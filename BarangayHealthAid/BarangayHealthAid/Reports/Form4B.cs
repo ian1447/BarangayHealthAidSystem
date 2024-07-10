@@ -13,5 +13,10 @@ namespace BarangayHealthAid.Reports
             InitializeComponent();
         }
 
+        private void xrTableRow137_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+        {
+
+        }
+
     }
 }
