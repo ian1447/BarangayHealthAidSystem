@@ -34,5 +34,17 @@ namespace BarangayHealthAid.Properties {
                 this["ServerConnString"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string LastLogin {
+            get {
+                return ((string)(this["LastLogin"]));
+            }
+            set {
+                this["LastLogin"] = value;
+            }
+        }
     }
 }
