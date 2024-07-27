@@ -16,5 +16,11 @@ namespace BarangayHealthAid
         {
             InitializeComponent();
         }
+
+        private void lblConnSettings_Click(object sender, EventArgs e)
+        {
+            ConnectionSettingsForm csf = new ConnectionSettingsForm();
+            csf.ShowDialog();
+        }
     }
 }

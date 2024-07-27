@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
-            this.rpgMain = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpgBackend = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rpgUsers = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
@@ -45,22 +43,10 @@
             this.ribbonControl1.MaxItemId = 1;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
-            this.rpgMain,
             this.rpgBackend});
             this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
             this.ribbonControl1.Size = new System.Drawing.Size(758, 144);
-            // 
-            // rpgMain
-            // 
-            this.rpgMain.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup1});
-            this.rpgMain.Name = "rpgMain";
-            this.rpgMain.Text = "Main";
-            // 
-            // ribbonPageGroup1
-            // 
-            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
-            this.ribbonPageGroup1.Text = "ribbonPageGroup1";
+            this.ribbonControl1.Visible = false;
             // 
             // rpgBackend
             // 
@@ -95,8 +81,6 @@
         #endregion
 
         private DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl1;
-        private DevExpress.XtraBars.Ribbon.RibbonPage rpgMain;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
         private DevExpress.XtraBars.Ribbon.RibbonPage rpgBackend;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgUsers;
     }
