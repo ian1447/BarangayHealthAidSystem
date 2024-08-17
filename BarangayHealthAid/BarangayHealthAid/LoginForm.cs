@@ -10,6 +10,7 @@ using DevExpress.XtraEditors;
 using BarangayHealthAid.Core;
 using BarangayHealthAid.Dal;
 using BarangayHealthAid.Sop;
+using BarangayHealthAid;
 
 namespace BarangayHealthAid
 {
@@ -58,6 +59,8 @@ namespace BarangayHealthAid
 
         #endregion
 
+        public static bool Userlogout = true;
+        DataTable UsersTable = new DataTable();
         private void lblConnSettings_Click(object sender, EventArgs e)
         {
             ConnectionSettingsForm csf = new ConnectionSettingsForm();
@@ -141,12 +144,32 @@ namespace BarangayHealthAid
 
         private void bwUsersLogin_DoWork(object sender, DoWorkEventArgs e)
         {
-
+            UsersTable = Login.Userlogin(txtUsername.Text, txtPassword.Text);
+            bwUsersLogin.CancelAsync();
         }
 
         private void bwUsersLogin_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-
+            HideLoading();
+            if (Login.LoginIsSuccessful)
+            {
+                if (UsersTable.Rows.Count > 0)
+                {
+                    Mainform mf = new Mainform();
+                    this.Hide();
+                    mf.ShowDialog();
+                    if (Userlogout)
+                    {
+                        txtPassword.Text = "";
+                        txtUsername.Enabled = false;
+                        this.Show();
+                    }
+                }
+                else
+                    MsgBox.Warning("No User Found. Please try again.");
+            }
+            else
+                MsgBox.Error(Login.LoginErrorMessage);
         }
     }
 }

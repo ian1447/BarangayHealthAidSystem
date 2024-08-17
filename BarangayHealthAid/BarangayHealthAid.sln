@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BarangayHealthAid.Core", "B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BarangayHealthAid.Dal", "BarangayHealthAid.Dal\BarangayHealthAid.Dal.csproj", "{66FB065E-F28F-4C1C-8635-6F97F062B457}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BarangayHealthAid.Sop", "BarangayHealthAid.Sop\BarangayHealthAid.Sop.csproj", "{6D3152F5-2344-4B91-8F54-3BA0A1863650}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,10 +25,6 @@ Global
 		{66FB065E-F28F-4C1C-8635-6F97F062B457}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{66FB065E-F28F-4C1C-8635-6F97F062B457}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{66FB065E-F28F-4C1C-8635-6F97F062B457}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6D3152F5-2344-4B91-8F54-3BA0A1863650}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6D3152F5-2344-4B91-8F54-3BA0A1863650}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6D3152F5-2344-4B91-8F54-3BA0A1863650}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6D3152F5-2344-4B91-8F54-3BA0A1863650}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

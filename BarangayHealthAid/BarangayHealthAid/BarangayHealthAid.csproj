@@ -34,6 +34,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BarangayHealthAid.Sop, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DLL\BarangayHealthAid.Sop.dll</HintPath>
+    </Reference>
     <Reference Include="DevExpress.Charts.v14.2.Core, Version=14.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.v14.2" />
     <Reference Include="DevExpress.Office.v14.2.Core, Version=14.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -162,10 +166,6 @@
     <ProjectReference Include="..\BarangayHealthAid.Dal\BarangayHealthAid.Dal.csproj">
       <Project>{66FB065E-F28F-4C1C-8635-6F97F062B457}</Project>
       <Name>BarangayHealthAid.Dal</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\BarangayHealthAid.Sop\BarangayHealthAid.Sop.csproj">
-      <Project>{6D3152F5-2344-4B91-8F54-3BA0A1863650}</Project>
-      <Name>BarangayHealthAid.Sop</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />
