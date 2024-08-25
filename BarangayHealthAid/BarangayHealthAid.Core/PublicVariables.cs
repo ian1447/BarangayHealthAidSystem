@@ -29,6 +29,8 @@ namespace BarangayHealthAid.Core
 
         public static string UserFullName { get; set; }
 
+        public static string Userid { get; set; }
+
         #endregion
 
     }

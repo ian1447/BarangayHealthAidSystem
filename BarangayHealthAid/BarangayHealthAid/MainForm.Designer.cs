@@ -30,13 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Mainform));
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
-            this.rpMain = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.rpgReports = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.btnFamilyPlanning = new DevExpress.XtraBars.BarButtonItem();
             this.btnForm4b = new DevExpress.XtraBars.BarButtonItem();
             this.btnMaternalHealth = new DevExpress.XtraBars.BarButtonItem();
             this.btnClinicalRecord = new DevExpress.XtraBars.BarButtonItem();
+            this.btnUserManagement = new DevExpress.XtraBars.BarButtonItem();
+            this.rpMain = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.rpgReports = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rpgBackend = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,39 +50,15 @@
             this.btnFamilyPlanning,
             this.btnForm4b,
             this.btnMaternalHealth,
-            this.btnClinicalRecord});
+            this.btnClinicalRecord,
+            this.btnUserManagement});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 5;
+            this.ribbon.MaxItemId = 6;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.rpMain});
             this.ribbon.Size = new System.Drawing.Size(1060, 144);
             this.ribbon.StatusBar = this.ribbonStatusBar;
-            // 
-            // rpMain
-            // 
-            this.rpMain.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.rpgReports});
-            this.rpMain.Name = "rpMain";
-            this.rpMain.Text = "Main";
-            // 
-            // rpgReports
-            // 
-            this.rpgReports.AllowTextClipping = false;
-            this.rpgReports.ItemLinks.Add(this.btnFamilyPlanning);
-            this.rpgReports.ItemLinks.Add(this.btnForm4b);
-            this.rpgReports.ItemLinks.Add(this.btnMaternalHealth);
-            this.rpgReports.ItemLinks.Add(this.btnClinicalRecord);
-            this.rpgReports.Name = "rpgReports";
-            this.rpgReports.ShowCaptionButton = false;
-            this.rpgReports.Text = "Reports";
-            // 
-            // ribbonStatusBar
-            // 
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 418);
-            this.ribbonStatusBar.Name = "ribbonStatusBar";
-            this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1060, 31);
             // 
             // btnFamilyPlanning
             // 
@@ -118,6 +96,49 @@
             this.btnClinicalRecord.Name = "btnClinicalRecord";
             this.btnClinicalRecord.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnClinicalRecord_ItemClick);
             // 
+            // btnUserManagement
+            // 
+            this.btnUserManagement.Caption = "User Management";
+            this.btnUserManagement.Glyph = ((System.Drawing.Image)(resources.GetObject("btnUserManagement.Glyph")));
+            this.btnUserManagement.Id = 5;
+            this.btnUserManagement.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnUserManagement.LargeGlyph")));
+            this.btnUserManagement.Name = "btnUserManagement";
+            this.btnUserManagement.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnUserManagement_ItemClick);
+            // 
+            // rpMain
+            // 
+            this.rpMain.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.rpgReports,
+            this.rpgBackend});
+            this.rpMain.Name = "rpMain";
+            this.rpMain.Text = "Main";
+            // 
+            // rpgReports
+            // 
+            this.rpgReports.AllowTextClipping = false;
+            this.rpgReports.ItemLinks.Add(this.btnFamilyPlanning);
+            this.rpgReports.ItemLinks.Add(this.btnForm4b);
+            this.rpgReports.ItemLinks.Add(this.btnMaternalHealth);
+            this.rpgReports.ItemLinks.Add(this.btnClinicalRecord);
+            this.rpgReports.Name = "rpgReports";
+            this.rpgReports.ShowCaptionButton = false;
+            this.rpgReports.Text = "Reports";
+            // 
+            // rpgBackend
+            // 
+            this.rpgBackend.AllowTextClipping = false;
+            this.rpgBackend.ItemLinks.Add(this.btnUserManagement);
+            this.rpgBackend.Name = "rpgBackend";
+            this.rpgBackend.ShowCaptionButton = false;
+            this.rpgBackend.Text = "Back End";
+            // 
+            // ribbonStatusBar
+            // 
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 418);
+            this.ribbonStatusBar.Name = "ribbonStatusBar";
+            this.ribbonStatusBar.Ribbon = this.ribbon;
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1060, 31);
+            // 
             // Mainform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -131,6 +152,7 @@
             this.StatusBar = this.ribbonStatusBar;
             this.Text = "Mainform";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Mainform_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -147,5 +169,7 @@
         private DevExpress.XtraBars.BarButtonItem btnForm4b;
         private DevExpress.XtraBars.BarButtonItem btnMaternalHealth;
         private DevExpress.XtraBars.BarButtonItem btnClinicalRecord;
+        private DevExpress.XtraBars.BarButtonItem btnUserManagement;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgBackend;
     }
 }

@@ -155,6 +155,7 @@ namespace BarangayHealthAid
             {
                 if (UsersTable.Rows.Count > 0)
                 {
+                    PublicVariables.Userid = UsersTable.Rows[0]["id"].ToString();
                     Mainform mf = new Mainform();
                     this.Hide();
                     mf.ShowDialog();

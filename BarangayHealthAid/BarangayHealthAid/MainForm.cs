@@ -11,6 +11,7 @@ using BarangayHealthAid.Core;
 using BarangayHealthAid.Dal;
 using BarangayHealthAid.Reports;
 using DevExpress.XtraReports.UI;
+using BarangayHealthAid.Backend;
 
 namespace BarangayHealthAid
 {
@@ -43,6 +44,17 @@ namespace BarangayHealthAid
         {
             PatientClinicalRecord pcr = new PatientClinicalRecord();
             pcr.ShowPreviewDialog();
+        }
+
+        private void btnUserManagement_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            UserManagementForm umf = new UserManagementForm();
+            umf.ShowDialog();
+        }
+
+        private void Mainform_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
