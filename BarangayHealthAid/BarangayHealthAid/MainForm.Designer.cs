@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Mainform));
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.btnFamilyPlanning = new DevExpress.XtraBars.BarButtonItem();
@@ -35,11 +36,17 @@
             this.btnMaternalHealth = new DevExpress.XtraBars.BarButtonItem();
             this.btnClinicalRecord = new DevExpress.XtraBars.BarButtonItem();
             this.btnUserManagement = new DevExpress.XtraBars.BarButtonItem();
+            this.btnPurok = new DevExpress.XtraBars.BarButtonItem();
             this.rpMain = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rpgReports = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rpgManagement = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpgBackend = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
+            this.documentManager1 = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
+            this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbon
@@ -51,9 +58,10 @@
             this.btnForm4b,
             this.btnMaternalHealth,
             this.btnClinicalRecord,
-            this.btnUserManagement});
+            this.btnUserManagement,
+            this.btnPurok});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 6;
+            this.ribbon.MaxItemId = 7;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.rpMain});
@@ -105,10 +113,20 @@
             this.btnUserManagement.Name = "btnUserManagement";
             this.btnUserManagement.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnUserManagement_ItemClick);
             // 
+            // btnPurok
+            // 
+            this.btnPurok.Caption = "Purok Management";
+            this.btnPurok.Glyph = ((System.Drawing.Image)(resources.GetObject("btnPurok.Glyph")));
+            this.btnPurok.Id = 6;
+            this.btnPurok.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnPurok.LargeGlyph")));
+            this.btnPurok.Name = "btnPurok";
+            this.btnPurok.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPurok_ItemClick);
+            // 
             // rpMain
             // 
             this.rpMain.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.rpgReports,
+            this.rpgManagement,
             this.rpgBackend});
             this.rpMain.Name = "rpMain";
             this.rpMain.Text = "Main";
@@ -123,6 +141,14 @@
             this.rpgReports.Name = "rpgReports";
             this.rpgReports.ShowCaptionButton = false;
             this.rpgReports.Text = "Reports";
+            // 
+            // rpgManagement
+            // 
+            this.rpgManagement.AllowTextClipping = false;
+            this.rpgManagement.ItemLinks.Add(this.btnPurok);
+            this.rpgManagement.Name = "rpgManagement";
+            this.rpgManagement.ShowCaptionButton = false;
+            this.rpgManagement.Text = "Management";
             // 
             // rpgBackend
             // 
@@ -139,6 +165,14 @@
             this.ribbonStatusBar.Ribbon = this.ribbon;
             this.ribbonStatusBar.Size = new System.Drawing.Size(1060, 31);
             // 
+            // documentManager1
+            // 
+            this.documentManager1.MdiParent = this;
+            this.documentManager1.MenuManager = this.ribbon;
+            this.documentManager1.View = this.tabbedView1;
+            this.documentManager1.ViewCollection.AddRange(new DevExpress.XtraBars.Docking2010.Views.BaseView[] {
+            this.tabbedView1});
+            // 
             // Mainform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -146,6 +180,7 @@
             this.ClientSize = new System.Drawing.Size(1060, 449);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
+            this.IsMdiContainer = true;
             this.Name = "Mainform";
             this.Ribbon = this.ribbon;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
@@ -154,6 +189,8 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Mainform_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -171,5 +208,9 @@
         private DevExpress.XtraBars.BarButtonItem btnClinicalRecord;
         private DevExpress.XtraBars.BarButtonItem btnUserManagement;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgBackend;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgManagement;
+        private DevExpress.XtraBars.BarButtonItem btnPurok;
+        private DevExpress.XtraBars.Docking2010.DocumentManager documentManager1;
+        private DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView tabbedView1;
     }
 }

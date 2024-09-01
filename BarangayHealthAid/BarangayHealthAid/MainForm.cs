@@ -12,6 +12,7 @@ using BarangayHealthAid.Dal;
 using BarangayHealthAid.Reports;
 using DevExpress.XtraReports.UI;
 using BarangayHealthAid.Backend;
+using BarangayHealthAid.Management;
 
 namespace BarangayHealthAid
 {
@@ -55,6 +56,31 @@ namespace BarangayHealthAid
         private void Mainform_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        public static bool PurokManagementFormIsOpen = false;
+        private void btnPurok_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (!PurokManagementFormIsOpen)
+            {
+                PurokManagementFormIsOpen = true;
+                PurokManagementForm pmf = new PurokManagementForm();
+                pmf.MdiParent = this;
+                pmf.WindowState = FormWindowState.Maximized;
+                pmf.Show();
+            }
+            else
+            {
+                Form fc = Application.OpenForms["PurokManagementForm"];
+                if (fc == null)
+                {
+                    PurokManagementForm a1 = new PurokManagementForm();
+                    a1.MdiParent = this;
+                    a1.Show();
+                }
+                else
+                    fc.Activate();
+            }
         }
     }
 }
