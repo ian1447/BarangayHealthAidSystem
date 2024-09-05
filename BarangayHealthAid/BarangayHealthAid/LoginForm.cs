@@ -69,6 +69,7 @@ namespace BarangayHealthAid
 
         private void LoginForm_Shown(object sender, EventArgs e)
         {
+            lblVersion.Text = PublicVariables.ProjectVersion;
             if (!string.IsNullOrEmpty(Properties.Settings.Default.LastLogin))
             {
                 ceChange.Checked = false;
