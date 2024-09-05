@@ -112,6 +112,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportForm\PatientRecordAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForm\PatientRecordAddForm.Designer.cs">
+      <DependentUpon>PatientRecordAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForm\PatientRecordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForm\PatientRecordForm.Designer.cs">
+      <DependentUpon>PatientRecordForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\FamilyPlanningForm.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -173,6 +185,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ReportForm\PatientRecordAddForm.resx">
+      <DependentUpon>PatientRecordAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\PatientRecordForm.resx">
+      <DependentUpon>PatientRecordForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\FamilyPlanningForm.resx">
       <DependentUpon>FamilyPlanningForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -181,6 +199,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\MaternalHealthRecord.resx">
       <DependentUpon>MaternalHealthRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PatientClinicalRecord.resx">
+      <DependentUpon>PatientClinicalRecord.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WaitForm1.resx">
       <DependentUpon>WaitForm1.cs</DependentUpon>

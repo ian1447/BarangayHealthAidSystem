@@ -13,6 +13,7 @@ using BarangayHealthAid.Reports;
 using DevExpress.XtraReports.UI;
 using BarangayHealthAid.Backend;
 using BarangayHealthAid.Management;
+using BarangayHealthAid.ReportForm;
 
 namespace BarangayHealthAid
 {
@@ -41,10 +42,29 @@ namespace BarangayHealthAid
             mhr.ShowPreviewDialog();
         }
 
+        public static bool PatientRecordFormIsOpen = false;
         private void btnClinicalRecord_ItemClick(object sender, ItemClickEventArgs e)
         {
-            PatientClinicalRecord pcr = new PatientClinicalRecord();
-            pcr.ShowPreviewDialog();
+            if (!PatientRecordFormIsOpen)
+            {
+                PatientRecordFormIsOpen = true;
+                PatientRecordForm ppf = new PatientRecordForm();
+                ppf.MdiParent = this;
+                ppf.WindowState = FormWindowState.Maximized;
+                ppf.Show();
+            }
+            else
+            {
+                Form fc = Application.OpenForms["PatientRecordForm"];
+                if (fc == null)
+                {
+                    PatientRecordForm a1 = new PatientRecordForm();
+                    a1.MdiParent = this;
+                    a1.Show();
+                }
+                else
+                    fc.Activate();
+            }
         }
 
         private void btnUserManagement_ItemClick(object sender, ItemClickEventArgs e)
