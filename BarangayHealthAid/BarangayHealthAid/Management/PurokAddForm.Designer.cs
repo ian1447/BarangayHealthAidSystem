@@ -94,6 +94,7 @@
             // 
             // layoutControlGroup1
             // 
+            this.layoutControlGroup1.AllowCustomizeChildren = false;
             this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.layoutControlGroup1.GroupBordersVisible = false;
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {

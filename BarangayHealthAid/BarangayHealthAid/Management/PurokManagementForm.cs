@@ -102,6 +102,7 @@ namespace BarangayHealthAid.Management
         private int purok_id,member_id;
         private void PurokManagementForm_Shown(object sender, EventArgs e)
         {
+            layoutControl1.AllowCustomization = false;
             LoadPurok();
         }
 

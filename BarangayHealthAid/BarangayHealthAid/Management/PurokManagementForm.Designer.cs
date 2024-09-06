@@ -304,6 +304,7 @@
             // 
             // layoutControlGroup1
             // 
+            this.layoutControlGroup1.AllowCustomizeChildren = false;
             this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.layoutControlGroup1.GroupBordersVisible = false;
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
@@ -314,6 +315,7 @@
             this.layoutControlGroup3});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
+            this.layoutControlGroup1.ShowInCustomizationForm = false;
             this.layoutControlGroup1.Size = new System.Drawing.Size(1141, 574);
             this.layoutControlGroup1.TextVisible = false;
             // 
@@ -341,6 +343,7 @@
             // 
             // layoutControlGroup2
             // 
+            this.layoutControlGroup2.AllowCustomizeChildren = false;
             this.layoutControlGroup2.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem1,
             this.layoutControlItem2,
@@ -423,6 +426,7 @@
             // 
             // layoutControlGroup3
             // 
+            this.layoutControlGroup3.AllowCustomizeChildren = false;
             this.layoutControlGroup3.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem6,
             this.layoutControlItem7,

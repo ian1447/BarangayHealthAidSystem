@@ -72,6 +72,7 @@
             // 
             // txtUsername
             // 
+            this.txtUsername.EditValue = "admin";
             this.txtUsername.Location = new System.Drawing.Point(26, 278);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -97,6 +98,7 @@
             // 
             // txtPassword
             // 
+            this.txtPassword.EditValue = "admin";
             this.txtPassword.Location = new System.Drawing.Point(26, 326);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
