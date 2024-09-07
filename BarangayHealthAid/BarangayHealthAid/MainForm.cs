@@ -36,10 +36,29 @@ namespace BarangayHealthAid
             f4b.ShowPreviewDialog();
         }
 
+        public static bool MaternalHealthRecordFormIsOpen = false;
         private void btnMaternalHealth_ItemClick(object sender, ItemClickEventArgs e)
         {
-            MaternalHealthRecord mhr = new MaternalHealthRecord();
-            mhr.ShowPreviewDialog();
+            if (!MaternalHealthRecordFormIsOpen)
+            {
+                MaternalHealthRecordFormIsOpen = true;
+                MaternalHealthRecordForm ppf = new MaternalHealthRecordForm();
+                ppf.MdiParent = this;
+                ppf.WindowState = FormWindowState.Maximized;
+                ppf.Show();
+            }
+            else
+            {
+                Form fc = Application.OpenForms["MaternalHealthRecordForm"];
+                if (fc == null)
+                {
+                    MaternalHealthRecordForm a1 = new MaternalHealthRecordForm();
+                    a1.MdiParent = this;
+                    a1.Show();
+                }
+                else
+                    fc.Activate();
+            }
         }
 
         public static bool PatientRecordFormIsOpen = false;
