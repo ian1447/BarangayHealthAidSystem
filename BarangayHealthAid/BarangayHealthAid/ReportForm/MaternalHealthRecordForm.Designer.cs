@@ -35,7 +35,7 @@
             this.dtMaternal = new DevExpress.XtraGrid.GridControl();
             this.gvMaternal = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.id = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.patient_name = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.name = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
@@ -45,6 +45,9 @@
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::BarangayHealthAid.WaitForm1), true, true);
+            this.bwGetMaternalRecord = new System.ComponentModel.BackgroundWorker();
+            this.btnRefresh = new DevExpress.XtraEditors.SimpleButton();
+            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtMaternal)).BeginInit();
@@ -57,10 +60,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.btnRefresh);
             this.layoutControl1.Controls.Add(this.btnPrint);
             this.layoutControl1.Controls.Add(this.btnAdd);
             this.layoutControl1.Controls.Add(this.dtMaternal);
@@ -87,7 +92,7 @@
             // btnAdd
             // 
             this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
-            this.btnAdd.Location = new System.Drawing.Point(876, 12);
+            this.btnAdd.Location = new System.Drawing.Point(756, 12);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(171, 22);
             this.btnAdd.StyleController = this.layoutControl1;
@@ -111,7 +116,7 @@
             // 
             this.gvMaternal.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.id,
-            this.patient_name});
+            this.name});
             this.gvMaternal.GridControl = this.dtMaternal;
             this.gvMaternal.Name = "gvMaternal";
             this.gvMaternal.OptionsBehavior.Editable = false;
@@ -127,18 +132,18 @@
             this.id.FieldName = "id";
             this.id.Name = "id";
             // 
-            // patient_name
+            // name
             // 
-            this.patient_name.AppearanceHeader.Options.UseTextOptions = true;
-            this.patient_name.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.patient_name.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.patient_name.Caption = "Patient Name";
-            this.patient_name.FieldName = "patient_name";
-            this.patient_name.MinWidth = 150;
-            this.patient_name.Name = "patient_name";
-            this.patient_name.Visible = true;
-            this.patient_name.VisibleIndex = 0;
-            this.patient_name.Width = 150;
+            this.name.AppearanceHeader.Options.UseTextOptions = true;
+            this.name.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.name.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.name.Caption = "Name";
+            this.name.FieldName = "name";
+            this.name.MinWidth = 150;
+            this.name.Name = "name";
+            this.name.Visible = true;
+            this.name.VisibleIndex = 0;
+            this.name.Width = 150;
             // 
             // repositoryItemCheckEdit1
             // 
@@ -154,7 +159,8 @@
             this.simpleSeparator1,
             this.layoutControlGroup2,
             this.layoutControlItem2,
-            this.layoutControlItem3});
+            this.layoutControlItem3,
+            this.layoutControlItem4});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Size = new System.Drawing.Size(1188, 584);
@@ -165,7 +171,7 @@
             this.emptySpaceItem2.AllowHotTrack = false;
             this.emptySpaceItem2.Location = new System.Drawing.Point(0, 0);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(864, 24);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(744, 24);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // simpleSeparator1
@@ -173,7 +179,7 @@
             this.simpleSeparator1.AllowHotTrack = false;
             this.simpleSeparator1.Location = new System.Drawing.Point(0, 24);
             this.simpleSeparator1.Name = "simpleSeparator1";
-            this.simpleSeparator1.Size = new System.Drawing.Size(864, 2);
+            this.simpleSeparator1.Size = new System.Drawing.Size(744, 2);
             // 
             // layoutControlGroup2
             // 
@@ -196,7 +202,7 @@
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.btnAdd;
-            this.layoutControlItem2.Location = new System.Drawing.Point(864, 0);
+            this.layoutControlItem2.Location = new System.Drawing.Point(744, 0);
             this.layoutControlItem2.MaxSize = new System.Drawing.Size(175, 26);
             this.layoutControlItem2.MinSize = new System.Drawing.Size(175, 26);
             this.layoutControlItem2.Name = "layoutControlItem2";
@@ -217,6 +223,35 @@
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 
+            // bwGetMaternalRecord
+            // 
+            this.bwGetMaternalRecord.WorkerSupportsCancellation = true;
+            this.bwGetMaternalRecord.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwGetMaternalRecord_DoWork);
+            this.bwGetMaternalRecord.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwGetMaternalRecord_RunWorkerCompleted);
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
+            this.btnRefresh.Location = new System.Drawing.Point(931, 12);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(116, 22);
+            this.btnRefresh.StyleController = this.layoutControl1;
+            this.btnRefresh.TabIndex = 9;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
+            // layoutControlItem4
+            // 
+            this.layoutControlItem4.Control = this.btnRefresh;
+            this.layoutControlItem4.Location = new System.Drawing.Point(919, 0);
+            this.layoutControlItem4.MaxSize = new System.Drawing.Size(120, 26);
+            this.layoutControlItem4.MinSize = new System.Drawing.Size(120, 26);
+            this.layoutControlItem4.Name = "layoutControlItem4";
+            this.layoutControlItem4.Size = new System.Drawing.Size(120, 26);
+            this.layoutControlItem4.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem4.TextVisible = false;
+            // 
             // MaternalHealthRecordForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -226,6 +261,7 @@
             this.Name = "MaternalHealthRecordForm";
             this.Text = "Maternal Health Record";
             this.Load += new System.EventHandler(this.MaternalHealthRecordForm_Load);
+            this.Shown += new System.EventHandler(this.MaternalHealthRecordForm_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtMaternal)).EndInit();
@@ -238,6 +274,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -251,7 +288,7 @@
         private DevExpress.XtraGrid.GridControl dtMaternal;
         private DevExpress.XtraGrid.Views.Grid.GridView gvMaternal;
         private DevExpress.XtraGrid.Columns.GridColumn id;
-        private DevExpress.XtraGrid.Columns.GridColumn patient_name;
+        private DevExpress.XtraGrid.Columns.GridColumn name;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit1;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup2;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
@@ -260,5 +297,8 @@
         private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
         private DevExpress.XtraEditors.SimpleButton btnPrint;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
+        private System.ComponentModel.BackgroundWorker bwGetMaternalRecord;
+        private DevExpress.XtraEditors.SimpleButton btnRefresh;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
     }
 }

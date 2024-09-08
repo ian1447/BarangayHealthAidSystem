@@ -79,9 +79,47 @@ namespace BarangayHealthAid.ReportForm
             catch { return false; }
         }
 
+        DataTable MaternalHealthTable = new DataTable();
         private void MaternalHealthRecordForm_Load(object sender, EventArgs e)
         {
             layoutControl1.AllowCustomization = false;
+        }
+
+        private void MaternalHealthRecordForm_Shown(object sender, EventArgs e)
+        {
+            LoadData();
+        }
+
+        private void LoadData()
+        {
+            if (bwGetMaternalRecord.IsBusy)
+            {
+                ShowLoading("Loading Data...");
+                bwGetMaternalRecord.RunWorkerAsync();
+            }
+        }
+
+        private void bwGetMaternalRecord_DoWork(object sender, DoWorkEventArgs e)
+        {
+            MaternalHealthTable = MaternalHealth.GetMaternalHealthRecord();
+            bwGetMaternalRecord.CancelAsync();
+        }
+
+        private void bwGetMaternalRecord_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            HideLoading();
+            if (MaternalHealth.GetMaternalHealthRecordIsSuccessful)
+            {
+                if (MaternalHealthTable.Rows.Count > 0)
+                    dtMaternal.DataSource = MaternalHealthTable;
+                else
+                {
+                    MsgBox.Warning("No data found.");
+                    dtMaternal.DataSource = new DataTable();
+                }
+            }
+            else
+                MsgBox.Error(MaternalHealth.GetMaternalHealthRecordErrorMessage);
         }
 
         private void btnPrint_Click(object sender, EventArgs e)
@@ -96,5 +134,9 @@ namespace BarangayHealthAid.ReportForm
             mhr.ShowDialog();
         }
 
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            LoadData();
+        }
     }
 }
