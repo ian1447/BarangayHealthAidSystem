@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PurokManagementForm));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.btnAddFamily = new DevExpress.XtraEditors.SimpleButton();
             this.btnAdd2 = new DevExpress.XtraEditors.SimpleButton();
             this.btnEdit2 = new DevExpress.XtraEditors.SimpleButton();
             this.btnRemove = new DevExpress.XtraEditors.SimpleButton();
@@ -66,6 +67,7 @@
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::BarangayHealthAid.WaitForm1), true, true);
             this.bwGetPurok = new System.ComponentModel.BackgroundWorker();
             this.bwDeletePurok = new System.ComponentModel.BackgroundWorker();
@@ -97,10 +99,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.btnAddFamily);
             this.layoutControl1.Controls.Add(this.btnAdd2);
             this.layoutControl1.Controls.Add(this.btnEdit2);
             this.layoutControl1.Controls.Add(this.btnRemove);
@@ -120,10 +124,21 @@
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
+            // btnAddFamily
+            // 
+            this.btnAddFamily.Image = ((System.Drawing.Image)(resources.GetObject("btnAddFamily.Image")));
+            this.btnAddFamily.Location = new System.Drawing.Point(769, 64);
+            this.btnAddFamily.Name = "btnAddFamily";
+            this.btnAddFamily.Size = new System.Drawing.Size(82, 22);
+            this.btnAddFamily.StyleController = this.layoutControl1;
+            this.btnAddFamily.TabIndex = 14;
+            this.btnAddFamily.Text = "Add Family";
+            this.btnAddFamily.Click += new System.EventHandler(this.btnAddFamily_Click);
+            // 
             // btnAdd2
             // 
             this.btnAdd2.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd2.Image")));
-            this.btnAdd2.Location = new System.Drawing.Point(773, 64);
+            this.btnAdd2.Location = new System.Drawing.Point(687, 64);
             this.btnAdd2.Name = "btnAdd2";
             this.btnAdd2.Size = new System.Drawing.Size(78, 22);
             this.btnAdd2.StyleController = this.layoutControl1;
@@ -140,6 +155,7 @@
             this.btnEdit2.StyleController = this.layoutControl1;
             this.btnEdit2.TabIndex = 12;
             this.btnEdit2.Text = "Edit";
+            this.btnEdit2.Click += new System.EventHandler(this.btnEdit2_Click);
             // 
             // btnRemove
             // 
@@ -165,12 +181,12 @@
             // 
             // dtPurokMember
             // 
-            this.dtPurokMember.Location = new System.Drawing.Point(437, 90);
+            this.dtPurokMember.Location = new System.Drawing.Point(422, 90);
             this.dtPurokMember.MainView = this.gvPurokMember;
             this.dtPurokMember.Name = "dtPurokMember";
             this.dtPurokMember.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit2});
-            this.dtPurokMember.Size = new System.Drawing.Size(680, 460);
+            this.dtPurokMember.Size = new System.Drawing.Size(695, 460);
             this.dtPurokMember.TabIndex = 6;
             this.dtPurokMember.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvPurokMember});
@@ -214,7 +230,7 @@
             // btnAdd
             // 
             this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
-            this.btnAdd.Location = new System.Drawing.Point(81, 64);
+            this.btnAdd.Location = new System.Drawing.Point(66, 64);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 22);
             this.btnAdd.StyleController = this.layoutControl1;
@@ -225,7 +241,7 @@
             // btnEdit
             // 
             this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
-            this.btnEdit.Location = new System.Drawing.Point(160, 64);
+            this.btnEdit.Location = new System.Drawing.Point(145, 64);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(80, 22);
             this.btnEdit.StyleController = this.layoutControl1;
@@ -235,7 +251,7 @@
             // btnDelete
             // 
             this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
-            this.btnDelete.Location = new System.Drawing.Point(244, 64);
+            this.btnDelete.Location = new System.Drawing.Point(229, 64);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(77, 22);
             this.btnDelete.StyleController = this.layoutControl1;
@@ -246,7 +262,7 @@
             // btnRefresh
             // 
             this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
-            this.btnRefresh.Location = new System.Drawing.Point(325, 64);
+            this.btnRefresh.Location = new System.Drawing.Point(310, 64);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(82, 22);
             this.btnRefresh.StyleController = this.layoutControl1;
@@ -261,7 +277,7 @@
             this.dtPurok.Name = "dtPurok";
             this.dtPurok.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit1});
-            this.dtPurok.Size = new System.Drawing.Size(383, 460);
+            this.dtPurok.Size = new System.Drawing.Size(368, 460);
             this.dtPurok.TabIndex = 5;
             this.dtPurok.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvPurok});
@@ -337,13 +353,12 @@
             // simpleSeparator2
             // 
             this.simpleSeparator2.AllowHotTrack = false;
-            this.simpleSeparator2.Location = new System.Drawing.Point(411, 21);
+            this.simpleSeparator2.Location = new System.Drawing.Point(396, 21);
             this.simpleSeparator2.Name = "simpleSeparator2";
             this.simpleSeparator2.Size = new System.Drawing.Size(2, 533);
             // 
             // layoutControlGroup2
             // 
-            this.layoutControlGroup2.AllowCustomizeChildren = false;
             this.layoutControlGroup2.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem1,
             this.layoutControlItem2,
@@ -353,7 +368,7 @@
             this.layoutControlItem5});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 21);
             this.layoutControlGroup2.Name = "layoutControlGroup2";
-            this.layoutControlGroup2.Size = new System.Drawing.Size(411, 533);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(396, 533);
             this.layoutControlGroup2.Text = "Purok";
             // 
             // layoutControlItem1
@@ -362,7 +377,7 @@
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 26);
             this.layoutControlItem1.MinSize = new System.Drawing.Size(104, 24);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(387, 464);
+            this.layoutControlItem1.Size = new System.Drawing.Size(372, 464);
             this.layoutControlItem1.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
@@ -370,7 +385,7 @@
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.btnRefresh;
-            this.layoutControlItem2.Location = new System.Drawing.Point(301, 0);
+            this.layoutControlItem2.Location = new System.Drawing.Point(286, 0);
             this.layoutControlItem2.MaxSize = new System.Drawing.Size(86, 26);
             this.layoutControlItem2.MinSize = new System.Drawing.Size(86, 26);
             this.layoutControlItem2.Name = "layoutControlItem2";
@@ -384,13 +399,13 @@
             this.emptySpaceItem2.AllowHotTrack = false;
             this.emptySpaceItem2.Location = new System.Drawing.Point(0, 0);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(57, 26);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(42, 26);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.btnDelete;
-            this.layoutControlItem3.Location = new System.Drawing.Point(220, 0);
+            this.layoutControlItem3.Location = new System.Drawing.Point(205, 0);
             this.layoutControlItem3.MaxSize = new System.Drawing.Size(81, 26);
             this.layoutControlItem3.MinSize = new System.Drawing.Size(81, 26);
             this.layoutControlItem3.Name = "layoutControlItem3";
@@ -402,7 +417,7 @@
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.btnEdit;
-            this.layoutControlItem4.Location = new System.Drawing.Point(136, 0);
+            this.layoutControlItem4.Location = new System.Drawing.Point(121, 0);
             this.layoutControlItem4.MaxSize = new System.Drawing.Size(84, 26);
             this.layoutControlItem4.MinSize = new System.Drawing.Size(84, 26);
             this.layoutControlItem4.Name = "layoutControlItem4";
@@ -415,7 +430,7 @@
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.btnAdd;
-            this.layoutControlItem5.Location = new System.Drawing.Point(57, 0);
+            this.layoutControlItem5.Location = new System.Drawing.Point(42, 0);
             this.layoutControlItem5.MaxSize = new System.Drawing.Size(79, 26);
             this.layoutControlItem5.MinSize = new System.Drawing.Size(79, 26);
             this.layoutControlItem5.Name = "layoutControlItem5";
@@ -426,17 +441,17 @@
             // 
             // layoutControlGroup3
             // 
-            this.layoutControlGroup3.AllowCustomizeChildren = false;
             this.layoutControlGroup3.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem6,
             this.layoutControlItem7,
             this.emptySpaceItem1,
             this.layoutControlItem8,
             this.layoutControlItem9,
-            this.layoutControlItem10});
-            this.layoutControlGroup3.Location = new System.Drawing.Point(413, 21);
+            this.layoutControlItem10,
+            this.layoutControlItem11});
+            this.layoutControlGroup3.Location = new System.Drawing.Point(398, 21);
             this.layoutControlGroup3.Name = "layoutControlGroup3";
-            this.layoutControlGroup3.Size = new System.Drawing.Size(708, 533);
+            this.layoutControlGroup3.Size = new System.Drawing.Size(723, 533);
             this.layoutControlGroup3.Text = "Purok Members";
             // 
             // layoutControlItem6
@@ -444,14 +459,14 @@
             this.layoutControlItem6.Control = this.dtPurokMember;
             this.layoutControlItem6.Location = new System.Drawing.Point(0, 26);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(684, 464);
+            this.layoutControlItem6.Size = new System.Drawing.Size(699, 464);
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem6.TextVisible = false;
             // 
             // layoutControlItem7
             // 
             this.layoutControlItem7.Control = this.btnRefresh2;
-            this.layoutControlItem7.Location = new System.Drawing.Point(588, 0);
+            this.layoutControlItem7.Location = new System.Drawing.Point(603, 0);
             this.layoutControlItem7.MaxSize = new System.Drawing.Size(96, 26);
             this.layoutControlItem7.MinSize = new System.Drawing.Size(96, 26);
             this.layoutControlItem7.Name = "layoutControlItem7";
@@ -465,13 +480,13 @@
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.Location = new System.Drawing.Point(0, 0);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(336, 26);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(265, 26);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem8
             // 
             this.layoutControlItem8.Control = this.btnRemove;
-            this.layoutControlItem8.Location = new System.Drawing.Point(500, 0);
+            this.layoutControlItem8.Location = new System.Drawing.Point(515, 0);
             this.layoutControlItem8.MaxSize = new System.Drawing.Size(88, 26);
             this.layoutControlItem8.MinSize = new System.Drawing.Size(88, 26);
             this.layoutControlItem8.Name = "layoutControlItem8";
@@ -483,7 +498,7 @@
             // layoutControlItem9
             // 
             this.layoutControlItem9.Control = this.btnEdit2;
-            this.layoutControlItem9.Location = new System.Drawing.Point(418, 0);
+            this.layoutControlItem9.Location = new System.Drawing.Point(433, 0);
             this.layoutControlItem9.MaxSize = new System.Drawing.Size(82, 26);
             this.layoutControlItem9.MinSize = new System.Drawing.Size(82, 26);
             this.layoutControlItem9.Name = "layoutControlItem9";
@@ -496,7 +511,7 @@
             // layoutControlItem10
             // 
             this.layoutControlItem10.Control = this.btnAdd2;
-            this.layoutControlItem10.Location = new System.Drawing.Point(336, 0);
+            this.layoutControlItem10.Location = new System.Drawing.Point(265, 0);
             this.layoutControlItem10.MaxSize = new System.Drawing.Size(82, 26);
             this.layoutControlItem10.MinSize = new System.Drawing.Size(82, 26);
             this.layoutControlItem10.Name = "layoutControlItem10";
@@ -504,6 +519,18 @@
             this.layoutControlItem10.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem10.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem10.TextVisible = false;
+            // 
+            // layoutControlItem11
+            // 
+            this.layoutControlItem11.Control = this.btnAddFamily;
+            this.layoutControlItem11.Location = new System.Drawing.Point(347, 0);
+            this.layoutControlItem11.MaxSize = new System.Drawing.Size(86, 26);
+            this.layoutControlItem11.MinSize = new System.Drawing.Size(86, 26);
+            this.layoutControlItem11.Name = "layoutControlItem11";
+            this.layoutControlItem11.Size = new System.Drawing.Size(86, 26);
+            this.layoutControlItem11.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem11.TextVisible = false;
             // 
             // bwGetPurok
             // 
@@ -564,6 +591,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -612,5 +640,7 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
         private System.ComponentModel.BackgroundWorker bwGetPurokMember;
         private System.ComponentModel.BackgroundWorker bwDeletePurokMember;
+        private DevExpress.XtraEditors.SimpleButton btnAddFamily;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
     }
 }

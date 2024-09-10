@@ -275,17 +275,40 @@ namespace BarangayHealthAid.Management
         }
 
         private void btnRemove_Click(object sender, EventArgs e)
-        {            
-            MsgBox.QuestionYesNo("Are you sure you want to delete this purok member?");
-            if (MsgBox.isYes)
+        {
+            if (SelectionPass2())
             {
-                GetRowDetailsMember();
-                if (!bwDeletePurokMember.IsBusy)
+                MsgBox.QuestionYesNo("Are you sure you want to delete this purok member?");
+                if (MsgBox.isYes)
                 {
-                    ShowLoading("Deleting Member");
-                    bwDeletePurokMember.RunWorkerAsync();
+                    GetRowDetailsMember();
+                    if (!bwDeletePurokMember.IsBusy)
+                    {
+                        ShowLoading("Deleting Member");
+                        bwDeletePurokMember.RunWorkerAsync();
+                    }
                 }
             }
+            else
+                MsgBox.Error("No Purok Member Selected.");
+        }
+
+        private void btnAddFamily_Click(object sender, EventArgs e)
+        {
+            if (SelectionPass2())
+            {
+                GetRowDetailsMember();
+                PurokFamilyMembersForm pfm = new PurokFamilyMembersForm();
+                pfm.purok_member_id = member_id;
+                pfm.ShowDialog();
+            }
+            else
+                MsgBox.Error("No Purok Member Selected.");
+        }
+
+        private void btnEdit2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

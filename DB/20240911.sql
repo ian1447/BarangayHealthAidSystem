@@ -163,6 +163,23 @@ CREATE TABLE `purok` (
 
 insert  into `purok`(`id`,`purok_name`,`added_by`,`added_on`) values (1,'Purok 1',1,'2024-09-01 20:40:42'),(3,'Purok 2',1,'2024-09-01 21:48:24');
 
+/*Table structure for table `purok_family_members` */
+
+DROP TABLE IF EXISTS `purok_family_members`;
+
+CREATE TABLE `purok_family_members` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `purok_members_id` int(11) NOT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `added_by` int(11) DEFAULT NULL,
+  `added_on` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
+/*Data for the table `purok_family_members` */
+
+insert  into `purok_family_members`(`id`,`purok_members_id`,`name`,`added_by`,`added_on`) values (1,1,'Father',1,'2024-09-10 23:26:39'),(2,1,'Mother',1,'2024-09-10 23:36:08'),(4,2,'Father3',1,'2024-09-11 00:07:05');
+
 /*Table structure for table `purok_members` */
 
 DROP TABLE IF EXISTS `purok_members`;
@@ -174,11 +191,11 @@ CREATE TABLE `purok_members` (
   `added_by` int(11) NOT NULL,
   `added_on` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 /*Data for the table `purok_members` */
 
-insert  into `purok_members`(`id`,`purok_id`,`name`,`added_by`,`added_on`) values (1,1,'test',1,'2024-09-01 21:46:31');
+insert  into `purok_members`(`id`,`purok_id`,`name`,`added_by`,`added_on`) values (1,1,'test',1,'2024-09-01 21:46:31'),(2,1,'Family Head 2',1,'2024-09-10 23:36:21');
 
 /*Table structure for table `users` */
 
@@ -618,6 +635,71 @@ BEGIN
 DELETE
 FROM `purok`
 WHERE `id` = _id;
+    END */$$
+DELIMITER ;
+
+/* Procedure structure for procedure `sp_purok_family_members_get` */
+
+/*!50003 DROP PROCEDURE IF EXISTS  `sp_purok_family_members_get` */;
+
+DELIMITER $$
+
+/*!50003 CREATE DEFINER=`system_admin`@`%` PROCEDURE `sp_purok_family_members_get`(
+	_purok_members_id int (11)
+)
+BEGIN
+SELECT * FROM `purok_family_members` p where p.`purok_members_id` = _purok_members_id;
+    END */$$
+DELIMITER ;
+
+/* Procedure structure for procedure `sp_purok_family_member_add` */
+
+/*!50003 DROP PROCEDURE IF EXISTS  `sp_purok_family_member_add` */;
+
+DELIMITER $$
+
+/*!50003 CREATE DEFINER=`system_admin`@`%` PROCEDURE `sp_purok_family_member_add`(
+     _purok_members_id INT (11),
+     _name VARCHAR (255),
+     _added_by INT (11)    
+    )
+BEGIN
+	INSERT INTO `purok_family_members`
+		    (`purok_members_id`,
+		     `name`,
+		     `added_by`)
+	VALUES (_purok_members_id,
+		_name,
+		_added_by);
+    END */$$
+DELIMITER ;
+
+/* Procedure structure for procedure `sp_purok_family_member_delete` */
+
+/*!50003 DROP PROCEDURE IF EXISTS  `sp_purok_family_member_delete` */;
+
+DELIMITER $$
+
+/*!50003 CREATE DEFINER=`system_admin`@`%` PROCEDURE `sp_purok_family_member_delete`(
+	_id int (11)
+    )
+BEGIN
+DELETE FROM `purok_family_members` WHERE id = _id;
+    END */$$
+DELIMITER ;
+
+/* Procedure structure for procedure `sp_purok_family_member_edit` */
+
+/*!50003 DROP PROCEDURE IF EXISTS  `sp_purok_family_member_edit` */;
+
+DELIMITER $$
+
+/*!50003 CREATE DEFINER=`system_admin`@`%` PROCEDURE `sp_purok_family_member_edit`(
+	_name varchar (255),
+	_id int (11)
+    )
+BEGIN
+UPDATE `purok_family_members` p SET p.`name` = _name WHERE p.`id` = _id;
     END */$$
 DELIMITER ;
 

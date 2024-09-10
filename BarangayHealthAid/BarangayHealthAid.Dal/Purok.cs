@@ -72,6 +72,35 @@ namespace BarangayHealthAid.Dal
             }
         }
 
+        public static string GetPurokFamilyMembersErrorMessage;
+        public static bool GetPurokFamilyMembersIsSuccessful;
+        public static DataTable GetPurokFamilyMembers(int _purok_members_id)
+        {
+            DataSet dt = new DataSet();
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(ConnectionString()))
+                {
+                    con.Open();
+                    MySqlCommand cmd = new MySqlCommand("sp_purok_family_members_get", con);
+                    cmd.Parameters.Add(new MySqlParameter("_purok_members_id", _purok_members_id));
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    MySqlDataAdapter adp = new MySqlDataAdapter(cmd);
+                    adp.Fill(dt);
+                    con.Close();
+                    GetPurokFamilyMembersIsSuccessful = true;
+                    return dt.Tables[0];
+                }
+            }
+
+            catch (Exception ex)
+            {
+                GetPurokFamilyMembersIsSuccessful = false;
+                GetPurokFamilyMembersErrorMessage = ex.Message + "\nFunction : Get Purok Family Members";
+                return null;
+            }
+        }
+
         public static string AddPurokErrorMessage;
         public static bool AddPurokIsSuccessful;
         public static void AddPurok(string _purok_name)
@@ -129,6 +158,63 @@ namespace BarangayHealthAid.Dal
             }
         }
 
+        public static string AddPurokFamilyMemberErrorMessage;
+        public static bool AddPurokFamilyMemberIsSuccessful;
+        public static void AddPurokFamilyMember(int _purok_members_id, string _name)
+        {
+            DataSet dt = new DataSet();
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(ConnectionString()))
+                {
+                    con.Open();
+                    MySqlCommand cmd = new MySqlCommand("sp_purok_family_member_add", con);
+                    cmd.Parameters.Add(new MySqlParameter("_purok_members_id", _purok_members_id));
+                    cmd.Parameters.Add(new MySqlParameter("_name", _name));
+                    cmd.Parameters.Add(new MySqlParameter("_added_by", PublicVariables.Userid));
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    MySqlDataAdapter adp = new MySqlDataAdapter(cmd);
+                    adp.Fill(dt);
+                    con.Close();
+                    AddPurokFamilyMemberIsSuccessful = true;
+                }
+            }
+
+            catch (Exception ex)
+            {
+                AddPurokFamilyMemberIsSuccessful = false;
+                AddPurokFamilyMemberErrorMessage = ex.Message + "\nFunction : Add Purok Family Member";
+            }
+        }
+
+        public static string EditPurokFamilyMemberErrorMessage;
+        public static bool EditPurokFamilyMemberIsSuccessful;
+        public static void EditPurokFamilyMember(int _id, string _name)
+        {
+            DataSet dt = new DataSet();
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(ConnectionString()))
+                {
+                    con.Open();
+                    MySqlCommand cmd = new MySqlCommand("sp_purok_family_member_edit", con);
+                    cmd.Parameters.Add(new MySqlParameter("_id", _id));
+                    cmd.Parameters.Add(new MySqlParameter("_name", _name));
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    MySqlDataAdapter adp = new MySqlDataAdapter(cmd);
+                    adp.Fill(dt);
+                    con.Close();
+                    EditPurokFamilyMemberIsSuccessful = true;
+                }
+            }
+
+            catch (Exception ex)
+            {
+                EditPurokFamilyMemberIsSuccessful = false;
+                EditPurokFamilyMemberErrorMessage = ex.Message + "\nFunction : Edit Purok Family Member";
+            }
+        }
+
         public static string DeletePurokErrorMessage;
         public static bool DeletePurokIsSuccessful;
         public static void DeletePurok(int _id)
@@ -180,6 +266,33 @@ namespace BarangayHealthAid.Dal
             {
                 DeletePurokMemberIsSuccessful = false;
                 DeletePurokMemberErrorMessage = ex.Message + "\nFunction : Deleting Purok Member";
+            }
+        }
+
+        public static string DeletePurokFamilyMemberErrorMessage;
+        public static bool DeletePurokFamilyMemberIsSuccessful;
+        public static void DeletePurokFamilyMember(int _id)
+        {
+            DataSet dt = new DataSet();
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(ConnectionString()))
+                {
+                    con.Open();
+                    MySqlCommand cmd = new MySqlCommand("sp_purok_family_member_delete", con);
+                    cmd.Parameters.Add(new MySqlParameter("_id", _id));
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    MySqlDataAdapter adp = new MySqlDataAdapter(cmd);
+                    adp.Fill(dt);
+                    con.Close();
+                    DeletePurokFamilyMemberIsSuccessful = true;
+                }
+            }
+
+            catch (Exception ex)
+            {
+                DeletePurokFamilyMemberIsSuccessful = false;
+                DeletePurokFamilyMemberErrorMessage = ex.Message + "\nFunction : Deleting Purok Family Member";
             }
         }
     }
