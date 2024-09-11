@@ -39,6 +39,7 @@
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::BarangayHealthAid.WaitForm1), true, true);
             this.bwAddPurok = new System.ComponentModel.BackgroundWorker();
+            this.bwEditPurok = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtPurokName.Properties)).BeginInit();
@@ -145,8 +146,15 @@
             this.bwAddPurok.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwAddPurok_DoWork);
             this.bwAddPurok.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwAddPurok_RunWorkerCompleted);
             // 
+            // bwEditPurok
+            // 
+            this.bwEditPurok.WorkerSupportsCancellation = true;
+            this.bwEditPurok.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwEditPurok_DoWork);
+            this.bwEditPurok.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwEditPurok_RunWorkerCompleted);
+            // 
             // PurokAddForm
             // 
+            this.AcceptButton = this.btnProceed;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(341, 90);
@@ -172,7 +180,6 @@
 
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
-        private DevExpress.XtraEditors.TextEdit txtPurokName;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraEditors.SimpleButton btnCancel;
         private DevExpress.XtraEditors.SimpleButton btnProceed;
@@ -180,5 +187,7 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
         private System.ComponentModel.BackgroundWorker bwAddPurok;
+        private System.ComponentModel.BackgroundWorker bwEditPurok;
+        public DevExpress.XtraEditors.TextEdit txtPurokName;
     }
 }

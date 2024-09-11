@@ -30,19 +30,20 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PurokMemberAddForm));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.txtName = new DevExpress.XtraEditors.TextEdit();
-            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.btnProceed = new DevExpress.XtraEditors.SimpleButton();
-            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
+            this.btnProceed = new DevExpress.XtraEditors.SimpleButton();
+            this.txtName = new DevExpress.XtraEditors.TextEdit();
+            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::BarangayHealthAid.WaitForm1), true, true);
             this.bwAddPurokMember = new System.ComponentModel.BackgroundWorker();
+            this.bwEditPurokMember = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
@@ -62,6 +63,36 @@
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
+            // btnCancel
+            // 
+            this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
+            this.btnCancel.Location = new System.Drawing.Point(12, 55);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(135, 24);
+            this.btnCancel.StyleController = this.layoutControl1;
+            this.btnCancel.TabIndex = 6;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnProceed
+            // 
+            this.btnProceed.Image = ((System.Drawing.Image)(resources.GetObject("btnProceed.Image")));
+            this.btnProceed.Location = new System.Drawing.Point(151, 55);
+            this.btnProceed.Name = "btnProceed";
+            this.btnProceed.Size = new System.Drawing.Size(187, 22);
+            this.btnProceed.StyleController = this.layoutControl1;
+            this.btnProceed.TabIndex = 5;
+            this.btnProceed.Text = "Proceed";
+            this.btnProceed.Click += new System.EventHandler(this.btnProceed_Click);
+            // 
+            // txtName
+            // 
+            this.txtName.Location = new System.Drawing.Point(12, 31);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(326, 20);
+            this.txtName.StyleController = this.layoutControl1;
+            this.txtName.TabIndex = 4;
+            // 
             // layoutControlGroup1
             // 
             this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
@@ -75,14 +106,6 @@
             this.layoutControlGroup1.Size = new System.Drawing.Size(350, 91);
             this.layoutControlGroup1.TextVisible = false;
             // 
-            // txtName
-            // 
-            this.txtName.Location = new System.Drawing.Point(12, 31);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(326, 20);
-            this.txtName.StyleController = this.layoutControl1;
-            this.txtName.TabIndex = 4;
-            // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -95,17 +118,6 @@
             this.layoutControlItem1.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem1.TextSize = new System.Drawing.Size(35, 16);
             // 
-            // btnProceed
-            // 
-            this.btnProceed.Image = ((System.Drawing.Image)(resources.GetObject("btnProceed.Image")));
-            this.btnProceed.Location = new System.Drawing.Point(151, 55);
-            this.btnProceed.Name = "btnProceed";
-            this.btnProceed.Size = new System.Drawing.Size(187, 22);
-            this.btnProceed.StyleController = this.layoutControl1;
-            this.btnProceed.TabIndex = 5;
-            this.btnProceed.Text = "Proceed";
-            this.btnProceed.Click += new System.EventHandler(this.btnProceed_Click);
-            // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.btnProceed;
@@ -114,17 +126,6 @@
             this.layoutControlItem2.Size = new System.Drawing.Size(191, 28);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
-            this.btnCancel.Location = new System.Drawing.Point(12, 55);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(135, 24);
-            this.btnCancel.StyleController = this.layoutControl1;
-            this.btnCancel.TabIndex = 6;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // layoutControlItem3
             // 
@@ -144,8 +145,15 @@
             this.bwAddPurokMember.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwAddPurokMember_DoWork);
             this.bwAddPurokMember.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwAddPurokMember_RunWorkerCompleted);
             // 
+            // bwEditPurokMember
+            // 
+            this.bwEditPurokMember.WorkerSupportsCancellation = true;
+            this.bwEditPurokMember.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwEditPurokMember_DoWork);
+            this.bwEditPurokMember.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwEditPurokMember_RunWorkerCompleted);
+            // 
             // PurokMemberAddForm
             // 
+            this.AcceptButton = this.btnProceed;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(350, 91);
@@ -158,8 +166,8 @@
             this.Text = "Purok Member";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
@@ -171,7 +179,6 @@
 
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
-        private DevExpress.XtraEditors.TextEdit txtName;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraEditors.SimpleButton btnCancel;
         private DevExpress.XtraEditors.SimpleButton btnProceed;
@@ -179,5 +186,7 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
         private System.ComponentModel.BackgroundWorker bwAddPurokMember;
+        private System.ComponentModel.BackgroundWorker bwEditPurokMember;
+        public DevExpress.XtraEditors.TextEdit txtName;
     }
 }

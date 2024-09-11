@@ -187,6 +187,62 @@ namespace BarangayHealthAid.Dal
             }
         }
 
+        public static string EditPurokErrorMessage;
+        public static bool EditPurokIsSuccessful;
+        public static void EditPurok(string _purok_name, int _id)
+        {
+            DataSet dt = new DataSet();
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(ConnectionString()))
+                {
+                    con.Open();
+                    MySqlCommand cmd = new MySqlCommand("sp_purok_edit", con);
+                    cmd.Parameters.Add(new MySqlParameter("_purok_name", _purok_name));
+                    cmd.Parameters.Add(new MySqlParameter("_id", _id));
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    MySqlDataAdapter adp = new MySqlDataAdapter(cmd);
+                    adp.Fill(dt);
+                    con.Close();
+                    EditPurokIsSuccessful = true;
+                }
+            }
+
+            catch (Exception ex)
+            {
+                EditPurokIsSuccessful = false;
+                EditPurokErrorMessage = ex.Message + "\nFunction : Edit Purok";
+            }
+        }
+
+        public static string EditPurokMemberErrorMessage;
+        public static bool EditPurokMemberIsSuccessful;
+        public static void EditPurokMember(int _id, string _name)
+        {
+            DataSet dt = new DataSet();
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(ConnectionString()))
+                {
+                    con.Open();
+                    MySqlCommand cmd = new MySqlCommand("sp_purok_members_edit", con);
+                    cmd.Parameters.Add(new MySqlParameter("_id", _id));
+                    cmd.Parameters.Add(new MySqlParameter("_name", _name));
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    MySqlDataAdapter adp = new MySqlDataAdapter(cmd);
+                    adp.Fill(dt);
+                    con.Close();
+                    EditPurokMemberIsSuccessful = true;
+                }
+            }
+
+            catch (Exception ex)
+            {
+                EditPurokMemberIsSuccessful = false;
+                EditPurokMemberErrorMessage = ex.Message + "\nFunction : Edit Purok Member";
+            }
+        }
+
         public static string EditPurokFamilyMemberErrorMessage;
         public static bool EditPurokFamilyMemberIsSuccessful;
         public static void EditPurokFamilyMember(int _id, string _name)

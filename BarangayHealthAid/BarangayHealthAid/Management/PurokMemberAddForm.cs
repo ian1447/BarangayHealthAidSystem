@@ -57,8 +57,8 @@ namespace BarangayHealthAid.Management
 
         #endregion
 
-        public int purok_id;
-
+        public int purok_id,purok_member_id;
+        public bool is_add = true;
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -68,10 +68,21 @@ namespace BarangayHealthAid.Management
         {
             if (txtName.Text != "")
             {
-                if (!bwAddPurokMember.IsBusy)
+                if (is_add)
                 {
-                    ShowLoading("Adding Member");
-                    bwAddPurokMember.RunWorkerAsync();
+                    if (!bwAddPurokMember.IsBusy)
+                    {
+                        ShowLoading("Adding Member...");
+                        bwAddPurokMember.RunWorkerAsync();
+                    }
+                }
+                else
+                {
+                    if (!bwEditPurokMember.IsBusy)
+                    {
+                        ShowLoading("Editing Member...");
+                        bwEditPurokMember.RunWorkerAsync();
+                    }
                 }
             }
             else
@@ -94,6 +105,24 @@ namespace BarangayHealthAid.Management
             }
             else
                 MsgBox.Error(Purok.AddPurokMemberErrorMessage);
+        }
+
+        private void bwEditPurokMember_DoWork(object sender, DoWorkEventArgs e)
+        {
+            Purok.EditPurokMember(purok_member_id,txtName.Text);
+            bwEditPurokMember.CancelAsync();
+        }
+
+        private void bwEditPurokMember_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            HideLoading();
+            if (Purok.EditPurokMemberIsSuccessful)
+            {
+                MsgBox.Information("Editing complete.");
+                this.Close();
+            }
+            else
+                MsgBox.Error(Purok.EditPurokMemberErrorMessage);
         }
 
     }

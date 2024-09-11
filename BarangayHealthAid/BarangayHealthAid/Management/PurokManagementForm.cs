@@ -100,6 +100,7 @@ namespace BarangayHealthAid.Management
         DataTable PurokMembersTable = new DataTable();
 
         private int purok_id,member_id;
+        private string member_name,_purok_name;
         private void PurokManagementForm_Shown(object sender, EventArgs e)
         {
             layoutControl1.AllowCustomization = false;
@@ -120,6 +121,7 @@ namespace BarangayHealthAid.Management
             if (SelectionPass())
             {
                 purok_id = Convert.ToInt32(gvPurok.GetFocusedRowCellValue("id").ToString());
+                _purok_name = gvPurok.GetFocusedRowCellValue("purok_name").ToString();
             }
             else
                 purok_id = 0;
@@ -130,6 +132,7 @@ namespace BarangayHealthAid.Management
             if (SelectionPass2())
             {
                 member_id = Convert.ToInt32(gvPurokMember.GetFocusedRowCellValue("id").ToString());
+                member_name = gvPurokMember.GetFocusedRowCellValue("name").ToString();
             }
             else
                 member_id = 0;
@@ -182,6 +185,21 @@ namespace BarangayHealthAid.Management
         {
             GetRowDetails();
             LoadMembers();
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            MsgBox.QuestionYesNo("Are you sure you want to edit this purok?");
+            if (MsgBox.isYes)
+            {
+                GetRowDetails();
+                PurokAddForm paf = new PurokAddForm();
+                paf.purok_id = purok_id;
+                paf.is_add = false;
+                paf.txtPurokName.Text = _purok_name;
+                paf.ShowDialog();
+                LoadPurok();
+            }
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -308,7 +326,22 @@ namespace BarangayHealthAid.Management
 
         private void btnEdit2_Click(object sender, EventArgs e)
         {
-
+            if (SelectionPass2())
+            {
+                MsgBox.QuestionYesNo("Are you sure you want to edit this purok member?");
+                if (MsgBox.isYes)
+                {
+                    GetRowDetailsMember();
+                    PurokMemberAddForm pmaf = new PurokMemberAddForm();
+                    pmaf.purok_member_id = member_id;
+                    pmaf.is_add = false;
+                    pmaf.txtName.Text = member_name;
+                    pmaf.ShowDialog();
+                    LoadMembers();
+                }
+            }
+            else
+                MsgBox.Error("No Purok Member Selected.");
         }
     }
 }
