@@ -161,7 +161,7 @@ CREATE TABLE `purok` (
 
 /*Data for the table `purok` */
 
-insert  into `purok`(`id`,`purok_name`,`added_by`,`added_on`) values (1,'Purok 1',1,'2024-09-01 20:40:42'),(3,'Purok 2',1,'2024-09-01 21:48:24');
+insert  into `purok`(`id`,`purok_name`,`added_by`,`added_on`) values (1,'Purok 1',1,'2024-09-11 21:24:25'),(3,'Purok 2',1,'2024-09-01 21:48:24');
 
 /*Table structure for table `purok_family_members` */
 
@@ -178,7 +178,7 @@ CREATE TABLE `purok_family_members` (
 
 /*Data for the table `purok_family_members` */
 
-insert  into `purok_family_members`(`id`,`purok_members_id`,`name`,`added_by`,`added_on`) values (1,1,'Father',1,'2024-09-10 23:26:39'),(2,1,'Mother',1,'2024-09-10 23:36:08'),(4,2,'Father3',1,'2024-09-11 00:07:05');
+insert  into `purok_family_members`(`id`,`purok_members_id`,`name`,`added_by`,`added_on`) values (1,1,'Father',1,'2024-09-10 23:26:39'),(2,1,'Family Head 234',1,'2024-09-10 23:36:08'),(4,2,'Father3',1,'2024-09-11 00:07:05');
 
 /*Table structure for table `purok_members` */
 
@@ -195,7 +195,7 @@ CREATE TABLE `purok_members` (
 
 /*Data for the table `purok_members` */
 
-insert  into `purok_members`(`id`,`purok_id`,`name`,`added_by`,`added_on`) values (1,1,'test',1,'2024-09-01 21:46:31'),(2,1,'Family Head 2',1,'2024-09-10 23:36:21');
+insert  into `purok_members`(`id`,`purok_id`,`name`,`added_by`,`added_on`) values (1,1,'test',1,'2024-09-01 21:46:31'),(2,1,'Family Head',1,'2024-09-10 23:36:21');
 
 /*Table structure for table `users` */
 
@@ -638,6 +638,21 @@ WHERE `id` = _id;
     END */$$
 DELIMITER ;
 
+/* Procedure structure for procedure `sp_purok_edit` */
+
+/*!50003 DROP PROCEDURE IF EXISTS  `sp_purok_edit` */;
+
+DELIMITER $$
+
+/*!50003 CREATE DEFINER=`system_admin`@`%` PROCEDURE `sp_purok_edit`(
+	_purok_name varchar (255),
+	_id int (11)
+    )
+BEGIN
+UPDATE `purok` p SET p.`purok_name` = _purok_name WHERE p.`id` = _id;
+    END */$$
+DELIMITER ;
+
 /* Procedure structure for procedure `sp_purok_family_members_get` */
 
 /*!50003 DROP PROCEDURE IF EXISTS  `sp_purok_family_members_get` */;
@@ -755,6 +770,21 @@ BEGIN
 DELETE
 FROM `purok_members`
 WHERE `id` = _id;
+    END */$$
+DELIMITER ;
+
+/* Procedure structure for procedure `sp_purok_members_edit` */
+
+/*!50003 DROP PROCEDURE IF EXISTS  `sp_purok_members_edit` */;
+
+DELIMITER $$
+
+/*!50003 CREATE DEFINER=`system_admin`@`%` PROCEDURE `sp_purok_members_edit`(
+	_name varchar (255),
+	_id int (11)
+    )
+BEGIN
+UPDATE `purok_members` p SET p.`name` = _name WHERE p.`id` = _id;
     END */$$
 DELIMITER ;
 
