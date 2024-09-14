@@ -30,16 +30,18 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MaternalHealthRecordAddForm));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.dateEdit7 = new DevExpress.XtraEditors.DateEdit();
-            this.dateEdit6 = new DevExpress.XtraEditors.DateEdit();
-            this.dateEdit5 = new DevExpress.XtraEditors.DateEdit();
-            this.dateEdit4 = new DevExpress.XtraEditors.DateEdit();
-            this.dateEdit3 = new DevExpress.XtraEditors.DateEdit();
-            this.dateEdit2 = new DevExpress.XtraEditors.DateEdit();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
-            this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
+            this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
+            this.btnSave = new DevExpress.XtraEditors.SimpleButton();
+            this.dtIronFolic9 = new DevExpress.XtraEditors.DateEdit();
+            this.dtIronFolic8 = new DevExpress.XtraEditors.DateEdit();
+            this.dtIronFolic7 = new DevExpress.XtraEditors.DateEdit();
+            this.dtIronFolic6 = new DevExpress.XtraEditors.DateEdit();
+            this.dtIronFolic5 = new DevExpress.XtraEditors.DateEdit();
+            this.dtIronFolic4 = new DevExpress.XtraEditors.DateEdit();
+            this.txtVitADescribed = new DevExpress.XtraEditors.TextEdit();
+            this.dtVitA = new DevExpress.XtraEditors.DateEdit();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
-            this.checkedListBoxControl1 = new DevExpress.XtraEditors.CheckedListBoxControl();
+            this.clbChecklist = new DevExpress.XtraEditors.CheckedListBoxControl();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.txtComplications = new DevExpress.XtraEditors.TextEdit();
             this.txtHIV = new DevExpress.XtraEditors.TextEdit();
@@ -60,12 +62,12 @@
             this.txtAttended = new DevExpress.XtraEditors.TextEdit();
             this.txtWhereDel = new DevExpress.XtraEditors.TextEdit();
             this.label1 = new System.Windows.Forms.Label();
-            this.textEdit9 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit8 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit7 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit6 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit5 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit4 = new DevExpress.XtraEditors.TextEdit();
+            this.txtEDC = new DevExpress.XtraEditors.TextEdit();
+            this.txtLMP = new DevExpress.XtraEditors.TextEdit();
+            this.txtStillBirth = new DevExpress.XtraEditors.TextEdit();
+            this.txtA = new DevExpress.XtraEditors.TextEdit();
+            this.txtPara = new DevExpress.XtraEditors.TextEdit();
+            this.txtGravida = new DevExpress.XtraEditors.TextEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.txtPrevHosp = new DevExpress.XtraEditors.TextEdit();
             this.txtAllergy = new DevExpress.XtraEditors.TextEdit();
@@ -172,33 +174,31 @@
             this.layoutControlItem55 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem56 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem57 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem58 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem59 = new DevExpress.XtraLayout.LayoutControlItem();
             this.Z = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem11 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.btnSave = new DevExpress.XtraEditors.SimpleButton();
-            this.layoutControlItem58 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
-            this.layoutControlItem59 = new DevExpress.XtraLayout.LayoutControlItem();
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::BarangayHealthAid.WaitForm1), true, true);
             this.bwAddRecord = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit7.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit7.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit6.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit6.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit5.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit5.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit4.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit3.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkedListBoxControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtIronFolic9.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtIronFolic9.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtIronFolic8.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtIronFolic8.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtIronFolic7.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtIronFolic7.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtIronFolic6.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtIronFolic6.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtIronFolic5.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtIronFolic5.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtIronFolic4.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtIronFolic4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtVitADescribed.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtVitA.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtVitA.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clbChecklist)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtComplications.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHIV.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBloodTyping.Properties)).BeginInit();
@@ -220,12 +220,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtScreeningPlan.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAttended.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtWhereDel.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit9.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit8.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit7.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEDC.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLMP.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtStillBirth.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtA.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPara.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGravida.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPrevHosp.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAllergy.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPrevIllness.Properties)).BeginInit();
@@ -330,27 +330,27 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem55)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem56)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem57)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem58)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem59)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Z)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem58)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem59)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
             this.layoutControl1.Controls.Add(this.btnCancel);
             this.layoutControl1.Controls.Add(this.btnSave);
-            this.layoutControl1.Controls.Add(this.dateEdit7);
-            this.layoutControl1.Controls.Add(this.dateEdit6);
-            this.layoutControl1.Controls.Add(this.dateEdit5);
-            this.layoutControl1.Controls.Add(this.dateEdit4);
-            this.layoutControl1.Controls.Add(this.dateEdit3);
-            this.layoutControl1.Controls.Add(this.dateEdit2);
-            this.layoutControl1.Controls.Add(this.textEdit1);
-            this.layoutControl1.Controls.Add(this.dateEdit1);
+            this.layoutControl1.Controls.Add(this.dtIronFolic9);
+            this.layoutControl1.Controls.Add(this.dtIronFolic8);
+            this.layoutControl1.Controls.Add(this.dtIronFolic7);
+            this.layoutControl1.Controls.Add(this.dtIronFolic6);
+            this.layoutControl1.Controls.Add(this.dtIronFolic5);
+            this.layoutControl1.Controls.Add(this.dtIronFolic4);
+            this.layoutControl1.Controls.Add(this.txtVitADescribed);
+            this.layoutControl1.Controls.Add(this.dtVitA);
             this.layoutControl1.Controls.Add(this.labelControl7);
-            this.layoutControl1.Controls.Add(this.checkedListBoxControl1);
+            this.layoutControl1.Controls.Add(this.clbChecklist);
             this.layoutControl1.Controls.Add(this.labelControl6);
             this.layoutControl1.Controls.Add(this.txtComplications);
             this.layoutControl1.Controls.Add(this.txtHIV);
@@ -371,12 +371,12 @@
             this.layoutControl1.Controls.Add(this.txtAttended);
             this.layoutControl1.Controls.Add(this.txtWhereDel);
             this.layoutControl1.Controls.Add(this.label1);
-            this.layoutControl1.Controls.Add(this.textEdit9);
-            this.layoutControl1.Controls.Add(this.textEdit8);
-            this.layoutControl1.Controls.Add(this.textEdit7);
-            this.layoutControl1.Controls.Add(this.textEdit6);
-            this.layoutControl1.Controls.Add(this.textEdit5);
-            this.layoutControl1.Controls.Add(this.textEdit4);
+            this.layoutControl1.Controls.Add(this.txtEDC);
+            this.layoutControl1.Controls.Add(this.txtLMP);
+            this.layoutControl1.Controls.Add(this.txtStillBirth);
+            this.layoutControl1.Controls.Add(this.txtA);
+            this.layoutControl1.Controls.Add(this.txtPara);
+            this.layoutControl1.Controls.Add(this.txtGravida);
             this.layoutControl1.Controls.Add(this.labelControl3);
             this.layoutControl1.Controls.Add(this.txtPrevHosp);
             this.layoutControl1.Controls.Add(this.txtAllergy);
@@ -407,132 +407,154 @@
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
-            // dateEdit7
+            // btnCancel
             // 
-            this.dateEdit7.EditValue = null;
-            this.dateEdit7.Location = new System.Drawing.Point(589, 602);
-            this.dateEdit7.Name = "dateEdit7";
-            this.dateEdit7.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
+            this.btnCancel.Location = new System.Drawing.Point(423, 758);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(126, 22);
+            this.btnCancel.StyleController = this.layoutControl1;
+            this.btnCancel.TabIndex = 20;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
+            this.btnSave.Location = new System.Drawing.Point(553, 758);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(169, 22);
+            this.btnSave.StyleController = this.layoutControl1;
+            this.btnSave.TabIndex = 19;
+            this.btnSave.Text = "Save";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // dtIronFolic9
+            // 
+            this.dtIronFolic9.EditValue = null;
+            this.dtIronFolic9.Location = new System.Drawing.Point(589, 602);
+            this.dtIronFolic9.Name = "dtIronFolic9";
+            this.dtIronFolic9.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit7.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dtIronFolic9.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit7.Properties.DisplayFormat.FormatString = "yyyy-MM-dd";
-            this.dateEdit7.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.dateEdit7.Properties.EditFormat.FormatString = "yyyy-MM-dd";
-            this.dateEdit7.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.dateEdit7.Size = new System.Drawing.Size(133, 20);
-            this.dateEdit7.StyleController = this.layoutControl1;
-            this.dateEdit7.TabIndex = 17;
+            this.dtIronFolic9.Properties.DisplayFormat.FormatString = "yyyy-MM-dd";
+            this.dtIronFolic9.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.dtIronFolic9.Properties.EditFormat.FormatString = "yyyy-MM-dd";
+            this.dtIronFolic9.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.dtIronFolic9.Size = new System.Drawing.Size(133, 20);
+            this.dtIronFolic9.StyleController = this.layoutControl1;
+            this.dtIronFolic9.TabIndex = 17;
             // 
-            // dateEdit6
+            // dtIronFolic8
             // 
-            this.dateEdit6.EditValue = null;
-            this.dateEdit6.Location = new System.Drawing.Point(407, 602);
-            this.dateEdit6.Name = "dateEdit6";
-            this.dateEdit6.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dtIronFolic8.EditValue = null;
+            this.dtIronFolic8.Location = new System.Drawing.Point(407, 602);
+            this.dtIronFolic8.Name = "dtIronFolic8";
+            this.dtIronFolic8.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit6.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dtIronFolic8.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit6.Properties.DisplayFormat.FormatString = "yyyy-MM-dd";
-            this.dateEdit6.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.dateEdit6.Properties.EditFormat.FormatString = "yyyy-MM-dd";
-            this.dateEdit6.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.dateEdit6.Size = new System.Drawing.Size(132, 20);
-            this.dateEdit6.StyleController = this.layoutControl1;
-            this.dateEdit6.TabIndex = 16;
+            this.dtIronFolic8.Properties.DisplayFormat.FormatString = "yyyy-MM-dd";
+            this.dtIronFolic8.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.dtIronFolic8.Properties.EditFormat.FormatString = "yyyy-MM-dd";
+            this.dtIronFolic8.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.dtIronFolic8.Size = new System.Drawing.Size(132, 20);
+            this.dtIronFolic8.StyleController = this.layoutControl1;
+            this.dtIronFolic8.TabIndex = 16;
             // 
-            // dateEdit5
+            // dtIronFolic7
             // 
-            this.dateEdit5.EditValue = null;
-            this.dateEdit5.Location = new System.Drawing.Point(589, 578);
-            this.dateEdit5.Name = "dateEdit5";
-            this.dateEdit5.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dtIronFolic7.EditValue = null;
+            this.dtIronFolic7.Location = new System.Drawing.Point(589, 578);
+            this.dtIronFolic7.Name = "dtIronFolic7";
+            this.dtIronFolic7.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit5.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dtIronFolic7.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit5.Properties.DisplayFormat.FormatString = "yyyy-MM-dd";
-            this.dateEdit5.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.dateEdit5.Properties.EditFormat.FormatString = "yyyy-MM-dd";
-            this.dateEdit5.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.dateEdit5.Size = new System.Drawing.Size(133, 20);
-            this.dateEdit5.StyleController = this.layoutControl1;
-            this.dateEdit5.TabIndex = 16;
+            this.dtIronFolic7.Properties.DisplayFormat.FormatString = "yyyy-MM-dd";
+            this.dtIronFolic7.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.dtIronFolic7.Properties.EditFormat.FormatString = "yyyy-MM-dd";
+            this.dtIronFolic7.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.dtIronFolic7.Size = new System.Drawing.Size(133, 20);
+            this.dtIronFolic7.StyleController = this.layoutControl1;
+            this.dtIronFolic7.TabIndex = 16;
             // 
-            // dateEdit4
+            // dtIronFolic6
             // 
-            this.dateEdit4.EditValue = null;
-            this.dateEdit4.Location = new System.Drawing.Point(407, 578);
-            this.dateEdit4.Name = "dateEdit4";
-            this.dateEdit4.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dtIronFolic6.EditValue = null;
+            this.dtIronFolic6.Location = new System.Drawing.Point(407, 578);
+            this.dtIronFolic6.Name = "dtIronFolic6";
+            this.dtIronFolic6.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit4.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dtIronFolic6.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit4.Properties.DisplayFormat.FormatString = "yyyy-MM-dd";
-            this.dateEdit4.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.dateEdit4.Properties.EditFormat.FormatString = "yyyy-MM-dd";
-            this.dateEdit4.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.dateEdit4.Size = new System.Drawing.Size(132, 20);
-            this.dateEdit4.StyleController = this.layoutControl1;
-            this.dateEdit4.TabIndex = 15;
+            this.dtIronFolic6.Properties.DisplayFormat.FormatString = "yyyy-MM-dd";
+            this.dtIronFolic6.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.dtIronFolic6.Properties.EditFormat.FormatString = "yyyy-MM-dd";
+            this.dtIronFolic6.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.dtIronFolic6.Size = new System.Drawing.Size(132, 20);
+            this.dtIronFolic6.StyleController = this.layoutControl1;
+            this.dtIronFolic6.TabIndex = 15;
             // 
-            // dateEdit3
+            // dtIronFolic5
             // 
-            this.dateEdit3.EditValue = null;
-            this.dateEdit3.Location = new System.Drawing.Point(589, 554);
-            this.dateEdit3.Name = "dateEdit3";
-            this.dateEdit3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dtIronFolic5.EditValue = null;
+            this.dtIronFolic5.Location = new System.Drawing.Point(589, 554);
+            this.dtIronFolic5.Name = "dtIronFolic5";
+            this.dtIronFolic5.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit3.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dtIronFolic5.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit3.Properties.DisplayFormat.FormatString = "yyyy-MM-dd";
-            this.dateEdit3.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.dateEdit3.Properties.EditFormat.FormatString = "yyyy-MM-dd";
-            this.dateEdit3.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.dateEdit3.Size = new System.Drawing.Size(133, 20);
-            this.dateEdit3.StyleController = this.layoutControl1;
-            this.dateEdit3.TabIndex = 15;
+            this.dtIronFolic5.Properties.DisplayFormat.FormatString = "yyyy-MM-dd";
+            this.dtIronFolic5.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.dtIronFolic5.Properties.EditFormat.FormatString = "yyyy-MM-dd";
+            this.dtIronFolic5.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.dtIronFolic5.Size = new System.Drawing.Size(133, 20);
+            this.dtIronFolic5.StyleController = this.layoutControl1;
+            this.dtIronFolic5.TabIndex = 15;
             // 
-            // dateEdit2
+            // dtIronFolic4
             // 
-            this.dateEdit2.EditValue = null;
-            this.dateEdit2.Location = new System.Drawing.Point(407, 554);
-            this.dateEdit2.Name = "dateEdit2";
-            this.dateEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dtIronFolic4.EditValue = null;
+            this.dtIronFolic4.Location = new System.Drawing.Point(407, 554);
+            this.dtIronFolic4.Name = "dtIronFolic4";
+            this.dtIronFolic4.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit2.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dtIronFolic4.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit2.Properties.DisplayFormat.FormatString = "yyyy-MM-dd";
-            this.dateEdit2.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.dateEdit2.Properties.EditFormat.FormatString = "yyyy-MM-dd";
-            this.dateEdit2.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.dateEdit2.Size = new System.Drawing.Size(132, 20);
-            this.dateEdit2.StyleController = this.layoutControl1;
-            this.dateEdit2.TabIndex = 14;
+            this.dtIronFolic4.Properties.DisplayFormat.FormatString = "yyyy-MM-dd";
+            this.dtIronFolic4.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.dtIronFolic4.Properties.EditFormat.FormatString = "yyyy-MM-dd";
+            this.dtIronFolic4.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.dtIronFolic4.Size = new System.Drawing.Size(132, 20);
+            this.dtIronFolic4.StyleController = this.layoutControl1;
+            this.dtIronFolic4.TabIndex = 14;
             // 
-            // textEdit1
+            // txtVitADescribed
             // 
-            this.textEdit1.Location = new System.Drawing.Point(595, 513);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(127, 20);
-            this.textEdit1.StyleController = this.layoutControl1;
-            this.textEdit1.TabIndex = 13;
+            this.txtVitADescribed.Location = new System.Drawing.Point(595, 513);
+            this.txtVitADescribed.Name = "txtVitADescribed";
+            this.txtVitADescribed.Size = new System.Drawing.Size(127, 20);
+            this.txtVitADescribed.StyleController = this.layoutControl1;
+            this.txtVitADescribed.TabIndex = 13;
             // 
-            // dateEdit1
+            // dtVitA
             // 
-            this.dateEdit1.EditValue = null;
-            this.dateEdit1.Location = new System.Drawing.Point(423, 513);
-            this.dateEdit1.Name = "dateEdit1";
-            this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dtVitA.EditValue = null;
+            this.dtVitA.Location = new System.Drawing.Point(423, 513);
+            this.dtVitA.Name = "dtVitA";
+            this.dtVitA.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dtVitA.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Properties.DisplayFormat.FormatString = "yyyy-MM-dd";
-            this.dateEdit1.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.dateEdit1.Properties.EditFormat.FormatString = "yyyy-MM-dd";
-            this.dateEdit1.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.dateEdit1.Size = new System.Drawing.Size(109, 20);
-            this.dateEdit1.StyleController = this.layoutControl1;
-            this.dateEdit1.TabIndex = 13;
+            this.dtVitA.Properties.DisplayFormat.FormatString = "yyyy-MM-dd";
+            this.dtVitA.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.dtVitA.Properties.EditFormat.FormatString = "yyyy-MM-dd";
+            this.dtVitA.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.dtVitA.Size = new System.Drawing.Size(109, 20);
+            this.dtVitA.StyleController = this.layoutControl1;
+            this.dtVitA.TabIndex = 13;
             // 
             // labelControl7
             // 
@@ -546,10 +568,10 @@
             this.labelControl7.TabIndex = 13;
             this.labelControl7.Text = "MICRONUTRIENT SUPPLEMENTATION Vit A (10,000 IU)";
             // 
-            // checkedListBoxControl1
+            // clbChecklist
             // 
-            this.checkedListBoxControl1.HorzScrollStep = 2;
-            this.checkedListBoxControl1.Items.AddRange(new DevExpress.XtraEditors.Controls.CheckedListBoxItem[] {
+            this.clbChecklist.HorzScrollStep = 2;
+            this.clbChecklist.Items.AddRange(new DevExpress.XtraEditors.Controls.CheckedListBoxItem[] {
             new DevExpress.XtraEditors.Controls.CheckedListBoxItem("Vaginal Bleeding", "Vaginal Bleeding"),
             new DevExpress.XtraEditors.Controls.CheckedListBoxItem("Severe Headache", "Severe Headache"),
             new DevExpress.XtraEditors.Controls.CheckedListBoxItem("Blurring of Vision", "Blurring of Vision"),
@@ -566,11 +588,11 @@
             new DevExpress.XtraEditors.Controls.CheckedListBoxItem("vaginal discharge", "vaginal discharge"),
             new DevExpress.XtraEditors.Controls.CheckedListBoxItem("diabetes", "diabetes"),
             new DevExpress.XtraEditors.Controls.CheckedListBoxItem("Escape of fluid from vagina", "Escape of fluid from vagina")});
-            this.checkedListBoxControl1.Location = new System.Drawing.Point(361, 418);
-            this.checkedListBoxControl1.Name = "checkedListBoxControl1";
-            this.checkedListBoxControl1.Size = new System.Drawing.Size(361, 71);
-            this.checkedListBoxControl1.StyleController = this.layoutControl1;
-            this.checkedListBoxControl1.TabIndex = 18;
+            this.clbChecklist.Location = new System.Drawing.Point(361, 418);
+            this.clbChecklist.Name = "clbChecklist";
+            this.clbChecklist.Size = new System.Drawing.Size(361, 71);
+            this.clbChecklist.StyleController = this.layoutControl1;
+            this.clbChecklist.TabIndex = 18;
             // 
             // labelControl6
             // 
@@ -789,53 +811,53 @@
             this.label1.TabIndex = 16;
             this.label1.Text = "Plan of Delivery:";
             // 
-            // textEdit9
+            // txtEDC
             // 
-            this.textEdit9.Location = new System.Drawing.Point(164, 456);
-            this.textEdit9.Name = "textEdit9";
-            this.textEdit9.Size = new System.Drawing.Size(193, 20);
-            this.textEdit9.StyleController = this.layoutControl1;
-            this.textEdit9.TabIndex = 15;
+            this.txtEDC.Location = new System.Drawing.Point(164, 456);
+            this.txtEDC.Name = "txtEDC";
+            this.txtEDC.Size = new System.Drawing.Size(193, 20);
+            this.txtEDC.StyleController = this.layoutControl1;
+            this.txtEDC.TabIndex = 15;
             // 
-            // textEdit8
+            // txtLMP
             // 
-            this.textEdit8.Location = new System.Drawing.Point(40, 456);
-            this.textEdit8.Name = "textEdit8";
-            this.textEdit8.Size = new System.Drawing.Size(91, 20);
-            this.textEdit8.StyleController = this.layoutControl1;
-            this.textEdit8.TabIndex = 14;
+            this.txtLMP.Location = new System.Drawing.Point(40, 456);
+            this.txtLMP.Name = "txtLMP";
+            this.txtLMP.Size = new System.Drawing.Size(91, 20);
+            this.txtLMP.StyleController = this.layoutControl1;
+            this.txtLMP.TabIndex = 14;
             // 
-            // textEdit7
+            // txtStillBirth
             // 
-            this.textEdit7.Location = new System.Drawing.Point(307, 432);
-            this.textEdit7.Name = "textEdit7";
-            this.textEdit7.Size = new System.Drawing.Size(50, 20);
-            this.textEdit7.StyleController = this.layoutControl1;
-            this.textEdit7.TabIndex = 15;
+            this.txtStillBirth.Location = new System.Drawing.Point(307, 432);
+            this.txtStillBirth.Name = "txtStillBirth";
+            this.txtStillBirth.Size = new System.Drawing.Size(50, 20);
+            this.txtStillBirth.StyleController = this.layoutControl1;
+            this.txtStillBirth.TabIndex = 15;
             // 
-            // textEdit6
+            // txtA
             // 
-            this.textEdit6.Location = new System.Drawing.Point(210, 432);
-            this.textEdit6.Name = "textEdit6";
-            this.textEdit6.Size = new System.Drawing.Size(50, 20);
-            this.textEdit6.StyleController = this.layoutControl1;
-            this.textEdit6.TabIndex = 15;
+            this.txtA.Location = new System.Drawing.Point(210, 432);
+            this.txtA.Name = "txtA";
+            this.txtA.Size = new System.Drawing.Size(50, 20);
+            this.txtA.StyleController = this.layoutControl1;
+            this.txtA.TabIndex = 15;
             // 
-            // textEdit5
+            // txtPara
             // 
-            this.textEdit5.Location = new System.Drawing.Point(144, 432);
-            this.textEdit5.Name = "textEdit5";
-            this.textEdit5.Size = new System.Drawing.Size(50, 20);
-            this.textEdit5.StyleController = this.layoutControl1;
-            this.textEdit5.TabIndex = 14;
+            this.txtPara.Location = new System.Drawing.Point(144, 432);
+            this.txtPara.Name = "txtPara";
+            this.txtPara.Size = new System.Drawing.Size(50, 20);
+            this.txtPara.StyleController = this.layoutControl1;
+            this.txtPara.TabIndex = 14;
             // 
-            // textEdit4
+            // txtGravida
             // 
-            this.textEdit4.Location = new System.Drawing.Point(58, 432);
-            this.textEdit4.Name = "textEdit4";
-            this.textEdit4.Size = new System.Drawing.Size(50, 20);
-            this.textEdit4.StyleController = this.layoutControl1;
-            this.textEdit4.TabIndex = 13;
+            this.txtGravida.Location = new System.Drawing.Point(58, 432);
+            this.txtGravida.Name = "txtGravida";
+            this.txtGravida.Size = new System.Drawing.Size(50, 20);
+            this.txtGravida.StyleController = this.layoutControl1;
+            this.txtGravida.TabIndex = 13;
             // 
             // labelControl3
             // 
@@ -1379,7 +1401,7 @@
             // 
             // layoutControlItem22
             // 
-            this.layoutControlItem22.Control = this.textEdit4;
+            this.layoutControlItem22.Control = this.txtGravida;
             this.layoutControlItem22.Location = new System.Drawing.Point(0, 420);
             this.layoutControlItem22.Name = "layoutControlItem22";
             this.layoutControlItem22.Size = new System.Drawing.Size(100, 24);
@@ -1390,7 +1412,7 @@
             // 
             // layoutControlItem23
             // 
-            this.layoutControlItem23.Control = this.textEdit5;
+            this.layoutControlItem23.Control = this.txtPara;
             this.layoutControlItem23.Location = new System.Drawing.Point(100, 420);
             this.layoutControlItem23.Name = "layoutControlItem23";
             this.layoutControlItem23.Size = new System.Drawing.Size(86, 24);
@@ -1401,7 +1423,7 @@
             // 
             // layoutControlItem24
             // 
-            this.layoutControlItem24.Control = this.textEdit6;
+            this.layoutControlItem24.Control = this.txtA;
             this.layoutControlItem24.Location = new System.Drawing.Point(186, 420);
             this.layoutControlItem24.Name = "layoutControlItem24";
             this.layoutControlItem24.Size = new System.Drawing.Size(66, 24);
@@ -1412,7 +1434,7 @@
             // 
             // layoutControlItem25
             // 
-            this.layoutControlItem25.Control = this.textEdit7;
+            this.layoutControlItem25.Control = this.txtStillBirth;
             this.layoutControlItem25.Location = new System.Drawing.Point(252, 420);
             this.layoutControlItem25.Name = "layoutControlItem25";
             this.layoutControlItem25.Size = new System.Drawing.Size(97, 24);
@@ -1423,7 +1445,7 @@
             // 
             // layoutControlItem26
             // 
-            this.layoutControlItem26.Control = this.textEdit8;
+            this.layoutControlItem26.Control = this.txtLMP;
             this.layoutControlItem26.Location = new System.Drawing.Point(0, 444);
             this.layoutControlItem26.Name = "layoutControlItem26";
             this.layoutControlItem26.Size = new System.Drawing.Size(123, 24);
@@ -1434,7 +1456,7 @@
             // 
             // layoutControlItem27
             // 
-            this.layoutControlItem27.Control = this.textEdit9;
+            this.layoutControlItem27.Control = this.txtEDC;
             this.layoutControlItem27.Location = new System.Drawing.Point(123, 444);
             this.layoutControlItem27.Name = "layoutControlItem27";
             this.layoutControlItem27.Size = new System.Drawing.Size(226, 24);
@@ -1860,7 +1882,7 @@
             // 
             // layoutControlItem48
             // 
-            this.layoutControlItem48.Control = this.checkedListBoxControl1;
+            this.layoutControlItem48.Control = this.clbChecklist;
             this.layoutControlItem48.Location = new System.Drawing.Point(349, 390);
             this.layoutControlItem48.MaxSize = new System.Drawing.Size(365, 91);
             this.layoutControlItem48.MinSize = new System.Drawing.Size(365, 91);
@@ -1890,7 +1912,7 @@
             // 
             // layoutControlItem50
             // 
-            this.layoutControlItem50.Control = this.dateEdit1;
+            this.layoutControlItem50.Control = this.dtVitA;
             this.layoutControlItem50.Location = new System.Drawing.Point(349, 501);
             this.layoutControlItem50.Name = "layoutControlItem50";
             this.layoutControlItem50.Size = new System.Drawing.Size(175, 24);
@@ -1901,7 +1923,7 @@
             // 
             // layoutControlItem51
             // 
-            this.layoutControlItem51.Control = this.textEdit1;
+            this.layoutControlItem51.Control = this.txtVitADescribed;
             this.layoutControlItem51.Location = new System.Drawing.Point(524, 501);
             this.layoutControlItem51.Name = "layoutControlItem51";
             this.layoutControlItem51.Size = new System.Drawing.Size(190, 24);
@@ -1921,7 +1943,7 @@
             // 
             // layoutControlItem52
             // 
-            this.layoutControlItem52.Control = this.dateEdit2;
+            this.layoutControlItem52.Control = this.dtIronFolic4;
             this.layoutControlItem52.Location = new System.Drawing.Point(349, 542);
             this.layoutControlItem52.Name = "layoutControlItem52";
             this.layoutControlItem52.Size = new System.Drawing.Size(182, 24);
@@ -1932,7 +1954,7 @@
             // 
             // layoutControlItem53
             // 
-            this.layoutControlItem53.Control = this.dateEdit3;
+            this.layoutControlItem53.Control = this.dtIronFolic5;
             this.layoutControlItem53.Location = new System.Drawing.Point(531, 542);
             this.layoutControlItem53.Name = "layoutControlItem53";
             this.layoutControlItem53.Size = new System.Drawing.Size(183, 24);
@@ -1943,7 +1965,7 @@
             // 
             // layoutControlItem54
             // 
-            this.layoutControlItem54.Control = this.dateEdit4;
+            this.layoutControlItem54.Control = this.dtIronFolic6;
             this.layoutControlItem54.Location = new System.Drawing.Point(349, 566);
             this.layoutControlItem54.Name = "layoutControlItem54";
             this.layoutControlItem54.Size = new System.Drawing.Size(182, 24);
@@ -1954,7 +1976,7 @@
             // 
             // layoutControlItem55
             // 
-            this.layoutControlItem55.Control = this.dateEdit5;
+            this.layoutControlItem55.Control = this.dtIronFolic7;
             this.layoutControlItem55.Location = new System.Drawing.Point(531, 566);
             this.layoutControlItem55.Name = "layoutControlItem55";
             this.layoutControlItem55.Size = new System.Drawing.Size(183, 24);
@@ -1965,7 +1987,7 @@
             // 
             // layoutControlItem56
             // 
-            this.layoutControlItem56.Control = this.dateEdit6;
+            this.layoutControlItem56.Control = this.dtIronFolic8;
             this.layoutControlItem56.Location = new System.Drawing.Point(349, 590);
             this.layoutControlItem56.Name = "layoutControlItem56";
             this.layoutControlItem56.Size = new System.Drawing.Size(182, 24);
@@ -1976,7 +1998,7 @@
             // 
             // layoutControlItem57
             // 
-            this.layoutControlItem57.Control = this.dateEdit7;
+            this.layoutControlItem57.Control = this.dtIronFolic9;
             this.layoutControlItem57.Location = new System.Drawing.Point(531, 590);
             this.layoutControlItem57.Name = "layoutControlItem57";
             this.layoutControlItem57.Size = new System.Drawing.Size(183, 24);
@@ -1984,6 +2006,24 @@
             this.layoutControlItem57.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
             this.layoutControlItem57.TextSize = new System.Drawing.Size(41, 13);
             this.layoutControlItem57.TextToControlDistance = 5;
+            // 
+            // layoutControlItem58
+            // 
+            this.layoutControlItem58.Control = this.btnSave;
+            this.layoutControlItem58.Location = new System.Drawing.Point(541, 746);
+            this.layoutControlItem58.Name = "layoutControlItem58";
+            this.layoutControlItem58.Size = new System.Drawing.Size(173, 30);
+            this.layoutControlItem58.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem58.TextVisible = false;
+            // 
+            // layoutControlItem59
+            // 
+            this.layoutControlItem59.Control = this.btnCancel;
+            this.layoutControlItem59.Location = new System.Drawing.Point(411, 746);
+            this.layoutControlItem59.Name = "layoutControlItem59";
+            this.layoutControlItem59.Size = new System.Drawing.Size(130, 30);
+            this.layoutControlItem59.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem59.TextVisible = false;
             // 
             // Z
             // 
@@ -2009,46 +2049,6 @@
             this.emptySpaceItem11.Size = new System.Drawing.Size(714, 10);
             this.emptySpaceItem11.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // btnSave
-            // 
-            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
-            this.btnSave.Location = new System.Drawing.Point(553, 758);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(169, 22);
-            this.btnSave.StyleController = this.layoutControl1;
-            this.btnSave.TabIndex = 19;
-            this.btnSave.Text = "Save";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // layoutControlItem58
-            // 
-            this.layoutControlItem58.Control = this.btnSave;
-            this.layoutControlItem58.Location = new System.Drawing.Point(541, 746);
-            this.layoutControlItem58.Name = "layoutControlItem58";
-            this.layoutControlItem58.Size = new System.Drawing.Size(173, 30);
-            this.layoutControlItem58.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem58.TextVisible = false;
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
-            this.btnCancel.Location = new System.Drawing.Point(423, 758);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(126, 22);
-            this.btnCancel.StyleController = this.layoutControl1;
-            this.btnCancel.TabIndex = 20;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
-            // layoutControlItem59
-            // 
-            this.layoutControlItem59.Control = this.btnCancel;
-            this.layoutControlItem59.Location = new System.Drawing.Point(411, 746);
-            this.layoutControlItem59.Name = "layoutControlItem59";
-            this.layoutControlItem59.Size = new System.Drawing.Size(130, 30);
-            this.layoutControlItem59.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem59.TextVisible = false;
-            // 
             // bwAddRecord
             // 
             this.bwAddRecord.WorkerSupportsCancellation = true;
@@ -2070,22 +2070,22 @@
             this.Load += new System.EventHandler(this.MaternalHealthRecordAddForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit7.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit7.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit6.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit6.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit5.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit5.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit4.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit3.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkedListBoxControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtIronFolic9.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtIronFolic9.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtIronFolic8.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtIronFolic8.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtIronFolic7.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtIronFolic7.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtIronFolic6.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtIronFolic6.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtIronFolic5.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtIronFolic5.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtIronFolic4.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtIronFolic4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtVitADescribed.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtVitA.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtVitA.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clbChecklist)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtComplications.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHIV.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBloodTyping.Properties)).EndInit();
@@ -2107,12 +2107,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtScreeningPlan.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAttended.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtWhereDel.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit9.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit8.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit7.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEDC.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLMP.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtStillBirth.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtA.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPara.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGravida.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPrevHosp.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAllergy.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPrevIllness.Properties)).EndInit();
@@ -2217,11 +2217,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem55)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem56)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem57)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem58)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem59)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Z)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem58)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem59)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2278,17 +2278,17 @@
         private DevExpress.XtraLayout.SimpleSeparator simpleSeparator3;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem21;
-        private DevExpress.XtraEditors.TextEdit textEdit4;
+        private DevExpress.XtraEditors.TextEdit txtGravida;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem22;
-        private DevExpress.XtraEditors.TextEdit textEdit5;
+        private DevExpress.XtraEditors.TextEdit txtPara;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem23;
-        private DevExpress.XtraEditors.TextEdit textEdit7;
-        private DevExpress.XtraEditors.TextEdit textEdit6;
+        private DevExpress.XtraEditors.TextEdit txtStillBirth;
+        private DevExpress.XtraEditors.TextEdit txtA;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem24;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem25;
-        private DevExpress.XtraEditors.TextEdit textEdit8;
+        private DevExpress.XtraEditors.TextEdit txtLMP;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem26;
-        private DevExpress.XtraEditors.TextEdit textEdit9;
+        private DevExpress.XtraEditors.TextEdit txtEDC;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem27;
         private DevExpress.XtraEditors.TextEdit txtWhereDel;
         private System.Windows.Forms.Label label1;
@@ -2349,7 +2349,7 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem44;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem45;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem46;
-        private DevExpress.XtraEditors.CheckedListBoxControl checkedListBoxControl1;
+        private DevExpress.XtraEditors.CheckedListBoxControl clbChecklist;
         private DevExpress.XtraEditors.LabelControl labelControl6;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem47;
         private DevExpress.XtraLayout.SimpleSeparator simpleSeparator7;
@@ -2357,21 +2357,21 @@
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem11;
         private DevExpress.XtraEditors.LabelControl labelControl7;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem49;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
-        private DevExpress.XtraEditors.DateEdit dateEdit1;
+        private DevExpress.XtraEditors.TextEdit txtVitADescribed;
+        private DevExpress.XtraEditors.DateEdit dtVitA;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem50;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem51;
         private DevExpress.XtraLayout.SimpleLabelItem simpleLabelItem10;
-        private DevExpress.XtraEditors.DateEdit dateEdit3;
-        private DevExpress.XtraEditors.DateEdit dateEdit2;
+        private DevExpress.XtraEditors.DateEdit dtIronFolic5;
+        private DevExpress.XtraEditors.DateEdit dtIronFolic4;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem52;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem53;
-        private DevExpress.XtraEditors.DateEdit dateEdit4;
+        private DevExpress.XtraEditors.DateEdit dtIronFolic6;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem54;
-        private DevExpress.XtraEditors.DateEdit dateEdit5;
+        private DevExpress.XtraEditors.DateEdit dtIronFolic7;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem55;
-        private DevExpress.XtraEditors.DateEdit dateEdit7;
-        private DevExpress.XtraEditors.DateEdit dateEdit6;
+        private DevExpress.XtraEditors.DateEdit dtIronFolic9;
+        private DevExpress.XtraEditors.DateEdit dtIronFolic8;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem56;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem57;
         private DevExpress.XtraEditors.SimpleButton btnSave;

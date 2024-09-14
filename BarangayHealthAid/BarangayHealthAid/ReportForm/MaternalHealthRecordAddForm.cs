@@ -81,7 +81,8 @@ namespace BarangayHealthAid.ReportForm
 
         private void bwAddRecord_DoWork(object sender, DoWorkEventArgs e)
         {
-            MaternalHealth.AddMaternalHealthRecord("asdf", "1999-05-28");
+            MaternalHealth.AddMaternalHealthRecord(txtName.Text,txtAge.Text,dtDob.Text,txtHeight.Text,txtHusbandName.Text,txtOccupation.Text,txtAddress.Text,txtContactNo.Text,
+txtbornalive.Text, txtliving.Text, txtAbortion.Text, txtFetalDeaths.Text, txtLargeBabies.Text, txtDiabetes.Text, txtPrevIllness.Text, txtAllergy.Text, txtPrevHosp.Text, txtGravida.Text, txtPara.Text, txtA.Text, txtLMP.Text, txtEDC.Text, txtWhereDel.Text, txtAttended.Text, txtScreeningPlan.Text, txtRiskCodes.Text, dtTT1.Text, dtTT2.Text, dtTT3.Text, dtTT4.Text, dtTT5.Text, txtUrinalysis.Text, txtHbsAntigen.Text, txtCBC.Text, txtRPR.Text, txtBloodTyping.Text, txtHIV.Text, txtComplications.Text, clbChecklist.Text, dtVitA.Text, txtVitADescribed.Text, dtIronFolic4.Text,dtIronFolic5.Text, dtIronFolic6.Text,dtIronFolic7.Text,dtIronFolic8.Text,dtIronFolic9.Text);
             bwAddRecord.CancelAsync();
         }
 

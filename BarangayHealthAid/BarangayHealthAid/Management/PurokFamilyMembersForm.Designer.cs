@@ -49,6 +49,7 @@
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::BarangayHealthAid.WaitForm1), true, true);
             this.bwGetPurokFamilyMembers = new System.ComponentModel.BackgroundWorker();
             this.bwDeletePurokFamilyMember = new System.ComponentModel.BackgroundWorker();
+            this.lblHeadName = new DevExpress.XtraLayout.SimpleLabelItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtMembers)).BeginInit();
@@ -61,6 +62,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblHeadName)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -82,7 +84,7 @@
             // btnAdd
             // 
             this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
-            this.btnAdd.Location = new System.Drawing.Point(143, 12);
+            this.btnAdd.Location = new System.Drawing.Point(143, 32);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(92, 22);
             this.btnAdd.StyleController = this.layoutControl1;
@@ -93,7 +95,7 @@
             // btnEdit
             // 
             this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
-            this.btnEdit.Location = new System.Drawing.Point(239, 12);
+            this.btnEdit.Location = new System.Drawing.Point(239, 32);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(82, 22);
             this.btnEdit.StyleController = this.layoutControl1;
@@ -104,7 +106,7 @@
             // btnRemove
             // 
             this.btnRemove.Image = ((System.Drawing.Image)(resources.GetObject("btnRemove.Image")));
-            this.btnRemove.Location = new System.Drawing.Point(325, 12);
+            this.btnRemove.Location = new System.Drawing.Point(325, 32);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(88, 22);
             this.btnRemove.StyleController = this.layoutControl1;
@@ -115,7 +117,7 @@
             // btnRefresh
             // 
             this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
-            this.btnRefresh.Location = new System.Drawing.Point(417, 12);
+            this.btnRefresh.Location = new System.Drawing.Point(417, 32);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(92, 22);
             this.btnRefresh.StyleController = this.layoutControl1;
@@ -125,12 +127,12 @@
             // 
             // dtMembers
             // 
-            this.dtMembers.Location = new System.Drawing.Point(12, 38);
+            this.dtMembers.Location = new System.Drawing.Point(12, 58);
             this.dtMembers.MainView = this.gvMembers;
             this.dtMembers.Name = "dtMembers";
             this.dtMembers.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit1});
-            this.dtMembers.Size = new System.Drawing.Size(497, 535);
+            this.dtMembers.Size = new System.Drawing.Size(497, 515);
             this.dtMembers.TabIndex = 6;
             this.dtMembers.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvMembers});
@@ -180,7 +182,8 @@
             this.layoutControlItem2,
             this.layoutControlItem3,
             this.layoutControlItem4,
-            this.layoutControlItem5});
+            this.layoutControlItem5,
+            this.lblHeadName});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Size = new System.Drawing.Size(521, 585);
@@ -189,7 +192,7 @@
             // emptySpaceItem2
             // 
             this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 0);
+            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 20);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
             this.emptySpaceItem2.Size = new System.Drawing.Size(131, 26);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
@@ -197,16 +200,16 @@
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.dtMembers;
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 26);
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 46);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(501, 539);
+            this.layoutControlItem1.Size = new System.Drawing.Size(501, 519);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.btnRefresh;
-            this.layoutControlItem2.Location = new System.Drawing.Point(405, 0);
+            this.layoutControlItem2.Location = new System.Drawing.Point(405, 20);
             this.layoutControlItem2.MaxSize = new System.Drawing.Size(96, 26);
             this.layoutControlItem2.MinSize = new System.Drawing.Size(96, 26);
             this.layoutControlItem2.Name = "layoutControlItem2";
@@ -218,7 +221,7 @@
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.btnRemove;
-            this.layoutControlItem3.Location = new System.Drawing.Point(313, 0);
+            this.layoutControlItem3.Location = new System.Drawing.Point(313, 20);
             this.layoutControlItem3.MaxSize = new System.Drawing.Size(92, 26);
             this.layoutControlItem3.MinSize = new System.Drawing.Size(92, 26);
             this.layoutControlItem3.Name = "layoutControlItem3";
@@ -230,7 +233,7 @@
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.btnEdit;
-            this.layoutControlItem4.Location = new System.Drawing.Point(227, 0);
+            this.layoutControlItem4.Location = new System.Drawing.Point(227, 20);
             this.layoutControlItem4.MaxSize = new System.Drawing.Size(86, 26);
             this.layoutControlItem4.MinSize = new System.Drawing.Size(86, 26);
             this.layoutControlItem4.Name = "layoutControlItem4";
@@ -242,7 +245,7 @@
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.btnAdd;
-            this.layoutControlItem5.Location = new System.Drawing.Point(131, 0);
+            this.layoutControlItem5.Location = new System.Drawing.Point(131, 20);
             this.layoutControlItem5.MaxSize = new System.Drawing.Size(96, 26);
             this.layoutControlItem5.MinSize = new System.Drawing.Size(96, 26);
             this.layoutControlItem5.Name = "layoutControlItem5";
@@ -262,6 +265,16 @@
             this.bwDeletePurokFamilyMember.WorkerSupportsCancellation = true;
             this.bwDeletePurokFamilyMember.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwDeletePurokFamilyMember_DoWork);
             this.bwDeletePurokFamilyMember.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwDeletePurokFamilyMember_RunWorkerCompleted);
+            // 
+            // lblHeadName
+            // 
+            this.lblHeadName.AllowHotTrack = false;
+            this.lblHeadName.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHeadName.AppearanceItemCaption.Options.UseFont = true;
+            this.lblHeadName.Location = new System.Drawing.Point(0, 0);
+            this.lblHeadName.Name = "lblHeadName";
+            this.lblHeadName.Size = new System.Drawing.Size(501, 20);
+            this.lblHeadName.TextSize = new System.Drawing.Size(116, 16);
             // 
             // PurokFamilyMembersForm
             // 
@@ -289,6 +302,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblHeadName)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -315,5 +329,6 @@
         private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
         private System.ComponentModel.BackgroundWorker bwGetPurokFamilyMembers;
         private System.ComponentModel.BackgroundWorker bwDeletePurokFamilyMember;
+        public DevExpress.XtraLayout.SimpleLabelItem lblHeadName;
     }
 }

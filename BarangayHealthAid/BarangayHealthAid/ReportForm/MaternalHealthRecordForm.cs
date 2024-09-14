@@ -92,7 +92,7 @@ namespace BarangayHealthAid.ReportForm
 
         private void LoadData()
         {
-            if (bwGetMaternalRecord.IsBusy)
+            if (!bwGetMaternalRecord.IsBusy)
             {
                 ShowLoading("Loading Data...");
                 bwGetMaternalRecord.RunWorkerAsync();

@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MaternalHealthRecordForm));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.btnRefresh = new DevExpress.XtraEditors.SimpleButton();
             this.btnPrint = new DevExpress.XtraEditors.SimpleButton();
             this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
             this.dtMaternal = new DevExpress.XtraGrid.GridControl();
@@ -44,10 +45,16 @@
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::BarangayHealthAid.WaitForm1), true, true);
             this.bwGetMaternalRecord = new System.ComponentModel.BackgroundWorker();
-            this.btnRefresh = new DevExpress.XtraEditors.SimpleButton();
-            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.format_birthdate = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.husband_name = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.age = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.height = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.occupation = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.address = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.contact_no = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtMaternal)).BeginInit();
@@ -77,6 +84,17 @@
             this.layoutControl1.Size = new System.Drawing.Size(1188, 584);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
+            this.btnRefresh.Location = new System.Drawing.Point(931, 12);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(116, 22);
+            this.btnRefresh.StyleController = this.layoutControl1;
+            this.btnRefresh.TabIndex = 9;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // btnPrint
             // 
@@ -116,7 +134,14 @@
             // 
             this.gvMaternal.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.id,
-            this.name});
+            this.name,
+            this.format_birthdate,
+            this.husband_name,
+            this.age,
+            this.height,
+            this.occupation,
+            this.address,
+            this.contact_no});
             this.gvMaternal.GridControl = this.dtMaternal;
             this.gvMaternal.Name = "gvMaternal";
             this.gvMaternal.OptionsBehavior.Editable = false;
@@ -223,23 +248,6 @@
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 
-            // bwGetMaternalRecord
-            // 
-            this.bwGetMaternalRecord.WorkerSupportsCancellation = true;
-            this.bwGetMaternalRecord.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwGetMaternalRecord_DoWork);
-            this.bwGetMaternalRecord.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwGetMaternalRecord_RunWorkerCompleted);
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
-            this.btnRefresh.Location = new System.Drawing.Point(931, 12);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(116, 22);
-            this.btnRefresh.StyleController = this.layoutControl1;
-            this.btnRefresh.TabIndex = 9;
-            this.btnRefresh.Text = "Refresh";
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
-            // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.btnRefresh;
@@ -251,6 +259,68 @@
             this.layoutControlItem4.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
+            // 
+            // bwGetMaternalRecord
+            // 
+            this.bwGetMaternalRecord.WorkerSupportsCancellation = true;
+            this.bwGetMaternalRecord.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwGetMaternalRecord_DoWork);
+            this.bwGetMaternalRecord.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwGetMaternalRecord_RunWorkerCompleted);
+            // 
+            // format_birthdate
+            // 
+            this.format_birthdate.Caption = "Birthday";
+            this.format_birthdate.FieldName = "format_birthdate";
+            this.format_birthdate.Name = "format_birthdate";
+            this.format_birthdate.Visible = true;
+            this.format_birthdate.VisibleIndex = 3;
+            // 
+            // husband_name
+            // 
+            this.husband_name.Caption = "Husband";
+            this.husband_name.FieldName = "husband_name";
+            this.husband_name.Name = "husband_name";
+            this.husband_name.Visible = true;
+            this.husband_name.VisibleIndex = 4;
+            // 
+            // age
+            // 
+            this.age.Caption = "Age";
+            this.age.FieldName = "age";
+            this.age.Name = "age";
+            this.age.Visible = true;
+            this.age.VisibleIndex = 1;
+            // 
+            // height
+            // 
+            this.height.Caption = "Height";
+            this.height.FieldName = "height";
+            this.height.Name = "height";
+            this.height.Visible = true;
+            this.height.VisibleIndex = 2;
+            // 
+            // occupation
+            // 
+            this.occupation.Caption = "Occupation";
+            this.occupation.FieldName = "occupation";
+            this.occupation.Name = "occupation";
+            this.occupation.Visible = true;
+            this.occupation.VisibleIndex = 5;
+            // 
+            // address
+            // 
+            this.address.Caption = "Address";
+            this.address.FieldName = "address";
+            this.address.Name = "address";
+            this.address.Visible = true;
+            this.address.VisibleIndex = 6;
+            // 
+            // contact_no
+            // 
+            this.contact_no.Caption = "Contact No.";
+            this.contact_no.FieldName = "contact_no";
+            this.contact_no.Name = "contact_no";
+            this.contact_no.Visible = true;
+            this.contact_no.VisibleIndex = 7;
             // 
             // MaternalHealthRecordForm
             // 
@@ -300,5 +370,12 @@
         private System.ComponentModel.BackgroundWorker bwGetMaternalRecord;
         private DevExpress.XtraEditors.SimpleButton btnRefresh;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
+        private DevExpress.XtraGrid.Columns.GridColumn format_birthdate;
+        private DevExpress.XtraGrid.Columns.GridColumn husband_name;
+        private DevExpress.XtraGrid.Columns.GridColumn age;
+        private DevExpress.XtraGrid.Columns.GridColumn height;
+        private DevExpress.XtraGrid.Columns.GridColumn occupation;
+        private DevExpress.XtraGrid.Columns.GridColumn address;
+        private DevExpress.XtraGrid.Columns.GridColumn contact_no;
     }
 }

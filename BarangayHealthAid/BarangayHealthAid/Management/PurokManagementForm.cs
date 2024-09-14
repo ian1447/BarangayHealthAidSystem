@@ -318,6 +318,7 @@ namespace BarangayHealthAid.Management
                 GetRowDetailsMember();
                 PurokFamilyMembersForm pfm = new PurokFamilyMembersForm();
                 pfm.purok_member_id = member_id;
+                pfm.lblHeadName.Text = "Purok Member Name: " + member_name;
                 pfm.ShowDialog();
             }
             else
