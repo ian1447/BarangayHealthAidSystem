@@ -122,6 +122,12 @@
     <Compile Include="Management\PurokMemberAddForm.Designer.cs">
       <DependentUpon>PurokMemberAddForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="OutPatient\OutPatientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OutPatient\OutPatientForm.Designer.cs">
+      <DependentUpon>OutPatientForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReportForm\MaternalHealthRecordAddForm.cs">
@@ -166,6 +172,12 @@
     <Compile Include="Reports\MaternalHealthRecord.Designer.cs">
       <DependentUpon>MaternalHealthRecord.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\OutPatientReportForm.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\OutPatientReportForm.Designer.cs">
+      <DependentUpon>OutPatientReportForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\PatientClinicalRecord.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -204,6 +216,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Management\PurokMemberAddForm.resx">
       <DependentUpon>PurokMemberAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OutPatient\OutPatientForm.resx">
+      <DependentUpon>OutPatientForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

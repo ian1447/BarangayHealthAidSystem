@@ -37,8 +37,10 @@
             this.btnClinicalRecord = new DevExpress.XtraBars.BarButtonItem();
             this.btnUserManagement = new DevExpress.XtraBars.BarButtonItem();
             this.btnPurok = new DevExpress.XtraBars.BarButtonItem();
+            this.btnOpt = new DevExpress.XtraBars.BarButtonItem();
             this.rpMain = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rpgReports = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rpgOPT = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpgManagement = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpgBackend = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
@@ -59,9 +61,10 @@
             this.btnMaternalHealth,
             this.btnClinicalRecord,
             this.btnUserManagement,
-            this.btnPurok});
+            this.btnPurok,
+            this.btnOpt});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 7;
+            this.ribbon.MaxItemId = 8;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.rpMain});
@@ -122,10 +125,19 @@
             this.btnPurok.Name = "btnPurok";
             this.btnPurok.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPurok_ItemClick);
             // 
+            // btnOpt
+            // 
+            this.btnOpt.Caption = "Out Patient";
+            this.btnOpt.Glyph = ((System.Drawing.Image)(resources.GetObject("btnOpt.Glyph")));
+            this.btnOpt.Id = 7;
+            this.btnOpt.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnOpt.LargeGlyph")));
+            this.btnOpt.Name = "btnOpt";
+            // 
             // rpMain
             // 
             this.rpMain.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.rpgReports,
+            this.rpgOPT,
             this.rpgManagement,
             this.rpgBackend});
             this.rpMain.Name = "rpMain";
@@ -141,6 +153,14 @@
             this.rpgReports.Name = "rpgReports";
             this.rpgReports.ShowCaptionButton = false;
             this.rpgReports.Text = "Reports";
+            // 
+            // rpgOPT
+            // 
+            this.rpgOPT.AllowTextClipping = false;
+            this.rpgOPT.ItemLinks.Add(this.btnOpt);
+            this.rpgOPT.Name = "rpgOPT";
+            this.rpgOPT.ShowCaptionButton = false;
+            this.rpgOPT.Text = "Out Patient";
             // 
             // rpgManagement
             // 
@@ -212,5 +232,7 @@
         private DevExpress.XtraBars.BarButtonItem btnPurok;
         private DevExpress.XtraBars.Docking2010.DocumentManager documentManager1;
         private DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView tabbedView1;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgOPT;
+        private DevExpress.XtraBars.BarButtonItem btnOpt;
     }
 }
