@@ -40,12 +40,14 @@
     </Reference>
     <Reference Include="DevExpress.Charts.v14.2.Core, Version=14.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.v14.2" />
+    <Reference Include="DevExpress.DataAccess.v14.2, Version=14.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Office.v14.2.Core, Version=14.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.PivotGrid.v14.2.Core, Version=14.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Printing.v14.2.Core" />
     <Reference Include="DevExpress.RichEdit.v14.2.Core, Version=14.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Utils.v14.2" />
     <Reference Include="DevExpress.Utils.v14.2.UI, Version=14.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v14.2, Version=14.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraBars.v14.2" />
     <Reference Include="DevExpress.Sparkline.v14.2.Core" />
     <Reference Include="DevExpress.XtraCharts.v14.2, Version=14.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -121,6 +123,12 @@
     </Compile>
     <Compile Include="Management\PurokMemberAddForm.Designer.cs">
       <DependentUpon>PurokMemberAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OutPatient\OutPatientAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OutPatient\OutPatientAddForm.Designer.cs">
+      <DependentUpon>OutPatientAddForm.cs</DependentUpon>
     </Compile>
     <Compile Include="OutPatient\OutPatientForm.cs">
       <SubType>Form</SubType>
@@ -217,6 +225,9 @@
     <EmbeddedResource Include="Management\PurokMemberAddForm.resx">
       <DependentUpon>PurokMemberAddForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="OutPatient\OutPatientAddForm.resx">
+      <DependentUpon>OutPatientAddForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OutPatient\OutPatientForm.resx">
       <DependentUpon>OutPatientForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -250,6 +261,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\MaternalHealthRecord.resx">
       <DependentUpon>MaternalHealthRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\OutPatientReportForm.resx">
+      <DependentUpon>OutPatientReportForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\PatientClinicalRecord.resx">
       <DependentUpon>PatientClinicalRecord.cs</DependentUpon>

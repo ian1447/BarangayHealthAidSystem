@@ -73,11 +73,33 @@ CREATE TABLE `maternal_health_record` (
   `added_by` int(11) DEFAULT NULL,
   `added_on` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 /*Data for the table `maternal_health_record` */
 
-insert  into `maternal_health_record`(`id`,`patient_id`,`name`,`age`,`dob`,`height`,`husband_name`,`occupation`,`address`,`contact_no`,`no_children_born_alive`,`living_children`,`abortion`,`fetal_deaths`,`largebabies`,`diabetes`,`previous_illness`,`allergy`,`previous_hospitalization`,`gravida`,`PARA`,`A`,`LMP`,`EDC`,`where_to_deliver`,`attended_by`,`new_born_screening_plan`,`risk_codes`,`tt1`,`tt2`,`tt3`,`tt4`,`tt5`,`urinalysis`,`hbs_antigen`,`CBC`,`RPR`,`blood_typing`,`HIV`,`prev_pregnancy_complic`,`checklist`,`vit_a_date_given`,`vit_a_prescribed`,`iron_folic_4`,`iron_folic_5`,`iron_folic_6`,`iron_folic_7`,`iron_folic_8`,`iron_folic_9`,`added_by`,`added_on`) values (1,0,'asdf',21,'1999-05-28','158.00','asdf','asdf','asdf','asdf',1,1,0,0,0,'asdf','asdf','asdf','asdf','asdf','asdf','asdf','asdf','asdf','asdf','asdf','asdf','','1999-05-28','1999-05-28','1999-05-28','1999-05-28','1999-05-28','asdf','asdf','asdf','asdf','asdf','asdf','asdf','asdf','1999-05-28','asdf','1999-05-28','1999-05-28','1999-05-28','1999-05-28','1999-05-28','1999-05-28',1,'2024-09-08 14:42:12');
+insert  into `maternal_health_record`(`id`,`patient_id`,`name`,`age`,`dob`,`height`,`husband_name`,`occupation`,`address`,`contact_no`,`no_children_born_alive`,`living_children`,`abortion`,`fetal_deaths`,`largebabies`,`diabetes`,`previous_illness`,`allergy`,`previous_hospitalization`,`gravida`,`PARA`,`A`,`LMP`,`EDC`,`where_to_deliver`,`attended_by`,`new_born_screening_plan`,`risk_codes`,`tt1`,`tt2`,`tt3`,`tt4`,`tt5`,`urinalysis`,`hbs_antigen`,`CBC`,`RPR`,`blood_typing`,`HIV`,`prev_pregnancy_complic`,`checklist`,`vit_a_date_given`,`vit_a_prescribed`,`iron_folic_4`,`iron_folic_5`,`iron_folic_6`,`iron_folic_7`,`iron_folic_8`,`iron_folic_9`,`added_by`,`added_on`) values (1,0,'asdf',21,'1999-05-28','158.00','asdf','asdf','asdf','asdf',1,1,0,0,0,'asdf','asdf','asdf','asdf','asdf','asdf','asdf','asdf','asdf','asdf','asdf','asdf','','1999-05-28','1999-05-28','1999-05-28','1999-05-28','1999-05-28','asdf','asdf','asdf','asdf','asdf','asdf','asdf','asdf','1999-05-28','asdf','1999-05-28','1999-05-28','1999-05-28','1999-05-28','1999-05-28','1999-05-28',1,'2024-09-08 14:42:12'),(2,0,'erw',13,'2024-09-03','23.00','asdf','zxcv','asdf','zxc',1,2,3,4,5,'zxcv','asdf','qwe','uioy','j','k','l','hj',';','78g','hfj','fvbnm','A','2024-09-03','2024-09-11','2024-09-10','2024-10-03','2024-09-30','asd','czx','dfsa','xcvz','zxvc','asdf','szxcv','Vaginal Bleeding','2024-09-18','azxc','2024-09-10','2024-10-01','2024-09-19','2024-09-10','2024-09-11','2024-09-03',1,'2024-09-14 16:03:20');
+
+/*Table structure for table `out_patient` */
+
+DROP TABLE IF EXISTS `out_patient`;
+
+CREATE TABLE `out_patient` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `purok_no` int(11) NOT NULL,
+  `name_of_child` varchar(255) NOT NULL,
+  `birthdate` date NOT NULL,
+  `age_in_months` int(11) NOT NULL,
+  `height` decimal(12,2) DEFAULT NULL,
+  `weight` decimal(12,2) DEFAULT NULL,
+  `nutritional_status` varchar(255) DEFAULT NULL,
+  `added_by` int(11) DEFAULT NULL,
+  `transdate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+/*Data for the table `out_patient` */
+
+insert  into `out_patient`(`id`,`purok_no`,`name_of_child`,`birthdate`,`age_in_months`,`height`,`weight`,`nutritional_status`,`added_by`,`transdate`) values (1,1,'test','2024-09-20',1,'12.00','23.19','normal',1,'2024-09-18 21:50:38');
 
 /*Table structure for table `patient_details` */
 
@@ -402,7 +424,56 @@ DELIMITER $$
 
 /*!50003 CREATE DEFINER=`system_admin`@`%` PROCEDURE `sp_maternal_health_record_get`()
 BEGIN
-SELECT * FROM `maternal_health_record`;
+SELECT DATE_FORMAT(m.`dob`, "%M %d,%Y") format_birthdate, m.*  FROM `maternal_health_record` m;
+    END */$$
+DELIMITER ;
+
+/* Procedure structure for procedure `sp_out_patient_add` */
+
+/*!50003 DROP PROCEDURE IF EXISTS  `sp_out_patient_add` */;
+
+DELIMITER $$
+
+/*!50003 CREATE DEFINER=`system_admin`@`%` PROCEDURE `sp_out_patient_add`(
+	_purok_no int (11),
+	_name_of_child varchar (255),
+	_birthdate date,
+	_age_in_months int (11),
+	_height decimal(12,2),
+	_weight decimal(12,2),
+	_nutritional_status varchar (255),
+	_added_by int (11)
+    )
+BEGIN
+INSERT INTO `out_patient`
+            (`purok_no`,
+             `name_of_child`,
+             `birthdate`,
+             `age_in_months`,
+             `height`,
+             `weight`,
+             `nutritional_status`,
+             `added_by`)
+VALUES (_purok_no,
+        _name_of_child,
+        _birthdate,
+        _age_in_months,
+        _height,
+        _weight,
+        _nutritional_status,
+        _added_by);
+    END */$$
+DELIMITER ;
+
+/* Procedure structure for procedure `sp_out_patient_get` */
+
+/*!50003 DROP PROCEDURE IF EXISTS  `sp_out_patient_get` */;
+
+DELIMITER $$
+
+/*!50003 CREATE DEFINER=`system_admin`@`%` PROCEDURE `sp_out_patient_get`()
+BEGIN
+SELECT * FROM `out_patient`;
     END */$$
 DELIMITER ;
 

@@ -132,6 +132,7 @@
             this.btnOpt.Id = 7;
             this.btnOpt.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnOpt.LargeGlyph")));
             this.btnOpt.Name = "btnOpt";
+            this.btnOpt.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnOpt_ItemClick);
             // 
             // rpMain
             // 
