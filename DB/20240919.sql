@@ -95,11 +95,11 @@ CREATE TABLE `out_patient` (
   `added_by` int(11) DEFAULT NULL,
   `transdate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 /*Data for the table `out_patient` */
 
-insert  into `out_patient`(`id`,`purok_no`,`name_of_child`,`birthdate`,`age_in_months`,`height`,`weight`,`nutritional_status`,`added_by`,`transdate`) values (1,1,'test','2024-09-20',1,'12.00','23.19','normal',1,'2024-09-18 21:50:38');
+insert  into `out_patient`(`id`,`purok_no`,`name_of_child`,`birthdate`,`age_in_months`,`height`,`weight`,`nutritional_status`,`added_by`,`transdate`) values (1,3,'test Edit','2024-06-30',2,'13.00','24.20','abniormal',1,'2024-09-18 21:50:38'),(3,2,'Testing Name','2024-09-10',23,'56.00','123.00','Normal',1,'2024-09-19 21:23:44');
 
 /*Table structure for table `patient_details` */
 
@@ -465,6 +465,35 @@ VALUES (_purok_no,
     END */$$
 DELIMITER ;
 
+/* Procedure structure for procedure `sp_out_patient_edit` */
+
+/*!50003 DROP PROCEDURE IF EXISTS  `sp_out_patient_edit` */;
+
+DELIMITER $$
+
+/*!50003 CREATE DEFINER=`system_admin`@`%` PROCEDURE `sp_out_patient_edit`(
+	_purok_no INT (11),
+	_name_of_child VARCHAR (255),
+	_birthdate DATE,
+	_age_in_months INT (11),
+	_height DECIMAL(12,2),
+	_weight DECIMAL(12,2),
+	_nutritional_status VARCHAR (255),
+	_id INT (11)
+    )
+BEGIN
+	UPDATE `out_patient`
+	SET `purok_no` = _purok_no,
+	  `name_of_child` = _name_of_child,
+	  `birthdate` = _birthdate,
+	  `age_in_months` = _age_in_months,
+	  `height` = _height,
+	  `weight` = _weight,
+	  `nutritional_status` = _nutritional_status
+	WHERE `id` = _id;
+    END */$$
+DELIMITER ;
+
 /* Procedure structure for procedure `sp_out_patient_get` */
 
 /*!50003 DROP PROCEDURE IF EXISTS  `sp_out_patient_get` */;
@@ -473,7 +502,7 @@ DELIMITER $$
 
 /*!50003 CREATE DEFINER=`system_admin`@`%` PROCEDURE `sp_out_patient_get`()
 BEGIN
-SELECT * FROM `out_patient`;
+SELECT DATE_FORMAT(op.`birthdate`, "%M %d,%Y") Formatbirthdate,op.* FROM `out_patient` op;
     END */$$
 DELIMITER ;
 

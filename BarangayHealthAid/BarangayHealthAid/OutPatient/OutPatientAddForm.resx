@@ -160,6 +160,9 @@
 </value>
   </data>
   <metadata name="bwAddOutPatient.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>189, 18</value>
+    <value>194, 17</value>
+  </metadata>
+  <metadata name="bwEditOutPatient.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>343, 17</value>
   </metadata>
 </root>

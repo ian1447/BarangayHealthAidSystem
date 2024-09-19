@@ -58,6 +58,7 @@ namespace BarangayHealthAid.OutPatient
         #endregion
 
         public bool isAdd = true;
+        public string _edit_id;
         private void btnCancel_Click(object sender, EventArgs e)
         {
             MsgBox.QuestionYesNo("Are you sure you want to close this form?\nDetails won't be saved as drafts.");
@@ -79,6 +80,14 @@ namespace BarangayHealthAid.OutPatient
                         bwAddOutPatient.RunWorkerAsync();
                     }
                 }
+                else
+                {
+                    if (!bwEditOutPatient.IsBusy)
+                    {
+                        ShowLoading("Editing Data...");
+                        bwEditOutPatient.RunWorkerAsync();
+                    }
+                }
             }
         }
 
@@ -98,6 +107,24 @@ namespace BarangayHealthAid.OutPatient
             }
             else
                 MsgBox.Error(OPT.GetOutPatientRecordsErrorMessage);
+        }
+
+        private void bwEditOutPatient_DoWork(object sender, DoWorkEventArgs e)
+        {
+            OPT.OutPatientEdit(txtPurok.Text, txtChildName.Text, dtDob.Text, txtAge.Text, txtHeight.Text, txtWeight.Text, txtNutStat.Text,_edit_id);
+            bwEditOutPatient.CancelAsync();
+        }
+
+        private void bwEditOutPatient_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            HideLoading();
+            if (OPT.OutPatientEditIsSuccessful)
+            {
+                MsgBox.Information("Data successfully Edited.");
+                this.Close();
+            }
+            else
+                MsgBox.Error(OPT.OutPatientEditErrorMessage);
         }
     }
 }

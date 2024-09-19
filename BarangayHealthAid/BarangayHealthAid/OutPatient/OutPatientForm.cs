@@ -143,8 +143,9 @@ namespace BarangayHealthAid.OutPatient
             {
                 OutPatientAddForm opa = new OutPatientAddForm();
                 opa.isAdd = false;
+                opa._edit_id = gvOutPatient.GetFocusedRowCellValue("id").ToString();
                 opa.txtAge.Text = gvOutPatient.GetFocusedRowCellValue("age_in_months").ToString();
-                opa.dtDob.DateTime = Convert.ToDateTime(gvOutPatient.GetFocusedRowCellValue("birthdate").ToString());
+                opa.dtDob.DateTime = Convert.ToDateTime(gvOutPatient.GetFocusedRowCellValue("Formatbirthdate").ToString());
                 opa.txtChildName.Text = gvOutPatient.GetFocusedRowCellValue("name_of_child").ToString();
                 opa.txtHeight.Text = gvOutPatient.GetFocusedRowCellValue("height").ToString();
                 opa.txtNutStat.Text = gvOutPatient.GetFocusedRowCellValue("nutritional_status").ToString();

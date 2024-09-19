@@ -76,5 +76,39 @@ namespace BarangayHealthAid.Dal
                 OutPatientAddErrorMessage = ex.Message + "\nFunction : Add Out Patient";
             }
         }
+
+        public static string OutPatientEditErrorMessage;
+        public static bool OutPatientEditIsSuccessful;
+        public static void OutPatientEdit(string _purok_no, string _name_of_child, string _birthdate, string _age_in_months, string _height, string _weight, string _nutritional_status, string _id)
+        {
+            DataSet dt = new DataSet();
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(ConnectionString()))
+                {
+                    con.Open();
+                    MySqlCommand cmd = new MySqlCommand("sp_out_patient_edit", con);
+                    cmd.Parameters.Add(new MySqlParameter("_purok_no", _purok_no));
+                    cmd.Parameters.Add(new MySqlParameter("_name_of_child", _name_of_child));
+                    cmd.Parameters.Add(new MySqlParameter("_birthdate", _birthdate));
+                    cmd.Parameters.Add(new MySqlParameter("_age_in_months", _age_in_months));
+                    cmd.Parameters.Add(new MySqlParameter("_height", _height));
+                    cmd.Parameters.Add(new MySqlParameter("_weight", _weight));
+                    cmd.Parameters.Add(new MySqlParameter("_nutritional_status", _nutritional_status));
+                    cmd.Parameters.Add(new MySqlParameter("_id", _id));
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    MySqlDataAdapter adp = new MySqlDataAdapter(cmd);
+                    adp.Fill(dt);
+                    con.Close();
+                    OutPatientEditIsSuccessful = true;
+                }
+            }
+
+            catch (Exception ex)
+            {
+                OutPatientEditIsSuccessful = false;
+                OutPatientEditErrorMessage = ex.Message + "\nFunction : Edit Out Patient";
+            }
+        }
     }
 }

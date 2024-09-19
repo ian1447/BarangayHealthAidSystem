@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OutPatientForm));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.btnEdit = new DevExpress.XtraEditors.SimpleButton();
             this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
             this.btnRefresh = new DevExpress.XtraEditors.SimpleButton();
             this.btnPrint = new DevExpress.XtraEditors.SimpleButton();
@@ -38,7 +39,7 @@
             this.id = new DevExpress.XtraGrid.Columns.GridColumn();
             this.purok_no = new DevExpress.XtraGrid.Columns.GridColumn();
             this.name_of_child = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.birthdate = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Formatbirthdate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.age_in_months = new DevExpress.XtraGrid.Columns.GridColumn();
             this.height = new DevExpress.XtraGrid.Columns.GridColumn();
             this.nutritional_status = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -51,10 +52,9 @@
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::BarangayHealthAid.WaitForm1), true, true);
             this.bwGetOutPatientData = new System.ComponentModel.BackgroundWorker();
-            this.btnEdit = new DevExpress.XtraEditors.SimpleButton();
-            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtOutPatient)).BeginInit();
@@ -85,6 +85,17 @@
             this.layoutControl1.Size = new System.Drawing.Size(1003, 570);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
+            this.btnEdit.Location = new System.Drawing.Point(664, 12);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(104, 22);
+            this.btnEdit.StyleController = this.layoutControl1;
+            this.btnEdit.TabIndex = 10;
+            this.btnEdit.Text = "Edit";
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnAdd
             // 
@@ -137,7 +148,7 @@
             this.id,
             this.purok_no,
             this.name_of_child,
-            this.birthdate,
+            this.Formatbirthdate,
             this.age_in_months,
             this.height,
             this.nutritional_status,
@@ -185,19 +196,19 @@
             this.name_of_child.Visible = true;
             this.name_of_child.VisibleIndex = 1;
             // 
-            // birthdate
+            // Formatbirthdate
             // 
-            this.birthdate.AppearanceCell.Options.UseTextOptions = true;
-            this.birthdate.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.birthdate.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.birthdate.AppearanceHeader.Options.UseTextOptions = true;
-            this.birthdate.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.birthdate.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.birthdate.Caption = "Birthdate";
-            this.birthdate.FieldName = "birthdate";
-            this.birthdate.Name = "birthdate";
-            this.birthdate.Visible = true;
-            this.birthdate.VisibleIndex = 2;
+            this.Formatbirthdate.AppearanceCell.Options.UseTextOptions = true;
+            this.Formatbirthdate.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.Formatbirthdate.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.Formatbirthdate.AppearanceHeader.Options.UseTextOptions = true;
+            this.Formatbirthdate.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.Formatbirthdate.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.Formatbirthdate.Caption = "Birthdate";
+            this.Formatbirthdate.FieldName = "Formatbirthdate";
+            this.Formatbirthdate.Name = "Formatbirthdate";
+            this.Formatbirthdate.Visible = true;
+            this.Formatbirthdate.VisibleIndex = 2;
             // 
             // age_in_months
             // 
@@ -338,23 +349,6 @@
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
-            // bwGetOutPatientData
-            // 
-            this.bwGetOutPatientData.WorkerSupportsCancellation = true;
-            this.bwGetOutPatientData.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwGetOutPatientData_DoWork);
-            this.bwGetOutPatientData.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwGetOutPatientData_RunWorkerCompleted);
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
-            this.btnEdit.Location = new System.Drawing.Point(664, 12);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(104, 22);
-            this.btnEdit.StyleController = this.layoutControl1;
-            this.btnEdit.TabIndex = 10;
-            this.btnEdit.Text = "Edit";
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
-            // 
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.btnEdit;
@@ -366,6 +360,12 @@
             this.layoutControlItem5.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
+            // 
+            // bwGetOutPatientData
+            // 
+            this.bwGetOutPatientData.WorkerSupportsCancellation = true;
+            this.bwGetOutPatientData.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwGetOutPatientData_DoWork);
+            this.bwGetOutPatientData.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwGetOutPatientData_RunWorkerCompleted);
             // 
             // OutPatientForm
             // 
@@ -406,7 +406,7 @@
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup2;
         private DevExpress.XtraGrid.Columns.GridColumn purok_no;
         private DevExpress.XtraGrid.Columns.GridColumn name_of_child;
-        private DevExpress.XtraGrid.Columns.GridColumn birthdate;
+        private DevExpress.XtraGrid.Columns.GridColumn Formatbirthdate;
         private DevExpress.XtraGrid.Columns.GridColumn age_in_months;
         private DevExpress.XtraGrid.Columns.GridColumn height;
         private DevExpress.XtraGrid.Columns.GridColumn nutritional_status;

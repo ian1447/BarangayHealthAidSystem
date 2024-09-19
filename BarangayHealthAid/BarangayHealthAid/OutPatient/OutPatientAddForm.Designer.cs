@@ -53,6 +53,7 @@
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::BarangayHealthAid.WaitForm1), true, true);
             this.bwAddOutPatient = new System.ComponentModel.BackgroundWorker();
+            this.bwEditOutPatient = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtNutStat.Properties)).BeginInit();
@@ -338,6 +339,12 @@
             this.bwAddOutPatient.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwAddOutPatient_DoWork);
             this.bwAddOutPatient.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwAddOutPatient_RunWorkerCompleted);
             // 
+            // bwEditOutPatient
+            // 
+            this.bwEditOutPatient.WorkerSupportsCancellation = true;
+            this.bwEditOutPatient.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwEditOutPatient_DoWork);
+            this.bwEditOutPatient.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwEditOutPatient_RunWorkerCompleted);
+            // 
             // OutPatientAddForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -402,5 +409,6 @@
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
         private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
         private System.ComponentModel.BackgroundWorker bwAddOutPatient;
+        private System.ComponentModel.BackgroundWorker bwEditOutPatient;
     }
 }
