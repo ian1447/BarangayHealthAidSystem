@@ -124,6 +124,7 @@ namespace BarangayHealthAid.OutPatient
         private void btnPrint_Click(object sender, EventArgs e)
         {
             OutPatientReportForm opr = new OutPatientReportForm();
+            opr.lblPreparedBy.Text = PublicVariables.UserFullName;
             opr.DataSource = OutPatientTable;
             opr.DataMember = "CustomeSqlQuery";
             opr.ShowPreviewDialog();
@@ -133,6 +134,27 @@ namespace BarangayHealthAid.OutPatient
         {
             OutPatientAddForm opa = new OutPatientAddForm();
             opa.ShowDialog();
+            LoadData();
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            if (SelectionPass())
+            {
+                OutPatientAddForm opa = new OutPatientAddForm();
+                opa.isAdd = false;
+                opa.txtAge.Text = gvOutPatient.GetFocusedRowCellValue("age_in_months").ToString();
+                opa.dtDob.DateTime = Convert.ToDateTime(gvOutPatient.GetFocusedRowCellValue("birthdate").ToString());
+                opa.txtChildName.Text = gvOutPatient.GetFocusedRowCellValue("name_of_child").ToString();
+                opa.txtHeight.Text = gvOutPatient.GetFocusedRowCellValue("height").ToString();
+                opa.txtNutStat.Text = gvOutPatient.GetFocusedRowCellValue("nutritional_status").ToString();
+                opa.txtPurok.Text = gvOutPatient.GetFocusedRowCellValue("purok_no").ToString();
+                opa.txtWeight.Text = gvOutPatient.GetFocusedRowCellValue("weight").ToString();
+                opa.ShowDialog();
+                LoadData();
+            }
+            else
+                MsgBox.Warning("No Out Patient Selected.");
         }
     }
 }

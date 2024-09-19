@@ -30,45 +30,47 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OutPatientAddForm));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
+            this.btnSave = new DevExpress.XtraEditors.SimpleButton();
+            this.txtNutStat = new DevExpress.XtraEditors.TextEdit();
+            this.txtPurok = new DevExpress.XtraEditors.TextEdit();
+            this.txtWeight = new DevExpress.XtraEditors.TextEdit();
+            this.txtHeight = new DevExpress.XtraEditors.TextEdit();
+            this.txtAge = new DevExpress.XtraEditors.TextEdit();
+            this.dtDob = new DevExpress.XtraEditors.DateEdit();
+            this.txtChildName = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.txtChildName = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.dtDob = new DevExpress.XtraEditors.DateEdit();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.txtAge = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.txtHeight = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.txtWeight = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.txtPurok = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.txtNutStat = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::BarangayHealthAid.WaitForm1), true, true);
+            this.bwAddOutPatient = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtChildName.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNutStat.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPurok.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtWeight.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtHeight.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAge.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtDob.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtDob.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtChildName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAge.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtHeight.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtWeight.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPurok.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNutStat.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
@@ -94,6 +96,109 @@
             this.layoutControl1.Size = new System.Drawing.Size(479, 163);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
+            this.btnCancel.Location = new System.Drawing.Point(206, 127);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(112, 22);
+            this.btnCancel.StyleController = this.layoutControl1;
+            this.btnCancel.TabIndex = 12;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
+            this.btnSave.Location = new System.Drawing.Point(322, 127);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(145, 22);
+            this.btnSave.StyleController = this.layoutControl1;
+            this.btnSave.TabIndex = 11;
+            this.btnSave.Text = "Save";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // txtNutStat
+            // 
+            this.txtNutStat.Location = new System.Drawing.Point(116, 91);
+            this.txtNutStat.Name = "txtNutStat";
+            this.txtNutStat.Size = new System.Drawing.Size(339, 20);
+            this.txtNutStat.StyleController = this.layoutControl1;
+            this.txtNutStat.TabIndex = 5;
+            // 
+            // txtPurok
+            // 
+            this.txtPurok.Location = new System.Drawing.Point(404, 67);
+            this.txtPurok.Name = "txtPurok";
+            this.txtPurok.Properties.EditFormat.FormatString = "n2";
+            this.txtPurok.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtPurok.Properties.Mask.EditMask = "n2";
+            this.txtPurok.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtPurok.Size = new System.Drawing.Size(51, 20);
+            this.txtPurok.StyleController = this.layoutControl1;
+            this.txtPurok.TabIndex = 8;
+            // 
+            // txtWeight
+            // 
+            this.txtWeight.Location = new System.Drawing.Point(312, 67);
+            this.txtWeight.Name = "txtWeight";
+            this.txtWeight.Properties.EditFormat.FormatString = "n2";
+            this.txtWeight.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtWeight.Properties.Mask.EditMask = "n2";
+            this.txtWeight.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtWeight.Size = new System.Drawing.Size(52, 20);
+            this.txtWeight.StyleController = this.layoutControl1;
+            this.txtWeight.TabIndex = 8;
+            // 
+            // txtHeight
+            // 
+            this.txtHeight.Location = new System.Drawing.Point(202, 67);
+            this.txtHeight.Name = "txtHeight";
+            this.txtHeight.Properties.EditFormat.FormatString = "n2";
+            this.txtHeight.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtHeight.Properties.Mask.EditMask = "n2";
+            this.txtHeight.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtHeight.Size = new System.Drawing.Size(63, 20);
+            this.txtHeight.StyleController = this.layoutControl1;
+            this.txtHeight.TabIndex = 7;
+            // 
+            // txtAge
+            // 
+            this.txtAge.Location = new System.Drawing.Point(106, 67);
+            this.txtAge.Name = "txtAge";
+            this.txtAge.Properties.EditFormat.FormatString = "n2";
+            this.txtAge.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtAge.Properties.Mask.EditMask = "n2";
+            this.txtAge.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtAge.Size = new System.Drawing.Size(52, 20);
+            this.txtAge.StyleController = this.layoutControl1;
+            this.txtAge.TabIndex = 6;
+            // 
+            // dtDob
+            // 
+            this.dtDob.EditValue = null;
+            this.dtDob.Location = new System.Drawing.Point(334, 43);
+            this.dtDob.Name = "dtDob";
+            this.dtDob.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dtDob.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dtDob.Properties.DisplayFormat.FormatString = "yyyy-MM-dd";
+            this.dtDob.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.dtDob.Properties.EditFormat.FormatString = "yyyy-MM-dd";
+            this.dtDob.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.dtDob.Size = new System.Drawing.Size(121, 20);
+            this.dtDob.StyleController = this.layoutControl1;
+            this.dtDob.TabIndex = 5;
+            // 
+            // txtChildName
+            // 
+            this.txtChildName.Location = new System.Drawing.Point(97, 43);
+            this.txtChildName.Name = "txtChildName";
+            this.txtChildName.Size = new System.Drawing.Size(180, 20);
+            this.txtChildName.StyleController = this.layoutControl1;
+            this.txtChildName.TabIndex = 4;
             // 
             // layoutControlGroup1
             // 
@@ -124,14 +229,6 @@
             this.layoutControlGroup2.Size = new System.Drawing.Size(459, 115);
             this.layoutControlGroup2.Text = "Details";
             // 
-            // txtChildName
-            // 
-            this.txtChildName.Location = new System.Drawing.Point(98, 43);
-            this.txtChildName.Name = "txtChildName";
-            this.txtChildName.Size = new System.Drawing.Size(179, 20);
-            this.txtChildName.StyleController = this.layoutControl1;
-            this.txtChildName.TabIndex = 4;
-            // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -142,19 +239,6 @@
             this.layoutControlItem1.Size = new System.Drawing.Size(257, 24);
             this.layoutControlItem1.Text = "Name of Child:";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(70, 13);
-            // 
-            // dtDob
-            // 
-            this.dtDob.EditValue = null;
-            this.dtDob.Location = new System.Drawing.Point(334, 43);
-            this.dtDob.Name = "dtDob";
-            this.dtDob.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dtDob.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dtDob.Size = new System.Drawing.Size(121, 20);
-            this.dtDob.StyleController = this.layoutControl1;
-            this.dtDob.TabIndex = 5;
             // 
             // layoutControlItem2
             // 
@@ -167,18 +251,6 @@
             this.layoutControlItem2.TextSize = new System.Drawing.Size(48, 13);
             this.layoutControlItem2.TextToControlDistance = 5;
             // 
-            // txtAge
-            // 
-            this.txtAge.Location = new System.Drawing.Point(106, 67);
-            this.txtAge.Name = "txtAge";
-            this.txtAge.Properties.EditFormat.FormatString = "n2";
-            this.txtAge.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtAge.Properties.Mask.EditMask = "n2";
-            this.txtAge.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txtAge.Size = new System.Drawing.Size(52, 20);
-            this.txtAge.StyleController = this.layoutControl1;
-            this.txtAge.TabIndex = 6;
-            // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.txtAge;
@@ -189,18 +261,6 @@
             this.layoutControlItem3.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
             this.layoutControlItem3.TextSize = new System.Drawing.Size(77, 13);
             this.layoutControlItem3.TextToControlDistance = 5;
-            // 
-            // txtHeight
-            // 
-            this.txtHeight.Location = new System.Drawing.Point(202, 67);
-            this.txtHeight.Name = "txtHeight";
-            this.txtHeight.Properties.EditFormat.FormatString = "n2";
-            this.txtHeight.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtHeight.Properties.Mask.EditMask = "n2";
-            this.txtHeight.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txtHeight.Size = new System.Drawing.Size(63, 20);
-            this.txtHeight.StyleController = this.layoutControl1;
-            this.txtHeight.TabIndex = 7;
             // 
             // layoutControlItem4
             // 
@@ -213,18 +273,6 @@
             this.layoutControlItem4.TextSize = new System.Drawing.Size(35, 13);
             this.layoutControlItem4.TextToControlDistance = 5;
             // 
-            // txtWeight
-            // 
-            this.txtWeight.Location = new System.Drawing.Point(312, 67);
-            this.txtWeight.Name = "txtWeight";
-            this.txtWeight.Properties.EditFormat.FormatString = "n2";
-            this.txtWeight.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtWeight.Properties.Mask.EditMask = "n2";
-            this.txtWeight.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txtWeight.Size = new System.Drawing.Size(52, 20);
-            this.txtWeight.StyleController = this.layoutControl1;
-            this.txtWeight.TabIndex = 8;
-            // 
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.txtWeight;
@@ -235,18 +283,6 @@
             this.layoutControlItem5.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
             this.layoutControlItem5.TextSize = new System.Drawing.Size(38, 13);
             this.layoutControlItem5.TextToControlDistance = 5;
-            // 
-            // txtPurok
-            // 
-            this.txtPurok.Location = new System.Drawing.Point(404, 67);
-            this.txtPurok.Name = "txtPurok";
-            this.txtPurok.Properties.EditFormat.FormatString = "n2";
-            this.txtPurok.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtPurok.Properties.Mask.EditMask = "n2";
-            this.txtPurok.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txtPurok.Size = new System.Drawing.Size(51, 20);
-            this.txtPurok.StyleController = this.layoutControl1;
-            this.txtPurok.TabIndex = 8;
             // 
             // layoutControlItem6
             // 
@@ -259,14 +295,6 @@
             this.layoutControlItem6.TextSize = new System.Drawing.Size(31, 13);
             this.layoutControlItem6.TextToControlDistance = 5;
             // 
-            // txtNutStat
-            // 
-            this.txtNutStat.Location = new System.Drawing.Point(116, 91);
-            this.txtNutStat.Name = "txtNutStat";
-            this.txtNutStat.Size = new System.Drawing.Size(339, 20);
-            this.txtNutStat.StyleController = this.layoutControl1;
-            this.txtNutStat.TabIndex = 5;
-            // 
             // layoutControlItem7
             // 
             this.layoutControlItem7.Control = this.txtNutStat;
@@ -278,16 +306,6 @@
             this.layoutControlItem7.TextSize = new System.Drawing.Size(87, 13);
             this.layoutControlItem7.TextToControlDistance = 5;
             // 
-            // btnSave
-            // 
-            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
-            this.btnSave.Location = new System.Drawing.Point(322, 127);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(145, 22);
-            this.btnSave.StyleController = this.layoutControl1;
-            this.btnSave.TabIndex = 11;
-            this.btnSave.Text = "Save";
-            // 
             // layoutControlItem8
             // 
             this.layoutControlItem8.Control = this.btnSave;
@@ -296,17 +314,6 @@
             this.layoutControlItem8.Size = new System.Drawing.Size(149, 28);
             this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem8.TextVisible = false;
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
-            this.btnCancel.Location = new System.Drawing.Point(206, 127);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(112, 22);
-            this.btnCancel.StyleController = this.layoutControl1;
-            this.btnCancel.TabIndex = 12;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // layoutControlItem9
             // 
@@ -325,6 +332,12 @@
             this.emptySpaceItem1.Size = new System.Drawing.Size(194, 28);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
+            // bwAddOutPatient
+            // 
+            this.bwAddOutPatient.WorkerSupportsCancellation = true;
+            this.bwAddOutPatient.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwAddOutPatient_DoWork);
+            this.bwAddOutPatient.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwAddOutPatient_RunWorkerCompleted);
+            // 
             // OutPatientAddForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -339,22 +352,22 @@
             this.Text = "Out Patient Add";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtChildName.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNutStat.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPurok.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtWeight.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtHeight.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAge.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtDob.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtDob.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtChildName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAge.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtHeight.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtWeight.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPurok.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNutStat.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
@@ -387,5 +400,7 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
+        private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
+        private System.ComponentModel.BackgroundWorker bwAddOutPatient;
     }
 }
