@@ -35,6 +35,7 @@ CREATE TABLE `maternal_health_record` (
   `living_children` int(11) DEFAULT NULL,
   `abortion` int(11) NOT NULL DEFAULT '0',
   `fetal_deaths` int(11) NOT NULL DEFAULT '0',
+  `type_last_delivery` varchar(255) DEFAULT NULL,
   `largebabies` int(11) NOT NULL DEFAULT '0' COMMENT '8lbs',
   `diabetes` varchar(255) DEFAULT NULL,
   `previous_illness` varchar(255) DEFAULT NULL,
@@ -43,6 +44,7 @@ CREATE TABLE `maternal_health_record` (
   `gravida` varchar(50) DEFAULT NULL,
   `PARA` varchar(50) DEFAULT NULL,
   `A` varchar(50) DEFAULT NULL,
+  `stillbirth` varchar(50) DEFAULT NULL,
   `LMP` varchar(50) DEFAULT NULL,
   `EDC` varchar(50) DEFAULT NULL,
   `where_to_deliver` varchar(255) DEFAULT NULL,
@@ -73,11 +75,11 @@ CREATE TABLE `maternal_health_record` (
   `added_by` int(11) DEFAULT NULL,
   `added_on` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 /*Data for the table `maternal_health_record` */
 
-insert  into `maternal_health_record`(`id`,`patient_id`,`name`,`age`,`dob`,`height`,`husband_name`,`occupation`,`address`,`contact_no`,`no_children_born_alive`,`living_children`,`abortion`,`fetal_deaths`,`largebabies`,`diabetes`,`previous_illness`,`allergy`,`previous_hospitalization`,`gravida`,`PARA`,`A`,`LMP`,`EDC`,`where_to_deliver`,`attended_by`,`new_born_screening_plan`,`risk_codes`,`tt1`,`tt2`,`tt3`,`tt4`,`tt5`,`urinalysis`,`hbs_antigen`,`CBC`,`RPR`,`blood_typing`,`HIV`,`prev_pregnancy_complic`,`checklist`,`vit_a_date_given`,`vit_a_prescribed`,`iron_folic_4`,`iron_folic_5`,`iron_folic_6`,`iron_folic_7`,`iron_folic_8`,`iron_folic_9`,`added_by`,`added_on`) values (1,0,'asdf',21,'1999-05-28','158.00','asdf','asdf','asdf','asdf',1,1,0,0,0,'asdf','asdf','asdf','asdf','asdf','asdf','asdf','asdf','asdf','asdf','asdf','asdf','','1999-05-28','1999-05-28','1999-05-28','1999-05-28','1999-05-28','asdf','asdf','asdf','asdf','asdf','asdf','asdf','asdf','1999-05-28','asdf','1999-05-28','1999-05-28','1999-05-28','1999-05-28','1999-05-28','1999-05-28',1,'2024-09-08 14:42:12'),(2,0,'erw',13,'2024-09-03','23.00','asdf','zxcv','asdf','zxc',1,2,3,4,5,'zxcv','asdf','qwe','uioy','j','k','l','hj',';','78g','hfj','fvbnm','A','2024-09-03','2024-09-11','2024-09-10','2024-10-03','2024-09-30','asd','czx','dfsa','xcvz','zxvc','asdf','szxcv','Vaginal Bleeding','2024-09-18','azxc','2024-09-10','2024-10-01','2024-09-19','2024-09-10','2024-09-11','2024-09-03',1,'2024-09-14 16:03:20');
+insert  into `maternal_health_record`(`id`,`patient_id`,`name`,`age`,`dob`,`height`,`husband_name`,`occupation`,`address`,`contact_no`,`no_children_born_alive`,`living_children`,`abortion`,`fetal_deaths`,`type_last_delivery`,`largebabies`,`diabetes`,`previous_illness`,`allergy`,`previous_hospitalization`,`gravida`,`PARA`,`A`,`stillbirth`,`LMP`,`EDC`,`where_to_deliver`,`attended_by`,`new_born_screening_plan`,`risk_codes`,`tt1`,`tt2`,`tt3`,`tt4`,`tt5`,`urinalysis`,`hbs_antigen`,`CBC`,`RPR`,`blood_typing`,`HIV`,`prev_pregnancy_complic`,`checklist`,`vit_a_date_given`,`vit_a_prescribed`,`iron_folic_4`,`iron_folic_5`,`iron_folic_6`,`iron_folic_7`,`iron_folic_8`,`iron_folic_9`,`added_by`,`added_on`) values (1,0,'asdf',21,'1999-05-28','158.00','asdf','asdf','asdf','asdf',1,1,0,0,NULL,0,'asdf','asdf','asdf','asdf','asdf','asdf','asdf',NULL,'asdf','asdf','asdf','asdf','asdf','','1999-05-28','1999-05-28','1999-05-28','1999-05-28','1999-05-28','asdf','asdf','asdf','asdf','asdf','asdf','asdf','asdf','1999-05-28','asdf','1999-05-28','1999-05-28','1999-05-28','1999-05-28','1999-05-28','1999-05-28',1,'2024-09-08 14:42:12'),(2,0,'erw',13,'2024-09-03','23.00','asdf','zxcv','asdf','zxc',1,2,3,4,NULL,5,'zxcv','asdf','qwe','uioy','j','k','l',NULL,'hj',';','78g','hfj','fvbnm','A','2024-09-03','2024-09-11','2024-09-10','2024-10-03','2024-09-30','asd','czx','dfsa','xcvz','zxvc','asdf','szxcv','Vaginal Bleeding, Severe Headache','2024-09-18','azxc','2024-09-10','2024-10-01','2024-09-19','2024-09-10','2024-09-11','2024-09-03',1,'2024-09-14 16:03:20'),(3,0,'asfd',2,'2024-08-30','12.00','axc','xcv','cvb','xcvb',2,2,23,3,'2',1,'2','x','df','g','vc','asdf','32','ew','zcx','af','nm,',',.b','jry','','2024-09-18','2024-08-28','2024-09-23','2024-09-19','2024-09-16','1','asd','bn','scxv','nm','vbm','xcbv','Breast abnormalities','2024-08-26','scv','2024-09-04','2024-09-02','2024-09-18','2024-09-10','2024-09-07','2024-09-18',1,'2024-09-21 23:25:51');
 
 /*Table structure for table `out_patient` */
 
@@ -276,6 +278,7 @@ DELIMITER $$
 	_living_children INT (11),
 	_abortion INT (11),
 	_fetal_deaths INT (11),
+	_type_last_delivery varchar (255),
 	_largebabies INT (11),
 	_diabetes VARCHAR (255),
 	_previous_illness VARCHAR (255),
@@ -284,6 +287,7 @@ DELIMITER $$
 	_gravida VARCHAR (50),
 	_PARA VARCHAR (50),
 	_A VARCHAR (50),
+	_stillbirth varchar (50),
 	_LMP VARCHAR (50),
 	_EDC VARCHAR (50),
 	_where_to_deliver VARCHAR (255),
@@ -328,6 +332,7 @@ INSERT INTO `maternal_health_record`
              `living_children`,
              `abortion`,
              `fetal_deaths`,
+             `type_last_delivery`,
              `largebabies`,
              `diabetes`,
              `previous_illness`,
@@ -336,6 +341,7 @@ INSERT INTO `maternal_health_record`
              `gravida`,
              `PARA`,
              `A`,
+             `stillbirth`,
              `LMP`,
              `EDC`,
              `where_to_deliver`,
@@ -377,6 +383,7 @@ VALUES (_patient_id,
 	_living_children,
 	_abortion,
 	_fetal_deaths,
+	_type_last_delivery,
 	_largebabies,
 	_diabetes,
 	_previous_illness,
@@ -385,6 +392,7 @@ VALUES (_patient_id,
 	_gravida,
 	_PARA,
 	_A,
+	_stillbirth,
 	_LMP,
 	_EDC,
 	_where_to_deliver,
