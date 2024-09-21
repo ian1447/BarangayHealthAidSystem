@@ -45,7 +45,7 @@ namespace BarangayHealthAid.Dal
 
         public static string AddMaternalHealthRecordErrorMessage;
         public static bool AddMaternalHealthRecordIsSuccessful;
-        public static void AddMaternalHealthRecord(string _name, string _age, string _dob, string _height, string _husband_name, string _occupation, string _address, string _contact_no, string _no_children_born_alive, string _living_children, string _abortion, string _fetal_deaths, string _largebabies, string _diabetes, string _previous_illness, string _allergy, string _previous_hospitalization, string _gravida, string _PARA, string _A, string _LMP, string _EDC, string _where_to_deliver, string _attended_by, string _new_born_screening_plan, string _risk_codes, string _tt1, string _tt2, string _tt3, string _tt4, string _tt5, string _urinalysis, string _hbs_antigen, string _CBC, string _RPR, string _blood_typing, string _HIV, string _prev_pregnancy_complic, string _checklist, string _vit_a_date_given, string _vit_a_prescribed, string _iron_folic_4, string _iron_folic_5, string _iron_folic_6, string _iron_folic_7, string _iron_folic_8, string _iron_folic_9)
+        public static void AddMaternalHealthRecord(string _name, string _age, string _dob, string _height, string _husband_name, string _occupation, string _address, string _contact_no, string _no_children_born_alive, string _living_children, string _abortion, string _fetal_deaths, string _type_last_delivery, string _largebabies, string _diabetes, string _previous_illness, string _allergy, string _previous_hospitalization, string _gravida, string _PARA, string _A, string _stillbirth, string _LMP, string _EDC, string _where_to_deliver, string _attended_by, string _new_born_screening_plan, string _risk_codes, string _tt1, string _tt2, string _tt3, string _tt4, string _tt5, string _urinalysis, string _hbs_antigen, string _CBC, string _RPR, string _blood_typing, string _HIV, string _prev_pregnancy_complic, string _checklist, string _vit_a_date_given, string _vit_a_prescribed, string _iron_folic_4, string _iron_folic_5, string _iron_folic_6, string _iron_folic_7, string _iron_folic_8, string _iron_folic_9)
         {
             DataSet dt = new DataSet();
             try
@@ -67,6 +67,7 @@ namespace BarangayHealthAid.Dal
                     cmd.Parameters.Add(new MySqlParameter("_living_children", _living_children));
                     cmd.Parameters.Add(new MySqlParameter("_abortion", _abortion));
                     cmd.Parameters.Add(new MySqlParameter("_fetal_deaths", _fetal_deaths));
+                    cmd.Parameters.Add(new MySqlParameter("_type_last_delivery", _type_last_delivery));
                     cmd.Parameters.Add(new MySqlParameter("_largebabies", _largebabies));
                     cmd.Parameters.Add(new MySqlParameter("_diabetes", _diabetes));
                     cmd.Parameters.Add(new MySqlParameter("_previous_illness", _previous_illness));
@@ -75,6 +76,7 @@ namespace BarangayHealthAid.Dal
                     cmd.Parameters.Add(new MySqlParameter("_gravida", _gravida));
                     cmd.Parameters.Add(new MySqlParameter("_PARA", _PARA));
                     cmd.Parameters.Add(new MySqlParameter("_A", _A));
+                    cmd.Parameters.Add(new MySqlParameter("_stillbirth", _stillbirth));
                     cmd.Parameters.Add(new MySqlParameter("_LMP", _LMP));
                     cmd.Parameters.Add(new MySqlParameter("_EDC", _EDC));
                     cmd.Parameters.Add(new MySqlParameter("_where_to_deliver", _where_to_deliver));

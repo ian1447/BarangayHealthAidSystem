@@ -9370,7 +9370,6 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel46;
         private DevExpress.XtraReports.UI.XRTable xrTable38;
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow39;
-        private DevExpress.XtraReports.UI.XRTableCell lblRiskCodes;
         private DevExpress.XtraReports.UI.XRLabel xrLabel44;
         private DevExpress.XtraReports.UI.XRLabel xrLabel43;
         private DevExpress.XtraReports.UI.XRTable xrTable37;
@@ -9765,5 +9764,6 @@
         public DevExpress.XtraReports.UI.XRTableCell lblFolic7;
         public DevExpress.XtraReports.UI.XRTableCell lblFolic8;
         public DevExpress.XtraReports.UI.XRTableCell lblFolic9;
+        public DevExpress.XtraReports.UI.XRTableCell lblRiskCodes;
     }
 }
