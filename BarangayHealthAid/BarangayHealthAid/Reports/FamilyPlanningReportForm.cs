@@ -6,9 +6,9 @@ using DevExpress.XtraReports.UI;
 
 namespace BarangayHealthAid.Reports
 {
-    public partial class FamilyPlanningForm : DevExpress.XtraReports.UI.XtraReport
+    public partial class FamilyPlanningReportForm : DevExpress.XtraReports.UI.XtraReport
     {
-        public FamilyPlanningForm()
+        public FamilyPlanningReportForm()
         {
             InitializeComponent();
         }

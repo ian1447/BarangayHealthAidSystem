@@ -58,6 +58,7 @@ namespace BarangayHealthAid.ReportForm
         #endregion
 
         private int is4p = 0;
+        public bool is_add = true;
         private void PatientRecordAddForm_Load(object sender, EventArgs e)
         {
             layoutControl1.AllowCustomization = false;
@@ -74,10 +75,18 @@ namespace BarangayHealthAid.ReportForm
         {
             if (ValidateChildren(ValidationConstraints.Enabled))
             {
-                if (!bwAddPatient.IsBusy)
+                if (is_add)
                 {
-                    ShowLoading("Adding Data...");
-                    bwAddPatient.RunWorkerAsync();
+                    if (!bwAddPatient.IsBusy)
+                    {
+                        ShowLoading("Adding Data...");
+                        bwAddPatient.RunWorkerAsync();
+                    }
+                }
+                else
+                {
+                    MsgBox.Information("Ani ang edit.");
+                    this.Close();
                 }
             }
         }

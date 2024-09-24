@@ -1,6 +1,6 @@
 ﻿namespace BarangayHealthAid.Reports
 {
-    partial class FamilyPlanningForm
+    partial class FamilyPlanningReportForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FamilyPlanningForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FamilyPlanningReportForm));
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
             this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();

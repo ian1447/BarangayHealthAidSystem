@@ -27,7 +27,7 @@ namespace BarangayHealthAid
 
         private void btnFamilyPlanning_ItemClick(object sender, ItemClickEventArgs e)
         {
-            FamilyPlanningForm fpf = new FamilyPlanningForm();
+            FamilyPlanningReportForm fpf = new FamilyPlanningReportForm();
             fpf.ShowPreviewDialog();
         }
 
