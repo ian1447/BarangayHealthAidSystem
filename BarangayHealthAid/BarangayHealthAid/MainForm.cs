@@ -25,10 +25,31 @@ namespace BarangayHealthAid
             InitializeComponent();
         }
 
+        public static bool FamilyPlanningFormIsOpen = false;
         private void btnFamilyPlanning_ItemClick(object sender, ItemClickEventArgs e)
         {
-            FamilyPlanningReportForm fpf = new FamilyPlanningReportForm();
-            fpf.ShowPreviewDialog();
+            if (!FamilyPlanningFormIsOpen)
+            {
+                FamilyPlanningFormIsOpen = true;
+                FamilyPlanningForm fpf = new FamilyPlanningForm();
+                fpf.MdiParent = this;
+                fpf.WindowState = FormWindowState.Maximized;
+                fpf.Show();
+            }
+            else
+            {
+                Form fc = Application.OpenForms["FamilyPlanningForm"];
+                if (fc == null)
+                {
+                    FamilyPlanningForm a1 = new FamilyPlanningForm();
+                    a1.MdiParent = this;
+                    a1.Show();
+                }
+                else
+                    fc.Activate();
+            }
+            //FamilyPlanningReportForm fpf = new FamilyPlanningReportForm();
+            //fpf.ShowPreviewDialog();
         }
 
         private void btnForm4b_ItemClick(object sender, ItemClickEventArgs e)

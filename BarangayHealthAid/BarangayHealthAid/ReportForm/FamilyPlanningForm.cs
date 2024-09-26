@@ -84,5 +84,11 @@ namespace BarangayHealthAid.ReportForm
         {
             layoutControl1.AllowCustomization = false;
         }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            FamilyPlanningAddForm fpa = new FamilyPlanningAddForm();
+            fpa.ShowDialog();
+        }
     }
 }
