@@ -173,6 +173,7 @@
             this.gvPatient.OptionsView.RowAutoHeight = true;
             this.gvPatient.OptionsView.ShowGroupPanel = false;
             this.gvPatient.OptionsView.ShowIndicator = false;
+            this.gvPatient.DoubleClick += new System.EventHandler(this.gvPatient_DoubleClick);
             // 
             // id
             // 

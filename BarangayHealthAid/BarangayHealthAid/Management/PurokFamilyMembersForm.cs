@@ -171,6 +171,10 @@ namespace BarangayHealthAid.Management
                 PurokFamilyMemberAddForm pfma = new PurokFamilyMemberAddForm();
                 pfma.purok_member_id = purok_member_id;
                 pfma.is_add = false;
+                pfma.txtType.Text = gvMembers.GetFocusedRowCellValue("description").ToString();
+                pfma.txtAge.Text = gvMembers.GetFocusedRowCellValue("age").ToString();
+                pfma.cbSex.Text = gvMembers.GetFocusedRowCellValue("sex").ToString();
+                pfma.dtDob.EditValue = Convert.ToDateTime(gvMembers.GetFocusedRowCellValue("formated_dob").ToString());
                 pfma.txtName.Text = gvMembers.GetFocusedRowCellValue("name").ToString();
                 pfma.edit_id = selected_id;
                 pfma.ShowDialog();

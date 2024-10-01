@@ -205,6 +205,7 @@
             this.gvPurokMember.OptionsView.ShowGroupPanel = false;
             this.gvPurokMember.OptionsView.ShowIndicator = false;
             this.gvPurokMember.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gvPurokMember_FocusedRowChanged);
+            this.gvPurokMember.DoubleClick += new System.EventHandler(this.gvPurokMember_DoubleClick);
             // 
             // purok_member_name
             // 

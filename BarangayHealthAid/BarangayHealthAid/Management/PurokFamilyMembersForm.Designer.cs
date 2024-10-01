@@ -37,6 +37,10 @@
             this.dtMembers = new DevExpress.XtraGrid.GridControl();
             this.gvMembers = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.family_member_name = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.description = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.formated_dob = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.age = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.sex = new DevExpress.XtraGrid.Columns.GridColumn();
             this.id = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
@@ -46,10 +50,10 @@
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lblHeadName = new DevExpress.XtraLayout.SimpleLabelItem();
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::BarangayHealthAid.WaitForm1), true, true);
             this.bwGetPurokFamilyMembers = new System.ComponentModel.BackgroundWorker();
             this.bwDeletePurokFamilyMember = new System.ComponentModel.BackgroundWorker();
-            this.lblHeadName = new DevExpress.XtraLayout.SimpleLabelItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtMembers)).BeginInit();
@@ -141,15 +145,23 @@
             // 
             this.gvMembers.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.family_member_name,
+            this.description,
+            this.formated_dob,
+            this.age,
+            this.sex,
             this.id});
             this.gvMembers.GridControl = this.dtMembers;
+            this.gvMembers.GroupCount = 1;
             this.gvMembers.Name = "gvMembers";
+            this.gvMembers.OptionsBehavior.AutoExpandAllGroups = true;
             this.gvMembers.OptionsBehavior.Editable = false;
             this.gvMembers.OptionsFind.AlwaysVisible = true;
             this.gvMembers.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.gvMembers.OptionsView.RowAutoHeight = true;
             this.gvMembers.OptionsView.ShowGroupPanel = false;
             this.gvMembers.OptionsView.ShowIndicator = false;
+            this.gvMembers.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.description, DevExpress.Data.ColumnSortOrder.Ascending)});
             // 
             // family_member_name
             // 
@@ -160,6 +172,38 @@
             this.family_member_name.Name = "family_member_name";
             this.family_member_name.Visible = true;
             this.family_member_name.VisibleIndex = 0;
+            // 
+            // description
+            // 
+            this.description.Caption = "Member Type";
+            this.description.FieldName = "description";
+            this.description.Name = "description";
+            this.description.Visible = true;
+            this.description.VisibleIndex = 1;
+            // 
+            // formated_dob
+            // 
+            this.formated_dob.Caption = "Birthday";
+            this.formated_dob.FieldName = "formated_dob";
+            this.formated_dob.Name = "formated_dob";
+            this.formated_dob.Visible = true;
+            this.formated_dob.VisibleIndex = 1;
+            // 
+            // age
+            // 
+            this.age.Caption = "Age";
+            this.age.FieldName = "age";
+            this.age.Name = "age";
+            this.age.Visible = true;
+            this.age.VisibleIndex = 2;
+            // 
+            // sex
+            // 
+            this.sex.Caption = "Sex";
+            this.sex.FieldName = "sex";
+            this.sex.Name = "sex";
+            this.sex.Visible = true;
+            this.sex.VisibleIndex = 3;
             // 
             // id
             // 
@@ -254,6 +298,16 @@
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
             // 
+            // lblHeadName
+            // 
+            this.lblHeadName.AllowHotTrack = false;
+            this.lblHeadName.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHeadName.AppearanceItemCaption.Options.UseFont = true;
+            this.lblHeadName.Location = new System.Drawing.Point(0, 0);
+            this.lblHeadName.Name = "lblHeadName";
+            this.lblHeadName.Size = new System.Drawing.Size(501, 20);
+            this.lblHeadName.TextSize = new System.Drawing.Size(116, 16);
+            // 
             // bwGetPurokFamilyMembers
             // 
             this.bwGetPurokFamilyMembers.WorkerSupportsCancellation = true;
@@ -265,16 +319,6 @@
             this.bwDeletePurokFamilyMember.WorkerSupportsCancellation = true;
             this.bwDeletePurokFamilyMember.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwDeletePurokFamilyMember_DoWork);
             this.bwDeletePurokFamilyMember.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwDeletePurokFamilyMember_RunWorkerCompleted);
-            // 
-            // lblHeadName
-            // 
-            this.lblHeadName.AllowHotTrack = false;
-            this.lblHeadName.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHeadName.AppearanceItemCaption.Options.UseFont = true;
-            this.lblHeadName.Location = new System.Drawing.Point(0, 0);
-            this.lblHeadName.Name = "lblHeadName";
-            this.lblHeadName.Size = new System.Drawing.Size(501, 20);
-            this.lblHeadName.TextSize = new System.Drawing.Size(116, 16);
             // 
             // PurokFamilyMembersForm
             // 
@@ -330,5 +374,9 @@
         private System.ComponentModel.BackgroundWorker bwGetPurokFamilyMembers;
         private System.ComponentModel.BackgroundWorker bwDeletePurokFamilyMember;
         public DevExpress.XtraLayout.SimpleLabelItem lblHeadName;
+        private DevExpress.XtraGrid.Columns.GridColumn description;
+        private DevExpress.XtraGrid.Columns.GridColumn formated_dob;
+        private DevExpress.XtraGrid.Columns.GridColumn age;
+        private DevExpress.XtraGrid.Columns.GridColumn sex;
     }
 }

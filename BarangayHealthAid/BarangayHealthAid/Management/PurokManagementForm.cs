@@ -344,5 +344,10 @@ namespace BarangayHealthAid.Management
             else
                 MsgBox.Error("No Purok Member Selected.");
         }
+
+        private void gvPurokMember_DoubleClick(object sender, EventArgs e)
+        {
+            btnAddFamily.PerformClick();
+        }
     }
 }

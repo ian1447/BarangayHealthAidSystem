@@ -330,5 +330,10 @@ namespace BarangayHealthAid.ReportForm
             
         }
 
+        private void gvPatient_DoubleClick(object sender, EventArgs e)
+        {
+            btnEdit.PerformClick();
+        }
+
     }
 }
