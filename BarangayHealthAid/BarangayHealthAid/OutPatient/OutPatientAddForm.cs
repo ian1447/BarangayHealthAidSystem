@@ -93,7 +93,7 @@ namespace BarangayHealthAid.OutPatient
 
         private void bwAddOutPatient_DoWork(object sender, DoWorkEventArgs e)
         {
-            OPT.OutPatientAdd(txtPurok.Text, txtChildName.Text,dtDob.Text,txtAge.Text,txtHeight.Text,txtWeight.Text,txtNutStat.Text);
+            OPT.OutPatientAdd(txtPurok.Text, txtChildName.Text,"Child",dtDob.Text,txtAge.Text,txtHeight.Text,txtWeight.Text,txtNutStat.Text,txtRemarks.Text);
             bwAddOutPatient.CancelAsync();
         }
 

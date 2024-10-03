@@ -148,6 +148,7 @@
             this.cmbCategory.Size = new System.Drawing.Size(105, 20);
             this.cmbCategory.StyleController = this.layoutControl1;
             this.cmbCategory.TabIndex = 12;
+            this.cmbCategory.SelectedIndexChanged += new System.EventHandler(this.cmbCategory_SelectedIndexChanged);
             // 
             // btnEdit
             // 

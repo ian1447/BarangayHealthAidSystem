@@ -167,6 +167,8 @@ DROP TABLE IF EXISTS `out_patient`;
 
 CREATE TABLE `out_patient` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
+  `patient_type` enum('Child','Family Planning','Maternal') DEFAULT NULL,
+  `patient_id` int(11) DEFAULT NULL,
   `purok_no` int(11) NOT NULL,
   `name_of_child` varchar(255) NOT NULL,
   `birthdate` date NOT NULL,
@@ -174,14 +176,15 @@ CREATE TABLE `out_patient` (
   `height` decimal(12,2) DEFAULT NULL,
   `weight` decimal(12,2) DEFAULT NULL,
   `nutritional_status` varchar(255) DEFAULT NULL,
+  `remarks` text,
   `added_by` int(11) DEFAULT NULL,
   `transdate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 /*Data for the table `out_patient` */
 
-insert  into `out_patient`(`id`,`purok_no`,`name_of_child`,`birthdate`,`age_in_months`,`height`,`weight`,`nutritional_status`,`added_by`,`transdate`) values (1,3,'test Edit','2024-06-30',2,'13.00','24.20','abniormal',1,'2024-09-18 21:50:38'),(3,2,'Testing Name','2024-09-10',23,'56.00','123.00','Normal',1,'2024-09-19 21:23:44');
+insert  into `out_patient`(`id`,`patient_type`,`patient_id`,`purok_no`,`name_of_child`,`birthdate`,`age_in_months`,`height`,`weight`,`nutritional_status`,`remarks`,`added_by`,`transdate`) values (1,'Child',NULL,3,'test Edit','2024-06-30',2,'13.00','24.20','abniormal',NULL,1,'2024-09-18 21:50:38'),(3,'Child',NULL,2,'Testing Name','2024-09-10',23,'56.00','123.00','Normal',NULL,1,'2024-09-19 21:23:44'),(4,'Child',NULL,12,'test','2024-10-07',12,'23.00','123.00','12asdf','testing remarks ug naa ba',1,'2024-10-03 21:25:34');
 
 /*Table structure for table `patient_details` */
 
@@ -245,9 +248,11 @@ CREATE TABLE `patient_details` (
   `added_by` int(11) DEFAULT NULL,
   `added_on` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 /*Data for the table `patient_details` */
+
+insert  into `patient_details`(`id`,`last_name`,`first_name`,`name_extension`,`middle_name`,`maiden_last_name`,`maiden_first_name`,`maiden_name_extension`,`maiden_middle_name`,`birthdate`,`age`,`place_of_birth`,`sex`,`civil_status`,`religion`,`blood_type`,`contact_number`,`address_purok`,`address_barangay`,`address_mun`,`address_province`,`address_country`,`address_zip_code`,`educational_attainment`,`employment_status`,`TIN`,`ph_stat`,`phic_id_no`,`phic_status_type`,`is_4p`,`4p_id_no`,`4p_status_type`,`membership_cat`,`partner_last_name`,`partner_first_name`,`partner_name_extension`,`partner_middle_name`,`partner_birthdate`,`partner_sex`,`partner_phic_id`,`father_last_name`,`father_first_name`,`father_name_extension`,`father_middle_name`,`father_birthdate`,`father_disability`,`father_phic_id`,`mother_last_name`,`mother_first_name`,`mother_name_extension`,`mother_middle_name`,`mother_birthdate`,`mother_disability`,`mother_phic_id`,`added_by`,`added_on`) values (1,'Dog','Max','','da','','','','','2024-10-16',12,'asdf','Male','Single','sfd','34','87864','13','312sdf','wer','4 23','x12','231','zxcv','asdf','3452234','','3452435','',0,'','Dependent','Govt-Permanent Regular','wdfa','sdaf','c','df','2024-10-14','Male','xczv','xcvzqfdw','asdf','z','34r','2024-10-05','cvb','asdf','1243','sadf','sdf','wf','2024-10-07','sfd','vxcz',1,'2024-10-03 21:33:35');
 
 /*Table structure for table `purok` */
 
@@ -273,14 +278,18 @@ CREATE TABLE `purok_family_members` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `purok_members_id` int(11) NOT NULL,
   `name` varchar(255) DEFAULT NULL,
+  `description` varchar(255) DEFAULT NULL,
+  `birthday` date DEFAULT NULL,
+  `age` int(11) DEFAULT NULL,
+  `sex` enum('Male','Female') DEFAULT NULL,
   `added_by` int(11) DEFAULT NULL,
   `added_on` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 /*Data for the table `purok_family_members` */
 
-insert  into `purok_family_members`(`id`,`purok_members_id`,`name`,`added_by`,`added_on`) values (1,1,'Father',1,'2024-09-10 23:26:39'),(2,1,'Family Head 234',1,'2024-09-10 23:36:08'),(4,2,'Father3',1,'2024-09-11 00:07:05');
+insert  into `purok_family_members`(`id`,`purok_members_id`,`name`,`description`,`birthday`,`age`,`sex`,`added_by`,`added_on`) values (1,1,'Father',NULL,NULL,NULL,NULL,1,'2024-09-10 23:26:39'),(2,1,'Family Head 234',NULL,NULL,NULL,NULL,1,'2024-09-10 23:36:08'),(5,2,'Testing Edit PAPAP','Father','2024-10-08',53,'Male',1,'2024-10-01 20:56:40'),(6,2,'test anak1','Son','2024-10-02',1,'Male',1,'2024-10-01 21:00:27'),(7,2,'test Anak 2','Son','2024-10-08',23,'Male',1,'2024-10-01 21:00:37');
 
 /*Table structure for table `purok_members` */
 
@@ -740,30 +749,36 @@ DELIMITER $$
 /*!50003 CREATE DEFINER=`system_admin`@`%` PROCEDURE `sp_out_patient_add`(
 	_purok_no int (11),
 	_name_of_child varchar (255),
+	_patient_type varchar (255),
 	_birthdate date,
 	_age_in_months int (11),
 	_height decimal(12,2),
 	_weight decimal(12,2),
 	_nutritional_status varchar (255),
+	_remarks varchar (255),
 	_added_by int (11)
     )
 BEGIN
 INSERT INTO `out_patient`
             (`purok_no`,
+             `patient_type`,
              `name_of_child`,
              `birthdate`,
              `age_in_months`,
              `height`,
              `weight`,
              `nutritional_status`,
+             `remarks`,
              `added_by`)
 VALUES (_purok_no,
+	_patient_type,
         _name_of_child,
         _birthdate,
         _age_in_months,
         _height,
         _weight,
         _nutritional_status,
+        _remarks,
         _added_by);
     END */$$
 DELIMITER ;
@@ -803,9 +818,13 @@ DELIMITER ;
 
 DELIMITER $$
 
-/*!50003 CREATE DEFINER=`system_admin`@`%` PROCEDURE `sp_out_patient_get`()
+/*!50003 CREATE DEFINER=`system_admin`@`%` PROCEDURE `sp_out_patient_get`(
+	in _patient_type varchar (255),
+	_date_from date,
+	_date_to date
+)
 BEGIN
-SELECT DATE_FORMAT(op.`birthdate`, "%M %d,%Y") Formatbirthdate,op.* FROM `out_patient` op;
+SELECT DATE_FORMAT(op.`birthdate`, "%M %d,%Y") Formatbirthdate,op.* FROM `out_patient` op WHERE op.`patient_type` = _patient_type AND (date(op.`transdate`) BETWEEN date(_date_from) AND date(_date_to));
     END */$$
 DELIMITER ;
 
@@ -894,7 +913,7 @@ INSERT INTO `patient_details`
              `address_mun`,
              `address_province`,
              `address_country`,
-             `address_zip_zode`,
+             `address_zip_code`,
              `educational_attainment`,
              `employment_status`,
              `TIN`,
@@ -984,6 +1003,126 @@ VALUES (_last_name,
     END */$$
 DELIMITER ;
 
+/* Procedure structure for procedure `sp_patient_details_edit` */
+
+/*!50003 DROP PROCEDURE IF EXISTS  `sp_patient_details_edit` */;
+
+DELIMITER $$
+
+/*!50003 CREATE DEFINER=`system_admin`@`%` PROCEDURE `sp_patient_details_edit`(
+	_first_name VARCHAR (255),
+	_name_extension VARCHAR (50),
+	_middle_name VARCHAR (255),
+	_maiden_last_name VARCHAR (255),
+	_maiden_first_name VARCHAR (255),
+	_maiden_name_extension VARCHAR (50),
+	_maiden_middle_name VARCHAR (255),
+	_birthdate DATE,
+	_age INT (11),
+	_place_of_birth TEXT,
+	_sex VARCHAR (50),
+	_civil_status VARCHAR (255),
+	_religion VARCHAR (255),
+	_blood_type VARCHAR (255),
+	_contact_number VARCHAR (15),
+	_address_purok VARCHAR (255),
+	_address_barangay VARCHAR (255),
+	_address_mun VARCHAR (255),
+	_address_province VARCHAR (255),
+	_address_country VARCHAR (255),
+	_address_zip_zode VARCHAR (25),
+	_educational_attainment VARCHAR (255),
+	_employment_status VARCHAR (255),
+	_TIN VARCHAR (50),
+	_ph_stat VARCHAR (255),
+	_phic_id_no VARCHAR (100),
+	_phic_status_type VARCHAR (255),
+	_is_4p INT (11),
+	_4p_id_no VARCHAR (100),
+	_4p_status_type VARCHAR (255),
+	_membership_cat VARCHAR (255),
+	_partner_last_name VARCHAR (255),
+	_partner_first_name VARCHAR (255),
+	_partner_name_extension VARCHAR (50),
+	_partner_middle_name VARCHAR (255),
+	_partner_birthdate DATE,
+	_partner_sex VARCHAR (50),
+	_partner_phic_id VARCHAR (50),
+	_father_last_name VARCHAR (255),
+	_father_first_name VARCHAR (255),
+	_father_name_extension VARCHAR (50),
+	_father_middle_name VARCHAR (255),
+	_father_birthdate DATE,
+	_father_disability VARCHAR (255),
+	_father_phic_id VARCHAR (50),
+	_mother_last_name VARCHAR (255),
+	_mother_first_name VARCHAR (255),
+	_mother_name_extension VARCHAR (50),
+	_mother_middle_name VARCHAR (255),
+	_mother_birthdate DATE,
+	_mother_disability VARCHAR (255),
+	_mother_phic_id VARCHAR (50),
+	_id INT (11)    
+    )
+BEGIN
+	UPDATE `barangay_aid`.`patient_details`
+	SET `last_name` = _last_name,
+	  `first_name` = _first_name,
+	  `name_extension` = _name_extension,
+	  `middle_name` = _middle_name,
+	  `maiden_last_name` = _maiden_last_name,
+	  `maiden_first_name` = _maiden_first_name,
+	  `maiden_name_extension` = _maiden_name_extension,
+	  `maiden_middle_name` = _maiden_middle_name,
+	  `birthdate` = _birthdate,
+	  `age` = _age,
+	  `place_of_birth` = _place_of_birth,
+	  `sex` = _sex,
+	  `civil_status` = _civil_status,
+	  `religion` = _religion,
+	  `blood_type` = _blood_type,
+	  `contact_number` = _contact_number,
+	  `address_purok` = _address_purok,
+	  `address_barangay` = _address_barangay,
+	  `address_mun` = _address_mun,
+	  `address_province` = _address_province,
+	  `address_country` = _address_country,
+	  `address_zip_code` = _address_zip_zode,
+	  `educational_attainment` = _educational_attainment,
+	  `employment_status` = _employment_status,
+	  `TIN` = _TIN,
+	  `ph_stat` = _ph_stat,
+	  `phic_id_no` = _phic_id_no,
+	  `phic_status_type` = _phic_status_type,
+	  `is_4p` = _is_4p,
+	  `4p_id_no` = _4p_id_no,
+	  `4p_status_type` = _4p_status_type,
+	  `membership_cat` = _membership_cat,
+	  `partner_last_name` = _partner_last_name,
+	  `partner_first_name` = _partner_first_name,
+	  `partner_name_extension` = _partner_name_extension,
+	  `partner_middle_name` = _partner_middle_name,
+	  `partner_birthdate` = _partner_birthdate,
+	  `partner_sex` = _partner_sex,
+	  `partner_phic_id` = _partner_phic_id,
+	  `father_last_name` = _father_last_name,
+	  `father_first_name` = _father_first_name,
+	  `father_name_extension` = _father_name_extension,
+	  `father_middle_name` = _father_middle_name,
+	  `father_birthdate` = _father_birthdate,
+	  `father_disability` = _father_disability,
+	  `father_phic_id` = _father_phic_id,
+	  `mother_last_name` = _mother_last_name,
+	  `mother_first_name` = _mother_first_name,
+	  `mother_name_extension` = _mother_name_extension,
+	  `mother_middle_name` = _mother_middle_name,
+	  `mother_birthdate` = _mother_birthdate,
+	  `mother_disability` = _mother_disability,
+	  `mother_phic_id` = _mother_phic_id
+	WHERE `id` = _id;
+    END */$$
+DELIMITER ;
+
 /* Procedure structure for procedure `sp_patient_details_get` */
 
 /*!50003 DROP PROCEDURE IF EXISTS  `sp_patient_details_get` */;
@@ -1066,7 +1205,7 @@ DELIMITER $$
 	_purok_members_id int (11)
 )
 BEGIN
-SELECT * FROM `purok_family_members` p where p.`purok_members_id` = _purok_members_id;
+	SELECT *,date_format(p.`birthday`,"%M %d,%Y") formated_dob FROM `purok_family_members` p where p.`purok_members_id` = _purok_members_id;
     END */$$
 DELIMITER ;
 
@@ -1079,15 +1218,27 @@ DELIMITER $$
 /*!50003 CREATE DEFINER=`system_admin`@`%` PROCEDURE `sp_purok_family_member_add`(
      _purok_members_id INT (11),
      _name VARCHAR (255),
+     _description varchar (255),
+     _birthday date,
+     _age int (11),
+     _sex varchar (50),
      _added_by INT (11)    
     )
 BEGIN
 	INSERT INTO `purok_family_members`
 		    (`purok_members_id`,
 		     `name`,
+		     `description`,
+		     `birthday`,
+		     `age`,
+		     `sex`,
 		     `added_by`)
 	VALUES (_purok_members_id,
 		_name,
+		_description,
+		_birthday,
+		_age,
+		_sex,
 		_added_by);
     END */$$
 DELIMITER ;
@@ -1114,10 +1265,14 @@ DELIMITER $$
 
 /*!50003 CREATE DEFINER=`system_admin`@`%` PROCEDURE `sp_purok_family_member_edit`(
 	_name varchar (255),
+	_description VARCHAR (255),
+	_birthday DATE,
+	_age INT (11),
+	_sex VARCHAR (50),
 	_id int (11)
     )
 BEGIN
-UPDATE `purok_family_members` p SET p.`name` = _name WHERE p.`id` = _id;
+UPDATE `purok_family_members` p SET p.`name` = _name, p.`description` = _description, p.`age`=_age, p.`sex`=_sex, p.`birthday`=_birthday WHERE p.`id` = _id;
     END */$$
 DELIMITER ;
 

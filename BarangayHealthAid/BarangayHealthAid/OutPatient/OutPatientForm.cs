@@ -113,7 +113,7 @@ namespace BarangayHealthAid.OutPatient
 
         private void bwGetOutPatientData_DoWork(object sender, DoWorkEventArgs e)
         {
-            OutPatientTable = OPT.GetOutPatientRecords();
+            OutPatientTable = OPT.GetOutPatientRecords(cmbCategory.Text, dateFrom, dateTo);
             bwGetOutPatientData.CancelAsync();
         }
 
@@ -127,7 +127,10 @@ namespace BarangayHealthAid.OutPatient
                     dtOutPatient.DataSource = OutPatientTable;
                 }
                 else
+                {
+                    dtOutPatient.DataSource = new DataTable();
                     MsgBox.Error("No Data Available.");
+                }
             }
             else
                 MsgBox.Error(OPT.GetOutPatientRecordsErrorMessage);
@@ -149,9 +152,12 @@ namespace BarangayHealthAid.OutPatient
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            OutPatientAddForm opa = new OutPatientAddForm();
-            opa.ShowDialog();
-            LoadData();
+            if (cmbCategory.Text == "Child")
+            {
+                OutPatientAddForm opa = new OutPatientAddForm();
+                opa.ShowDialog();
+                LoadData();
+            }
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
@@ -208,15 +214,15 @@ namespace BarangayHealthAid.OutPatient
                 dateTo = Convert.ToDateTime(dtpFrom.EditValue).AddMonths(1).AddSeconds(-1);
                 LoadData();
             }
-            //else if (cmbdateperiod.Text.Equals("All Records"))
-            //{
-            //    dtpFrom.EditValue = baseDate.AddYears(-100);
-            //    dtpTo.EditValue = Convert.ToDateTime(dtpFrom.EditValue).AddYears(100);
+            else if (cmbdateperiod.Text.Equals("All Records"))
+            {
+                dtpFrom.EditValue = baseDate.AddYears(-100);
+                dtpTo.EditValue = Convert.ToDateTime(dtpFrom.EditValue).AddYears(100);
 
-            //    dateFrom = baseDate.AddYears(-100);
-            //    dateTo = Convert.ToDateTime(dtpFrom.EditValue).AddYears(100);
-            //    LoadData();
-            //}
+                dateFrom = baseDate.AddYears(-100);
+                dateTo = Convert.ToDateTime(dtpFrom.EditValue).AddYears(100);
+                LoadData();
+            }
             else
             {
                 dtpFrom.EditValue = baseDate.AddYears(-10);
@@ -241,6 +247,11 @@ namespace BarangayHealthAid.OutPatient
         private void cmbdateperiod_Popup(object sender, EventArgs e)
         {
             pnlDates.Visible = cmbdateperiod.Text.Equals("Pick a date..") ? true : false;
+        }
+
+        private void cmbCategory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadData();
         }
     }
 }

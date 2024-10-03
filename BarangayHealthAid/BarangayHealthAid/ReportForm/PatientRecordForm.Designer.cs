@@ -61,6 +61,8 @@
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::BarangayHealthAid.WaitForm1), true, true);
             this.bwGetPatientData = new System.ComponentModel.BackgroundWorker();
+            this.btnAddRecord = new DevExpress.XtraEditors.SimpleButton();
+            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtPatient)).BeginInit();
@@ -75,10 +77,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.btnAddRecord);
             this.layoutControl1.Controls.Add(this.btnEdit);
             this.layoutControl1.Controls.Add(this.btnRefresh);
             this.layoutControl1.Controls.Add(this.btnPrint);
@@ -96,7 +100,7 @@
             // btnEdit
             // 
             this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
-            this.btnEdit.Location = new System.Drawing.Point(1102, 12);
+            this.btnEdit.Location = new System.Drawing.Point(975, 12);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(115, 22);
             this.btnEdit.StyleController = this.layoutControl1;
@@ -129,7 +133,7 @@
             // btnAdd
             // 
             this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
-            this.btnAdd.Location = new System.Drawing.Point(982, 12);
+            this.btnAdd.Location = new System.Drawing.Point(855, 12);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(116, 22);
             this.btnAdd.StyleController = this.layoutControl1;
@@ -354,7 +358,8 @@
             this.layoutControlItem2,
             this.layoutControlItem3,
             this.layoutControlItem4,
-            this.layoutControlItem5});
+            this.layoutControlItem5,
+            this.layoutControlItem6});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Size = new System.Drawing.Size(1462, 576);
@@ -365,7 +370,7 @@
             this.S.AllowHotTrack = false;
             this.S.Location = new System.Drawing.Point(0, 0);
             this.S.Name = "S";
-            this.S.Size = new System.Drawing.Size(970, 26);
+            this.S.Size = new System.Drawing.Size(843, 26);
             this.S.TextSize = new System.Drawing.Size(0, 0);
             // 
             // simpleSeparator1
@@ -397,7 +402,7 @@
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.btnAdd;
-            this.layoutControlItem2.Location = new System.Drawing.Point(970, 0);
+            this.layoutControlItem2.Location = new System.Drawing.Point(843, 0);
             this.layoutControlItem2.MaxSize = new System.Drawing.Size(120, 26);
             this.layoutControlItem2.MinSize = new System.Drawing.Size(120, 26);
             this.layoutControlItem2.Name = "layoutControlItem2";
@@ -433,7 +438,7 @@
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.btnEdit;
-            this.layoutControlItem5.Location = new System.Drawing.Point(1090, 0);
+            this.layoutControlItem5.Location = new System.Drawing.Point(963, 0);
             this.layoutControlItem5.MaxSize = new System.Drawing.Size(119, 26);
             this.layoutControlItem5.MinSize = new System.Drawing.Size(119, 26);
             this.layoutControlItem5.Name = "layoutControlItem5";
@@ -447,6 +452,25 @@
             this.bwGetPatientData.WorkerSupportsCancellation = true;
             this.bwGetPatientData.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwGetPatientData_DoWork);
             this.bwGetPatientData.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwGetPatientData_RunWorkerCompleted);
+            // 
+            // btnAddRecord
+            // 
+            this.btnAddRecord.Image = ((System.Drawing.Image)(resources.GetObject("btnAddRecord.Image")));
+            this.btnAddRecord.Location = new System.Drawing.Point(1094, 12);
+            this.btnAddRecord.Name = "btnAddRecord";
+            this.btnAddRecord.Size = new System.Drawing.Size(123, 22);
+            this.btnAddRecord.StyleController = this.layoutControl1;
+            this.btnAddRecord.TabIndex = 8;
+            this.btnAddRecord.Text = "Add Patient Record";
+            // 
+            // layoutControlItem6
+            // 
+            this.layoutControlItem6.Control = this.btnAddRecord;
+            this.layoutControlItem6.Location = new System.Drawing.Point(1082, 0);
+            this.layoutControlItem6.Name = "layoutControlItem6";
+            this.layoutControlItem6.Size = new System.Drawing.Size(127, 26);
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem6.TextVisible = false;
             // 
             // PatientRecordForm
             // 
@@ -471,6 +495,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -509,5 +534,7 @@
         private System.ComponentModel.BackgroundWorker bwGetPatientData;
         private DevExpress.XtraEditors.SimpleButton btnEdit;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
+        private DevExpress.XtraEditors.SimpleButton btnAddRecord;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
     }
 }

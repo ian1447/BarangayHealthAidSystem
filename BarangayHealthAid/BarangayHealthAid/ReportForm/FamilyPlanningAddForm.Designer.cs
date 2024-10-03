@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.txtCurMeth = new DevExpress.XtraEditors.TextEdit();
+            this.rgCurMeth = new DevExpress.XtraEditors.RadioGroup();
             this.txtChangeMethodOthers = new DevExpress.XtraEditors.TextEdit();
             this.rgCMReason = new DevExpress.XtraEditors.RadioGroup();
             this.txtOthers = new DevExpress.XtraEditors.TextEdit();
@@ -104,13 +106,13 @@
             this.layoutControlItem32 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem33 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem34 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.rgCurMeth = new DevExpress.XtraEditors.RadioGroup();
             this.layoutControlItem35 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.txtCurMeth = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlItem36 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCurMeth.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rgCurMeth.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtChangeMethodOthers.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rgCMReason.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtOthers.Properties)).BeginInit();
@@ -184,10 +186,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem32)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem33)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem34)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rgCurMeth.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem35)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCurMeth.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem36)).BeginInit();
             this.SuspendLayout();
             // 
@@ -237,6 +237,44 @@
             this.layoutControl1.Size = new System.Drawing.Size(749, 555);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // txtCurMeth
+            // 
+            this.txtCurMeth.Enabled = false;
+            this.txtCurMeth.Location = new System.Drawing.Point(655, 341);
+            this.txtCurMeth.Name = "txtCurMeth";
+            this.txtCurMeth.Size = new System.Drawing.Size(82, 20);
+            this.txtCurMeth.StyleController = this.layoutControl1;
+            this.txtCurMeth.TabIndex = 24;
+            this.txtCurMeth.EnabledChanged += new System.EventHandler(this.txtCurMeth_EnabledChanged);
+            // 
+            // rgCurMeth
+            // 
+            this.rgCurMeth.Enabled = false;
+            this.rgCurMeth.Location = new System.Drawing.Point(457, 252);
+            this.rgCurMeth.Name = "rgCurMeth";
+            this.rgCurMeth.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rgCurMeth.Properties.Appearance.Options.UseFont = true;
+            this.rgCurMeth.Properties.Columns = 3;
+            this.rgCurMeth.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("COC", "COC"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("POP", "POP"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("Injectable", "Injectable"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("Implant", "Implant"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("IUD-Internal", "IUD-Internal"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("IUD-Post-Partum", "IUD-Post-Partum"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("Condom", "Condom"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("BOM/CMM", "BOM/CMM"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("BBT", "BBT"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("STM", "STM"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("SDM", "SDM"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("LAM", "LAM"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("others", "others")});
+            this.rgCurMeth.Size = new System.Drawing.Size(280, 85);
+            this.rgCurMeth.StyleController = this.layoutControl1;
+            this.rgCurMeth.TabIndex = 23;
+            this.rgCurMeth.SelectedIndexChanged += new System.EventHandler(this.rgCurMeth_SelectedIndexChanged);
+            this.rgCurMeth.EnabledChanged += new System.EventHandler(this.rgCurMeth_EnabledChanged);
             // 
             // txtChangeMethodOthers
             // 
@@ -1119,34 +1157,6 @@
             this.layoutControlItem34.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem34.TextVisible = false;
             // 
-            // rgCurMeth
-            // 
-            this.rgCurMeth.Enabled = false;
-            this.rgCurMeth.Location = new System.Drawing.Point(457, 252);
-            this.rgCurMeth.Name = "rgCurMeth";
-            this.rgCurMeth.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rgCurMeth.Properties.Appearance.Options.UseFont = true;
-            this.rgCurMeth.Properties.Columns = 3;
-            this.rgCurMeth.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("COC", "COC"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("POP", "POP"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("Injectable", "Injectable"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("Implant", "Implant"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("IUD-Internal", "IUD-Internal"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("IUD-Post-Partum", "IUD-Post-Partum"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("Condom", "Condom"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("BOM/CMM", "BOM/CMM"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("BBT", "BBT"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("STM", "STM"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("SDM", "SDM"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("LAM", "LAM"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("others", "others")});
-            this.rgCurMeth.Size = new System.Drawing.Size(280, 85);
-            this.rgCurMeth.StyleController = this.layoutControl1;
-            this.rgCurMeth.TabIndex = 23;
-            this.rgCurMeth.SelectedIndexChanged += new System.EventHandler(this.rgCurMeth_SelectedIndexChanged);
-            this.rgCurMeth.EnabledChanged += new System.EventHandler(this.rgCurMeth_EnabledChanged);
-            // 
             // layoutControlItem35
             // 
             this.layoutControlItem35.Control = this.rgCurMeth;
@@ -1169,16 +1179,6 @@
             this.emptySpaceItem3.Name = "emptySpaceItem3";
             this.emptySpaceItem3.Size = new System.Drawing.Size(521, 24);
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // txtCurMeth
-            // 
-            this.txtCurMeth.Enabled = false;
-            this.txtCurMeth.Location = new System.Drawing.Point(655, 341);
-            this.txtCurMeth.Name = "txtCurMeth";
-            this.txtCurMeth.Size = new System.Drawing.Size(82, 20);
-            this.txtCurMeth.StyleController = this.layoutControl1;
-            this.txtCurMeth.TabIndex = 24;
-            this.txtCurMeth.EnabledChanged += new System.EventHandler(this.txtCurMeth_EnabledChanged);
             // 
             // layoutControlItem36
             // 
@@ -1205,6 +1205,8 @@
             this.Text = "Family Planning Add";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txtCurMeth.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rgCurMeth.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtChangeMethodOthers.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rgCMReason.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtOthers.Properties)).EndInit();
@@ -1278,10 +1280,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem32)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem33)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem34)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rgCurMeth.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem35)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCurMeth.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem36)).EndInit();
             this.ResumeLayout(false);
 
