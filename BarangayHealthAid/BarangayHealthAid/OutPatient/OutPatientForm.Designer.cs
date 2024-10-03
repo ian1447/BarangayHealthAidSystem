@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OutPatientForm));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.cmbdateperiod = new DevExpress.XtraEditors.SearchLookUpEdit();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.cmbCategory = new DevExpress.XtraEditors.ComboBoxEdit();
             this.btnEdit = new DevExpress.XtraEditors.SimpleButton();
             this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
             this.btnRefresh = new DevExpress.XtraEditors.SimpleButton();
@@ -53,10 +56,21 @@
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::BarangayHealthAid.WaitForm1), true, true);
             this.bwGetOutPatientData = new System.ComponentModel.BackgroundWorker();
+            this.pnlDates = new DevExpress.XtraEditors.PanelControl();
+            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
+            this.btnSearch = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.dtpTo = new DevExpress.XtraEditors.DateEdit();
+            this.dtpFrom = new DevExpress.XtraEditors.DateEdit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbdateperiod.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbCategory.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtOutPatient)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvOutPatient)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
@@ -68,10 +82,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pnlDates)).BeginInit();
+            this.pnlDates.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpTo.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpTo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpFrom.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpFrom.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.cmbdateperiod);
+            this.layoutControl1.Controls.Add(this.cmbCategory);
             this.layoutControl1.Controls.Add(this.btnEdit);
             this.layoutControl1.Controls.Add(this.btnAdd);
             this.layoutControl1.Controls.Add(this.btnRefresh);
@@ -85,6 +109,45 @@
             this.layoutControl1.Size = new System.Drawing.Size(1003, 570);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // cmbdateperiod
+            // 
+            this.cmbdateperiod.Location = new System.Drawing.Point(225, 12);
+            this.cmbdateperiod.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbdateperiod.Name = "cmbdateperiod";
+            this.cmbdateperiod.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbdateperiod.Properties.Appearance.Options.UseFont = true;
+            this.cmbdateperiod.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmbdateperiod.Properties.View = this.gridView1;
+            this.cmbdateperiod.Size = new System.Drawing.Size(135, 20);
+            this.cmbdateperiod.StyleController = this.layoutControl1;
+            this.cmbdateperiod.TabIndex = 396;
+            this.cmbdateperiod.Popup += new System.EventHandler(this.cmbdateperiod_Popup);
+            this.cmbdateperiod.EditValueChanged += new System.EventHandler(this.cmbdateperiod_EditValueChanged);
+            // 
+            // gridView1
+            // 
+            this.gridView1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridView1.OptionsView.ShowGroupPanel = false;
+            // 
+            // cmbCategory
+            // 
+            this.cmbCategory.EditValue = "Child";
+            this.cmbCategory.Location = new System.Drawing.Point(64, 12);
+            this.cmbCategory.Name = "cmbCategory";
+            this.cmbCategory.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmbCategory.Properties.Items.AddRange(new object[] {
+            "Child",
+            "Family Planning",
+            "Maternal"});
+            this.cmbCategory.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.cmbCategory.Size = new System.Drawing.Size(105, 20);
+            this.cmbCategory.StyleController = this.layoutControl1;
+            this.cmbCategory.TabIndex = 12;
             // 
             // btnEdit
             // 
@@ -281,7 +344,9 @@
             this.layoutControlItem2,
             this.layoutControlItem3,
             this.layoutControlItem4,
-            this.layoutControlItem5});
+            this.layoutControlItem5,
+            this.layoutControlItem7,
+            this.layoutControlItem6});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Size = new System.Drawing.Size(1003, 570);
@@ -290,9 +355,9 @@
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 0);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(352, 0);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(544, 26);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(192, 26);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlGroup2
@@ -361,23 +426,142 @@
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
             // 
+            // layoutControlItem7
+            // 
+            this.layoutControlItem7.Control = this.cmbCategory;
+            this.layoutControlItem7.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem7.MaxSize = new System.Drawing.Size(161, 26);
+            this.layoutControlItem7.MinSize = new System.Drawing.Size(161, 26);
+            this.layoutControlItem7.Name = "layoutControlItem7";
+            this.layoutControlItem7.Size = new System.Drawing.Size(161, 26);
+            this.layoutControlItem7.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.layoutControlItem7.Text = "Category:";
+            this.layoutControlItem7.TextSize = new System.Drawing.Size(49, 13);
+            // 
+            // layoutControlItem6
+            // 
+            this.layoutControlItem6.Control = this.cmbdateperiod;
+            this.layoutControlItem6.Location = new System.Drawing.Point(161, 0);
+            this.layoutControlItem6.MaxSize = new System.Drawing.Size(191, 26);
+            this.layoutControlItem6.MinSize = new System.Drawing.Size(191, 26);
+            this.layoutControlItem6.Name = "layoutControlItem6";
+            this.layoutControlItem6.Size = new System.Drawing.Size(191, 26);
+            this.layoutControlItem6.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.layoutControlItem6.Text = "Period:";
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(49, 13);
+            // 
             // bwGetOutPatientData
             // 
             this.bwGetOutPatientData.WorkerSupportsCancellation = true;
             this.bwGetOutPatientData.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwGetOutPatientData_DoWork);
             this.bwGetOutPatientData.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwGetOutPatientData_RunWorkerCompleted);
             // 
+            // pnlDates
+            // 
+            this.pnlDates.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.pnlDates.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.pnlDates.Appearance.Options.UseBackColor = true;
+            this.pnlDates.Appearance.Options.UseFont = true;
+            this.pnlDates.Controls.Add(this.labelControl8);
+            this.pnlDates.Controls.Add(this.btnSearch);
+            this.pnlDates.Controls.Add(this.labelControl6);
+            this.pnlDates.Controls.Add(this.dtpTo);
+            this.pnlDates.Controls.Add(this.dtpFrom);
+            this.pnlDates.Location = new System.Drawing.Point(295, 256);
+            this.pnlDates.Name = "pnlDates";
+            this.pnlDates.Size = new System.Drawing.Size(413, 59);
+            this.pnlDates.TabIndex = 398;
+            this.pnlDates.Visible = false;
+            this.pnlDates.VisibleChanged += new System.EventHandler(this.pnlDates_VisibleChanged);
+            // 
+            // labelControl8
+            // 
+            this.labelControl8.Appearance.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl8.Location = new System.Drawing.Point(14, 6);
+            this.labelControl8.Name = "labelControl8";
+            this.labelControl8.Size = new System.Drawing.Size(32, 13);
+            this.labelControl8.TabIndex = 370;
+            this.labelControl8.Text = "From :";
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Appearance.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.Appearance.Options.UseFont = true;
+            this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
+            this.btnSearch.Location = new System.Drawing.Point(326, 23);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(75, 27);
+            this.btnSearch.TabIndex = 365;
+            this.btnSearch.Text = "Load";
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // labelControl6
+            // 
+            this.labelControl6.Appearance.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl6.Location = new System.Drawing.Point(170, 6);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(19, 13);
+            this.labelControl6.TabIndex = 369;
+            this.labelControl6.Text = "To :";
+            // 
+            // dtpTo
+            // 
+            this.dtpTo.EditValue = null;
+            this.dtpTo.Location = new System.Drawing.Point(170, 26);
+            this.dtpTo.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpTo.Name = "dtpTo";
+            this.dtpTo.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.dtpTo.Properties.Appearance.Options.UseFont = true;
+            this.dtpTo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dtpTo.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dtpTo.Properties.DisplayFormat.FormatString = "MMM. dd, yyyy";
+            this.dtpTo.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dtpTo.Properties.EditFormat.FormatString = "MMM. dd, yyyy";
+            this.dtpTo.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dtpTo.Properties.Mask.EditMask = "MMM. dd, yyyy";
+            this.dtpTo.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
+            this.dtpTo.Size = new System.Drawing.Size(148, 24);
+            this.dtpTo.TabIndex = 364;
+            // 
+            // dtpFrom
+            // 
+            this.dtpFrom.EditValue = null;
+            this.dtpFrom.Location = new System.Drawing.Point(14, 26);
+            this.dtpFrom.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpFrom.Name = "dtpFrom";
+            this.dtpFrom.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.dtpFrom.Properties.Appearance.Options.UseFont = true;
+            this.dtpFrom.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dtpFrom.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dtpFrom.Properties.DisplayFormat.FormatString = "MMM. dd, yyyy";
+            this.dtpFrom.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dtpFrom.Properties.EditFormat.FormatString = "MMM. dd, yyyy";
+            this.dtpFrom.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dtpFrom.Properties.Mask.EditMask = "MMM. dd, yyyy";
+            this.dtpFrom.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
+            this.dtpFrom.Size = new System.Drawing.Size(148, 24);
+            this.dtpFrom.TabIndex = 362;
+            // 
             // OutPatientForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1003, 570);
+            this.Controls.Add(this.pnlDates);
             this.Controls.Add(this.layoutControl1);
             this.Name = "OutPatientForm";
             this.Text = "Out Patient";
             this.Shown += new System.EventHandler(this.OutPatientForm_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.cmbdateperiod.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbCategory.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtOutPatient)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvOutPatient)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
@@ -389,6 +573,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pnlDates)).EndInit();
+            this.pnlDates.ResumeLayout(false);
+            this.pnlDates.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpTo.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpTo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpFrom.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpFrom.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -421,5 +614,16 @@
         private System.ComponentModel.BackgroundWorker bwGetOutPatientData;
         private DevExpress.XtraEditors.SimpleButton btnEdit;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
+        private DevExpress.XtraEditors.ComboBoxEdit cmbCategory;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
+        private DevExpress.XtraEditors.SearchLookUpEdit cmbdateperiod;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
+        private DevExpress.XtraEditors.PanelControl pnlDates;
+        private DevExpress.XtraEditors.LabelControl labelControl8;
+        private DevExpress.XtraEditors.SimpleButton btnSearch;
+        private DevExpress.XtraEditors.LabelControl labelControl6;
+        private DevExpress.XtraEditors.DateEdit dtpTo;
+        private DevExpress.XtraEditors.DateEdit dtpFrom;
     }
 }

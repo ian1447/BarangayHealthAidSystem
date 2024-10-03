@@ -80,8 +80,25 @@ namespace BarangayHealthAid.OutPatient
         }
 
         DataTable OutPatientTable = new DataTable();
+        DataTable dataPeriod = new DataTable();
+        DateTime dateFrom = new DateTime();
+        DateTime dateTo = new DateTime();
         private void OutPatientForm_Shown(object sender, EventArgs e)
         {
+            dataPeriod.Columns.Add("Period", typeof(string));
+            dataPeriod.Rows.Add("Today's Record");
+            dataPeriod.Rows.Add("This Week's Record");
+            dataPeriod.Rows.Add("This Month's Record");
+            dataPeriod.Rows.Add("All Records");
+            dataPeriod.Rows.Add("Pick a date..");
+            cmbdateperiod.Properties.DataSource = dataPeriod;
+            cmbdateperiod.Properties.DisplayMember = "Period";
+            cmbdateperiod.Properties.ValueMember = "Period";
+            cmbdateperiod.EditValue = "Today's Record";
+            pnlDates.Location = new Point(
+               this.ClientSize.Width / 2 - pnlDates.Size.Width / 2,
+               this.ClientSize.Height / 5 - pnlDates.Size.Height / 2);
+            //pnlDates.Visible = true;
             LoadData();
         }
 
@@ -156,6 +173,74 @@ namespace BarangayHealthAid.OutPatient
             }
             else
                 MsgBox.Warning("No Out Patient Selected.");
+        }
+
+        private void cmbdateperiod_EditValueChanged(object sender, EventArgs e)
+        {
+            pnlDates.Visible = cmbdateperiod.Text.Equals("Pick a date..") ? true : false;
+            DateTime baseDate = DateTime.Now;
+            cmbdateperiod.Properties.DisplayMember = "Period";
+
+            if (cmbdateperiod.Text.Equals("Today's Record"))
+            {
+                dtpTo.EditValue = DateTime.Now;
+                dtpFrom.EditValue = DateTime.Now;
+
+                dateFrom = DateTime.Now;
+                dateTo = DateTime.Now;
+                LoadData();
+            }
+            else if (cmbdateperiod.Text.Equals("This Week's Record"))
+            {
+                dtpFrom.EditValue = baseDate.AddDays(-(int)baseDate.DayOfWeek);
+                dtpTo.EditValue = Convert.ToDateTime(dtpFrom.EditValue).AddDays(7).AddSeconds(-1);
+
+                dateFrom = baseDate.AddDays(-(int)baseDate.DayOfWeek);
+                dateTo = Convert.ToDateTime(dtpFrom.EditValue).AddDays(7).AddSeconds(-1);
+                LoadData();
+            }
+            else if (cmbdateperiod.Text.Equals("This Month's Record"))
+            {
+                dtpFrom.EditValue = baseDate.AddDays(1 - baseDate.Day);
+                dtpTo.EditValue = Convert.ToDateTime(dtpFrom.EditValue).AddMonths(1).AddSeconds(-1);
+
+                dateFrom = baseDate.AddDays(1 - baseDate.Day);
+                dateTo = Convert.ToDateTime(dtpFrom.EditValue).AddMonths(1).AddSeconds(-1);
+                LoadData();
+            }
+            //else if (cmbdateperiod.Text.Equals("All Records"))
+            //{
+            //    dtpFrom.EditValue = baseDate.AddYears(-100);
+            //    dtpTo.EditValue = Convert.ToDateTime(dtpFrom.EditValue).AddYears(100);
+
+            //    dateFrom = baseDate.AddYears(-100);
+            //    dateTo = Convert.ToDateTime(dtpFrom.EditValue).AddYears(100);
+            //    LoadData();
+            //}
+            else
+            {
+                dtpFrom.EditValue = baseDate.AddYears(-10);
+                dtpTo.EditValue = Convert.ToDateTime(dtpFrom.EditValue).AddYears(10);
+
+                dateFrom = baseDate.AddYears(-10);
+                dateTo = Convert.ToDateTime(dtpFrom.EditValue).AddYears(10);
+            }
+        }
+
+        private void pnlDates_VisibleChanged(object sender, EventArgs e)
+        {
+            layoutControl1.Enabled = !pnlDates.Visible;
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            pnlDates.Visible = false; 
+            LoadData();
+        }
+
+        private void cmbdateperiod_Popup(object sender, EventArgs e)
+        {
+            pnlDates.Visible = cmbdateperiod.Text.Equals("Pick a date..") ? true : false;
         }
     }
 }

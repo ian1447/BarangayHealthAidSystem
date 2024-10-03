@@ -66,6 +66,7 @@
             this.xrLine1 = new DevExpress.XtraReports.UI.XRLine();
             this.xrLabel6 = new DevExpress.XtraReports.UI.XRLabel();
             this.sqlDataSource1 = new DevExpress.DataAccess.Sql.SqlDataSource();
+            this.lblType = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -177,6 +178,7 @@
             // ReportHeader
             // 
             this.ReportHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.lblType,
             this.xrTable1,
             this.lblDate,
             this.lblBHW,
@@ -185,7 +187,7 @@
             this.xrLabel3,
             this.xrLabel2,
             this.xrLabel1});
-            this.ReportHeader.HeightF = 258F;
+            this.ReportHeader.HeightF = 281.9584F;
             this.ReportHeader.Name = "ReportHeader";
             // 
             // xrTable1
@@ -193,7 +195,7 @@
             this.xrTable1.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)
                         | DevExpress.XtraPrinting.BorderSide.Right)
                         | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.xrTable1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 215.2917F);
+            this.xrTable1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 226.7501F);
             this.xrTable1.Name = "xrTable1";
             this.xrTable1.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
             this.xrTableRow1});
@@ -260,7 +262,7 @@
             // 
             // lblDate
             // 
-            this.lblDate.LocationFloat = new DevExpress.Utils.PointFloat(0F, 186.2917F);
+            this.lblDate.LocationFloat = new DevExpress.Utils.PointFloat(0F, 197.75F);
             this.lblDate.Name = "lblDate";
             this.lblDate.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.lblDate.SizeF = new System.Drawing.SizeF(748F, 23F);
@@ -270,7 +272,7 @@
             // 
             // lblBHW
             // 
-            this.lblBHW.LocationFloat = new DevExpress.Utils.PointFloat(0F, 163.2917F);
+            this.lblBHW.LocationFloat = new DevExpress.Utils.PointFloat(0F, 174.75F);
             this.lblBHW.Name = "lblBHW";
             this.lblBHW.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.lblBHW.SizeF = new System.Drawing.SizeF(748F, 23F);
@@ -281,7 +283,7 @@
             // 
             // xrLabel5
             // 
-            this.xrLabel5.LocationFloat = new DevExpress.Utils.PointFloat(0F, 140.2917F);
+            this.xrLabel5.LocationFloat = new DevExpress.Utils.PointFloat(0F, 151.7501F);
             this.xrLabel5.Name = "xrLabel5";
             this.xrLabel5.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel5.SizeF = new System.Drawing.SizeF(748F, 23F);
@@ -391,6 +393,16 @@
             customSqlQuery1});
             this.sqlDataSource1.ResultSchemaSerializable = resources.GetString("sqlDataSource1.ResultSchemaSerializable");
             // 
+            // lblType
+            // 
+            this.lblType.LocationFloat = new DevExpress.Utils.PointFloat(0F, 112.5F);
+            this.lblType.Name = "lblType";
+            this.lblType.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.lblType.SizeF = new System.Drawing.SizeF(748F, 23F);
+            this.lblType.StylePriority.UseTextAlignment = false;
+            this.lblType.Text = "Category: ";
+            this.lblType.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            // 
             // OutPatientReportForm
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -448,5 +460,6 @@
         public DevExpress.XtraReports.UI.XRLabel lblPreparedByTitle;
         private DevExpress.XtraReports.UI.XRLine xrLine1;
         private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource1;
+        public DevExpress.XtraReports.UI.XRLabel lblType;
     }
 }

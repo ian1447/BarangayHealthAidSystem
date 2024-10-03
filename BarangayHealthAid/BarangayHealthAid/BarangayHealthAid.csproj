@@ -130,11 +130,23 @@
     <Compile Include="OutPatient\OutPatientAddForm.Designer.cs">
       <DependentUpon>OutPatientAddForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="OutPatient\OutPatientAddForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OutPatient\OutPatientAddForm2.Designer.cs">
+      <DependentUpon>OutPatientAddForm2.cs</DependentUpon>
+    </Compile>
     <Compile Include="OutPatient\OutPatientForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="OutPatient\OutPatientForm.Designer.cs">
       <DependentUpon>OutPatientForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OutPatient\SelectPatientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OutPatient\SelectPatientForm.Designer.cs">
+      <DependentUpon>SelectPatientForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -240,8 +252,14 @@
     <EmbeddedResource Include="OutPatient\OutPatientAddForm.resx">
       <DependentUpon>OutPatientAddForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="OutPatient\OutPatientAddForm2.resx">
+      <DependentUpon>OutPatientAddForm2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OutPatient\OutPatientForm.resx">
       <DependentUpon>OutPatientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OutPatient\SelectPatientForm.resx">
+      <DependentUpon>SelectPatientForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
