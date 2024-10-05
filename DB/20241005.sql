@@ -169,10 +169,10 @@ CREATE TABLE `out_patient` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `patient_type` enum('Child','Family Planning','Maternal') DEFAULT NULL,
   `patient_id` int(11) DEFAULT NULL,
-  `purok_no` int(11) NOT NULL,
-  `name_of_child` varchar(255) NOT NULL,
-  `birthdate` date NOT NULL,
-  `age_in_months` int(11) NOT NULL,
+  `purok_no` int(11) DEFAULT NULL,
+  `name_of_child` varchar(255) DEFAULT NULL,
+  `birthdate` date DEFAULT NULL,
+  `age_in_months` int(11) DEFAULT NULL,
   `height` decimal(12,2) DEFAULT NULL,
   `weight` decimal(12,2) DEFAULT NULL,
   `nutritional_status` varchar(255) DEFAULT NULL,
@@ -180,11 +180,11 @@ CREATE TABLE `out_patient` (
   `added_by` int(11) DEFAULT NULL,
   `transdate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 /*Data for the table `out_patient` */
 
-insert  into `out_patient`(`id`,`patient_type`,`patient_id`,`purok_no`,`name_of_child`,`birthdate`,`age_in_months`,`height`,`weight`,`nutritional_status`,`remarks`,`added_by`,`transdate`) values (1,'Child',NULL,3,'test Edit','2024-06-30',2,'13.00','24.20','abniormal',NULL,1,'2024-09-18 21:50:38'),(3,'Child',NULL,2,'Testing Name','2024-09-10',23,'56.00','123.00','Normal',NULL,1,'2024-09-19 21:23:44'),(4,'Child',NULL,12,'test','2024-10-07',12,'23.00','123.00','12asdf','testing remarks ug naa ba',1,'2024-10-03 21:25:34');
+insert  into `out_patient`(`id`,`patient_type`,`patient_id`,`purok_no`,`name_of_child`,`birthdate`,`age_in_months`,`height`,`weight`,`nutritional_status`,`remarks`,`added_by`,`transdate`) values (1,'Child',NULL,3,'test Edit','2024-06-30',2,'13.00','24.20','abniormal',NULL,1,'2024-09-18 21:50:38'),(3,'Child',NULL,2,'Testing Name','2024-09-10',23,'56.00','123.00','Normal',NULL,1,'2024-09-19 21:23:44'),(4,'Child',NULL,12,'test','2024-10-07',12,'23.00','123.00','12asdf','testing remarks ug naa ba',1,'2024-10-03 21:25:34'),(5,'Child',0,21,'testing new2','2024-09-29',223,'213.00','4312.00','testing status 2','testing remarks2',1,'2024-10-05 13:52:15'),(6,'Maternal',2,2,'',NULL,0,'0.00','1.00','3','sdaf',1,'2024-10-05 14:41:22'),(7,'Maternal',3,123,'',NULL,0,'0.00','123.00','sdfzxcv','zxcv',1,'2024-10-05 21:39:18');
 
 /*Table structure for table `patient_details` */
 
@@ -750,18 +750,20 @@ DELIMITER $$
 	_purok_no int (11),
 	_name_of_child varchar (255),
 	_patient_type varchar (255),
+	_patient_id INT (11),
 	_birthdate date,
 	_age_in_months int (11),
 	_height decimal(12,2),
 	_weight decimal(12,2),
 	_nutritional_status varchar (255),
-	_remarks varchar (255),
+	_remarks text (255),
 	_added_by int (11)
     )
 BEGIN
 INSERT INTO `out_patient`
             (`purok_no`,
              `patient_type`,
+             `patient_id`,
              `name_of_child`,
              `birthdate`,
              `age_in_months`,
@@ -772,6 +774,7 @@ INSERT INTO `out_patient`
              `added_by`)
 VALUES (_purok_no,
 	_patient_type,
+	_patient_id,
         _name_of_child,
         _birthdate,
         _age_in_months,
@@ -792,22 +795,28 @@ DELIMITER $$
 /*!50003 CREATE DEFINER=`system_admin`@`%` PROCEDURE `sp_out_patient_edit`(
 	_purok_no INT (11),
 	_name_of_child VARCHAR (255),
+	_patient_type VARCHAR (255),
+	_patient_id INT (11),
 	_birthdate DATE,
 	_age_in_months INT (11),
 	_height DECIMAL(12,2),
 	_weight DECIMAL(12,2),
 	_nutritional_status VARCHAR (255),
+	_remarks TEXT (255),
 	_id INT (11)
     )
 BEGIN
 	UPDATE `out_patient`
 	SET `purok_no` = _purok_no,
+	  `patient_type` = _patient_type,
+	  `patient_id` = _patient_id,
 	  `name_of_child` = _name_of_child,
 	  `birthdate` = _birthdate,
 	  `age_in_months` = _age_in_months,
 	  `height` = _height,
 	  `weight` = _weight,
-	  `nutritional_status` = _nutritional_status
+	  `nutritional_status` = _nutritional_status,
+	  `remarks` = _remarks
 	WHERE `id` = _id;
     END */$$
 DELIMITER ;
@@ -824,7 +833,12 @@ DELIMITER $$
 	_date_to date
 )
 BEGIN
-SELECT DATE_FORMAT(op.`birthdate`, "%M %d,%Y") Formatbirthdate,op.* FROM `out_patient` op WHERE op.`patient_type` = _patient_type AND (date(op.`transdate`) BETWEEN date(_date_from) AND date(_date_to));
+	if _patient_type = "Child" then
+		SELECT DATE_FORMAT(op.`birthdate`, "%M %d,%Y") Formatbirthdate,op.* FROM `out_patient` op WHERE op.`patient_type` = _patient_type AND (date(op.`transdate`) BETWEEN date(_date_from) AND date(_date_to));
+	elseif _patient_type = "Maternal" then
+		SELECT DATE_FORMAT(m.`dob`, "%M %d,%Y") Formatbirthdate,m.`name`, m.`height`,m.`age`,op.*FROM `out_patient` op
+		JOIN `maternal_health_record` m ON m.`id` = op.`patient_id` WHERE op.`patient_type` = _patient_type AND (DATE(op.`transdate`) BETWEEN DATE(_date_from) AND DATE(_date_to));
+	end if;
     END */$$
 DELIMITER ;
 
