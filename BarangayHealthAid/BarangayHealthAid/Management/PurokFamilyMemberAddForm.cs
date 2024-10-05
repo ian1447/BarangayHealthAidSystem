@@ -91,7 +91,7 @@ namespace BarangayHealthAid.Management
 
         private void bwAddFamilyMember_DoWork(object sender, DoWorkEventArgs e)
         {
-            Purok.AddPurokFamilyMember(purok_member_id, txtName.Text,txtType.Text,dtDob.Text,txtAge.Text,cbSex.Text);
+            Purok.AddPurokFamilyMember(purok_member_id, txtName.Text,cbType.Text,dtDob.Text,txtAge.Text,cbSex.Text);
             bwAddFamilyMember.CancelAsync();
         }
 
@@ -109,7 +109,7 @@ namespace BarangayHealthAid.Management
 
         private void bwEditFamilyMember_DoWork(object sender, DoWorkEventArgs e)
         {
-            Purok.EditPurokFamilyMember(edit_id, txtName.Text, txtType.Text, dtDob.Text, txtAge.Text, cbSex.Text);
+            Purok.EditPurokFamilyMember(edit_id, txtName.Text, cbType.Text, dtDob.Text, txtAge.Text, cbSex.Text);
             bwEditFamilyMember.CancelAsync();
         }
 

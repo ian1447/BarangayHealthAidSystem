@@ -48,8 +48,9 @@ namespace BarangayHealthAid.Dal
 
         public static string OutPatientAddErrorMessage;
         public static bool OutPatientAddIsSuccessful;
-        public static void OutPatientAdd(string _purok_no, string _name_of_child, string _patient_type, string _birthdate, string _age_in_months, string _height, string _weight, string _nutritional_status, string _remarks)
+        public static void OutPatientAdd(string _purok_no, int _patient_id, string _name_of_child, string _patient_type, string _birthdate, string _age_in_months, string _height, string _weight, string _nutritional_status, string _remarks)
         {
+            _birthdate = _birthdate == "" ? null : _birthdate;
             DataSet dt = new DataSet();
             try
             {
@@ -60,6 +61,7 @@ namespace BarangayHealthAid.Dal
                     cmd.Parameters.Add(new MySqlParameter("_purok_no", _purok_no));
                     cmd.Parameters.Add(new MySqlParameter("_name_of_child", _name_of_child));
                     cmd.Parameters.Add(new MySqlParameter("_patient_type", _patient_type));
+                    cmd.Parameters.Add(new MySqlParameter("_patient_id", _patient_id));
                     cmd.Parameters.Add(new MySqlParameter("_birthdate", _birthdate));
                     cmd.Parameters.Add(new MySqlParameter("_age_in_months", _age_in_months));
                     cmd.Parameters.Add(new MySqlParameter("_height", _height));
@@ -84,7 +86,7 @@ namespace BarangayHealthAid.Dal
 
         public static string OutPatientEditErrorMessage;
         public static bool OutPatientEditIsSuccessful;
-        public static void OutPatientEdit(string _purok_no, string _name_of_child, string _birthdate, string _age_in_months, string _height, string _weight, string _nutritional_status, string _id)
+        public static void OutPatientEdit(string _purok_no, int _patient_id, string _name_of_child, string _patient_type, string _birthdate, string _age_in_months, string _height, string _weight, string _nutritional_status, string _remarks, string _id)
         {
             DataSet dt = new DataSet();
             try
@@ -95,11 +97,14 @@ namespace BarangayHealthAid.Dal
                     MySqlCommand cmd = new MySqlCommand("sp_out_patient_edit", con);
                     cmd.Parameters.Add(new MySqlParameter("_purok_no", _purok_no));
                     cmd.Parameters.Add(new MySqlParameter("_name_of_child", _name_of_child));
+                    cmd.Parameters.Add(new MySqlParameter("_patient_type", _patient_type));
+                    cmd.Parameters.Add(new MySqlParameter("_patient_id", _patient_id));
                     cmd.Parameters.Add(new MySqlParameter("_birthdate", _birthdate));
                     cmd.Parameters.Add(new MySqlParameter("_age_in_months", _age_in_months));
                     cmd.Parameters.Add(new MySqlParameter("_height", _height));
                     cmd.Parameters.Add(new MySqlParameter("_weight", _weight));
                     cmd.Parameters.Add(new MySqlParameter("_nutritional_status", _nutritional_status));
+                    cmd.Parameters.Add(new MySqlParameter("_remarks", _remarks));
                     cmd.Parameters.Add(new MySqlParameter("_id", _id));
                     cmd.CommandType = CommandType.StoredProcedure;
                     MySqlDataAdapter adp = new MySqlDataAdapter(cmd);

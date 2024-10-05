@@ -437,7 +437,7 @@
         private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
         private System.ComponentModel.BackgroundWorker bwAddOutPatient;
         private System.ComponentModel.BackgroundWorker bwEditOutPatient;
-        private DevExpress.XtraEditors.MemoEdit txtRemarks;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
+        public DevExpress.XtraEditors.MemoEdit txtRemarks;
     }
 }

@@ -12,6 +12,7 @@ using BarangayHealthAid.Dal;
 using BarangayHealthAid.Reports;
 using BarangayHealthAid.ReportForm;
 using DevExpress.XtraReports.UI;
+using DevExpress.XtraGrid.Columns;
 
 namespace BarangayHealthAid.OutPatient
 {
@@ -129,7 +130,7 @@ namespace BarangayHealthAid.OutPatient
                 else
                 {
                     dtOutPatient.DataSource = new DataTable();
-                    MsgBox.Error("No Data Available.");
+                    //MsgBox.Error("No Data Available.");
                 }
             }
             else
@@ -158,6 +159,13 @@ namespace BarangayHealthAid.OutPatient
                 opa.ShowDialog();
                 LoadData();
             }
+            else
+            {
+                OutPatientAddForm2 opa2 = new OutPatientAddForm2();
+                opa2.patient_type = cmbCategory.Text;
+                opa2.ShowDialog();
+                LoadData();
+            }
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
@@ -174,6 +182,7 @@ namespace BarangayHealthAid.OutPatient
                 opa.txtNutStat.Text = gvOutPatient.GetFocusedRowCellValue("nutritional_status").ToString();
                 opa.txtPurok.Text = gvOutPatient.GetFocusedRowCellValue("purok_no").ToString();
                 opa.txtWeight.Text = gvOutPatient.GetFocusedRowCellValue("weight").ToString();
+                opa.txtRemarks.Text = gvOutPatient.GetFocusedRowCellValue("remarks").ToString();
                 opa.ShowDialog();
                 LoadData();
             }
@@ -251,6 +260,23 @@ namespace BarangayHealthAid.OutPatient
 
         private void cmbCategory_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (cmbCategory.Text == "Maternal")
+            {
+                GridColumn column = gvOutPatient.Columns[2];
+                column.FieldName = "name";
+                GridColumn column2 = gvOutPatient.Columns[4];
+                column2.FieldName = "age";
+                column2.Caption = "Age";
+            }
+            else
+            {
+                GridColumn column = gvOutPatient.Columns[2];
+                column.FieldName = "name_of_child";
+                GridColumn column2 = gvOutPatient.Columns[4];
+                column2.FieldName = "age_in_months";
+                column2.Caption = "Age in months";
+            }
+            gvOutPatient.RefreshData();
             LoadData();
         }
     }

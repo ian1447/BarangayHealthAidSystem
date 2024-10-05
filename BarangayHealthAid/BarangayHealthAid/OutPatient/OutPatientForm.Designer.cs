@@ -47,6 +47,7 @@
             this.height = new DevExpress.XtraGrid.Columns.GridColumn();
             this.nutritional_status = new DevExpress.XtraGrid.Columns.GridColumn();
             this.weight = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.remarks = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
@@ -216,7 +217,8 @@
             this.age_in_months,
             this.height,
             this.nutritional_status,
-            this.weight});
+            this.weight,
+            this.remarks});
             this.gvOutPatient.GridControl = this.dtOutPatient;
             this.gvOutPatient.Name = "gvOutPatient";
             this.gvOutPatient.OptionsBehavior.Editable = false;
@@ -329,6 +331,20 @@
             this.weight.Name = "weight";
             this.weight.Visible = true;
             this.weight.VisibleIndex = 5;
+            // 
+            // remarks
+            // 
+            this.remarks.AppearanceCell.Options.UseTextOptions = true;
+            this.remarks.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.remarks.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.remarks.AppearanceHeader.Options.UseTextOptions = true;
+            this.remarks.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.remarks.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.remarks.Caption = "Remarks";
+            this.remarks.FieldName = "remarks";
+            this.remarks.Name = "remarks";
+            this.remarks.Visible = true;
+            this.remarks.VisibleIndex = 7;
             // 
             // repositoryItemCheckEdit1
             // 
@@ -626,5 +642,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl6;
         private DevExpress.XtraEditors.DateEdit dtpTo;
         private DevExpress.XtraEditors.DateEdit dtpFrom;
+        private DevExpress.XtraGrid.Columns.GridColumn remarks;
     }
 }

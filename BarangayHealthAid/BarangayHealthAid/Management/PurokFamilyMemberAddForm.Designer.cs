@@ -33,7 +33,6 @@
             this.cbSex = new DevExpress.XtraEditors.ComboBoxEdit();
             this.txtAge = new DevExpress.XtraEditors.TextEdit();
             this.dtDob = new DevExpress.XtraEditors.DateEdit();
-            this.txtType = new DevExpress.XtraEditors.TextEdit();
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.txtName = new DevExpress.XtraEditors.TextEdit();
@@ -41,37 +40,38 @@
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::BarangayHealthAid.WaitForm1), true, true);
             this.bwAddFamilyMember = new System.ComponentModel.BackgroundWorker();
             this.bwEditFamilyMember = new System.ComponentModel.BackgroundWorker();
+            this.cbType = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbSex.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAge.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtDob.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtDob.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtType.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbType.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.cbType);
             this.layoutControl1.Controls.Add(this.cbSex);
             this.layoutControl1.Controls.Add(this.txtAge);
             this.layoutControl1.Controls.Add(this.dtDob);
-            this.layoutControl1.Controls.Add(this.txtType);
             this.layoutControl1.Controls.Add(this.btnCancel);
             this.layoutControl1.Controls.Add(this.btnSave);
             this.layoutControl1.Controls.Add(this.txtName);
@@ -102,6 +102,8 @@
             // 
             this.txtAge.Location = new System.Drawing.Point(139, 121);
             this.txtAge.Name = "txtAge";
+            this.txtAge.Properties.Mask.EditMask = "d";
+            this.txtAge.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtAge.Size = new System.Drawing.Size(122, 20);
             this.txtAge.StyleController = this.layoutControl1;
             this.txtAge.TabIndex = 6;
@@ -122,14 +124,6 @@
             this.dtDob.Size = new System.Drawing.Size(123, 20);
             this.dtDob.StyleController = this.layoutControl1;
             this.dtDob.TabIndex = 10;
-            // 
-            // txtType
-            // 
-            this.txtType.Location = new System.Drawing.Point(12, 31);
-            this.txtType.Name = "txtType";
-            this.txtType.Size = new System.Drawing.Size(376, 20);
-            this.txtType.StyleController = this.layoutControl1;
-            this.txtType.TabIndex = 5;
             // 
             // btnCancel
             // 
@@ -169,10 +163,10 @@
             this.layoutControlItem1,
             this.layoutControlItem2,
             this.layoutControlItem3,
-            this.layoutControlItem4,
             this.layoutControlItem5,
             this.layoutControlItem6,
-            this.layoutControlItem7});
+            this.layoutControlItem7,
+            this.layoutControlItem8});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Size = new System.Drawing.Size(400, 179);
@@ -211,18 +205,6 @@
             this.layoutControlItem3.Size = new System.Drawing.Size(127, 26);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
-            // 
-            // layoutControlItem4
-            // 
-            this.layoutControlItem4.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.layoutControlItem4.AppearanceItemCaption.Options.UseFont = true;
-            this.layoutControlItem4.Control = this.txtType;
-            this.layoutControlItem4.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(380, 43);
-            this.layoutControlItem4.Text = "Member Type (e.g Father,Mother):";
-            this.layoutControlItem4.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(225, 16);
             // 
             // layoutControlItem5
             // 
@@ -278,6 +260,32 @@
             this.bwEditFamilyMember.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwEditFamilyMember_DoWork);
             this.bwEditFamilyMember.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwEditFamilyMember_RunWorkerCompleted);
             // 
+            // cbType
+            // 
+            this.cbType.Location = new System.Drawing.Point(12, 31);
+            this.cbType.Name = "cbType";
+            this.cbType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbType.Properties.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.cbType.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.cbType.Size = new System.Drawing.Size(376, 20);
+            this.cbType.StyleController = this.layoutControl1;
+            this.cbType.TabIndex = 14;
+            // 
+            // layoutControlItem8
+            // 
+            this.layoutControlItem8.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem8.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem8.Control = this.cbType;
+            this.layoutControlItem8.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem8.Name = "layoutControlItem8";
+            this.layoutControlItem8.Size = new System.Drawing.Size(380, 43);
+            this.layoutControlItem8.Text = "Member Type (e.g Father,Mother):";
+            this.layoutControlItem8.TextLocation = DevExpress.Utils.Locations.Top;
+            this.layoutControlItem8.TextSize = new System.Drawing.Size(225, 16);
+            // 
             // PurokFamilyMemberAddForm
             // 
             this.AcceptButton = this.btnSave;
@@ -297,16 +305,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtAge.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtDob.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtDob.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtType.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbType.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -324,13 +332,13 @@
         private System.ComponentModel.BackgroundWorker bwAddFamilyMember;
         private System.ComponentModel.BackgroundWorker bwEditFamilyMember;
         public DevExpress.XtraEditors.TextEdit txtName;
-        public DevExpress.XtraEditors.TextEdit txtType;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         public DevExpress.XtraEditors.TextEdit txtAge;
         public DevExpress.XtraEditors.DateEdit dtDob;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
         public DevExpress.XtraEditors.ComboBoxEdit cbSex;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
+        public DevExpress.XtraEditors.ComboBoxEdit cbType;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
     }
 }

@@ -93,7 +93,7 @@ namespace BarangayHealthAid.OutPatient
 
         private void bwAddOutPatient_DoWork(object sender, DoWorkEventArgs e)
         {
-            OPT.OutPatientAdd(txtPurok.Text, txtChildName.Text,"Child",dtDob.Text,txtAge.Text,txtHeight.Text,txtWeight.Text,txtNutStat.Text,txtRemarks.Text);
+            OPT.OutPatientAdd(txtPurok.Text,0, txtChildName.Text,"Child",dtDob.Text,txtAge.Text,txtHeight.Text,txtWeight.Text,txtNutStat.Text,txtRemarks.Text);
             bwAddOutPatient.CancelAsync();
         }
 
@@ -111,7 +111,7 @@ namespace BarangayHealthAid.OutPatient
 
         private void bwEditOutPatient_DoWork(object sender, DoWorkEventArgs e)
         {
-            OPT.OutPatientEdit(txtPurok.Text, txtChildName.Text, dtDob.Text, txtAge.Text, txtHeight.Text, txtWeight.Text, txtNutStat.Text,_edit_id);
+            OPT.OutPatientEdit(txtPurok.Text,0, txtChildName.Text,"Child",dtDob.Text, txtAge.Text, txtHeight.Text, txtWeight.Text, txtNutStat.Text, txtRemarks.Text, _edit_id);
             bwEditOutPatient.CancelAsync();
         }
 
