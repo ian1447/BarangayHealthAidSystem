@@ -335,5 +335,18 @@ namespace BarangayHealthAid.ReportForm
             btnEdit.PerformClick();
         }
 
+        private void btnAddRecord_Click(object sender, EventArgs e)
+        {
+            if (SelectionPass())
+            {
+                int id = Convert.ToInt32(gvPatient.GetFocusedRowCellValue("id").ToString());
+                PatientHistoricalRecordForm phr = new PatientHistoricalRecordForm();
+                phr.patient_id = id;
+                phr.ShowDialog();
+            }
+            else
+                MsgBox.Warning("No selected patient.");
+        }
+
     }
 }

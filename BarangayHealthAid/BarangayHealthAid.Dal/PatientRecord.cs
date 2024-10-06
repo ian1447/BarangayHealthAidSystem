@@ -125,5 +125,68 @@ namespace BarangayHealthAid.Dal
                 AddPatientErrorMessage = ex.Message + "\nFunction : Add Patient Record";
             }
         }
+
+        public static string AddPatientHistoryErrorMessage;
+        public static bool AddPatientHistoryIsSuccessful;
+        public static void AddPatientHistory(int _patient_details_id, string _weight, string _height, string _pr, string _rr, string _temp, string _bp, string _remarks) 
+        {
+            DataSet dt = new DataSet();
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(ConnectionString()))
+                {
+                    con.Open();
+                    MySqlCommand cmd = new MySqlCommand("sp_patient_details_history_add", con);
+                    cmd.Parameters.Add(new MySqlParameter("_patient_details_id", _patient_details_id));
+                    cmd.Parameters.Add(new MySqlParameter("_weight", _weight));
+                    cmd.Parameters.Add(new MySqlParameter("_height", _height));
+                    cmd.Parameters.Add(new MySqlParameter("_pr", _pr));
+                    cmd.Parameters.Add(new MySqlParameter("_rr", _rr));
+                    cmd.Parameters.Add(new MySqlParameter("_temp", _temp));
+                    cmd.Parameters.Add(new MySqlParameter("_bp", _bp));
+                    cmd.Parameters.Add(new MySqlParameter("_remarks", _remarks));
+                    cmd.Parameters.Add(new MySqlParameter("_added_by", PublicVariables.Userid));
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    MySqlDataAdapter adp = new MySqlDataAdapter(cmd);
+                    adp.Fill(dt);
+                    con.Close();
+                    AddPatientHistoryIsSuccessful = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                AddPatientHistoryIsSuccessful = false;
+                AddPatientHistoryErrorMessage = ex.Message + "\nFunction : Add Patient History";
+            }
+        }
+
+        public static string GetPatientHistoryErrorMessage;
+        public static bool GetPatientHistoryIsSuccessful;
+        public static DataTable GetPatientHistory(int _patient_details_id)
+        {
+            DataSet dt = new DataSet();
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(ConnectionString()))
+                {
+                    con.Open();
+                    MySqlCommand cmd = new MySqlCommand("sp_patient_details_history_get", con);
+                    cmd.Parameters.Add(new MySqlParameter("_patient_details_id", _patient_details_id));
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    MySqlDataAdapter adp = new MySqlDataAdapter(cmd);
+                    adp.Fill(dt);
+                    con.Close();
+                    GetPatientHistoryIsSuccessful = true;
+                    return dt.Tables[0];
+                }
+            }
+
+            catch (Exception ex)
+            {
+                GetPatientHistoryIsSuccessful = false;
+                GetPatientHistoryErrorMessage = ex.Message + "\nFunction : Get Patient History";
+                return null;
+            }
+        }
     }
 }

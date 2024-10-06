@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PatientRecordForm));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.btnAddRecord = new DevExpress.XtraEditors.SimpleButton();
             this.btnEdit = new DevExpress.XtraEditors.SimpleButton();
             this.btnRefresh = new DevExpress.XtraEditors.SimpleButton();
             this.btnPrint = new DevExpress.XtraEditors.SimpleButton();
@@ -59,10 +60,9 @@
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::BarangayHealthAid.WaitForm1), true, true);
             this.bwGetPatientData = new System.ComponentModel.BackgroundWorker();
-            this.btnAddRecord = new DevExpress.XtraEditors.SimpleButton();
-            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtPatient)).BeginInit();
@@ -96,6 +96,17 @@
             this.layoutControl1.Size = new System.Drawing.Size(1462, 576);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // btnAddRecord
+            // 
+            this.btnAddRecord.Image = ((System.Drawing.Image)(resources.GetObject("btnAddRecord.Image")));
+            this.btnAddRecord.Location = new System.Drawing.Point(1094, 12);
+            this.btnAddRecord.Name = "btnAddRecord";
+            this.btnAddRecord.Size = new System.Drawing.Size(123, 22);
+            this.btnAddRecord.StyleController = this.layoutControl1;
+            this.btnAddRecord.TabIndex = 8;
+            this.btnAddRecord.Text = "Add Patient Record";
+            this.btnAddRecord.Click += new System.EventHandler(this.btnAddRecord_Click);
             // 
             // btnEdit
             // 
@@ -447,30 +458,23 @@
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
             // 
+            // layoutControlItem6
+            // 
+            this.layoutControlItem6.Control = this.btnAddRecord;
+            this.layoutControlItem6.Location = new System.Drawing.Point(1082, 0);
+            this.layoutControlItem6.MaxSize = new System.Drawing.Size(127, 26);
+            this.layoutControlItem6.MinSize = new System.Drawing.Size(127, 26);
+            this.layoutControlItem6.Name = "layoutControlItem6";
+            this.layoutControlItem6.Size = new System.Drawing.Size(127, 26);
+            this.layoutControlItem6.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem6.TextVisible = false;
+            // 
             // bwGetPatientData
             // 
             this.bwGetPatientData.WorkerSupportsCancellation = true;
             this.bwGetPatientData.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwGetPatientData_DoWork);
             this.bwGetPatientData.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwGetPatientData_RunWorkerCompleted);
-            // 
-            // btnAddRecord
-            // 
-            this.btnAddRecord.Image = ((System.Drawing.Image)(resources.GetObject("btnAddRecord.Image")));
-            this.btnAddRecord.Location = new System.Drawing.Point(1094, 12);
-            this.btnAddRecord.Name = "btnAddRecord";
-            this.btnAddRecord.Size = new System.Drawing.Size(123, 22);
-            this.btnAddRecord.StyleController = this.layoutControl1;
-            this.btnAddRecord.TabIndex = 8;
-            this.btnAddRecord.Text = "Add Patient Record";
-            // 
-            // layoutControlItem6
-            // 
-            this.layoutControlItem6.Control = this.btnAddRecord;
-            this.layoutControlItem6.Location = new System.Drawing.Point(1082, 0);
-            this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(127, 26);
-            this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem6.TextVisible = false;
             // 
             // PatientRecordForm
             // 

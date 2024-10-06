@@ -165,6 +165,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportForm\ClinicalRecordAddHistoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForm\ClinicalRecordAddHistoryForm.Designer.cs">
+      <DependentUpon>ClinicalRecordAddHistoryForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReportForm\FamilyPlanningAddForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -189,6 +195,12 @@
     <Compile Include="ReportForm\MaternalHealthRecordForm.Designer.cs">
       <DependentUpon>MaternalHealthRecordForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReportForm\PatientHistoricalRecordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForm\PatientHistoricalRecordForm.Designer.cs">
+      <DependentUpon>PatientHistoricalRecordForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReportForm\PatientRecordAddForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -200,6 +212,18 @@
     </Compile>
     <Compile Include="ReportForm\PatientRecordForm.Designer.cs">
       <DependentUpon>PatientRecordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\MaternalHealthRecord2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\MaternalHealthRecord2.Designer.cs">
+      <DependentUpon>MaternalHealthRecord2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\PatientClinicalRecord2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PatientClinicalRecord2.Designer.cs">
+      <DependentUpon>PatientClinicalRecord2.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\FamilyPlanningReportForm.cs">
       <SubType>Component</SubType>
@@ -286,6 +310,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ReportForm\ClinicalRecordAddHistoryForm.resx">
+      <DependentUpon>ClinicalRecordAddHistoryForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ReportForm\FamilyPlanningAddForm.resx">
       <DependentUpon>FamilyPlanningAddForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -298,11 +325,20 @@
     <EmbeddedResource Include="ReportForm\MaternalHealthRecordForm.resx">
       <DependentUpon>MaternalHealthRecordForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\PatientHistoricalRecordForm.resx">
+      <DependentUpon>PatientHistoricalRecordForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ReportForm\PatientRecordAddForm.resx">
       <DependentUpon>PatientRecordAddForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReportForm\PatientRecordForm.resx">
       <DependentUpon>PatientRecordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\MaternalHealthRecord2.resx">
+      <DependentUpon>MaternalHealthRecord2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PatientClinicalRecord2.resx">
+      <DependentUpon>PatientClinicalRecord2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\FamilyPlanningReportForm.resx">
       <DependentUpon>FamilyPlanningReportForm.cs</DependentUpon>

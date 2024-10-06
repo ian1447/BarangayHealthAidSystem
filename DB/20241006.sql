@@ -254,6 +254,29 @@ CREATE TABLE `patient_details` (
 
 insert  into `patient_details`(`id`,`last_name`,`first_name`,`name_extension`,`middle_name`,`maiden_last_name`,`maiden_first_name`,`maiden_name_extension`,`maiden_middle_name`,`birthdate`,`age`,`place_of_birth`,`sex`,`civil_status`,`religion`,`blood_type`,`contact_number`,`address_purok`,`address_barangay`,`address_mun`,`address_province`,`address_country`,`address_zip_code`,`educational_attainment`,`employment_status`,`TIN`,`ph_stat`,`phic_id_no`,`phic_status_type`,`is_4p`,`4p_id_no`,`4p_status_type`,`membership_cat`,`partner_last_name`,`partner_first_name`,`partner_name_extension`,`partner_middle_name`,`partner_birthdate`,`partner_sex`,`partner_phic_id`,`father_last_name`,`father_first_name`,`father_name_extension`,`father_middle_name`,`father_birthdate`,`father_disability`,`father_phic_id`,`mother_last_name`,`mother_first_name`,`mother_name_extension`,`mother_middle_name`,`mother_birthdate`,`mother_disability`,`mother_phic_id`,`added_by`,`added_on`) values (1,'Dog','Max','','da','','','','','2024-10-16',12,'asdf','Male','Single','sfd','34','87864','13','312sdf','wer','4 23','x12','231','zxcv','asdf','3452234','','3452435','',0,'','Dependent','Govt-Permanent Regular','wdfa','sdaf','c','df','2024-10-14','Male','xczv','xcvzqfdw','asdf','z','34r','2024-10-05','cvb','asdf','1243','sadf','sdf','wf','2024-10-07','sfd','vxcz',1,'2024-10-03 21:33:35');
 
+/*Table structure for table `patient_details_history` */
+
+DROP TABLE IF EXISTS `patient_details_history`;
+
+CREATE TABLE `patient_details_history` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `patient_details_id` int(11) NOT NULL,
+  `weight` decimal(12,2) DEFAULT NULL,
+  `height` decimal(12,2) DEFAULT NULL,
+  `pr` decimal(12,2) DEFAULT NULL,
+  `rr` decimal(12,2) DEFAULT NULL,
+  `temp` decimal(12,2) DEFAULT NULL,
+  `BP` decimal(12,2) DEFAULT NULL,
+  `remarks` text,
+  `added_by` int(11) DEFAULT NULL,
+  `transdate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+/*Data for the table `patient_details_history` */
+
+insert  into `patient_details_history`(`id`,`patient_details_id`,`weight`,`height`,`pr`,`rr`,`temp`,`BP`,`remarks`,`added_by`,`transdate`) values (1,1,'3.00','123.00','34.00','2.00','234.00','1.00','test remarks',1,'2024-10-06 22:47:04');
+
 /*Table structure for table `purok` */
 
 DROP TABLE IF EXISTS `purok`;
@@ -1157,6 +1180,60 @@ BEGIN
 	IF(pd.`mother_name_extension` = "",CONCAT(pd.`mother_first_name`, " ",pd.`mother_middle_name`," ",pd.`mother_last_name`),
 	CONCAT(pd.`mother_first_name`, " ",pd.`mother_middle_name`," ",pd.`mother_last_name`, " ", pd.`mother_name_extension`)) mother_name,
 	pd.* FROM `patient_details` pd;
+    END */$$
+DELIMITER ;
+
+/* Procedure structure for procedure `sp_patient_details_history_add` */
+
+/*!50003 DROP PROCEDURE IF EXISTS  `sp_patient_details_history_add` */;
+
+DELIMITER $$
+
+/*!50003 CREATE DEFINER=`system_admin`@`%` PROCEDURE `sp_patient_details_history_add`(
+	_patient_details_id int (11),
+	_weight decimal (12,2),
+	_height decimal (12,2),
+	_pr DECIMAL (12,2),
+	_rr DECIMAL (12,2),
+	_temp DECIMAL (12,2),
+	_bp DECIMAL (12,2),
+	_remarks text,
+	_added_by int (11)
+    )
+BEGIN
+	INSERT INTO `patient_details_history`
+		    (`patient_details_id`,
+		     `weight`,
+		     `height`,
+		     `pr`,
+		     `rr`,
+		     `temp`,
+		     `BP`,
+		     `remarks`,
+		     `added_by`)
+	VALUES (_patient_details_id,
+		_weight,
+		_height,
+		_pr,
+		_rr,
+		_temp,
+		_bp,
+		_remarks,
+		_added_by);
+    END */$$
+DELIMITER ;
+
+/* Procedure structure for procedure `sp_patient_details_history_get` */
+
+/*!50003 DROP PROCEDURE IF EXISTS  `sp_patient_details_history_get` */;
+
+DELIMITER $$
+
+/*!50003 CREATE DEFINER=`system_admin`@`%` PROCEDURE `sp_patient_details_history_get`(
+	_patient_details_id int (11)
+    )
+BEGIN
+	SELECT ph.*, DATE_FORMAT(ph.`transdate`,"%M %d,%Y") `date`, TIME_FORMAT(ph.`transdate`, '%h:%i:%s %p') `time` FROM `patient_details_history` ph WHERE ph.`patient_details_id` = _patient_details_id;
     END */$$
 DELIMITER ;
 
