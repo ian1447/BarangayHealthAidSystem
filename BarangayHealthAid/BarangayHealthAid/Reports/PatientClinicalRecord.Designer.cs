@@ -321,61 +321,6 @@
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.ReportHeader = new DevExpress.XtraReports.UI.ReportHeaderBand();
-            this.xrTable14 = new DevExpress.XtraReports.UI.XRTable();
-            this.xrTableRow88 = new DevExpress.XtraReports.UI.XRTableRow();
-            this.xrTableCell392 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell393 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell394 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableRow89 = new DevExpress.XtraReports.UI.XRTableRow();
-            this.xrTableCell395 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell396 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell397 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableRow90 = new DevExpress.XtraReports.UI.XRTableRow();
-            this.xrTableCell398 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell399 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell400 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell401 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell402 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableRow91 = new DevExpress.XtraReports.UI.XRTableRow();
-            this.xrTableCell403 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell404 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell405 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell406 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell407 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell408 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell409 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableRow92 = new DevExpress.XtraReports.UI.XRTableRow();
-            this.xrTableCell410 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell411 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell412 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell413 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell414 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell415 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell416 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableRow137 = new DevExpress.XtraReports.UI.XRTableRow();
-            this.xrTableCell417 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell418 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell419 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell420 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell421 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableRow138 = new DevExpress.XtraReports.UI.XRTableRow();
-            this.xrTableCell422 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell423 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell424 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell631 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell632 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableRow139 = new DevExpress.XtraReports.UI.XRTableRow();
-            this.xrTableCell633 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell634 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell635 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell636 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell637 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableRow140 = new DevExpress.XtraReports.UI.XRTableRow();
-            this.xrTableCell638 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell639 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell640 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell641 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell642 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTable13 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow87 = new DevExpress.XtraReports.UI.XRTableRow();
             this.xrTableCell388 = new DevExpress.XtraReports.UI.XRTableCell();
@@ -399,25 +344,6 @@
             this.xrLabel10 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel9 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrTable7 = new DevExpress.XtraReports.UI.XRTable();
-            this.xrTableRow40 = new DevExpress.XtraReports.UI.XRTableRow();
-            this.xrTableCell174 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableRow41 = new DevExpress.XtraReports.UI.XRTableRow();
-            this.xrTableCell175 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell176 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell177 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell178 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableRow42 = new DevExpress.XtraReports.UI.XRTableRow();
-            this.lblLastName = new DevExpress.XtraReports.UI.XRTableCell();
-            this.lblFirstName = new DevExpress.XtraReports.UI.XRTableCell();
-            this.lblExt = new DevExpress.XtraReports.UI.XRTableCell();
-            this.lblMiddleName = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableRow43 = new DevExpress.XtraReports.UI.XRTableRow();
-            this.xrTableCell183 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableRow44 = new DevExpress.XtraReports.UI.XRTableRow();
-            this.xrTableCell184 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell185 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell186 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell187 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableRow45 = new DevExpress.XtraReports.UI.XRTableRow();
             this.lblMaidenLastName = new DevExpress.XtraReports.UI.XRTableCell();
             this.lblMaidenFirstName = new DevExpress.XtraReports.UI.XRTableCell();
@@ -570,78 +496,111 @@
             this.lblMotherDob = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableRow65 = new DevExpress.XtraReports.UI.XRTableRow();
             this.xrTableCell289 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableRow75 = new DevExpress.XtraReports.UI.XRTableRow();
-            this.xrTableCell335 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell336 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell337 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableRow76 = new DevExpress.XtraReports.UI.XRTableRow();
-            this.xrTableCell338 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell340 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableRow77 = new DevExpress.XtraReports.UI.XRTableRow();
-            this.xrTableCell341 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell342 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell343 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell344 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell345 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableRow78 = new DevExpress.XtraReports.UI.XRTableRow();
-            this.xrTableCell346 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell347 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell348 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell349 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell350 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell351 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell352 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableRow79 = new DevExpress.XtraReports.UI.XRTableRow();
-            this.xrTableCell353 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell354 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell355 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell356 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell357 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell358 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell359 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableRow80 = new DevExpress.XtraReports.UI.XRTableRow();
-            this.xrTableCell360 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell361 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell362 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell363 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell364 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableRow81 = new DevExpress.XtraReports.UI.XRTableRow();
-            this.xrTableCell365 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell366 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell367 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell368 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell369 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableRow82 = new DevExpress.XtraReports.UI.XRTableRow();
-            this.xrTableCell370 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell371 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell372 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell373 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell374 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableRow83 = new DevExpress.XtraReports.UI.XRTableRow();
-            this.xrTableCell375 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell376 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell377 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell378 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell379 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrTableCell339 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrTableCell187 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell186 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell185 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell184 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableRow44 = new DevExpress.XtraReports.UI.XRTableRow();
+            this.xrTableCell183 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableRow43 = new DevExpress.XtraReports.UI.XRTableRow();
+            this.lblMiddleName = new DevExpress.XtraReports.UI.XRTableCell();
+            this.lblExt = new DevExpress.XtraReports.UI.XRTableCell();
+            this.lblFirstName = new DevExpress.XtraReports.UI.XRTableCell();
+            this.lblLastName = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableRow42 = new DevExpress.XtraReports.UI.XRTableRow();
+            this.xrTableCell178 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell177 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell176 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell175 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableRow41 = new DevExpress.XtraReports.UI.XRTableRow();
+            this.xrTableCell174 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableRow40 = new DevExpress.XtraReports.UI.XRTableRow();
+            this.xrTable4 = new DevExpress.XtraReports.UI.XRTable();
+            this.xrTableRow30 = new DevExpress.XtraReports.UI.XRTableRow();
+            this.xrTableCell101 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell102 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell103 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableRow31 = new DevExpress.XtraReports.UI.XRTableRow();
+            this.xrTableCell110 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell111 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell113 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableRow32 = new DevExpress.XtraReports.UI.XRTableRow();
+            this.xrTableCell119 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell120 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell121 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableRow33 = new DevExpress.XtraReports.UI.XRTableRow();
+            this.xrTableCell125 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell126 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell128 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableRow34 = new DevExpress.XtraReports.UI.XRTableRow();
+            this.xrTableCell131 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell132 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell133 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableRow35 = new DevExpress.XtraReports.UI.XRTableRow();
+            this.xrTableCell136 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell137 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell138 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTable3 = new DevExpress.XtraReports.UI.XRTable();
+            this.xrTableRow19 = new DevExpress.XtraReports.UI.XRTableRow();
+            this.xrTableCell53 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableRow20 = new DevExpress.XtraReports.UI.XRTableRow();
+            this.xrTableCell77 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableRow21 = new DevExpress.XtraReports.UI.XRTableRow();
+            this.xrTableCell93 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableRow22 = new DevExpress.XtraReports.UI.XRTableRow();
+            this.xrTableCell98 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell99 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell100 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableRow23 = new DevExpress.XtraReports.UI.XRTableRow();
+            this.xrTableCell105 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell106 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableRow24 = new DevExpress.XtraReports.UI.XRTableRow();
+            this.xrTableCell112 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableRow25 = new DevExpress.XtraReports.UI.XRTableRow();
+            this.xrTableCell117 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableRow26 = new DevExpress.XtraReports.UI.XRTableRow();
+            this.xrTableCell122 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableRow27 = new DevExpress.XtraReports.UI.XRTableRow();
+            this.xrTableCell127 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTable5 = new DevExpress.XtraReports.UI.XRTable();
+            this.xrTableRow70 = new DevExpress.XtraReports.UI.XRTableRow();
+            this.xrTableCell158 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableRow71 = new DevExpress.XtraReports.UI.XRTableRow();
+            this.xrTableCell163 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTable6 = new DevExpress.XtraReports.UI.XRTable();
+            this.xrTableRow38 = new DevExpress.XtraReports.UI.XRTableRow();
+            this.xrTableCell72 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell95 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableRow29 = new DevExpress.XtraReports.UI.XRTableRow();
+            this.xrTableCell91 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableRow28 = new DevExpress.XtraReports.UI.XRTableRow();
+            this.xrTableCell141 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableRow36 = new DevExpress.XtraReports.UI.XRTableRow();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.xrTable14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xrTable4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xrTable3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xrTable5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xrTable6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Detail
             // 
-            this.Detail.HeightF = 39.78825F;
+            this.Detail.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrTable4,
+            this.xrTable3,
+            this.xrTable5,
+            this.xrTable6});
+            this.Detail.HeightF = 388.6524F;
             this.Detail.Name = "Detail";
             this.Detail.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.Detail.PageBreak = DevExpress.XtraReports.UI.PageBreak.BeforeBandExceptFirstEntry;
@@ -5087,7 +5046,6 @@
             // ReportHeader
             // 
             this.ReportHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrTable14,
             this.xrTable13,
             this.xrTable12,
             this.xrTable11,
@@ -5097,856 +5055,8 @@
             this.xrTable7,
             this.xrLabel1,
             this.xrLabel2});
-            this.ReportHeader.HeightF = 912.6732F;
+            this.ReportHeader.HeightF = 523.2903F;
             this.ReportHeader.Name = "ReportHeader";
-            // 
-            // xrTable14
-            // 
-            this.xrTable14.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.xrTable14.LocationFloat = new DevExpress.Utils.PointFloat(1.5F, 718.187F);
-            this.xrTable14.Name = "xrTable14";
-            this.xrTable14.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
-            this.xrTableRow88,
-            this.xrTableRow89,
-            this.xrTableRow90,
-            this.xrTableRow91,
-            this.xrTableRow92,
-            this.xrTableRow137,
-            this.xrTableRow138,
-            this.xrTableRow139,
-            this.xrTableRow140});
-            this.xrTable14.SizeF = new System.Drawing.SizeF(762F, 194.4862F);
-            this.xrTable14.StylePriority.UseFont = false;
-            // 
-            // xrTableRow88
-            // 
-            this.xrTableRow88.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
-            this.xrTableCell392,
-            this.xrTableCell393,
-            this.xrTableCell394});
-            this.xrTableRow88.Name = "xrTableRow88";
-            this.xrTableRow88.Weight = 0.1600818097239764D;
-            // 
-            // xrTableCell392
-            // 
-            this.xrTableCell392.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell392.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)
-                        | DevExpress.XtraPrinting.BorderSide.Right)));
-            this.xrTableCell392.Font = new System.Drawing.Font("Times New Roman", 7.5F);
-            this.xrTableCell392.ForeColor = System.Drawing.Color.Blue;
-            this.xrTableCell392.Name = "xrTableCell392";
-            this.xrTableCell392.StylePriority.UseBorderColor = false;
-            this.xrTableCell392.StylePriority.UseBorders = false;
-            this.xrTableCell392.StylePriority.UseFont = false;
-            this.xrTableCell392.StylePriority.UseForeColor = false;
-            this.xrTableCell392.StylePriority.UseTextAlignment = false;
-            this.xrTableCell392.Text = "DATE:";
-            this.xrTableCell392.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.xrTableCell392.Weight = 0.183250275632711D;
-            // 
-            // xrTableCell393
-            // 
-            this.xrTableCell393.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell393.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)
-                        | DevExpress.XtraPrinting.BorderSide.Right)));
-            this.xrTableCell393.Font = new System.Drawing.Font("Times New Roman", 7.5F);
-            this.xrTableCell393.ForeColor = System.Drawing.Color.Black;
-            this.xrTableCell393.Name = "xrTableCell393";
-            this.xrTableCell393.StylePriority.UseBorderColor = false;
-            this.xrTableCell393.StylePriority.UseBorders = false;
-            this.xrTableCell393.StylePriority.UseFont = false;
-            this.xrTableCell393.StylePriority.UseForeColor = false;
-            this.xrTableCell393.StylePriority.UseTextAlignment = false;
-            this.xrTableCell393.Text = " ";
-            this.xrTableCell393.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.xrTableCell393.Weight = 1.2986662843202201D;
-            // 
-            // xrTableCell394
-            // 
-            this.xrTableCell394.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell394.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)
-                        | DevExpress.XtraPrinting.BorderSide.Right)));
-            this.xrTableCell394.Font = new System.Drawing.Font("Times New Roman", 7.5F);
-            this.xrTableCell394.ForeColor = System.Drawing.Color.Blue;
-            this.xrTableCell394.Name = "xrTableCell394";
-            this.xrTableCell394.StylePriority.UseBorderColor = false;
-            this.xrTableCell394.StylePriority.UseBorders = false;
-            this.xrTableCell394.StylePriority.UseFont = false;
-            this.xrTableCell394.StylePriority.UseForeColor = false;
-            this.xrTableCell394.StylePriority.UseTextAlignment = false;
-            this.xrTableCell394.Text = "ASSESMENT";
-            this.xrTableCell394.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.xrTableCell394.Weight = 0.35396424271024995D;
-            // 
-            // xrTableRow89
-            // 
-            this.xrTableRow89.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
-            this.xrTableCell395,
-            this.xrTableCell396,
-            this.xrTableCell397});
-            this.xrTableRow89.Name = "xrTableRow89";
-            this.xrTableRow89.Weight = 0.1600818097239764D;
-            // 
-            // xrTableCell395
-            // 
-            this.xrTableCell395.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell395.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right)
-                        | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.xrTableCell395.Font = new System.Drawing.Font("Times New Roman", 7.5F);
-            this.xrTableCell395.ForeColor = System.Drawing.Color.Black;
-            this.xrTableCell395.Name = "xrTableCell395";
-            this.xrTableCell395.StylePriority.UseBorderColor = false;
-            this.xrTableCell395.StylePriority.UseBorders = false;
-            this.xrTableCell395.StylePriority.UseFont = false;
-            this.xrTableCell395.StylePriority.UseForeColor = false;
-            this.xrTableCell395.StylePriority.UseTextAlignment = false;
-            this.xrTableCell395.Text = "[DATE:]";
-            this.xrTableCell395.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.xrTableCell395.Weight = 0.183250275632711D;
-            // 
-            // xrTableCell396
-            // 
-            this.xrTableCell396.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell396.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right)));
-            this.xrTableCell396.Font = new System.Drawing.Font("Times New Roman", 7.5F);
-            this.xrTableCell396.ForeColor = System.Drawing.Color.Black;
-            this.xrTableCell396.Name = "xrTableCell396";
-            this.xrTableCell396.StylePriority.UseBorderColor = false;
-            this.xrTableCell396.StylePriority.UseBorders = false;
-            this.xrTableCell396.StylePriority.UseFont = false;
-            this.xrTableCell396.StylePriority.UseForeColor = false;
-            this.xrTableCell396.StylePriority.UseTextAlignment = false;
-            this.xrTableCell396.Text = " ";
-            this.xrTableCell396.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.xrTableCell396.Weight = 1.2986662843202201D;
-            // 
-            // xrTableCell397
-            // 
-            this.xrTableCell397.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell397.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right)));
-            this.xrTableCell397.Font = new System.Drawing.Font("Times New Roman", 7.5F, System.Drawing.FontStyle.Bold);
-            this.xrTableCell397.ForeColor = System.Drawing.Color.Blue;
-            this.xrTableCell397.Name = "xrTableCell397";
-            this.xrTableCell397.StylePriority.UseBorderColor = false;
-            this.xrTableCell397.StylePriority.UseBorders = false;
-            this.xrTableCell397.StylePriority.UseFont = false;
-            this.xrTableCell397.StylePriority.UseForeColor = false;
-            this.xrTableCell397.StylePriority.UseTextAlignment = false;
-            this.xrTableCell397.Text = "Chief Complaint";
-            this.xrTableCell397.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.xrTableCell397.Weight = 0.35396424271024995D;
-            // 
-            // xrTableRow90
-            // 
-            this.xrTableRow90.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
-            this.xrTableCell398,
-            this.xrTableCell399,
-            this.xrTableCell400,
-            this.xrTableCell401,
-            this.xrTableCell402});
-            this.xrTableRow90.Name = "xrTableRow90";
-            this.xrTableRow90.Weight = 0.1600818097239764D;
-            // 
-            // xrTableCell398
-            // 
-            this.xrTableCell398.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell398.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right)));
-            this.xrTableCell398.Font = new System.Drawing.Font("Times New Roman", 8F);
-            this.xrTableCell398.ForeColor = System.Drawing.Color.Blue;
-            this.xrTableCell398.Name = "xrTableCell398";
-            this.xrTableCell398.StylePriority.UseBorderColor = false;
-            this.xrTableCell398.StylePriority.UseBorders = false;
-            this.xrTableCell398.StylePriority.UseFont = false;
-            this.xrTableCell398.StylePriority.UseForeColor = false;
-            this.xrTableCell398.StylePriority.UseTextAlignment = false;
-            this.xrTableCell398.Text = "Time:";
-            this.xrTableCell398.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.xrTableCell398.Weight = 0.183250275632711D;
-            // 
-            // xrTableCell399
-            // 
-            this.xrTableCell399.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell399.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right)));
-            this.xrTableCell399.Font = new System.Drawing.Font("Times New Roman", 7.5F);
-            this.xrTableCell399.ForeColor = System.Drawing.Color.Black;
-            this.xrTableCell399.Name = "xrTableCell399";
-            this.xrTableCell399.StylePriority.UseBorderColor = false;
-            this.xrTableCell399.StylePriority.UseBorders = false;
-            this.xrTableCell399.StylePriority.UseFont = false;
-            this.xrTableCell399.StylePriority.UseForeColor = false;
-            this.xrTableCell399.StylePriority.UseTextAlignment = false;
-            this.xrTableCell399.Text = " ";
-            this.xrTableCell399.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.xrTableCell399.Weight = 1.2986662843202201D;
-            // 
-            // xrTableCell400
-            // 
-            this.xrTableCell400.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell400.Borders = DevExpress.XtraPrinting.BorderSide.Left;
-            this.xrTableCell400.Font = new System.Drawing.Font("Times New Roman", 9F);
-            this.xrTableCell400.ForeColor = System.Drawing.Color.Blue;
-            this.xrTableCell400.Name = "xrTableCell400";
-            this.xrTableCell400.StylePriority.UseBorderColor = false;
-            this.xrTableCell400.StylePriority.UseBorders = false;
-            this.xrTableCell400.StylePriority.UseFont = false;
-            this.xrTableCell400.StylePriority.UseForeColor = false;
-            this.xrTableCell400.StylePriority.UseTextAlignment = false;
-            this.xrTableCell400.Text = " Wt:";
-            this.xrTableCell400.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomRight;
-            this.xrTableCell400.Weight = 0.052980490396855234D;
-            // 
-            // xrTableCell401
-            // 
-            this.xrTableCell401.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell401.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
-            this.xrTableCell401.Font = new System.Drawing.Font("Times New Roman", 9F);
-            this.xrTableCell401.ForeColor = System.Drawing.Color.Black;
-            this.xrTableCell401.Name = "xrTableCell401";
-            this.xrTableCell401.StylePriority.UseBorderColor = false;
-            this.xrTableCell401.StylePriority.UseBorders = false;
-            this.xrTableCell401.StylePriority.UseFont = false;
-            this.xrTableCell401.StylePriority.UseForeColor = false;
-            this.xrTableCell401.StylePriority.UseTextAlignment = false;
-            this.xrTableCell401.Text = "[Wt]";
-            this.xrTableCell401.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomCenter;
-            this.xrTableCell401.Weight = 0.12400163095826974D;
-            // 
-            // xrTableCell402
-            // 
-            this.xrTableCell402.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell402.Borders = DevExpress.XtraPrinting.BorderSide.Right;
-            this.xrTableCell402.Font = new System.Drawing.Font("Times New Roman", 9F);
-            this.xrTableCell402.ForeColor = System.Drawing.Color.Blue;
-            this.xrTableCell402.Name = "xrTableCell402";
-            this.xrTableCell402.StylePriority.UseBorderColor = false;
-            this.xrTableCell402.StylePriority.UseBorders = false;
-            this.xrTableCell402.StylePriority.UseFont = false;
-            this.xrTableCell402.StylePriority.UseForeColor = false;
-            this.xrTableCell402.StylePriority.UseTextAlignment = false;
-            this.xrTableCell402.Text = "kg";
-            this.xrTableCell402.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
-            this.xrTableCell402.Weight = 0.17698212135512498D;
-            // 
-            // xrTableRow91
-            // 
-            this.xrTableRow91.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
-            this.xrTableCell403,
-            this.xrTableCell404,
-            this.xrTableCell405,
-            this.xrTableCell406,
-            this.xrTableCell407,
-            this.xrTableCell408,
-            this.xrTableCell409});
-            this.xrTableRow91.Name = "xrTableRow91";
-            this.xrTableRow91.Weight = 0.17474680043605795D;
-            // 
-            // xrTableCell403
-            // 
-            this.xrTableCell403.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell403.Borders = DevExpress.XtraPrinting.BorderSide.Left;
-            this.xrTableCell403.Font = new System.Drawing.Font("Times New Roman", 7.5F);
-            this.xrTableCell403.ForeColor = System.Drawing.Color.Black;
-            this.xrTableCell403.Name = "xrTableCell403";
-            this.xrTableCell403.StylePriority.UseBorderColor = false;
-            this.xrTableCell403.StylePriority.UseBorders = false;
-            this.xrTableCell403.StylePriority.UseFont = false;
-            this.xrTableCell403.StylePriority.UseForeColor = false;
-            this.xrTableCell403.StylePriority.UseTextAlignment = false;
-            this.xrTableCell403.Text = " ";
-            this.xrTableCell403.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.xrTableCell403.Weight = 0.031375760499292971D;
-            // 
-            // xrTableCell404
-            // 
-            this.xrTableCell404.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell404.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
-            this.xrTableCell404.Font = new System.Drawing.Font("Times New Roman", 7.5F);
-            this.xrTableCell404.ForeColor = System.Drawing.Color.Black;
-            this.xrTableCell404.Name = "xrTableCell404";
-            this.xrTableCell404.StylePriority.UseBorderColor = false;
-            this.xrTableCell404.StylePriority.UseBorders = false;
-            this.xrTableCell404.StylePriority.UseFont = false;
-            this.xrTableCell404.StylePriority.UseForeColor = false;
-            this.xrTableCell404.StylePriority.UseTextAlignment = false;
-            this.xrTableCell404.Text = "[Time:]";
-            this.xrTableCell404.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomCenter;
-            this.xrTableCell404.Weight = 0.12280888042222993D;
-            // 
-            // xrTableCell405
-            // 
-            this.xrTableCell405.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell405.Borders = DevExpress.XtraPrinting.BorderSide.Right;
-            this.xrTableCell405.Font = new System.Drawing.Font("Times New Roman", 7.5F);
-            this.xrTableCell405.ForeColor = System.Drawing.Color.Black;
-            this.xrTableCell405.Name = "xrTableCell405";
-            this.xrTableCell405.StylePriority.UseBorderColor = false;
-            this.xrTableCell405.StylePriority.UseBorders = false;
-            this.xrTableCell405.StylePriority.UseFont = false;
-            this.xrTableCell405.StylePriority.UseForeColor = false;
-            this.xrTableCell405.StylePriority.UseTextAlignment = false;
-            this.xrTableCell405.Text = " ";
-            this.xrTableCell405.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.xrTableCell405.Weight = 0.029065634711188115D;
-            // 
-            // xrTableCell406
-            // 
-            this.xrTableCell406.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell406.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right)));
-            this.xrTableCell406.Font = new System.Drawing.Font("Times New Roman", 7.5F);
-            this.xrTableCell406.ForeColor = System.Drawing.Color.Black;
-            this.xrTableCell406.Name = "xrTableCell406";
-            this.xrTableCell406.StylePriority.UseBorderColor = false;
-            this.xrTableCell406.StylePriority.UseBorders = false;
-            this.xrTableCell406.StylePriority.UseFont = false;
-            this.xrTableCell406.StylePriority.UseForeColor = false;
-            this.xrTableCell406.StylePriority.UseTextAlignment = false;
-            this.xrTableCell406.Text = " ";
-            this.xrTableCell406.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.xrTableCell406.Weight = 1.2986662843202201D;
-            // 
-            // xrTableCell407
-            // 
-            this.xrTableCell407.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell407.Borders = DevExpress.XtraPrinting.BorderSide.Left;
-            this.xrTableCell407.Font = new System.Drawing.Font("Times New Roman", 9F);
-            this.xrTableCell407.ForeColor = System.Drawing.Color.Blue;
-            this.xrTableCell407.Name = "xrTableCell407";
-            this.xrTableCell407.StylePriority.UseBorderColor = false;
-            this.xrTableCell407.StylePriority.UseBorders = false;
-            this.xrTableCell407.StylePriority.UseFont = false;
-            this.xrTableCell407.StylePriority.UseForeColor = false;
-            this.xrTableCell407.StylePriority.UseTextAlignment = false;
-            this.xrTableCell407.Text = "Ht:";
-            this.xrTableCell407.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomRight;
-            this.xrTableCell407.Weight = 0.043355951457598713D;
-            // 
-            // xrTableCell408
-            // 
-            this.xrTableCell408.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell408.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
-            this.xrTableCell408.Font = new System.Drawing.Font("Times New Roman", 9F);
-            this.xrTableCell408.ForeColor = System.Drawing.Color.Black;
-            this.xrTableCell408.Name = "xrTableCell408";
-            this.xrTableCell408.StylePriority.UseBorderColor = false;
-            this.xrTableCell408.StylePriority.UseBorders = false;
-            this.xrTableCell408.StylePriority.UseFont = false;
-            this.xrTableCell408.StylePriority.UseForeColor = false;
-            this.xrTableCell408.StylePriority.UseTextAlignment = false;
-            this.xrTableCell408.Text = "[Ht]";
-            this.xrTableCell408.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomCenter;
-            this.xrTableCell408.Weight = 0.13362616989752627D;
-            // 
-            // xrTableCell409
-            // 
-            this.xrTableCell409.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell409.Borders = DevExpress.XtraPrinting.BorderSide.Right;
-            this.xrTableCell409.Font = new System.Drawing.Font("Times New Roman", 9F);
-            this.xrTableCell409.ForeColor = System.Drawing.Color.Blue;
-            this.xrTableCell409.Name = "xrTableCell409";
-            this.xrTableCell409.StylePriority.UseBorderColor = false;
-            this.xrTableCell409.StylePriority.UseBorders = false;
-            this.xrTableCell409.StylePriority.UseFont = false;
-            this.xrTableCell409.StylePriority.UseForeColor = false;
-            this.xrTableCell409.StylePriority.UseTextAlignment = false;
-            this.xrTableCell409.Text = "cms";
-            this.xrTableCell409.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
-            this.xrTableCell409.Weight = 0.17698212135512498D;
-            // 
-            // xrTableRow92
-            // 
-            this.xrTableRow92.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
-            this.xrTableCell410,
-            this.xrTableCell411,
-            this.xrTableCell412,
-            this.xrTableCell413,
-            this.xrTableCell414,
-            this.xrTableCell415,
-            this.xrTableCell416});
-            this.xrTableRow92.Name = "xrTableRow92";
-            this.xrTableRow92.Weight = 0.16008178175267304D;
-            // 
-            // xrTableCell410
-            // 
-            this.xrTableCell410.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell410.Borders = DevExpress.XtraPrinting.BorderSide.Left;
-            this.xrTableCell410.Font = new System.Drawing.Font("Times New Roman", 7.5F);
-            this.xrTableCell410.ForeColor = System.Drawing.Color.Blue;
-            this.xrTableCell410.Name = "xrTableCell410";
-            this.xrTableCell410.StylePriority.UseBorderColor = false;
-            this.xrTableCell410.StylePriority.UseBorders = false;
-            this.xrTableCell410.StylePriority.UseFont = false;
-            this.xrTableCell410.StylePriority.UseForeColor = false;
-            this.xrTableCell410.StylePriority.UseTextAlignment = false;
-            this.xrTableCell410.Text = "Age:";
-            this.xrTableCell410.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomRight;
-            this.xrTableCell410.Weight = 0.057843242582248405D;
-            // 
-            // xrTableCell411
-            // 
-            this.xrTableCell411.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell411.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
-            this.xrTableCell411.Font = new System.Drawing.Font("Times New Roman", 7.5F);
-            this.xrTableCell411.ForeColor = System.Drawing.Color.Black;
-            this.xrTableCell411.Name = "xrTableCell411";
-            this.xrTableCell411.StylePriority.UseBorderColor = false;
-            this.xrTableCell411.StylePriority.UseBorders = false;
-            this.xrTableCell411.StylePriority.UseFont = false;
-            this.xrTableCell411.StylePriority.UseForeColor = false;
-            this.xrTableCell411.StylePriority.UseTextAlignment = false;
-            this.xrTableCell411.Text = "[Age:]";
-            this.xrTableCell411.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomCenter;
-            this.xrTableCell411.Weight = 0.096341398339274492D;
-            // 
-            // xrTableCell412
-            // 
-            this.xrTableCell412.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell412.Borders = DevExpress.XtraPrinting.BorderSide.Right;
-            this.xrTableCell412.Font = new System.Drawing.Font("Times New Roman", 7.5F);
-            this.xrTableCell412.ForeColor = System.Drawing.Color.Black;
-            this.xrTableCell412.Name = "xrTableCell412";
-            this.xrTableCell412.StylePriority.UseBorderColor = false;
-            this.xrTableCell412.StylePriority.UseBorders = false;
-            this.xrTableCell412.StylePriority.UseFont = false;
-            this.xrTableCell412.StylePriority.UseForeColor = false;
-            this.xrTableCell412.StylePriority.UseTextAlignment = false;
-            this.xrTableCell412.Text = " ";
-            this.xrTableCell412.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.xrTableCell412.Weight = 0.029065634711188115D;
-            // 
-            // xrTableCell413
-            // 
-            this.xrTableCell413.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell413.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right)));
-            this.xrTableCell413.Font = new System.Drawing.Font("Times New Roman", 7.5F);
-            this.xrTableCell413.ForeColor = System.Drawing.Color.Black;
-            this.xrTableCell413.Name = "xrTableCell413";
-            this.xrTableCell413.StylePriority.UseBorderColor = false;
-            this.xrTableCell413.StylePriority.UseBorders = false;
-            this.xrTableCell413.StylePriority.UseFont = false;
-            this.xrTableCell413.StylePriority.UseForeColor = false;
-            this.xrTableCell413.StylePriority.UseTextAlignment = false;
-            this.xrTableCell413.Text = " ";
-            this.xrTableCell413.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.xrTableCell413.Weight = 1.2986662843202201D;
-            // 
-            // xrTableCell414
-            // 
-            this.xrTableCell414.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell414.Borders = DevExpress.XtraPrinting.BorderSide.Left;
-            this.xrTableCell414.Font = new System.Drawing.Font("Times New Roman", 9F);
-            this.xrTableCell414.ForeColor = System.Drawing.Color.Blue;
-            this.xrTableCell414.Name = "xrTableCell414";
-            this.xrTableCell414.StylePriority.UseBorderColor = false;
-            this.xrTableCell414.StylePriority.UseBorders = false;
-            this.xrTableCell414.StylePriority.UseFont = false;
-            this.xrTableCell414.StylePriority.UseForeColor = false;
-            this.xrTableCell414.StylePriority.UseTextAlignment = false;
-            this.xrTableCell414.Text = "PR:";
-            this.xrTableCell414.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomRight;
-            this.xrTableCell414.Weight = 0.050574355662041104D;
-            // 
-            // xrTableCell415
-            // 
-            this.xrTableCell415.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell415.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
-            this.xrTableCell415.Font = new System.Drawing.Font("Times New Roman", 9F);
-            this.xrTableCell415.ForeColor = System.Drawing.Color.Black;
-            this.xrTableCell415.Name = "xrTableCell415";
-            this.xrTableCell415.StylePriority.UseBorderColor = false;
-            this.xrTableCell415.StylePriority.UseBorders = false;
-            this.xrTableCell415.StylePriority.UseFont = false;
-            this.xrTableCell415.StylePriority.UseForeColor = false;
-            this.xrTableCell415.StylePriority.UseTextAlignment = false;
-            this.xrTableCell415.Text = "[PR]";
-            this.xrTableCell415.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomCenter;
-            this.xrTableCell415.Weight = 0.12640776569308387D;
-            // 
-            // xrTableCell416
-            // 
-            this.xrTableCell416.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell416.Borders = DevExpress.XtraPrinting.BorderSide.Right;
-            this.xrTableCell416.Font = new System.Drawing.Font("Times New Roman", 9F);
-            this.xrTableCell416.ForeColor = System.Drawing.Color.Blue;
-            this.xrTableCell416.Name = "xrTableCell416";
-            this.xrTableCell416.StylePriority.UseBorderColor = false;
-            this.xrTableCell416.StylePriority.UseBorders = false;
-            this.xrTableCell416.StylePriority.UseFont = false;
-            this.xrTableCell416.StylePriority.UseForeColor = false;
-            this.xrTableCell416.StylePriority.UseTextAlignment = false;
-            this.xrTableCell416.Text = "bpm";
-            this.xrTableCell416.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
-            this.xrTableCell416.Weight = 0.17698212135512498D;
-            // 
-            // xrTableRow137
-            // 
-            this.xrTableRow137.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
-            this.xrTableCell417,
-            this.xrTableCell418,
-            this.xrTableCell419,
-            this.xrTableCell420,
-            this.xrTableCell421});
-            this.xrTableRow137.Name = "xrTableRow137";
-            this.xrTableRow137.Weight = 0.16741429109436551D;
-            // 
-            // xrTableCell417
-            // 
-            this.xrTableCell417.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell417.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right)));
-            this.xrTableCell417.Font = new System.Drawing.Font("Times New Roman", 7.5F);
-            this.xrTableCell417.ForeColor = System.Drawing.Color.Black;
-            this.xrTableCell417.Name = "xrTableCell417";
-            this.xrTableCell417.StylePriority.UseBorderColor = false;
-            this.xrTableCell417.StylePriority.UseBorders = false;
-            this.xrTableCell417.StylePriority.UseFont = false;
-            this.xrTableCell417.StylePriority.UseForeColor = false;
-            this.xrTableCell417.StylePriority.UseTextAlignment = false;
-            this.xrTableCell417.Text = " ";
-            this.xrTableCell417.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.xrTableCell417.Weight = 0.183250275632711D;
-            // 
-            // xrTableCell418
-            // 
-            this.xrTableCell418.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell418.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right)));
-            this.xrTableCell418.Font = new System.Drawing.Font("Times New Roman", 7.5F);
-            this.xrTableCell418.ForeColor = System.Drawing.Color.Black;
-            this.xrTableCell418.Name = "xrTableCell418";
-            this.xrTableCell418.StylePriority.UseBorderColor = false;
-            this.xrTableCell418.StylePriority.UseBorders = false;
-            this.xrTableCell418.StylePriority.UseFont = false;
-            this.xrTableCell418.StylePriority.UseForeColor = false;
-            this.xrTableCell418.StylePriority.UseTextAlignment = false;
-            this.xrTableCell418.Text = " ";
-            this.xrTableCell418.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.xrTableCell418.Weight = 1.2986662843202201D;
-            // 
-            // xrTableCell419
-            // 
-            this.xrTableCell419.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell419.Borders = DevExpress.XtraPrinting.BorderSide.Left;
-            this.xrTableCell419.Font = new System.Drawing.Font("Times New Roman", 9F);
-            this.xrTableCell419.ForeColor = System.Drawing.Color.Blue;
-            this.xrTableCell419.Name = "xrTableCell419";
-            this.xrTableCell419.StylePriority.UseBorderColor = false;
-            this.xrTableCell419.StylePriority.UseBorders = false;
-            this.xrTableCell419.StylePriority.UseFont = false;
-            this.xrTableCell419.StylePriority.UseForeColor = false;
-            this.xrTableCell419.StylePriority.UseTextAlignment = false;
-            this.xrTableCell419.Text = "RR:";
-            this.xrTableCell419.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomRight;
-            this.xrTableCell419.Weight = 0.052980490396855234D;
-            // 
-            // xrTableCell420
-            // 
-            this.xrTableCell420.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell420.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
-            this.xrTableCell420.Font = new System.Drawing.Font("Times New Roman", 9F);
-            this.xrTableCell420.ForeColor = System.Drawing.Color.Black;
-            this.xrTableCell420.Name = "xrTableCell420";
-            this.xrTableCell420.StylePriority.UseBorderColor = false;
-            this.xrTableCell420.StylePriority.UseBorders = false;
-            this.xrTableCell420.StylePriority.UseFont = false;
-            this.xrTableCell420.StylePriority.UseForeColor = false;
-            this.xrTableCell420.StylePriority.UseTextAlignment = false;
-            this.xrTableCell420.Text = "[RR]";
-            this.xrTableCell420.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomCenter;
-            this.xrTableCell420.Weight = 0.12400163095826974D;
-            // 
-            // xrTableCell421
-            // 
-            this.xrTableCell421.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell421.Borders = DevExpress.XtraPrinting.BorderSide.Right;
-            this.xrTableCell421.Font = new System.Drawing.Font("Times New Roman", 9F);
-            this.xrTableCell421.ForeColor = System.Drawing.Color.Blue;
-            this.xrTableCell421.Name = "xrTableCell421";
-            this.xrTableCell421.StylePriority.UseBorderColor = false;
-            this.xrTableCell421.StylePriority.UseBorders = false;
-            this.xrTableCell421.StylePriority.UseFont = false;
-            this.xrTableCell421.StylePriority.UseForeColor = false;
-            this.xrTableCell421.StylePriority.UseTextAlignment = false;
-            this.xrTableCell421.Text = "bpm";
-            this.xrTableCell421.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
-            this.xrTableCell421.Weight = 0.17698212135512498D;
-            // 
-            // xrTableRow138
-            // 
-            this.xrTableRow138.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
-            this.xrTableCell422,
-            this.xrTableCell423,
-            this.xrTableCell424,
-            this.xrTableCell631,
-            this.xrTableCell632});
-            this.xrTableRow138.Name = "xrTableRow138";
-            this.xrTableRow138.Weight = 0.17474691232127129D;
-            // 
-            // xrTableCell422
-            // 
-            this.xrTableCell422.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell422.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right)));
-            this.xrTableCell422.Font = new System.Drawing.Font("Times New Roman", 7.5F);
-            this.xrTableCell422.ForeColor = System.Drawing.Color.Black;
-            this.xrTableCell422.Name = "xrTableCell422";
-            this.xrTableCell422.StylePriority.UseBorderColor = false;
-            this.xrTableCell422.StylePriority.UseBorders = false;
-            this.xrTableCell422.StylePriority.UseFont = false;
-            this.xrTableCell422.StylePriority.UseForeColor = false;
-            this.xrTableCell422.StylePriority.UseTextAlignment = false;
-            this.xrTableCell422.Text = " ";
-            this.xrTableCell422.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.xrTableCell422.Weight = 0.183250275632711D;
-            // 
-            // xrTableCell423
-            // 
-            this.xrTableCell423.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell423.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right)));
-            this.xrTableCell423.Font = new System.Drawing.Font("Times New Roman", 7.5F);
-            this.xrTableCell423.ForeColor = System.Drawing.Color.Black;
-            this.xrTableCell423.Name = "xrTableCell423";
-            this.xrTableCell423.StylePriority.UseBorderColor = false;
-            this.xrTableCell423.StylePriority.UseBorders = false;
-            this.xrTableCell423.StylePriority.UseFont = false;
-            this.xrTableCell423.StylePriority.UseForeColor = false;
-            this.xrTableCell423.StylePriority.UseTextAlignment = false;
-            this.xrTableCell423.Text = " ";
-            this.xrTableCell423.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.xrTableCell423.Weight = 1.2986662843202201D;
-            // 
-            // xrTableCell424
-            // 
-            this.xrTableCell424.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell424.Borders = DevExpress.XtraPrinting.BorderSide.Left;
-            this.xrTableCell424.Font = new System.Drawing.Font("Times New Roman", 9F);
-            this.xrTableCell424.ForeColor = System.Drawing.Color.Blue;
-            this.xrTableCell424.Name = "xrTableCell424";
-            this.xrTableCell424.StylePriority.UseBorderColor = false;
-            this.xrTableCell424.StylePriority.UseBorders = false;
-            this.xrTableCell424.StylePriority.UseFont = false;
-            this.xrTableCell424.StylePriority.UseForeColor = false;
-            this.xrTableCell424.StylePriority.UseTextAlignment = false;
-            this.xrTableCell424.Text = "Temp:";
-            this.xrTableCell424.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomRight;
-            this.xrTableCell424.Weight = 0.079447972479810669D;
-            // 
-            // xrTableCell631
-            // 
-            this.xrTableCell631.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell631.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
-            this.xrTableCell631.Font = new System.Drawing.Font("Times New Roman", 9F);
-            this.xrTableCell631.ForeColor = System.Drawing.Color.Black;
-            this.xrTableCell631.Name = "xrTableCell631";
-            this.xrTableCell631.StylePriority.UseBorderColor = false;
-            this.xrTableCell631.StylePriority.UseBorders = false;
-            this.xrTableCell631.StylePriority.UseFont = false;
-            this.xrTableCell631.StylePriority.UseForeColor = false;
-            this.xrTableCell631.StylePriority.UseTextAlignment = false;
-            this.xrTableCell631.Text = "[Temp]";
-            this.xrTableCell631.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomCenter;
-            this.xrTableCell631.Weight = 0.12881382699849325D;
-            // 
-            // xrTableCell632
-            // 
-            this.xrTableCell632.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell632.Borders = DevExpress.XtraPrinting.BorderSide.Right;
-            this.xrTableCell632.Font = new System.Drawing.Font("Times New Roman", 9F);
-            this.xrTableCell632.ForeColor = System.Drawing.Color.Blue;
-            this.xrTableCell632.Name = "xrTableCell632";
-            this.xrTableCell632.StylePriority.UseBorderColor = false;
-            this.xrTableCell632.StylePriority.UseBorders = false;
-            this.xrTableCell632.StylePriority.UseFont = false;
-            this.xrTableCell632.StylePriority.UseForeColor = false;
-            this.xrTableCell632.StylePriority.UseTextAlignment = false;
-            this.xrTableCell632.Text = "C";
-            this.xrTableCell632.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
-            this.xrTableCell632.Weight = 0.14570244323194603D;
-            // 
-            // xrTableRow139
-            // 
-            this.xrTableRow139.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
-            this.xrTableCell633,
-            this.xrTableCell634,
-            this.xrTableCell635,
-            this.xrTableCell636,
-            this.xrTableCell637});
-            this.xrTableRow139.Name = "xrTableRow139";
-            this.xrTableRow139.Weight = 0.17474691232127129D;
-            // 
-            // xrTableCell633
-            // 
-            this.xrTableCell633.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell633.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right)));
-            this.xrTableCell633.Font = new System.Drawing.Font("Times New Roman", 7.5F);
-            this.xrTableCell633.ForeColor = System.Drawing.Color.Black;
-            this.xrTableCell633.Name = "xrTableCell633";
-            this.xrTableCell633.StylePriority.UseBorderColor = false;
-            this.xrTableCell633.StylePriority.UseBorders = false;
-            this.xrTableCell633.StylePriority.UseFont = false;
-            this.xrTableCell633.StylePriority.UseForeColor = false;
-            this.xrTableCell633.StylePriority.UseTextAlignment = false;
-            this.xrTableCell633.Text = " ";
-            this.xrTableCell633.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.xrTableCell633.Weight = 0.183250275632711D;
-            // 
-            // xrTableCell634
-            // 
-            this.xrTableCell634.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell634.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right)));
-            this.xrTableCell634.Font = new System.Drawing.Font("Times New Roman", 7.5F, System.Drawing.FontStyle.Bold);
-            this.xrTableCell634.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.xrTableCell634.Multiline = true;
-            this.xrTableCell634.Name = "xrTableCell634";
-            this.xrTableCell634.StylePriority.UseBorderColor = false;
-            this.xrTableCell634.StylePriority.UseBorders = false;
-            this.xrTableCell634.StylePriority.UseFont = false;
-            this.xrTableCell634.StylePriority.UseForeColor = false;
-            this.xrTableCell634.StylePriority.UseTextAlignment = false;
-            this.xrTableCell634.Text = "                                                                                 " +
-                "                                                      DR. ELDRIN M. MASCARINAS  " +
-                "\r\n          ";
-            this.xrTableCell634.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
-            this.xrTableCell634.Weight = 1.2986662843202201D;
-            // 
-            // xrTableCell635
-            // 
-            this.xrTableCell635.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell635.Borders = DevExpress.XtraPrinting.BorderSide.Left;
-            this.xrTableCell635.Font = new System.Drawing.Font("Times New Roman", 9F);
-            this.xrTableCell635.ForeColor = System.Drawing.Color.Blue;
-            this.xrTableCell635.Name = "xrTableCell635";
-            this.xrTableCell635.StylePriority.UseBorderColor = false;
-            this.xrTableCell635.StylePriority.UseBorders = false;
-            this.xrTableCell635.StylePriority.UseFont = false;
-            this.xrTableCell635.StylePriority.UseForeColor = false;
-            this.xrTableCell635.StylePriority.UseTextAlignment = false;
-            this.xrTableCell635.Text = "BP:";
-            this.xrTableCell635.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            this.xrTableCell635.Weight = 0.093884780888695452D;
-            // 
-            // xrTableCell636
-            // 
-            this.xrTableCell636.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell636.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
-            this.xrTableCell636.Font = new System.Drawing.Font("Times New Roman", 9F);
-            this.xrTableCell636.ForeColor = System.Drawing.Color.Black;
-            this.xrTableCell636.Name = "xrTableCell636";
-            this.xrTableCell636.StylePriority.UseBorderColor = false;
-            this.xrTableCell636.StylePriority.UseBorders = false;
-            this.xrTableCell636.StylePriority.UseFont = false;
-            this.xrTableCell636.StylePriority.UseForeColor = false;
-            this.xrTableCell636.StylePriority.UseTextAlignment = false;
-            this.xrTableCell636.Text = "[BP]";
-            this.xrTableCell636.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomCenter;
-            this.xrTableCell636.Weight = 0.11437701858960847D;
-            // 
-            // xrTableCell637
-            // 
-            this.xrTableCell637.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell637.Borders = DevExpress.XtraPrinting.BorderSide.Right;
-            this.xrTableCell637.Font = new System.Drawing.Font("Times New Roman", 9F);
-            this.xrTableCell637.ForeColor = System.Drawing.Color.Blue;
-            this.xrTableCell637.Name = "xrTableCell637";
-            this.xrTableCell637.StylePriority.UseBorderColor = false;
-            this.xrTableCell637.StylePriority.UseBorders = false;
-            this.xrTableCell637.StylePriority.UseFont = false;
-            this.xrTableCell637.StylePriority.UseForeColor = false;
-            this.xrTableCell637.StylePriority.UseTextAlignment = false;
-            this.xrTableCell637.Text = "mmHg";
-            this.xrTableCell637.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
-            this.xrTableCell637.Weight = 0.14570244323194603D;
-            // 
-            // xrTableRow140
-            // 
-            this.xrTableRow140.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
-            this.xrTableCell638,
-            this.xrTableCell639,
-            this.xrTableCell640,
-            this.xrTableCell641,
-            this.xrTableCell642});
-            this.xrTableRow140.Name = "xrTableRow140";
-            this.xrTableRow140.Weight = 0.094089305983694582D;
-            // 
-            // xrTableCell638
-            // 
-            this.xrTableCell638.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell638.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right)
-                        | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.xrTableCell638.Font = new System.Drawing.Font("Times New Roman", 7.5F);
-            this.xrTableCell638.ForeColor = System.Drawing.Color.Black;
-            this.xrTableCell638.Name = "xrTableCell638";
-            this.xrTableCell638.StylePriority.UseBorderColor = false;
-            this.xrTableCell638.StylePriority.UseBorders = false;
-            this.xrTableCell638.StylePriority.UseFont = false;
-            this.xrTableCell638.StylePriority.UseForeColor = false;
-            this.xrTableCell638.StylePriority.UseTextAlignment = false;
-            this.xrTableCell638.Text = " ";
-            this.xrTableCell638.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.xrTableCell638.Weight = 0.183250275632711D;
-            // 
-            // xrTableCell639
-            // 
-            this.xrTableCell639.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell639.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right)
-                        | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.xrTableCell639.Font = new System.Drawing.Font("Times New Roman", 6.8F);
-            this.xrTableCell639.ForeColor = System.Drawing.Color.Black;
-            this.xrTableCell639.Name = "xrTableCell639";
-            this.xrTableCell639.StylePriority.UseBorderColor = false;
-            this.xrTableCell639.StylePriority.UseBorders = false;
-            this.xrTableCell639.StylePriority.UseFont = false;
-            this.xrTableCell639.StylePriority.UseForeColor = false;
-            this.xrTableCell639.StylePriority.UseTextAlignment = false;
-            this.xrTableCell639.Text = "                                                                                 " +
-                "                                                                       Municipal" +
-                " Health Officer";
-            this.xrTableCell639.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
-            this.xrTableCell639.Weight = 1.2986662843202201D;
-            // 
-            // xrTableCell640
-            // 
-            this.xrTableCell640.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell640.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.xrTableCell640.Font = new System.Drawing.Font("Times New Roman", 9F);
-            this.xrTableCell640.ForeColor = System.Drawing.Color.Blue;
-            this.xrTableCell640.Name = "xrTableCell640";
-            this.xrTableCell640.StylePriority.UseBorderColor = false;
-            this.xrTableCell640.StylePriority.UseBorders = false;
-            this.xrTableCell640.StylePriority.UseFont = false;
-            this.xrTableCell640.StylePriority.UseForeColor = false;
-            this.xrTableCell640.StylePriority.UseTextAlignment = false;
-            this.xrTableCell640.Text = " ";
-            this.xrTableCell640.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            this.xrTableCell640.Weight = 0.093884780888695452D;
-            // 
-            // xrTableCell641
-            // 
-            this.xrTableCell641.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell641.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
-            this.xrTableCell641.Font = new System.Drawing.Font("Times New Roman", 9F);
-            this.xrTableCell641.ForeColor = System.Drawing.Color.Black;
-            this.xrTableCell641.Name = "xrTableCell641";
-            this.xrTableCell641.StylePriority.UseBorderColor = false;
-            this.xrTableCell641.StylePriority.UseBorders = false;
-            this.xrTableCell641.StylePriority.UseFont = false;
-            this.xrTableCell641.StylePriority.UseForeColor = false;
-            this.xrTableCell641.StylePriority.UseTextAlignment = false;
-            this.xrTableCell641.Text = " ";
-            this.xrTableCell641.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomCenter;
-            this.xrTableCell641.Weight = 0.11437701858960847D;
-            // 
-            // xrTableCell642
-            // 
-            this.xrTableCell642.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell642.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Right | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.xrTableCell642.Font = new System.Drawing.Font("Times New Roman", 9F);
-            this.xrTableCell642.ForeColor = System.Drawing.Color.Blue;
-            this.xrTableCell642.Name = "xrTableCell642";
-            this.xrTableCell642.StylePriority.UseBorderColor = false;
-            this.xrTableCell642.StylePriority.UseBorders = false;
-            this.xrTableCell642.StylePriority.UseFont = false;
-            this.xrTableCell642.StylePriority.UseForeColor = false;
-            this.xrTableCell642.StylePriority.UseTextAlignment = false;
-            this.xrTableCell642.Text = " ";
-            this.xrTableCell642.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
-            this.xrTableCell642.Weight = 0.14570244323194603D;
             // 
             // xrTable13
             // 
@@ -6165,280 +5275,9 @@
             this.xrTableRow62,
             this.xrTableRow63,
             this.xrTableRow64,
-            this.xrTableRow65,
-            this.xrTableRow75,
-            this.xrTableRow76,
-            this.xrTableRow77,
-            this.xrTableRow78,
-            this.xrTableRow79,
-            this.xrTableRow80,
-            this.xrTableRow81,
-            this.xrTableRow82,
-            this.xrTableRow83});
-            this.xrTable7.SizeF = new System.Drawing.SizeF(762F, 669.5542F);
+            this.xrTableRow65});
+            this.xrTable7.SizeF = new System.Drawing.SizeF(762F, 475.0681F);
             this.xrTable7.StylePriority.UseFont = false;
-            // 
-            // xrTableRow40
-            // 
-            this.xrTableRow40.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
-            this.xrTableCell174});
-            this.xrTableRow40.Name = "xrTableRow40";
-            this.xrTableRow40.Weight = 0.1305737744869323D;
-            // 
-            // xrTableCell174
-            // 
-            this.xrTableCell174.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell174.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)
-                        | DevExpress.XtraPrinting.BorderSide.Right)));
-            this.xrTableCell174.Font = new System.Drawing.Font("Times New Roman", 8.6F, System.Drawing.FontStyle.Bold);
-            this.xrTableCell174.ForeColor = System.Drawing.Color.Blue;
-            this.xrTableCell174.Name = "xrTableCell174";
-            this.xrTableCell174.StylePriority.UseBorderColor = false;
-            this.xrTableCell174.StylePriority.UseBorders = false;
-            this.xrTableCell174.StylePriority.UseFont = false;
-            this.xrTableCell174.StylePriority.UseForeColor = false;
-            this.xrTableCell174.StylePriority.UseTextAlignment = false;
-            this.xrTableCell174.Text = " PATIENT INFORMATION";
-            this.xrTableCell174.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            this.xrTableCell174.Weight = 1.8237387338624995D;
-            // 
-            // xrTableRow41
-            // 
-            this.xrTableRow41.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
-            this.xrTableCell175,
-            this.xrTableCell176,
-            this.xrTableCell177,
-            this.xrTableCell178});
-            this.xrTableRow41.Name = "xrTableRow41";
-            this.xrTableRow41.Weight = 0.1305737744869323D;
-            // 
-            // xrTableCell175
-            // 
-            this.xrTableCell175.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell175.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)));
-            this.xrTableCell175.Font = new System.Drawing.Font("Times New Roman", 8.6F);
-            this.xrTableCell175.ForeColor = System.Drawing.Color.Blue;
-            this.xrTableCell175.Name = "xrTableCell175";
-            this.xrTableCell175.StylePriority.UseBorderColor = false;
-            this.xrTableCell175.StylePriority.UseBorders = false;
-            this.xrTableCell175.StylePriority.UseFont = false;
-            this.xrTableCell175.StylePriority.UseForeColor = false;
-            this.xrTableCell175.StylePriority.UseTextAlignment = false;
-            this.xrTableCell175.Text = "Last Name";
-            this.xrTableCell175.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.xrTableCell175.Weight = 0.37331005090918479D;
-            // 
-            // xrTableCell176
-            // 
-            this.xrTableCell176.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell176.Borders = DevExpress.XtraPrinting.BorderSide.Top;
-            this.xrTableCell176.Font = new System.Drawing.Font("Times New Roman", 8.6F);
-            this.xrTableCell176.ForeColor = System.Drawing.Color.Blue;
-            this.xrTableCell176.Name = "xrTableCell176";
-            this.xrTableCell176.StylePriority.UseBorderColor = false;
-            this.xrTableCell176.StylePriority.UseBorders = false;
-            this.xrTableCell176.StylePriority.UseFont = false;
-            this.xrTableCell176.StylePriority.UseForeColor = false;
-            this.xrTableCell176.StylePriority.UseTextAlignment = false;
-            this.xrTableCell176.Text = "First Name";
-            this.xrTableCell176.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.xrTableCell176.Weight = 0.36633043171163548D;
-            // 
-            // xrTableCell177
-            // 
-            this.xrTableCell177.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell177.Borders = DevExpress.XtraPrinting.BorderSide.Top;
-            this.xrTableCell177.Font = new System.Drawing.Font("Times New Roman", 8.6F);
-            this.xrTableCell177.ForeColor = System.Drawing.Color.Blue;
-            this.xrTableCell177.Name = "xrTableCell177";
-            this.xrTableCell177.StylePriority.UseBorderColor = false;
-            this.xrTableCell177.StylePriority.UseBorders = false;
-            this.xrTableCell177.StylePriority.UseFont = false;
-            this.xrTableCell177.StylePriority.UseForeColor = false;
-            this.xrTableCell177.StylePriority.UseTextAlignment = false;
-            this.xrTableCell177.Text = "Name Extension (JR/SR/III)";
-            this.xrTableCell177.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
-            this.xrTableCell177.Weight = 0.55414053701934773D;
-            // 
-            // xrTableCell178
-            // 
-            this.xrTableCell178.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell178.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Right)));
-            this.xrTableCell178.Font = new System.Drawing.Font("Times New Roman", 8.6F);
-            this.xrTableCell178.ForeColor = System.Drawing.Color.Blue;
-            this.xrTableCell178.Name = "xrTableCell178";
-            this.xrTableCell178.StylePriority.UseBorderColor = false;
-            this.xrTableCell178.StylePriority.UseBorders = false;
-            this.xrTableCell178.StylePriority.UseFont = false;
-            this.xrTableCell178.StylePriority.UseForeColor = false;
-            this.xrTableCell178.StylePriority.UseTextAlignment = false;
-            this.xrTableCell178.Text = "Middle Name";
-            this.xrTableCell178.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.xrTableCell178.Weight = 0.52995771422233362D;
-            // 
-            // xrTableRow42
-            // 
-            this.xrTableRow42.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
-            this.lblLastName,
-            this.lblFirstName,
-            this.lblExt,
-            this.lblMiddleName});
-            this.xrTableRow42.Name = "xrTableRow42";
-            this.xrTableRow42.Weight = 0.1305737744869323D;
-            // 
-            // lblLastName
-            // 
-            this.lblLastName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.lblLastName.Borders = DevExpress.XtraPrinting.BorderSide.Left;
-            this.lblLastName.Font = new System.Drawing.Font("Times New Roman", 8F);
-            this.lblLastName.Name = "lblLastName";
-            this.lblLastName.StylePriority.UseBorderColor = false;
-            this.lblLastName.StylePriority.UseBorders = false;
-            this.lblLastName.StylePriority.UseFont = false;
-            this.lblLastName.StylePriority.UseTextAlignment = false;
-            this.lblLastName.Text = "[Last Name]";
-            this.lblLastName.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.lblLastName.Weight = 0.37331005090918479D;
-            // 
-            // lblFirstName
-            // 
-            this.lblFirstName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.lblFirstName.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.lblFirstName.Font = new System.Drawing.Font("Times New Roman", 8F);
-            this.lblFirstName.Name = "lblFirstName";
-            this.lblFirstName.StylePriority.UseBorderColor = false;
-            this.lblFirstName.StylePriority.UseBorders = false;
-            this.lblFirstName.StylePriority.UseFont = false;
-            this.lblFirstName.StylePriority.UseTextAlignment = false;
-            this.lblFirstName.Text = "[First Name]";
-            this.lblFirstName.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.lblFirstName.Weight = 0.36633043171163537D;
-            // 
-            // lblExt
-            // 
-            this.lblExt.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.lblExt.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.lblExt.Font = new System.Drawing.Font("Times New Roman", 8F);
-            this.lblExt.Name = "lblExt";
-            this.lblExt.StylePriority.UseBorderColor = false;
-            this.lblExt.StylePriority.UseBorders = false;
-            this.lblExt.StylePriority.UseFont = false;
-            this.lblExt.StylePriority.UseTextAlignment = false;
-            this.lblExt.Text = "[Name Extension (JR/SR/III)]";
-            this.lblExt.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
-            this.lblExt.Weight = 0.55414053701934762D;
-            // 
-            // lblMiddleName
-            // 
-            this.lblMiddleName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.lblMiddleName.Borders = DevExpress.XtraPrinting.BorderSide.Right;
-            this.lblMiddleName.Font = new System.Drawing.Font("Times New Roman", 8F);
-            this.lblMiddleName.Name = "lblMiddleName";
-            this.lblMiddleName.StylePriority.UseBorderColor = false;
-            this.lblMiddleName.StylePriority.UseBorders = false;
-            this.lblMiddleName.StylePriority.UseFont = false;
-            this.lblMiddleName.StylePriority.UseTextAlignment = false;
-            this.lblMiddleName.Text = "[Middle Name]";
-            this.lblMiddleName.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.lblMiddleName.Weight = 0.529957714222334D;
-            // 
-            // xrTableRow43
-            // 
-            this.xrTableRow43.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
-            this.xrTableCell183});
-            this.xrTableRow43.Name = "xrTableRow43";
-            this.xrTableRow43.Weight = 0.1305737744869323D;
-            // 
-            // xrTableCell183
-            // 
-            this.xrTableCell183.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell183.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)
-                        | DevExpress.XtraPrinting.BorderSide.Right)));
-            this.xrTableCell183.Font = new System.Drawing.Font("Times New Roman", 8.6F, System.Drawing.FontStyle.Bold);
-            this.xrTableCell183.ForeColor = System.Drawing.Color.Blue;
-            this.xrTableCell183.Name = "xrTableCell183";
-            this.xrTableCell183.StylePriority.UseBorderColor = false;
-            this.xrTableCell183.StylePriority.UseBorders = false;
-            this.xrTableCell183.StylePriority.UseFont = false;
-            this.xrTableCell183.StylePriority.UseForeColor = false;
-            this.xrTableCell183.StylePriority.UseTextAlignment = false;
-            this.xrTableCell183.Text = " If Married Female, please write FULL MAIDEN NAME: ";
-            this.xrTableCell183.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            this.xrTableCell183.Weight = 1.8237387338624995D;
-            // 
-            // xrTableRow44
-            // 
-            this.xrTableRow44.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
-            this.xrTableCell184,
-            this.xrTableCell185,
-            this.xrTableCell186,
-            this.xrTableCell187});
-            this.xrTableRow44.Name = "xrTableRow44";
-            this.xrTableRow44.Weight = 0.1305737744869323D;
-            // 
-            // xrTableCell184
-            // 
-            this.xrTableCell184.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell184.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)));
-            this.xrTableCell184.Font = new System.Drawing.Font("Times New Roman", 8.6F);
-            this.xrTableCell184.ForeColor = System.Drawing.Color.Blue;
-            this.xrTableCell184.Name = "xrTableCell184";
-            this.xrTableCell184.StylePriority.UseBorderColor = false;
-            this.xrTableCell184.StylePriority.UseBorders = false;
-            this.xrTableCell184.StylePriority.UseFont = false;
-            this.xrTableCell184.StylePriority.UseForeColor = false;
-            this.xrTableCell184.StylePriority.UseTextAlignment = false;
-            this.xrTableCell184.Text = "Last Name";
-            this.xrTableCell184.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.xrTableCell184.Weight = 0.37331008690924267D;
-            // 
-            // xrTableCell185
-            // 
-            this.xrTableCell185.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell185.Borders = DevExpress.XtraPrinting.BorderSide.Top;
-            this.xrTableCell185.Font = new System.Drawing.Font("Times New Roman", 8.6F);
-            this.xrTableCell185.ForeColor = System.Drawing.Color.Blue;
-            this.xrTableCell185.Name = "xrTableCell185";
-            this.xrTableCell185.StylePriority.UseBorderColor = false;
-            this.xrTableCell185.StylePriority.UseBorders = false;
-            this.xrTableCell185.StylePriority.UseFont = false;
-            this.xrTableCell185.StylePriority.UseForeColor = false;
-            this.xrTableCell185.StylePriority.UseTextAlignment = false;
-            this.xrTableCell185.Text = "First Name";
-            this.xrTableCell185.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.xrTableCell185.Weight = 0.366330395711577D;
-            // 
-            // xrTableCell186
-            // 
-            this.xrTableCell186.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell186.Borders = DevExpress.XtraPrinting.BorderSide.Top;
-            this.xrTableCell186.Font = new System.Drawing.Font("Times New Roman", 8.6F);
-            this.xrTableCell186.ForeColor = System.Drawing.Color.Blue;
-            this.xrTableCell186.Name = "xrTableCell186";
-            this.xrTableCell186.StylePriority.UseBorderColor = false;
-            this.xrTableCell186.StylePriority.UseBorders = false;
-            this.xrTableCell186.StylePriority.UseFont = false;
-            this.xrTableCell186.StylePriority.UseForeColor = false;
-            this.xrTableCell186.StylePriority.UseTextAlignment = false;
-            this.xrTableCell186.Text = "Name Extension (JR/SR/III)";
-            this.xrTableCell186.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
-            this.xrTableCell186.Weight = 0.55414039301911511D;
-            // 
-            // xrTableCell187
-            // 
-            this.xrTableCell187.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell187.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Right)));
-            this.xrTableCell187.Font = new System.Drawing.Font("Times New Roman", 8.6F);
-            this.xrTableCell187.ForeColor = System.Drawing.Color.Blue;
-            this.xrTableCell187.Name = "xrTableCell187";
-            this.xrTableCell187.StylePriority.UseBorderColor = false;
-            this.xrTableCell187.StylePriority.UseBorders = false;
-            this.xrTableCell187.StylePriority.UseFont = false;
-            this.xrTableCell187.StylePriority.UseForeColor = false;
-            this.xrTableCell187.StylePriority.UseTextAlignment = false;
-            this.xrTableCell187.Text = "Middle Name";
-            this.xrTableCell187.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.xrTableCell187.Weight = 0.52995785822256469D;
             // 
             // xrTableRow45
             // 
@@ -8866,820 +7705,6 @@
             this.xrTableCell289.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.xrTableCell289.Weight = 1.8358808026631812D;
             // 
-            // xrTableRow75
-            // 
-            this.xrTableRow75.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
-            this.xrTableCell335,
-            this.xrTableCell336,
-            this.xrTableCell337});
-            this.xrTableRow75.Name = "xrTableRow75";
-            this.xrTableRow75.Weight = 0.1600818097239764D;
-            // 
-            // xrTableCell335
-            // 
-            this.xrTableCell335.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell335.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)
-                        | DevExpress.XtraPrinting.BorderSide.Right)));
-            this.xrTableCell335.Font = new System.Drawing.Font("Times New Roman", 7.5F);
-            this.xrTableCell335.ForeColor = System.Drawing.Color.Blue;
-            this.xrTableCell335.Name = "xrTableCell335";
-            this.xrTableCell335.StylePriority.UseBorderColor = false;
-            this.xrTableCell335.StylePriority.UseBorders = false;
-            this.xrTableCell335.StylePriority.UseFont = false;
-            this.xrTableCell335.StylePriority.UseForeColor = false;
-            this.xrTableCell335.StylePriority.UseTextAlignment = false;
-            this.xrTableCell335.Text = "DATE:";
-            this.xrTableCell335.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.xrTableCell335.Weight = 0.183250275632711D;
-            // 
-            // xrTableCell336
-            // 
-            this.xrTableCell336.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell336.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)
-                        | DevExpress.XtraPrinting.BorderSide.Right)));
-            this.xrTableCell336.Font = new System.Drawing.Font("Times New Roman", 7.5F);
-            this.xrTableCell336.ForeColor = System.Drawing.Color.Black;
-            this.xrTableCell336.Name = "xrTableCell336";
-            this.xrTableCell336.StylePriority.UseBorderColor = false;
-            this.xrTableCell336.StylePriority.UseBorders = false;
-            this.xrTableCell336.StylePriority.UseFont = false;
-            this.xrTableCell336.StylePriority.UseForeColor = false;
-            this.xrTableCell336.StylePriority.UseTextAlignment = false;
-            this.xrTableCell336.Text = " ";
-            this.xrTableCell336.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.xrTableCell336.Weight = 1.2986662843202201D;
-            // 
-            // xrTableCell337
-            // 
-            this.xrTableCell337.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell337.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)
-                        | DevExpress.XtraPrinting.BorderSide.Right)));
-            this.xrTableCell337.Font = new System.Drawing.Font("Times New Roman", 7.5F);
-            this.xrTableCell337.ForeColor = System.Drawing.Color.Blue;
-            this.xrTableCell337.Name = "xrTableCell337";
-            this.xrTableCell337.StylePriority.UseBorderColor = false;
-            this.xrTableCell337.StylePriority.UseBorders = false;
-            this.xrTableCell337.StylePriority.UseFont = false;
-            this.xrTableCell337.StylePriority.UseForeColor = false;
-            this.xrTableCell337.StylePriority.UseTextAlignment = false;
-            this.xrTableCell337.Text = "ASSESMENT";
-            this.xrTableCell337.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.xrTableCell337.Weight = 0.35396424271024995D;
-            // 
-            // xrTableRow76
-            // 
-            this.xrTableRow76.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
-            this.xrTableCell338,
-            this.xrTableCell339,
-            this.xrTableCell340});
-            this.xrTableRow76.Name = "xrTableRow76";
-            this.xrTableRow76.Weight = 0.1600818097239764D;
-            // 
-            // xrTableCell338
-            // 
-            this.xrTableCell338.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell338.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right)
-                        | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.xrTableCell338.Font = new System.Drawing.Font("Times New Roman", 7.5F);
-            this.xrTableCell338.ForeColor = System.Drawing.Color.Black;
-            this.xrTableCell338.Name = "xrTableCell338";
-            this.xrTableCell338.StylePriority.UseBorderColor = false;
-            this.xrTableCell338.StylePriority.UseBorders = false;
-            this.xrTableCell338.StylePriority.UseFont = false;
-            this.xrTableCell338.StylePriority.UseForeColor = false;
-            this.xrTableCell338.StylePriority.UseTextAlignment = false;
-            this.xrTableCell338.Text = "[DATE:]";
-            this.xrTableCell338.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.xrTableCell338.Weight = 0.183250275632711D;
-            // 
-            // xrTableCell340
-            // 
-            this.xrTableCell340.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell340.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right)));
-            this.xrTableCell340.Font = new System.Drawing.Font("Times New Roman", 7.5F, System.Drawing.FontStyle.Bold);
-            this.xrTableCell340.ForeColor = System.Drawing.Color.Blue;
-            this.xrTableCell340.Name = "xrTableCell340";
-            this.xrTableCell340.StylePriority.UseBorderColor = false;
-            this.xrTableCell340.StylePriority.UseBorders = false;
-            this.xrTableCell340.StylePriority.UseFont = false;
-            this.xrTableCell340.StylePriority.UseForeColor = false;
-            this.xrTableCell340.StylePriority.UseTextAlignment = false;
-            this.xrTableCell340.Text = "Chief Complaint";
-            this.xrTableCell340.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.xrTableCell340.Weight = 0.35396424271024995D;
-            // 
-            // xrTableRow77
-            // 
-            this.xrTableRow77.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
-            this.xrTableCell341,
-            this.xrTableCell342,
-            this.xrTableCell343,
-            this.xrTableCell344,
-            this.xrTableCell345});
-            this.xrTableRow77.Name = "xrTableRow77";
-            this.xrTableRow77.Weight = 0.1600818097239764D;
-            // 
-            // xrTableCell341
-            // 
-            this.xrTableCell341.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell341.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right)));
-            this.xrTableCell341.Font = new System.Drawing.Font("Times New Roman", 8F);
-            this.xrTableCell341.ForeColor = System.Drawing.Color.Blue;
-            this.xrTableCell341.Name = "xrTableCell341";
-            this.xrTableCell341.StylePriority.UseBorderColor = false;
-            this.xrTableCell341.StylePriority.UseBorders = false;
-            this.xrTableCell341.StylePriority.UseFont = false;
-            this.xrTableCell341.StylePriority.UseForeColor = false;
-            this.xrTableCell341.StylePriority.UseTextAlignment = false;
-            this.xrTableCell341.Text = "Time:";
-            this.xrTableCell341.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.xrTableCell341.Weight = 0.183250275632711D;
-            // 
-            // xrTableCell342
-            // 
-            this.xrTableCell342.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell342.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right)));
-            this.xrTableCell342.Font = new System.Drawing.Font("Times New Roman", 7.5F);
-            this.xrTableCell342.ForeColor = System.Drawing.Color.Black;
-            this.xrTableCell342.Name = "xrTableCell342";
-            this.xrTableCell342.StylePriority.UseBorderColor = false;
-            this.xrTableCell342.StylePriority.UseBorders = false;
-            this.xrTableCell342.StylePriority.UseFont = false;
-            this.xrTableCell342.StylePriority.UseForeColor = false;
-            this.xrTableCell342.StylePriority.UseTextAlignment = false;
-            this.xrTableCell342.Text = " ";
-            this.xrTableCell342.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.xrTableCell342.Weight = 1.2986662843202201D;
-            // 
-            // xrTableCell343
-            // 
-            this.xrTableCell343.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell343.Borders = DevExpress.XtraPrinting.BorderSide.Left;
-            this.xrTableCell343.Font = new System.Drawing.Font("Times New Roman", 9F);
-            this.xrTableCell343.ForeColor = System.Drawing.Color.Blue;
-            this.xrTableCell343.Name = "xrTableCell343";
-            this.xrTableCell343.StylePriority.UseBorderColor = false;
-            this.xrTableCell343.StylePriority.UseBorders = false;
-            this.xrTableCell343.StylePriority.UseFont = false;
-            this.xrTableCell343.StylePriority.UseForeColor = false;
-            this.xrTableCell343.StylePriority.UseTextAlignment = false;
-            this.xrTableCell343.Text = " Wt:";
-            this.xrTableCell343.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomRight;
-            this.xrTableCell343.Weight = 0.052980490396855234D;
-            // 
-            // xrTableCell344
-            // 
-            this.xrTableCell344.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell344.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
-            this.xrTableCell344.Font = new System.Drawing.Font("Times New Roman", 9F);
-            this.xrTableCell344.ForeColor = System.Drawing.Color.Black;
-            this.xrTableCell344.Name = "xrTableCell344";
-            this.xrTableCell344.StylePriority.UseBorderColor = false;
-            this.xrTableCell344.StylePriority.UseBorders = false;
-            this.xrTableCell344.StylePriority.UseFont = false;
-            this.xrTableCell344.StylePriority.UseForeColor = false;
-            this.xrTableCell344.StylePriority.UseTextAlignment = false;
-            this.xrTableCell344.Text = "[Wt]";
-            this.xrTableCell344.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomCenter;
-            this.xrTableCell344.Weight = 0.12400163095826974D;
-            // 
-            // xrTableCell345
-            // 
-            this.xrTableCell345.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell345.Borders = DevExpress.XtraPrinting.BorderSide.Right;
-            this.xrTableCell345.Font = new System.Drawing.Font("Times New Roman", 9F);
-            this.xrTableCell345.ForeColor = System.Drawing.Color.Blue;
-            this.xrTableCell345.Name = "xrTableCell345";
-            this.xrTableCell345.StylePriority.UseBorderColor = false;
-            this.xrTableCell345.StylePriority.UseBorders = false;
-            this.xrTableCell345.StylePriority.UseFont = false;
-            this.xrTableCell345.StylePriority.UseForeColor = false;
-            this.xrTableCell345.StylePriority.UseTextAlignment = false;
-            this.xrTableCell345.Text = "kg";
-            this.xrTableCell345.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
-            this.xrTableCell345.Weight = 0.17698212135512498D;
-            // 
-            // xrTableRow78
-            // 
-            this.xrTableRow78.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
-            this.xrTableCell346,
-            this.xrTableCell347,
-            this.xrTableCell348,
-            this.xrTableCell349,
-            this.xrTableCell350,
-            this.xrTableCell351,
-            this.xrTableCell352});
-            this.xrTableRow78.Name = "xrTableRow78";
-            this.xrTableRow78.Weight = 0.17474680043605795D;
-            // 
-            // xrTableCell346
-            // 
-            this.xrTableCell346.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell346.Borders = DevExpress.XtraPrinting.BorderSide.Left;
-            this.xrTableCell346.Font = new System.Drawing.Font("Times New Roman", 7.5F);
-            this.xrTableCell346.ForeColor = System.Drawing.Color.Black;
-            this.xrTableCell346.Name = "xrTableCell346";
-            this.xrTableCell346.StylePriority.UseBorderColor = false;
-            this.xrTableCell346.StylePriority.UseBorders = false;
-            this.xrTableCell346.StylePriority.UseFont = false;
-            this.xrTableCell346.StylePriority.UseForeColor = false;
-            this.xrTableCell346.StylePriority.UseTextAlignment = false;
-            this.xrTableCell346.Text = " ";
-            this.xrTableCell346.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.xrTableCell346.Weight = 0.031375760499292971D;
-            // 
-            // xrTableCell347
-            // 
-            this.xrTableCell347.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell347.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
-            this.xrTableCell347.Font = new System.Drawing.Font("Times New Roman", 7.5F);
-            this.xrTableCell347.ForeColor = System.Drawing.Color.Black;
-            this.xrTableCell347.Name = "xrTableCell347";
-            this.xrTableCell347.StylePriority.UseBorderColor = false;
-            this.xrTableCell347.StylePriority.UseBorders = false;
-            this.xrTableCell347.StylePriority.UseFont = false;
-            this.xrTableCell347.StylePriority.UseForeColor = false;
-            this.xrTableCell347.StylePriority.UseTextAlignment = false;
-            this.xrTableCell347.Text = "[Time:]";
-            this.xrTableCell347.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomCenter;
-            this.xrTableCell347.Weight = 0.12280888042222993D;
-            // 
-            // xrTableCell348
-            // 
-            this.xrTableCell348.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell348.Borders = DevExpress.XtraPrinting.BorderSide.Right;
-            this.xrTableCell348.Font = new System.Drawing.Font("Times New Roman", 7.5F);
-            this.xrTableCell348.ForeColor = System.Drawing.Color.Black;
-            this.xrTableCell348.Name = "xrTableCell348";
-            this.xrTableCell348.StylePriority.UseBorderColor = false;
-            this.xrTableCell348.StylePriority.UseBorders = false;
-            this.xrTableCell348.StylePriority.UseFont = false;
-            this.xrTableCell348.StylePriority.UseForeColor = false;
-            this.xrTableCell348.StylePriority.UseTextAlignment = false;
-            this.xrTableCell348.Text = " ";
-            this.xrTableCell348.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.xrTableCell348.Weight = 0.029065634711188115D;
-            // 
-            // xrTableCell349
-            // 
-            this.xrTableCell349.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell349.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right)));
-            this.xrTableCell349.Font = new System.Drawing.Font("Times New Roman", 7.5F);
-            this.xrTableCell349.ForeColor = System.Drawing.Color.Black;
-            this.xrTableCell349.Name = "xrTableCell349";
-            this.xrTableCell349.StylePriority.UseBorderColor = false;
-            this.xrTableCell349.StylePriority.UseBorders = false;
-            this.xrTableCell349.StylePriority.UseFont = false;
-            this.xrTableCell349.StylePriority.UseForeColor = false;
-            this.xrTableCell349.StylePriority.UseTextAlignment = false;
-            this.xrTableCell349.Text = " ";
-            this.xrTableCell349.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.xrTableCell349.Weight = 1.2986662843202201D;
-            // 
-            // xrTableCell350
-            // 
-            this.xrTableCell350.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell350.Borders = DevExpress.XtraPrinting.BorderSide.Left;
-            this.xrTableCell350.Font = new System.Drawing.Font("Times New Roman", 9F);
-            this.xrTableCell350.ForeColor = System.Drawing.Color.Blue;
-            this.xrTableCell350.Name = "xrTableCell350";
-            this.xrTableCell350.StylePriority.UseBorderColor = false;
-            this.xrTableCell350.StylePriority.UseBorders = false;
-            this.xrTableCell350.StylePriority.UseFont = false;
-            this.xrTableCell350.StylePriority.UseForeColor = false;
-            this.xrTableCell350.StylePriority.UseTextAlignment = false;
-            this.xrTableCell350.Text = "Ht:";
-            this.xrTableCell350.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomRight;
-            this.xrTableCell350.Weight = 0.043355951457598713D;
-            // 
-            // xrTableCell351
-            // 
-            this.xrTableCell351.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell351.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
-            this.xrTableCell351.Font = new System.Drawing.Font("Times New Roman", 9F);
-            this.xrTableCell351.ForeColor = System.Drawing.Color.Black;
-            this.xrTableCell351.Name = "xrTableCell351";
-            this.xrTableCell351.StylePriority.UseBorderColor = false;
-            this.xrTableCell351.StylePriority.UseBorders = false;
-            this.xrTableCell351.StylePriority.UseFont = false;
-            this.xrTableCell351.StylePriority.UseForeColor = false;
-            this.xrTableCell351.StylePriority.UseTextAlignment = false;
-            this.xrTableCell351.Text = "[Ht]";
-            this.xrTableCell351.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomCenter;
-            this.xrTableCell351.Weight = 0.13362616989752627D;
-            // 
-            // xrTableCell352
-            // 
-            this.xrTableCell352.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell352.Borders = DevExpress.XtraPrinting.BorderSide.Right;
-            this.xrTableCell352.Font = new System.Drawing.Font("Times New Roman", 9F);
-            this.xrTableCell352.ForeColor = System.Drawing.Color.Blue;
-            this.xrTableCell352.Name = "xrTableCell352";
-            this.xrTableCell352.StylePriority.UseBorderColor = false;
-            this.xrTableCell352.StylePriority.UseBorders = false;
-            this.xrTableCell352.StylePriority.UseFont = false;
-            this.xrTableCell352.StylePriority.UseForeColor = false;
-            this.xrTableCell352.StylePriority.UseTextAlignment = false;
-            this.xrTableCell352.Text = "cms";
-            this.xrTableCell352.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
-            this.xrTableCell352.Weight = 0.17698212135512498D;
-            // 
-            // xrTableRow79
-            // 
-            this.xrTableRow79.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
-            this.xrTableCell353,
-            this.xrTableCell354,
-            this.xrTableCell355,
-            this.xrTableCell356,
-            this.xrTableCell357,
-            this.xrTableCell358,
-            this.xrTableCell359});
-            this.xrTableRow79.Name = "xrTableRow79";
-            this.xrTableRow79.Weight = 0.16008178175267304D;
-            // 
-            // xrTableCell353
-            // 
-            this.xrTableCell353.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell353.Borders = DevExpress.XtraPrinting.BorderSide.Left;
-            this.xrTableCell353.Font = new System.Drawing.Font("Times New Roman", 7.5F);
-            this.xrTableCell353.ForeColor = System.Drawing.Color.Blue;
-            this.xrTableCell353.Name = "xrTableCell353";
-            this.xrTableCell353.StylePriority.UseBorderColor = false;
-            this.xrTableCell353.StylePriority.UseBorders = false;
-            this.xrTableCell353.StylePriority.UseFont = false;
-            this.xrTableCell353.StylePriority.UseForeColor = false;
-            this.xrTableCell353.StylePriority.UseTextAlignment = false;
-            this.xrTableCell353.Text = "Age:";
-            this.xrTableCell353.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomRight;
-            this.xrTableCell353.Weight = 0.057843242582248405D;
-            // 
-            // xrTableCell354
-            // 
-            this.xrTableCell354.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell354.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
-            this.xrTableCell354.Font = new System.Drawing.Font("Times New Roman", 7.5F);
-            this.xrTableCell354.ForeColor = System.Drawing.Color.Black;
-            this.xrTableCell354.Name = "xrTableCell354";
-            this.xrTableCell354.StylePriority.UseBorderColor = false;
-            this.xrTableCell354.StylePriority.UseBorders = false;
-            this.xrTableCell354.StylePriority.UseFont = false;
-            this.xrTableCell354.StylePriority.UseForeColor = false;
-            this.xrTableCell354.StylePriority.UseTextAlignment = false;
-            this.xrTableCell354.Text = "[Age:]";
-            this.xrTableCell354.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomCenter;
-            this.xrTableCell354.Weight = 0.096341398339274492D;
-            // 
-            // xrTableCell355
-            // 
-            this.xrTableCell355.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell355.Borders = DevExpress.XtraPrinting.BorderSide.Right;
-            this.xrTableCell355.Font = new System.Drawing.Font("Times New Roman", 7.5F);
-            this.xrTableCell355.ForeColor = System.Drawing.Color.Black;
-            this.xrTableCell355.Name = "xrTableCell355";
-            this.xrTableCell355.StylePriority.UseBorderColor = false;
-            this.xrTableCell355.StylePriority.UseBorders = false;
-            this.xrTableCell355.StylePriority.UseFont = false;
-            this.xrTableCell355.StylePriority.UseForeColor = false;
-            this.xrTableCell355.StylePriority.UseTextAlignment = false;
-            this.xrTableCell355.Text = " ";
-            this.xrTableCell355.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.xrTableCell355.Weight = 0.029065634711188115D;
-            // 
-            // xrTableCell356
-            // 
-            this.xrTableCell356.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell356.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right)));
-            this.xrTableCell356.Font = new System.Drawing.Font("Times New Roman", 7.5F);
-            this.xrTableCell356.ForeColor = System.Drawing.Color.Black;
-            this.xrTableCell356.Name = "xrTableCell356";
-            this.xrTableCell356.StylePriority.UseBorderColor = false;
-            this.xrTableCell356.StylePriority.UseBorders = false;
-            this.xrTableCell356.StylePriority.UseFont = false;
-            this.xrTableCell356.StylePriority.UseForeColor = false;
-            this.xrTableCell356.StylePriority.UseTextAlignment = false;
-            this.xrTableCell356.Text = " ";
-            this.xrTableCell356.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.xrTableCell356.Weight = 1.2986662843202201D;
-            // 
-            // xrTableCell357
-            // 
-            this.xrTableCell357.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell357.Borders = DevExpress.XtraPrinting.BorderSide.Left;
-            this.xrTableCell357.Font = new System.Drawing.Font("Times New Roman", 9F);
-            this.xrTableCell357.ForeColor = System.Drawing.Color.Blue;
-            this.xrTableCell357.Name = "xrTableCell357";
-            this.xrTableCell357.StylePriority.UseBorderColor = false;
-            this.xrTableCell357.StylePriority.UseBorders = false;
-            this.xrTableCell357.StylePriority.UseFont = false;
-            this.xrTableCell357.StylePriority.UseForeColor = false;
-            this.xrTableCell357.StylePriority.UseTextAlignment = false;
-            this.xrTableCell357.Text = "PR:";
-            this.xrTableCell357.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomRight;
-            this.xrTableCell357.Weight = 0.050574355662041104D;
-            // 
-            // xrTableCell358
-            // 
-            this.xrTableCell358.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell358.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
-            this.xrTableCell358.Font = new System.Drawing.Font("Times New Roman", 9F);
-            this.xrTableCell358.ForeColor = System.Drawing.Color.Black;
-            this.xrTableCell358.Name = "xrTableCell358";
-            this.xrTableCell358.StylePriority.UseBorderColor = false;
-            this.xrTableCell358.StylePriority.UseBorders = false;
-            this.xrTableCell358.StylePriority.UseFont = false;
-            this.xrTableCell358.StylePriority.UseForeColor = false;
-            this.xrTableCell358.StylePriority.UseTextAlignment = false;
-            this.xrTableCell358.Text = "[PR]";
-            this.xrTableCell358.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomCenter;
-            this.xrTableCell358.Weight = 0.12640776569308387D;
-            // 
-            // xrTableCell359
-            // 
-            this.xrTableCell359.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell359.Borders = DevExpress.XtraPrinting.BorderSide.Right;
-            this.xrTableCell359.Font = new System.Drawing.Font("Times New Roman", 9F);
-            this.xrTableCell359.ForeColor = System.Drawing.Color.Blue;
-            this.xrTableCell359.Name = "xrTableCell359";
-            this.xrTableCell359.StylePriority.UseBorderColor = false;
-            this.xrTableCell359.StylePriority.UseBorders = false;
-            this.xrTableCell359.StylePriority.UseFont = false;
-            this.xrTableCell359.StylePriority.UseForeColor = false;
-            this.xrTableCell359.StylePriority.UseTextAlignment = false;
-            this.xrTableCell359.Text = "bpm";
-            this.xrTableCell359.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
-            this.xrTableCell359.Weight = 0.17698212135512498D;
-            // 
-            // xrTableRow80
-            // 
-            this.xrTableRow80.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
-            this.xrTableCell360,
-            this.xrTableCell361,
-            this.xrTableCell362,
-            this.xrTableCell363,
-            this.xrTableCell364});
-            this.xrTableRow80.Name = "xrTableRow80";
-            this.xrTableRow80.Weight = 0.16741429109436551D;
-            // 
-            // xrTableCell360
-            // 
-            this.xrTableCell360.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell360.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right)));
-            this.xrTableCell360.Font = new System.Drawing.Font("Times New Roman", 7.5F);
-            this.xrTableCell360.ForeColor = System.Drawing.Color.Black;
-            this.xrTableCell360.Name = "xrTableCell360";
-            this.xrTableCell360.StylePriority.UseBorderColor = false;
-            this.xrTableCell360.StylePriority.UseBorders = false;
-            this.xrTableCell360.StylePriority.UseFont = false;
-            this.xrTableCell360.StylePriority.UseForeColor = false;
-            this.xrTableCell360.StylePriority.UseTextAlignment = false;
-            this.xrTableCell360.Text = " ";
-            this.xrTableCell360.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.xrTableCell360.Weight = 0.183250275632711D;
-            // 
-            // xrTableCell361
-            // 
-            this.xrTableCell361.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell361.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right)));
-            this.xrTableCell361.Font = new System.Drawing.Font("Times New Roman", 7.5F);
-            this.xrTableCell361.ForeColor = System.Drawing.Color.Black;
-            this.xrTableCell361.Name = "xrTableCell361";
-            this.xrTableCell361.StylePriority.UseBorderColor = false;
-            this.xrTableCell361.StylePriority.UseBorders = false;
-            this.xrTableCell361.StylePriority.UseFont = false;
-            this.xrTableCell361.StylePriority.UseForeColor = false;
-            this.xrTableCell361.StylePriority.UseTextAlignment = false;
-            this.xrTableCell361.Text = " ";
-            this.xrTableCell361.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.xrTableCell361.Weight = 1.2986662843202201D;
-            // 
-            // xrTableCell362
-            // 
-            this.xrTableCell362.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell362.Borders = DevExpress.XtraPrinting.BorderSide.Left;
-            this.xrTableCell362.Font = new System.Drawing.Font("Times New Roman", 9F);
-            this.xrTableCell362.ForeColor = System.Drawing.Color.Blue;
-            this.xrTableCell362.Name = "xrTableCell362";
-            this.xrTableCell362.StylePriority.UseBorderColor = false;
-            this.xrTableCell362.StylePriority.UseBorders = false;
-            this.xrTableCell362.StylePriority.UseFont = false;
-            this.xrTableCell362.StylePriority.UseForeColor = false;
-            this.xrTableCell362.StylePriority.UseTextAlignment = false;
-            this.xrTableCell362.Text = "RR:";
-            this.xrTableCell362.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomRight;
-            this.xrTableCell362.Weight = 0.052980490396855234D;
-            // 
-            // xrTableCell363
-            // 
-            this.xrTableCell363.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell363.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
-            this.xrTableCell363.Font = new System.Drawing.Font("Times New Roman", 9F);
-            this.xrTableCell363.ForeColor = System.Drawing.Color.Black;
-            this.xrTableCell363.Name = "xrTableCell363";
-            this.xrTableCell363.StylePriority.UseBorderColor = false;
-            this.xrTableCell363.StylePriority.UseBorders = false;
-            this.xrTableCell363.StylePriority.UseFont = false;
-            this.xrTableCell363.StylePriority.UseForeColor = false;
-            this.xrTableCell363.StylePriority.UseTextAlignment = false;
-            this.xrTableCell363.Text = "[RR]";
-            this.xrTableCell363.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomCenter;
-            this.xrTableCell363.Weight = 0.12400163095826974D;
-            // 
-            // xrTableCell364
-            // 
-            this.xrTableCell364.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell364.Borders = DevExpress.XtraPrinting.BorderSide.Right;
-            this.xrTableCell364.Font = new System.Drawing.Font("Times New Roman", 9F);
-            this.xrTableCell364.ForeColor = System.Drawing.Color.Blue;
-            this.xrTableCell364.Name = "xrTableCell364";
-            this.xrTableCell364.StylePriority.UseBorderColor = false;
-            this.xrTableCell364.StylePriority.UseBorders = false;
-            this.xrTableCell364.StylePriority.UseFont = false;
-            this.xrTableCell364.StylePriority.UseForeColor = false;
-            this.xrTableCell364.StylePriority.UseTextAlignment = false;
-            this.xrTableCell364.Text = "bpm";
-            this.xrTableCell364.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
-            this.xrTableCell364.Weight = 0.17698212135512498D;
-            // 
-            // xrTableRow81
-            // 
-            this.xrTableRow81.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
-            this.xrTableCell365,
-            this.xrTableCell366,
-            this.xrTableCell367,
-            this.xrTableCell368,
-            this.xrTableCell369});
-            this.xrTableRow81.Name = "xrTableRow81";
-            this.xrTableRow81.Weight = 0.17474691232127129D;
-            // 
-            // xrTableCell365
-            // 
-            this.xrTableCell365.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell365.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right)));
-            this.xrTableCell365.Font = new System.Drawing.Font("Times New Roman", 7.5F);
-            this.xrTableCell365.ForeColor = System.Drawing.Color.Black;
-            this.xrTableCell365.Name = "xrTableCell365";
-            this.xrTableCell365.StylePriority.UseBorderColor = false;
-            this.xrTableCell365.StylePriority.UseBorders = false;
-            this.xrTableCell365.StylePriority.UseFont = false;
-            this.xrTableCell365.StylePriority.UseForeColor = false;
-            this.xrTableCell365.StylePriority.UseTextAlignment = false;
-            this.xrTableCell365.Text = " ";
-            this.xrTableCell365.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.xrTableCell365.Weight = 0.183250275632711D;
-            // 
-            // xrTableCell366
-            // 
-            this.xrTableCell366.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell366.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right)));
-            this.xrTableCell366.Font = new System.Drawing.Font("Times New Roman", 7.5F);
-            this.xrTableCell366.ForeColor = System.Drawing.Color.Black;
-            this.xrTableCell366.Name = "xrTableCell366";
-            this.xrTableCell366.StylePriority.UseBorderColor = false;
-            this.xrTableCell366.StylePriority.UseBorders = false;
-            this.xrTableCell366.StylePriority.UseFont = false;
-            this.xrTableCell366.StylePriority.UseForeColor = false;
-            this.xrTableCell366.StylePriority.UseTextAlignment = false;
-            this.xrTableCell366.Text = " ";
-            this.xrTableCell366.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.xrTableCell366.Weight = 1.2986662843202201D;
-            // 
-            // xrTableCell367
-            // 
-            this.xrTableCell367.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell367.Borders = DevExpress.XtraPrinting.BorderSide.Left;
-            this.xrTableCell367.Font = new System.Drawing.Font("Times New Roman", 9F);
-            this.xrTableCell367.ForeColor = System.Drawing.Color.Blue;
-            this.xrTableCell367.Name = "xrTableCell367";
-            this.xrTableCell367.StylePriority.UseBorderColor = false;
-            this.xrTableCell367.StylePriority.UseBorders = false;
-            this.xrTableCell367.StylePriority.UseFont = false;
-            this.xrTableCell367.StylePriority.UseForeColor = false;
-            this.xrTableCell367.StylePriority.UseTextAlignment = false;
-            this.xrTableCell367.Text = "Temp:";
-            this.xrTableCell367.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomRight;
-            this.xrTableCell367.Weight = 0.079447972479810669D;
-            // 
-            // xrTableCell368
-            // 
-            this.xrTableCell368.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell368.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
-            this.xrTableCell368.Font = new System.Drawing.Font("Times New Roman", 9F);
-            this.xrTableCell368.ForeColor = System.Drawing.Color.Black;
-            this.xrTableCell368.Name = "xrTableCell368";
-            this.xrTableCell368.StylePriority.UseBorderColor = false;
-            this.xrTableCell368.StylePriority.UseBorders = false;
-            this.xrTableCell368.StylePriority.UseFont = false;
-            this.xrTableCell368.StylePriority.UseForeColor = false;
-            this.xrTableCell368.StylePriority.UseTextAlignment = false;
-            this.xrTableCell368.Text = "[Temp]";
-            this.xrTableCell368.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomCenter;
-            this.xrTableCell368.Weight = 0.12881382699849325D;
-            // 
-            // xrTableCell369
-            // 
-            this.xrTableCell369.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell369.Borders = DevExpress.XtraPrinting.BorderSide.Right;
-            this.xrTableCell369.Font = new System.Drawing.Font("Times New Roman", 9F);
-            this.xrTableCell369.ForeColor = System.Drawing.Color.Blue;
-            this.xrTableCell369.Name = "xrTableCell369";
-            this.xrTableCell369.StylePriority.UseBorderColor = false;
-            this.xrTableCell369.StylePriority.UseBorders = false;
-            this.xrTableCell369.StylePriority.UseFont = false;
-            this.xrTableCell369.StylePriority.UseForeColor = false;
-            this.xrTableCell369.StylePriority.UseTextAlignment = false;
-            this.xrTableCell369.Text = "C";
-            this.xrTableCell369.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
-            this.xrTableCell369.Weight = 0.14570244323194603D;
-            // 
-            // xrTableRow82
-            // 
-            this.xrTableRow82.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
-            this.xrTableCell370,
-            this.xrTableCell371,
-            this.xrTableCell372,
-            this.xrTableCell373,
-            this.xrTableCell374});
-            this.xrTableRow82.Name = "xrTableRow82";
-            this.xrTableRow82.Weight = 0.17474691232127129D;
-            // 
-            // xrTableCell370
-            // 
-            this.xrTableCell370.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell370.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right)));
-            this.xrTableCell370.Font = new System.Drawing.Font("Times New Roman", 7.5F);
-            this.xrTableCell370.ForeColor = System.Drawing.Color.Black;
-            this.xrTableCell370.Name = "xrTableCell370";
-            this.xrTableCell370.StylePriority.UseBorderColor = false;
-            this.xrTableCell370.StylePriority.UseBorders = false;
-            this.xrTableCell370.StylePriority.UseFont = false;
-            this.xrTableCell370.StylePriority.UseForeColor = false;
-            this.xrTableCell370.StylePriority.UseTextAlignment = false;
-            this.xrTableCell370.Text = " ";
-            this.xrTableCell370.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.xrTableCell370.Weight = 0.183250275632711D;
-            // 
-            // xrTableCell371
-            // 
-            this.xrTableCell371.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell371.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right)));
-            this.xrTableCell371.Font = new System.Drawing.Font("Times New Roman", 7.5F, System.Drawing.FontStyle.Bold);
-            this.xrTableCell371.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.xrTableCell371.Multiline = true;
-            this.xrTableCell371.Name = "xrTableCell371";
-            this.xrTableCell371.StylePriority.UseBorderColor = false;
-            this.xrTableCell371.StylePriority.UseBorders = false;
-            this.xrTableCell371.StylePriority.UseFont = false;
-            this.xrTableCell371.StylePriority.UseForeColor = false;
-            this.xrTableCell371.StylePriority.UseTextAlignment = false;
-            this.xrTableCell371.Text = "                                                                                 " +
-                "                                                      DR. ELDRIN M. MASCARINAS  " +
-                "\r\n          ";
-            this.xrTableCell371.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
-            this.xrTableCell371.Weight = 1.2986662843202201D;
-            // 
-            // xrTableCell372
-            // 
-            this.xrTableCell372.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell372.Borders = DevExpress.XtraPrinting.BorderSide.Left;
-            this.xrTableCell372.Font = new System.Drawing.Font("Times New Roman", 9F);
-            this.xrTableCell372.ForeColor = System.Drawing.Color.Blue;
-            this.xrTableCell372.Name = "xrTableCell372";
-            this.xrTableCell372.StylePriority.UseBorderColor = false;
-            this.xrTableCell372.StylePriority.UseBorders = false;
-            this.xrTableCell372.StylePriority.UseFont = false;
-            this.xrTableCell372.StylePriority.UseForeColor = false;
-            this.xrTableCell372.StylePriority.UseTextAlignment = false;
-            this.xrTableCell372.Text = "BP:";
-            this.xrTableCell372.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            this.xrTableCell372.Weight = 0.093884780888695452D;
-            // 
-            // xrTableCell373
-            // 
-            this.xrTableCell373.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell373.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
-            this.xrTableCell373.Font = new System.Drawing.Font("Times New Roman", 9F);
-            this.xrTableCell373.ForeColor = System.Drawing.Color.Black;
-            this.xrTableCell373.Name = "xrTableCell373";
-            this.xrTableCell373.StylePriority.UseBorderColor = false;
-            this.xrTableCell373.StylePriority.UseBorders = false;
-            this.xrTableCell373.StylePriority.UseFont = false;
-            this.xrTableCell373.StylePriority.UseForeColor = false;
-            this.xrTableCell373.StylePriority.UseTextAlignment = false;
-            this.xrTableCell373.Text = "[BP]";
-            this.xrTableCell373.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomCenter;
-            this.xrTableCell373.Weight = 0.11437701858960847D;
-            // 
-            // xrTableCell374
-            // 
-            this.xrTableCell374.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell374.Borders = DevExpress.XtraPrinting.BorderSide.Right;
-            this.xrTableCell374.Font = new System.Drawing.Font("Times New Roman", 9F);
-            this.xrTableCell374.ForeColor = System.Drawing.Color.Blue;
-            this.xrTableCell374.Name = "xrTableCell374";
-            this.xrTableCell374.StylePriority.UseBorderColor = false;
-            this.xrTableCell374.StylePriority.UseBorders = false;
-            this.xrTableCell374.StylePriority.UseFont = false;
-            this.xrTableCell374.StylePriority.UseForeColor = false;
-            this.xrTableCell374.StylePriority.UseTextAlignment = false;
-            this.xrTableCell374.Text = "mmHg";
-            this.xrTableCell374.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
-            this.xrTableCell374.Weight = 0.14570244323194603D;
-            // 
-            // xrTableRow83
-            // 
-            this.xrTableRow83.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
-            this.xrTableCell375,
-            this.xrTableCell376,
-            this.xrTableCell377,
-            this.xrTableCell378,
-            this.xrTableCell379});
-            this.xrTableRow83.Name = "xrTableRow83";
-            this.xrTableRow83.Weight = 0.094089305983694582D;
-            // 
-            // xrTableCell375
-            // 
-            this.xrTableCell375.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell375.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right)
-                        | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.xrTableCell375.Font = new System.Drawing.Font("Times New Roman", 7.5F);
-            this.xrTableCell375.ForeColor = System.Drawing.Color.Black;
-            this.xrTableCell375.Name = "xrTableCell375";
-            this.xrTableCell375.StylePriority.UseBorderColor = false;
-            this.xrTableCell375.StylePriority.UseBorders = false;
-            this.xrTableCell375.StylePriority.UseFont = false;
-            this.xrTableCell375.StylePriority.UseForeColor = false;
-            this.xrTableCell375.StylePriority.UseTextAlignment = false;
-            this.xrTableCell375.Text = " ";
-            this.xrTableCell375.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.xrTableCell375.Weight = 0.183250275632711D;
-            // 
-            // xrTableCell376
-            // 
-            this.xrTableCell376.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell376.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right)
-                        | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.xrTableCell376.Font = new System.Drawing.Font("Times New Roman", 6.8F);
-            this.xrTableCell376.ForeColor = System.Drawing.Color.Black;
-            this.xrTableCell376.Name = "xrTableCell376";
-            this.xrTableCell376.StylePriority.UseBorderColor = false;
-            this.xrTableCell376.StylePriority.UseBorders = false;
-            this.xrTableCell376.StylePriority.UseFont = false;
-            this.xrTableCell376.StylePriority.UseForeColor = false;
-            this.xrTableCell376.StylePriority.UseTextAlignment = false;
-            this.xrTableCell376.Text = "                                                                                 " +
-                "                                                                       Municipal" +
-                " Health Officer";
-            this.xrTableCell376.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
-            this.xrTableCell376.Weight = 1.2986662843202201D;
-            // 
-            // xrTableCell377
-            // 
-            this.xrTableCell377.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell377.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.xrTableCell377.Font = new System.Drawing.Font("Times New Roman", 9F);
-            this.xrTableCell377.ForeColor = System.Drawing.Color.Blue;
-            this.xrTableCell377.Name = "xrTableCell377";
-            this.xrTableCell377.StylePriority.UseBorderColor = false;
-            this.xrTableCell377.StylePriority.UseBorders = false;
-            this.xrTableCell377.StylePriority.UseFont = false;
-            this.xrTableCell377.StylePriority.UseForeColor = false;
-            this.xrTableCell377.StylePriority.UseTextAlignment = false;
-            this.xrTableCell377.Text = " ";
-            this.xrTableCell377.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            this.xrTableCell377.Weight = 0.093884780888695452D;
-            // 
-            // xrTableCell378
-            // 
-            this.xrTableCell378.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell378.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
-            this.xrTableCell378.Font = new System.Drawing.Font("Times New Roman", 9F);
-            this.xrTableCell378.ForeColor = System.Drawing.Color.Black;
-            this.xrTableCell378.Name = "xrTableCell378";
-            this.xrTableCell378.StylePriority.UseBorderColor = false;
-            this.xrTableCell378.StylePriority.UseBorders = false;
-            this.xrTableCell378.StylePriority.UseFont = false;
-            this.xrTableCell378.StylePriority.UseForeColor = false;
-            this.xrTableCell378.StylePriority.UseTextAlignment = false;
-            this.xrTableCell378.Text = " ";
-            this.xrTableCell378.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomCenter;
-            this.xrTableCell378.Weight = 0.11437701858960847D;
-            // 
-            // xrTableCell379
-            // 
-            this.xrTableCell379.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell379.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Right | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.xrTableCell379.Font = new System.Drawing.Font("Times New Roman", 9F);
-            this.xrTableCell379.ForeColor = System.Drawing.Color.Blue;
-            this.xrTableCell379.Name = "xrTableCell379";
-            this.xrTableCell379.StylePriority.UseBorderColor = false;
-            this.xrTableCell379.StylePriority.UseBorders = false;
-            this.xrTableCell379.StylePriority.UseFont = false;
-            this.xrTableCell379.StylePriority.UseForeColor = false;
-            this.xrTableCell379.StylePriority.UseTextAlignment = false;
-            this.xrTableCell379.Text = " ";
-            this.xrTableCell379.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
-            this.xrTableCell379.Weight = 0.14570244323194603D;
-            // 
             // xrLabel1
             // 
             this.xrLabel1.Font = new System.Drawing.Font("Arial", 5.9F);
@@ -9704,32 +7729,1074 @@
             this.xrLabel2.StylePriority.UseForeColor = false;
             this.xrLabel2.Text = "PhilHealth Identification Number (PIN)";
             // 
-            // xrTableCell339
+            // xrTableCell187
             // 
-            this.xrTableCell339.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xrTableCell339.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right)));
-            this.xrTableCell339.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrLabel3});
-            this.xrTableCell339.Font = new System.Drawing.Font("Times New Roman", 7.5F);
-            this.xrTableCell339.ForeColor = System.Drawing.Color.Black;
-            this.xrTableCell339.Name = "xrTableCell339";
-            this.xrTableCell339.StylePriority.UseBorderColor = false;
-            this.xrTableCell339.StylePriority.UseBorders = false;
-            this.xrTableCell339.StylePriority.UseFont = false;
-            this.xrTableCell339.StylePriority.UseForeColor = false;
-            this.xrTableCell339.StylePriority.UseTextAlignment = false;
-            this.xrTableCell339.Text = " ";
-            this.xrTableCell339.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.xrTableCell339.Weight = 1.2986662843202201D;
+            this.xrTableCell187.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.xrTableCell187.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Right)));
+            this.xrTableCell187.Font = new System.Drawing.Font("Times New Roman", 8.6F);
+            this.xrTableCell187.ForeColor = System.Drawing.Color.Blue;
+            this.xrTableCell187.Name = "xrTableCell187";
+            this.xrTableCell187.StylePriority.UseBorderColor = false;
+            this.xrTableCell187.StylePriority.UseBorders = false;
+            this.xrTableCell187.StylePriority.UseFont = false;
+            this.xrTableCell187.StylePriority.UseForeColor = false;
+            this.xrTableCell187.StylePriority.UseTextAlignment = false;
+            this.xrTableCell187.Text = "Middle Name";
+            this.xrTableCell187.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.xrTableCell187.Weight = 0.52995785822256469D;
             // 
-            // xrLabel3
+            // xrTableCell186
             // 
-            this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(10.00001F, 0F);
-            this.xrLabel3.Name = "xrLabel3";
-            this.xrLabel3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel3.SizeF = new System.Drawing.SizeF(483.5555F, 137.8225F);
-            this.xrLabel3.Text = "asdhyfbkjzxch voiauyse rkhjasc gfkhzxgcvkl  kasdf kasd hfas dfklahsd fhkzxlcjvbh " +
-                "aoiwuedyr aksjhdf asdf";
+            this.xrTableCell186.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.xrTableCell186.Borders = DevExpress.XtraPrinting.BorderSide.Top;
+            this.xrTableCell186.Font = new System.Drawing.Font("Times New Roman", 8.6F);
+            this.xrTableCell186.ForeColor = System.Drawing.Color.Blue;
+            this.xrTableCell186.Name = "xrTableCell186";
+            this.xrTableCell186.StylePriority.UseBorderColor = false;
+            this.xrTableCell186.StylePriority.UseBorders = false;
+            this.xrTableCell186.StylePriority.UseFont = false;
+            this.xrTableCell186.StylePriority.UseForeColor = false;
+            this.xrTableCell186.StylePriority.UseTextAlignment = false;
+            this.xrTableCell186.Text = "Name Extension (JR/SR/III)";
+            this.xrTableCell186.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            this.xrTableCell186.Weight = 0.55414039301911511D;
+            // 
+            // xrTableCell185
+            // 
+            this.xrTableCell185.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.xrTableCell185.Borders = DevExpress.XtraPrinting.BorderSide.Top;
+            this.xrTableCell185.Font = new System.Drawing.Font("Times New Roman", 8.6F);
+            this.xrTableCell185.ForeColor = System.Drawing.Color.Blue;
+            this.xrTableCell185.Name = "xrTableCell185";
+            this.xrTableCell185.StylePriority.UseBorderColor = false;
+            this.xrTableCell185.StylePriority.UseBorders = false;
+            this.xrTableCell185.StylePriority.UseFont = false;
+            this.xrTableCell185.StylePriority.UseForeColor = false;
+            this.xrTableCell185.StylePriority.UseTextAlignment = false;
+            this.xrTableCell185.Text = "First Name";
+            this.xrTableCell185.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.xrTableCell185.Weight = 0.366330395711577D;
+            // 
+            // xrTableCell184
+            // 
+            this.xrTableCell184.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.xrTableCell184.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)));
+            this.xrTableCell184.Font = new System.Drawing.Font("Times New Roman", 8.6F);
+            this.xrTableCell184.ForeColor = System.Drawing.Color.Blue;
+            this.xrTableCell184.Name = "xrTableCell184";
+            this.xrTableCell184.StylePriority.UseBorderColor = false;
+            this.xrTableCell184.StylePriority.UseBorders = false;
+            this.xrTableCell184.StylePriority.UseFont = false;
+            this.xrTableCell184.StylePriority.UseForeColor = false;
+            this.xrTableCell184.StylePriority.UseTextAlignment = false;
+            this.xrTableCell184.Text = "Last Name";
+            this.xrTableCell184.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.xrTableCell184.Weight = 0.37331008690924267D;
+            // 
+            // xrTableRow44
+            // 
+            this.xrTableRow44.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
+            this.xrTableCell184,
+            this.xrTableCell185,
+            this.xrTableCell186,
+            this.xrTableCell187});
+            this.xrTableRow44.Name = "xrTableRow44";
+            this.xrTableRow44.Weight = 0.1305737744869323D;
+            // 
+            // xrTableCell183
+            // 
+            this.xrTableCell183.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.xrTableCell183.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)
+                        | DevExpress.XtraPrinting.BorderSide.Right)));
+            this.xrTableCell183.Font = new System.Drawing.Font("Times New Roman", 8.6F, System.Drawing.FontStyle.Bold);
+            this.xrTableCell183.ForeColor = System.Drawing.Color.Blue;
+            this.xrTableCell183.Name = "xrTableCell183";
+            this.xrTableCell183.StylePriority.UseBorderColor = false;
+            this.xrTableCell183.StylePriority.UseBorders = false;
+            this.xrTableCell183.StylePriority.UseFont = false;
+            this.xrTableCell183.StylePriority.UseForeColor = false;
+            this.xrTableCell183.StylePriority.UseTextAlignment = false;
+            this.xrTableCell183.Text = " If Married Female, please write FULL MAIDEN NAME: ";
+            this.xrTableCell183.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            this.xrTableCell183.Weight = 1.8237387338624995D;
+            // 
+            // xrTableRow43
+            // 
+            this.xrTableRow43.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
+            this.xrTableCell183});
+            this.xrTableRow43.Name = "xrTableRow43";
+            this.xrTableRow43.Weight = 0.1305737744869323D;
+            // 
+            // lblMiddleName
+            // 
+            this.lblMiddleName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.lblMiddleName.Borders = DevExpress.XtraPrinting.BorderSide.Right;
+            this.lblMiddleName.Font = new System.Drawing.Font("Times New Roman", 8F);
+            this.lblMiddleName.Name = "lblMiddleName";
+            this.lblMiddleName.StylePriority.UseBorderColor = false;
+            this.lblMiddleName.StylePriority.UseBorders = false;
+            this.lblMiddleName.StylePriority.UseFont = false;
+            this.lblMiddleName.StylePriority.UseTextAlignment = false;
+            this.lblMiddleName.Text = "[Middle Name]";
+            this.lblMiddleName.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.lblMiddleName.Weight = 0.529957714222334D;
+            // 
+            // lblExt
+            // 
+            this.lblExt.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.lblExt.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.lblExt.Font = new System.Drawing.Font("Times New Roman", 8F);
+            this.lblExt.Name = "lblExt";
+            this.lblExt.StylePriority.UseBorderColor = false;
+            this.lblExt.StylePriority.UseBorders = false;
+            this.lblExt.StylePriority.UseFont = false;
+            this.lblExt.StylePriority.UseTextAlignment = false;
+            this.lblExt.Text = "[Name Extension (JR/SR/III)]";
+            this.lblExt.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            this.lblExt.Weight = 0.55414053701934762D;
+            // 
+            // lblFirstName
+            // 
+            this.lblFirstName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.lblFirstName.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.lblFirstName.Font = new System.Drawing.Font("Times New Roman", 8F);
+            this.lblFirstName.Name = "lblFirstName";
+            this.lblFirstName.StylePriority.UseBorderColor = false;
+            this.lblFirstName.StylePriority.UseBorders = false;
+            this.lblFirstName.StylePriority.UseFont = false;
+            this.lblFirstName.StylePriority.UseTextAlignment = false;
+            this.lblFirstName.Text = "[First Name]";
+            this.lblFirstName.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.lblFirstName.Weight = 0.36633043171163537D;
+            // 
+            // lblLastName
+            // 
+            this.lblLastName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.lblLastName.Borders = DevExpress.XtraPrinting.BorderSide.Left;
+            this.lblLastName.Font = new System.Drawing.Font("Times New Roman", 8F);
+            this.lblLastName.Name = "lblLastName";
+            this.lblLastName.StylePriority.UseBorderColor = false;
+            this.lblLastName.StylePriority.UseBorders = false;
+            this.lblLastName.StylePriority.UseFont = false;
+            this.lblLastName.StylePriority.UseTextAlignment = false;
+            this.lblLastName.Text = "[Last Name]";
+            this.lblLastName.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.lblLastName.Weight = 0.37331005090918479D;
+            // 
+            // xrTableRow42
+            // 
+            this.xrTableRow42.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
+            this.lblLastName,
+            this.lblFirstName,
+            this.lblExt,
+            this.lblMiddleName});
+            this.xrTableRow42.Name = "xrTableRow42";
+            this.xrTableRow42.Weight = 0.1305737744869323D;
+            // 
+            // xrTableCell178
+            // 
+            this.xrTableCell178.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.xrTableCell178.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Right)));
+            this.xrTableCell178.Font = new System.Drawing.Font("Times New Roman", 8.6F);
+            this.xrTableCell178.ForeColor = System.Drawing.Color.Blue;
+            this.xrTableCell178.Name = "xrTableCell178";
+            this.xrTableCell178.StylePriority.UseBorderColor = false;
+            this.xrTableCell178.StylePriority.UseBorders = false;
+            this.xrTableCell178.StylePriority.UseFont = false;
+            this.xrTableCell178.StylePriority.UseForeColor = false;
+            this.xrTableCell178.StylePriority.UseTextAlignment = false;
+            this.xrTableCell178.Text = "Middle Name";
+            this.xrTableCell178.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.xrTableCell178.Weight = 0.52995771422233362D;
+            // 
+            // xrTableCell177
+            // 
+            this.xrTableCell177.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.xrTableCell177.Borders = DevExpress.XtraPrinting.BorderSide.Top;
+            this.xrTableCell177.Font = new System.Drawing.Font("Times New Roman", 8.6F);
+            this.xrTableCell177.ForeColor = System.Drawing.Color.Blue;
+            this.xrTableCell177.Name = "xrTableCell177";
+            this.xrTableCell177.StylePriority.UseBorderColor = false;
+            this.xrTableCell177.StylePriority.UseBorders = false;
+            this.xrTableCell177.StylePriority.UseFont = false;
+            this.xrTableCell177.StylePriority.UseForeColor = false;
+            this.xrTableCell177.StylePriority.UseTextAlignment = false;
+            this.xrTableCell177.Text = "Name Extension (JR/SR/III)";
+            this.xrTableCell177.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            this.xrTableCell177.Weight = 0.55414053701934773D;
+            // 
+            // xrTableCell176
+            // 
+            this.xrTableCell176.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.xrTableCell176.Borders = DevExpress.XtraPrinting.BorderSide.Top;
+            this.xrTableCell176.Font = new System.Drawing.Font("Times New Roman", 8.6F);
+            this.xrTableCell176.ForeColor = System.Drawing.Color.Blue;
+            this.xrTableCell176.Name = "xrTableCell176";
+            this.xrTableCell176.StylePriority.UseBorderColor = false;
+            this.xrTableCell176.StylePriority.UseBorders = false;
+            this.xrTableCell176.StylePriority.UseFont = false;
+            this.xrTableCell176.StylePriority.UseForeColor = false;
+            this.xrTableCell176.StylePriority.UseTextAlignment = false;
+            this.xrTableCell176.Text = "First Name";
+            this.xrTableCell176.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.xrTableCell176.Weight = 0.36633043171163548D;
+            // 
+            // xrTableCell175
+            // 
+            this.xrTableCell175.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.xrTableCell175.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)));
+            this.xrTableCell175.Font = new System.Drawing.Font("Times New Roman", 8.6F);
+            this.xrTableCell175.ForeColor = System.Drawing.Color.Blue;
+            this.xrTableCell175.Name = "xrTableCell175";
+            this.xrTableCell175.StylePriority.UseBorderColor = false;
+            this.xrTableCell175.StylePriority.UseBorders = false;
+            this.xrTableCell175.StylePriority.UseFont = false;
+            this.xrTableCell175.StylePriority.UseForeColor = false;
+            this.xrTableCell175.StylePriority.UseTextAlignment = false;
+            this.xrTableCell175.Text = "Last Name";
+            this.xrTableCell175.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.xrTableCell175.Weight = 0.37331005090918479D;
+            // 
+            // xrTableRow41
+            // 
+            this.xrTableRow41.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
+            this.xrTableCell175,
+            this.xrTableCell176,
+            this.xrTableCell177,
+            this.xrTableCell178});
+            this.xrTableRow41.Name = "xrTableRow41";
+            this.xrTableRow41.Weight = 0.1305737744869323D;
+            // 
+            // xrTableCell174
+            // 
+            this.xrTableCell174.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.xrTableCell174.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)
+                        | DevExpress.XtraPrinting.BorderSide.Right)));
+            this.xrTableCell174.Font = new System.Drawing.Font("Times New Roman", 8.6F, System.Drawing.FontStyle.Bold);
+            this.xrTableCell174.ForeColor = System.Drawing.Color.Blue;
+            this.xrTableCell174.Name = "xrTableCell174";
+            this.xrTableCell174.StylePriority.UseBorderColor = false;
+            this.xrTableCell174.StylePriority.UseBorders = false;
+            this.xrTableCell174.StylePriority.UseFont = false;
+            this.xrTableCell174.StylePriority.UseForeColor = false;
+            this.xrTableCell174.StylePriority.UseTextAlignment = false;
+            this.xrTableCell174.Text = " PATIENT INFORMATION";
+            this.xrTableCell174.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            this.xrTableCell174.Weight = 1.8237387338624995D;
+            // 
+            // xrTableRow40
+            // 
+            this.xrTableRow40.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
+            this.xrTableCell174});
+            this.xrTableRow40.Name = "xrTableRow40";
+            this.xrTableRow40.Weight = 0.1305737744869323D;
+            // 
+            // xrTable4
+            // 
+            this.xrTable4.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.xrTable4.LocationFloat = new DevExpress.Utils.PointFloat(616.3337F, 4.152051E-05F);
+            this.xrTable4.Name = "xrTable4";
+            this.xrTable4.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
+            this.xrTableRow28,
+            this.xrTableRow29,
+            this.xrTableRow30,
+            this.xrTableRow31,
+            this.xrTableRow32,
+            this.xrTableRow33,
+            this.xrTableRow34,
+            this.xrTableRow35,
+            this.xrTableRow36});
+            this.xrTable4.SizeF = new System.Drawing.SizeF(147.4163F, 206.601F);
+            this.xrTable4.StylePriority.UseFont = false;
+            // 
+            // xrTableRow30
+            // 
+            this.xrTableRow30.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
+            this.xrTableCell101,
+            this.xrTableCell102,
+            this.xrTableCell103});
+            this.xrTableRow30.Name = "xrTableRow30";
+            this.xrTableRow30.Weight = 0.1600818097239764D;
+            // 
+            // xrTableCell101
+            // 
+            this.xrTableCell101.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.xrTableCell101.Borders = DevExpress.XtraPrinting.BorderSide.Left;
+            this.xrTableCell101.Font = new System.Drawing.Font("Times New Roman", 8F);
+            this.xrTableCell101.ForeColor = System.Drawing.Color.Blue;
+            this.xrTableCell101.Name = "xrTableCell101";
+            this.xrTableCell101.StylePriority.UseBorderColor = false;
+            this.xrTableCell101.StylePriority.UseBorders = false;
+            this.xrTableCell101.StylePriority.UseFont = false;
+            this.xrTableCell101.StylePriority.UseForeColor = false;
+            this.xrTableCell101.StylePriority.UseTextAlignment = false;
+            this.xrTableCell101.Text = " Wt:";
+            this.xrTableCell101.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomRight;
+            this.xrTableCell101.Weight = 0.27762452012406214D;
+            // 
+            // xrTableCell102
+            // 
+            this.xrTableCell102.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.xrTableCell102.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
+            this.xrTableCell102.Font = new System.Drawing.Font("Times New Roman", 8F);
+            this.xrTableCell102.ForeColor = System.Drawing.Color.Black;
+            this.xrTableCell102.Name = "xrTableCell102";
+            this.xrTableCell102.StylePriority.UseBorderColor = false;
+            this.xrTableCell102.StylePriority.UseBorders = false;
+            this.xrTableCell102.StylePriority.UseFont = false;
+            this.xrTableCell102.StylePriority.UseForeColor = false;
+            this.xrTableCell102.StylePriority.UseTextAlignment = false;
+            this.xrTableCell102.Text = "[Wt]";
+            this.xrTableCell102.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomCenter;
+            this.xrTableCell102.Weight = 0.64978469684572848D;
+            // 
+            // xrTableCell103
+            // 
+            this.xrTableCell103.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.xrTableCell103.Borders = DevExpress.XtraPrinting.BorderSide.Right;
+            this.xrTableCell103.Font = new System.Drawing.Font("Times New Roman", 8F);
+            this.xrTableCell103.ForeColor = System.Drawing.Color.Blue;
+            this.xrTableCell103.Name = "xrTableCell103";
+            this.xrTableCell103.StylePriority.UseBorderColor = false;
+            this.xrTableCell103.StylePriority.UseBorders = false;
+            this.xrTableCell103.StylePriority.UseFont = false;
+            this.xrTableCell103.StylePriority.UseForeColor = false;
+            this.xrTableCell103.StylePriority.UseTextAlignment = false;
+            this.xrTableCell103.Text = "kg";
+            this.xrTableCell103.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
+            this.xrTableCell103.Weight = 0.90847158569339026D;
+            // 
+            // xrTableRow31
+            // 
+            this.xrTableRow31.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
+            this.xrTableCell110,
+            this.xrTableCell111,
+            this.xrTableCell113});
+            this.xrTableRow31.Name = "xrTableRow31";
+            this.xrTableRow31.Weight = 0.17474680043605795D;
+            // 
+            // xrTableCell110
+            // 
+            this.xrTableCell110.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.xrTableCell110.Borders = DevExpress.XtraPrinting.BorderSide.Left;
+            this.xrTableCell110.Font = new System.Drawing.Font("Times New Roman", 8F);
+            this.xrTableCell110.ForeColor = System.Drawing.Color.Blue;
+            this.xrTableCell110.Name = "xrTableCell110";
+            this.xrTableCell110.StylePriority.UseBorderColor = false;
+            this.xrTableCell110.StylePriority.UseBorders = false;
+            this.xrTableCell110.StylePriority.UseFont = false;
+            this.xrTableCell110.StylePriority.UseForeColor = false;
+            this.xrTableCell110.StylePriority.UseTextAlignment = false;
+            this.xrTableCell110.Text = "Ht:";
+            this.xrTableCell110.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomRight;
+            this.xrTableCell110.Weight = 0.22718996913664427D;
+            // 
+            // xrTableCell111
+            // 
+            this.xrTableCell111.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.xrTableCell111.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
+            this.xrTableCell111.Font = new System.Drawing.Font("Times New Roman", 8F);
+            this.xrTableCell111.ForeColor = System.Drawing.Color.Black;
+            this.xrTableCell111.Name = "xrTableCell111";
+            this.xrTableCell111.StylePriority.UseBorderColor = false;
+            this.xrTableCell111.StylePriority.UseBorders = false;
+            this.xrTableCell111.StylePriority.UseFont = false;
+            this.xrTableCell111.StylePriority.UseForeColor = false;
+            this.xrTableCell111.StylePriority.UseTextAlignment = false;
+            this.xrTableCell111.Text = "[Ht]";
+            this.xrTableCell111.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomCenter;
+            this.xrTableCell111.Weight = 0.70021915151201308D;
+            // 
+            // xrTableCell113
+            // 
+            this.xrTableCell113.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.xrTableCell113.Borders = DevExpress.XtraPrinting.BorderSide.Right;
+            this.xrTableCell113.Font = new System.Drawing.Font("Times New Roman", 9F);
+            this.xrTableCell113.ForeColor = System.Drawing.Color.Blue;
+            this.xrTableCell113.Name = "xrTableCell113";
+            this.xrTableCell113.StylePriority.UseBorderColor = false;
+            this.xrTableCell113.StylePriority.UseBorders = false;
+            this.xrTableCell113.StylePriority.UseFont = false;
+            this.xrTableCell113.StylePriority.UseForeColor = false;
+            this.xrTableCell113.StylePriority.UseTextAlignment = false;
+            this.xrTableCell113.Text = "cms";
+            this.xrTableCell113.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
+            this.xrTableCell113.Weight = 0.90847168201452377D;
+            // 
+            // xrTableRow32
+            // 
+            this.xrTableRow32.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
+            this.xrTableCell119,
+            this.xrTableCell120,
+            this.xrTableCell121});
+            this.xrTableRow32.Name = "xrTableRow32";
+            this.xrTableRow32.Weight = 0.16008178175267304D;
+            // 
+            // xrTableCell119
+            // 
+            this.xrTableCell119.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.xrTableCell119.Borders = DevExpress.XtraPrinting.BorderSide.Left;
+            this.xrTableCell119.Font = new System.Drawing.Font("Times New Roman", 8F);
+            this.xrTableCell119.ForeColor = System.Drawing.Color.Blue;
+            this.xrTableCell119.Name = "xrTableCell119";
+            this.xrTableCell119.StylePriority.UseBorderColor = false;
+            this.xrTableCell119.StylePriority.UseBorders = false;
+            this.xrTableCell119.StylePriority.UseFont = false;
+            this.xrTableCell119.StylePriority.UseForeColor = false;
+            this.xrTableCell119.StylePriority.UseTextAlignment = false;
+            this.xrTableCell119.Text = "PR:";
+            this.xrTableCell119.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomRight;
+            this.xrTableCell119.Weight = 0.26501643622372478D;
+            // 
+            // xrTableCell120
+            // 
+            this.xrTableCell120.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.xrTableCell120.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
+            this.xrTableCell120.Font = new System.Drawing.Font("Times New Roman", 8F);
+            this.xrTableCell120.ForeColor = System.Drawing.Color.Black;
+            this.xrTableCell120.Name = "xrTableCell120";
+            this.xrTableCell120.StylePriority.UseBorderColor = false;
+            this.xrTableCell120.StylePriority.UseBorders = false;
+            this.xrTableCell120.StylePriority.UseFont = false;
+            this.xrTableCell120.StylePriority.UseForeColor = false;
+            this.xrTableCell120.StylePriority.UseTextAlignment = false;
+            this.xrTableCell120.Text = "[PR]";
+            this.xrTableCell120.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomCenter;
+            this.xrTableCell120.Weight = 0.6623926844249326D;
+            // 
+            // xrTableCell121
+            // 
+            this.xrTableCell121.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.xrTableCell121.Borders = DevExpress.XtraPrinting.BorderSide.Right;
+            this.xrTableCell121.Font = new System.Drawing.Font("Times New Roman", 8F);
+            this.xrTableCell121.ForeColor = System.Drawing.Color.Blue;
+            this.xrTableCell121.Name = "xrTableCell121";
+            this.xrTableCell121.StylePriority.UseBorderColor = false;
+            this.xrTableCell121.StylePriority.UseBorders = false;
+            this.xrTableCell121.StylePriority.UseFont = false;
+            this.xrTableCell121.StylePriority.UseForeColor = false;
+            this.xrTableCell121.StylePriority.UseTextAlignment = false;
+            this.xrTableCell121.Text = "bpm";
+            this.xrTableCell121.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
+            this.xrTableCell121.Weight = 0.90847168201452377D;
+            // 
+            // xrTableRow33
+            // 
+            this.xrTableRow33.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
+            this.xrTableCell125,
+            this.xrTableCell126,
+            this.xrTableCell128});
+            this.xrTableRow33.Name = "xrTableRow33";
+            this.xrTableRow33.Weight = 0.16741429109436551D;
+            // 
+            // xrTableCell125
+            // 
+            this.xrTableCell125.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.xrTableCell125.Borders = DevExpress.XtraPrinting.BorderSide.Left;
+            this.xrTableCell125.Font = new System.Drawing.Font("Times New Roman", 8F);
+            this.xrTableCell125.ForeColor = System.Drawing.Color.Blue;
+            this.xrTableCell125.Name = "xrTableCell125";
+            this.xrTableCell125.StylePriority.UseBorderColor = false;
+            this.xrTableCell125.StylePriority.UseBorders = false;
+            this.xrTableCell125.StylePriority.UseFont = false;
+            this.xrTableCell125.StylePriority.UseForeColor = false;
+            this.xrTableCell125.StylePriority.UseTextAlignment = false;
+            this.xrTableCell125.Text = "RR:";
+            this.xrTableCell125.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomRight;
+            this.xrTableCell125.Weight = 0.27762452012406214D;
+            // 
+            // xrTableCell126
+            // 
+            this.xrTableCell126.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.xrTableCell126.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
+            this.xrTableCell126.Font = new System.Drawing.Font("Times New Roman", 8F);
+            this.xrTableCell126.ForeColor = System.Drawing.Color.Black;
+            this.xrTableCell126.Name = "xrTableCell126";
+            this.xrTableCell126.StylePriority.UseBorderColor = false;
+            this.xrTableCell126.StylePriority.UseBorders = false;
+            this.xrTableCell126.StylePriority.UseFont = false;
+            this.xrTableCell126.StylePriority.UseForeColor = false;
+            this.xrTableCell126.StylePriority.UseTextAlignment = false;
+            this.xrTableCell126.Text = "[RR]";
+            this.xrTableCell126.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomCenter;
+            this.xrTableCell126.Weight = 0.64978469684572848D;
+            // 
+            // xrTableCell128
+            // 
+            this.xrTableCell128.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.xrTableCell128.Borders = DevExpress.XtraPrinting.BorderSide.Right;
+            this.xrTableCell128.Font = new System.Drawing.Font("Times New Roman", 9F);
+            this.xrTableCell128.ForeColor = System.Drawing.Color.Blue;
+            this.xrTableCell128.Name = "xrTableCell128";
+            this.xrTableCell128.StylePriority.UseBorderColor = false;
+            this.xrTableCell128.StylePriority.UseBorders = false;
+            this.xrTableCell128.StylePriority.UseFont = false;
+            this.xrTableCell128.StylePriority.UseForeColor = false;
+            this.xrTableCell128.StylePriority.UseTextAlignment = false;
+            this.xrTableCell128.Text = "bpm";
+            this.xrTableCell128.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
+            this.xrTableCell128.Weight = 0.90847158569339026D;
+            // 
+            // xrTableRow34
+            // 
+            this.xrTableRow34.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
+            this.xrTableCell131,
+            this.xrTableCell132,
+            this.xrTableCell133});
+            this.xrTableRow34.Name = "xrTableRow34";
+            this.xrTableRow34.Weight = 0.17474691232127129D;
+            // 
+            // xrTableCell131
+            // 
+            this.xrTableCell131.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.xrTableCell131.Borders = DevExpress.XtraPrinting.BorderSide.Left;
+            this.xrTableCell131.Font = new System.Drawing.Font("Times New Roman", 8F);
+            this.xrTableCell131.ForeColor = System.Drawing.Color.Blue;
+            this.xrTableCell131.Name = "xrTableCell131";
+            this.xrTableCell131.StylePriority.UseBorderColor = false;
+            this.xrTableCell131.StylePriority.UseBorders = false;
+            this.xrTableCell131.StylePriority.UseFont = false;
+            this.xrTableCell131.StylePriority.UseForeColor = false;
+            this.xrTableCell131.StylePriority.UseTextAlignment = false;
+            this.xrTableCell131.Text = "Temp:";
+            this.xrTableCell131.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomRight;
+            this.xrTableCell131.Weight = 0.41631765707735985D;
+            // 
+            // xrTableCell132
+            // 
+            this.xrTableCell132.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.xrTableCell132.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
+            this.xrTableCell132.Font = new System.Drawing.Font("Times New Roman", 9F);
+            this.xrTableCell132.ForeColor = System.Drawing.Color.Black;
+            this.xrTableCell132.Name = "xrTableCell132";
+            this.xrTableCell132.StylePriority.UseBorderColor = false;
+            this.xrTableCell132.StylePriority.UseBorders = false;
+            this.xrTableCell132.StylePriority.UseFont = false;
+            this.xrTableCell132.StylePriority.UseForeColor = false;
+            this.xrTableCell132.StylePriority.UseTextAlignment = false;
+            this.xrTableCell132.Text = "[Temp]";
+            this.xrTableCell132.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomCenter;
+            this.xrTableCell132.Weight = 0.67500153770578275D;
+            // 
+            // xrTableCell133
+            // 
+            this.xrTableCell133.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.xrTableCell133.Borders = DevExpress.XtraPrinting.BorderSide.Right;
+            this.xrTableCell133.Font = new System.Drawing.Font("Times New Roman", 9F);
+            this.xrTableCell133.ForeColor = System.Drawing.Color.Blue;
+            this.xrTableCell133.Name = "xrTableCell133";
+            this.xrTableCell133.StylePriority.UseBorderColor = false;
+            this.xrTableCell133.StylePriority.UseBorders = false;
+            this.xrTableCell133.StylePriority.UseFont = false;
+            this.xrTableCell133.StylePriority.UseForeColor = false;
+            this.xrTableCell133.StylePriority.UseTextAlignment = false;
+            this.xrTableCell133.Text = "C";
+            this.xrTableCell133.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
+            this.xrTableCell133.Weight = 0.74456160788003878D;
+            // 
+            // xrTableRow35
+            // 
+            this.xrTableRow35.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
+            this.xrTableCell136,
+            this.xrTableCell137,
+            this.xrTableCell138});
+            this.xrTableRow35.Name = "xrTableRow35";
+            this.xrTableRow35.Weight = 0.17474691232127129D;
+            // 
+            // xrTableCell136
+            // 
+            this.xrTableCell136.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.xrTableCell136.Borders = DevExpress.XtraPrinting.BorderSide.Left;
+            this.xrTableCell136.Font = new System.Drawing.Font("Times New Roman", 9F);
+            this.xrTableCell136.ForeColor = System.Drawing.Color.Blue;
+            this.xrTableCell136.Name = "xrTableCell136";
+            this.xrTableCell136.StylePriority.UseBorderColor = false;
+            this.xrTableCell136.StylePriority.UseBorders = false;
+            this.xrTableCell136.StylePriority.UseFont = false;
+            this.xrTableCell136.StylePriority.UseForeColor = false;
+            this.xrTableCell136.StylePriority.UseTextAlignment = false;
+            this.xrTableCell136.Text = " BP:";
+            this.xrTableCell136.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            this.xrTableCell136.Weight = 0.49196830362460253D;
+            // 
+            // xrTableCell137
+            // 
+            this.xrTableCell137.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.xrTableCell137.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
+            this.xrTableCell137.Font = new System.Drawing.Font("Times New Roman", 8F);
+            this.xrTableCell137.ForeColor = System.Drawing.Color.Black;
+            this.xrTableCell137.Name = "xrTableCell137";
+            this.xrTableCell137.StylePriority.UseBorderColor = false;
+            this.xrTableCell137.StylePriority.UseBorders = false;
+            this.xrTableCell137.StylePriority.UseFont = false;
+            this.xrTableCell137.StylePriority.UseForeColor = false;
+            this.xrTableCell137.StylePriority.UseTextAlignment = false;
+            this.xrTableCell137.Text = "[BP]";
+            this.xrTableCell137.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomCenter;
+            this.xrTableCell137.Weight = 0.59935093931910666D;
+            // 
+            // xrTableCell138
+            // 
+            this.xrTableCell138.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.xrTableCell138.Borders = DevExpress.XtraPrinting.BorderSide.Right;
+            this.xrTableCell138.Font = new System.Drawing.Font("Times New Roman", 8F);
+            this.xrTableCell138.ForeColor = System.Drawing.Color.Blue;
+            this.xrTableCell138.Name = "xrTableCell138";
+            this.xrTableCell138.StylePriority.UseBorderColor = false;
+            this.xrTableCell138.StylePriority.UseBorders = false;
+            this.xrTableCell138.StylePriority.UseFont = false;
+            this.xrTableCell138.StylePriority.UseForeColor = false;
+            this.xrTableCell138.StylePriority.UseTextAlignment = false;
+            this.xrTableCell138.Text = "mmHg";
+            this.xrTableCell138.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
+            this.xrTableCell138.Weight = 0.744561559719472D;
+            // 
+            // xrTable3
+            // 
+            this.xrTable3.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.xrTable3.LocationFloat = new DevExpress.Utils.PointFloat(1.25F, 6.103516E-05F);
+            this.xrTable3.Name = "xrTable3";
+            this.xrTable3.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
+            this.xrTableRow19,
+            this.xrTableRow20,
+            this.xrTableRow21,
+            this.xrTableRow22,
+            this.xrTableRow23,
+            this.xrTableRow24,
+            this.xrTableRow25,
+            this.xrTableRow26,
+            this.xrTableRow27});
+            this.xrTable3.SizeF = new System.Drawing.SizeF(76.05979F, 206.4862F);
+            this.xrTable3.StylePriority.UseFont = false;
+            // 
+            // xrTableRow19
+            // 
+            this.xrTableRow19.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
+            this.xrTableCell53});
+            this.xrTableRow19.Name = "xrTableRow19";
+            this.xrTableRow19.Weight = 0.1600818097239764D;
+            // 
+            // xrTableCell53
+            // 
+            this.xrTableCell53.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.xrTableCell53.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)
+                        | DevExpress.XtraPrinting.BorderSide.Right)));
+            this.xrTableCell53.Font = new System.Drawing.Font("Times New Roman", 7.5F);
+            this.xrTableCell53.ForeColor = System.Drawing.Color.Blue;
+            this.xrTableCell53.Name = "xrTableCell53";
+            this.xrTableCell53.StylePriority.UseBorderColor = false;
+            this.xrTableCell53.StylePriority.UseBorders = false;
+            this.xrTableCell53.StylePriority.UseFont = false;
+            this.xrTableCell53.StylePriority.UseForeColor = false;
+            this.xrTableCell53.StylePriority.UseTextAlignment = false;
+            this.xrTableCell53.Text = "DATE:";
+            this.xrTableCell53.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.xrTableCell53.Weight = 0.537214518342961D;
+            // 
+            // xrTableRow20
+            // 
+            this.xrTableRow20.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
+            this.xrTableCell77});
+            this.xrTableRow20.Name = "xrTableRow20";
+            this.xrTableRow20.Weight = 0.1600818097239764D;
+            // 
+            // xrTableCell77
+            // 
+            this.xrTableCell77.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.xrTableCell77.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right)
+                        | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrTableCell77.Font = new System.Drawing.Font("Times New Roman", 7.5F);
+            this.xrTableCell77.ForeColor = System.Drawing.Color.Black;
+            this.xrTableCell77.Name = "xrTableCell77";
+            this.xrTableCell77.StylePriority.UseBorderColor = false;
+            this.xrTableCell77.StylePriority.UseBorders = false;
+            this.xrTableCell77.StylePriority.UseFont = false;
+            this.xrTableCell77.StylePriority.UseForeColor = false;
+            this.xrTableCell77.StylePriority.UseTextAlignment = false;
+            this.xrTableCell77.Text = "[DATE:]";
+            this.xrTableCell77.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.xrTableCell77.Weight = 0.537214518342961D;
+            // 
+            // xrTableRow21
+            // 
+            this.xrTableRow21.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
+            this.xrTableCell93});
+            this.xrTableRow21.Name = "xrTableRow21";
+            this.xrTableRow21.Weight = 0.1600818097239764D;
+            // 
+            // xrTableCell93
+            // 
+            this.xrTableCell93.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.xrTableCell93.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right)));
+            this.xrTableCell93.Font = new System.Drawing.Font("Times New Roman", 8F);
+            this.xrTableCell93.ForeColor = System.Drawing.Color.Blue;
+            this.xrTableCell93.Name = "xrTableCell93";
+            this.xrTableCell93.StylePriority.UseBorderColor = false;
+            this.xrTableCell93.StylePriority.UseBorders = false;
+            this.xrTableCell93.StylePriority.UseFont = false;
+            this.xrTableCell93.StylePriority.UseForeColor = false;
+            this.xrTableCell93.StylePriority.UseTextAlignment = false;
+            this.xrTableCell93.Text = "Time:";
+            this.xrTableCell93.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.xrTableCell93.Weight = 0.537214518342961D;
+            // 
+            // xrTableRow22
+            // 
+            this.xrTableRow22.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
+            this.xrTableCell98,
+            this.xrTableCell99,
+            this.xrTableCell100});
+            this.xrTableRow22.Name = "xrTableRow22";
+            this.xrTableRow22.Weight = 0.17474680043605795D;
+            // 
+            // xrTableCell98
+            // 
+            this.xrTableCell98.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.xrTableCell98.Borders = DevExpress.XtraPrinting.BorderSide.Left;
+            this.xrTableCell98.Font = new System.Drawing.Font("Times New Roman", 7.5F);
+            this.xrTableCell98.ForeColor = System.Drawing.Color.Black;
+            this.xrTableCell98.Name = "xrTableCell98";
+            this.xrTableCell98.StylePriority.UseBorderColor = false;
+            this.xrTableCell98.StylePriority.UseBorders = false;
+            this.xrTableCell98.StylePriority.UseFont = false;
+            this.xrTableCell98.StylePriority.UseForeColor = false;
+            this.xrTableCell98.StylePriority.UseTextAlignment = false;
+            this.xrTableCell98.Text = " ";
+            this.xrTableCell98.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.xrTableCell98.Weight = 0.0919808029732572D;
+            // 
+            // xrTableCell99
+            // 
+            this.xrTableCell99.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.xrTableCell99.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
+            this.xrTableCell99.Font = new System.Drawing.Font("Times New Roman", 7.5F);
+            this.xrTableCell99.ForeColor = System.Drawing.Color.Black;
+            this.xrTableCell99.Name = "xrTableCell99";
+            this.xrTableCell99.StylePriority.UseBorderColor = false;
+            this.xrTableCell99.StylePriority.UseBorders = false;
+            this.xrTableCell99.StylePriority.UseFont = false;
+            this.xrTableCell99.StylePriority.UseForeColor = false;
+            this.xrTableCell99.StylePriority.UseTextAlignment = false;
+            this.xrTableCell99.Text = "[Time:]";
+            this.xrTableCell99.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomCenter;
+            this.xrTableCell99.Weight = 0.36002525245989414D;
+            // 
+            // xrTableCell100
+            // 
+            this.xrTableCell100.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.xrTableCell100.Borders = DevExpress.XtraPrinting.BorderSide.Right;
+            this.xrTableCell100.Font = new System.Drawing.Font("Times New Roman", 7.5F);
+            this.xrTableCell100.ForeColor = System.Drawing.Color.Black;
+            this.xrTableCell100.Name = "xrTableCell100";
+            this.xrTableCell100.StylePriority.UseBorderColor = false;
+            this.xrTableCell100.StylePriority.UseBorders = false;
+            this.xrTableCell100.StylePriority.UseFont = false;
+            this.xrTableCell100.StylePriority.UseForeColor = false;
+            this.xrTableCell100.StylePriority.UseTextAlignment = false;
+            this.xrTableCell100.Text = " ";
+            this.xrTableCell100.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.xrTableCell100.Weight = 0.085208462909809657D;
+            // 
+            // xrTableRow23
+            // 
+            this.xrTableRow23.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
+            this.xrTableCell105,
+            this.xrTableCell106});
+            this.xrTableRow23.Name = "xrTableRow23";
+            this.xrTableRow23.Weight = 0.16008178175267304D;
+            // 
+            // xrTableCell105
+            // 
+            this.xrTableCell105.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.xrTableCell105.Borders = DevExpress.XtraPrinting.BorderSide.Left;
+            this.xrTableCell105.Font = new System.Drawing.Font("Times New Roman", 7.5F);
+            this.xrTableCell105.ForeColor = System.Drawing.Color.Blue;
+            this.xrTableCell105.Name = "xrTableCell105";
+            this.xrTableCell105.StylePriority.UseBorderColor = false;
+            this.xrTableCell105.StylePriority.UseBorders = false;
+            this.xrTableCell105.StylePriority.UseFont = false;
+            this.xrTableCell105.StylePriority.UseForeColor = false;
+            this.xrTableCell105.StylePriority.UseTextAlignment = false;
+            this.xrTableCell105.Text = "Age:";
+            this.xrTableCell105.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomRight;
+            this.xrTableCell105.Weight = 0.16957269316532897D;
+            // 
+            // xrTableCell106
+            // 
+            this.xrTableCell106.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.xrTableCell106.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Right | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrTableCell106.Font = new System.Drawing.Font("Times New Roman", 7.5F);
+            this.xrTableCell106.ForeColor = System.Drawing.Color.Black;
+            this.xrTableCell106.Name = "xrTableCell106";
+            this.xrTableCell106.StylePriority.UseBorderColor = false;
+            this.xrTableCell106.StylePriority.UseBorders = false;
+            this.xrTableCell106.StylePriority.UseFont = false;
+            this.xrTableCell106.StylePriority.UseForeColor = false;
+            this.xrTableCell106.StylePriority.UseTextAlignment = false;
+            this.xrTableCell106.Text = "[Age:]";
+            this.xrTableCell106.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomCenter;
+            this.xrTableCell106.Weight = 0.367641825177632D;
+            // 
+            // xrTableRow24
+            // 
+            this.xrTableRow24.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
+            this.xrTableCell112});
+            this.xrTableRow24.Name = "xrTableRow24";
+            this.xrTableRow24.Weight = 0.16741429109436551D;
+            // 
+            // xrTableCell112
+            // 
+            this.xrTableCell112.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.xrTableCell112.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right)));
+            this.xrTableCell112.Font = new System.Drawing.Font("Times New Roman", 7.5F);
+            this.xrTableCell112.ForeColor = System.Drawing.Color.Black;
+            this.xrTableCell112.Name = "xrTableCell112";
+            this.xrTableCell112.StylePriority.UseBorderColor = false;
+            this.xrTableCell112.StylePriority.UseBorders = false;
+            this.xrTableCell112.StylePriority.UseFont = false;
+            this.xrTableCell112.StylePriority.UseForeColor = false;
+            this.xrTableCell112.StylePriority.UseTextAlignment = false;
+            this.xrTableCell112.Text = " ";
+            this.xrTableCell112.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.xrTableCell112.Weight = 0.537214518342961D;
+            // 
+            // xrTableRow25
+            // 
+            this.xrTableRow25.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
+            this.xrTableCell117});
+            this.xrTableRow25.Name = "xrTableRow25";
+            this.xrTableRow25.Weight = 0.17474691232127129D;
+            // 
+            // xrTableCell117
+            // 
+            this.xrTableCell117.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.xrTableCell117.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right)));
+            this.xrTableCell117.Font = new System.Drawing.Font("Times New Roman", 7.5F);
+            this.xrTableCell117.ForeColor = System.Drawing.Color.Black;
+            this.xrTableCell117.Name = "xrTableCell117";
+            this.xrTableCell117.StylePriority.UseBorderColor = false;
+            this.xrTableCell117.StylePriority.UseBorders = false;
+            this.xrTableCell117.StylePriority.UseFont = false;
+            this.xrTableCell117.StylePriority.UseForeColor = false;
+            this.xrTableCell117.StylePriority.UseTextAlignment = false;
+            this.xrTableCell117.Text = " ";
+            this.xrTableCell117.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.xrTableCell117.Weight = 0.537214518342961D;
+            // 
+            // xrTableRow26
+            // 
+            this.xrTableRow26.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
+            this.xrTableCell122});
+            this.xrTableRow26.Name = "xrTableRow26";
+            this.xrTableRow26.Weight = 0.17474691232127129D;
+            // 
+            // xrTableCell122
+            // 
+            this.xrTableCell122.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.xrTableCell122.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right)));
+            this.xrTableCell122.Font = new System.Drawing.Font("Times New Roman", 7.5F);
+            this.xrTableCell122.ForeColor = System.Drawing.Color.Black;
+            this.xrTableCell122.Name = "xrTableCell122";
+            this.xrTableCell122.StylePriority.UseBorderColor = false;
+            this.xrTableCell122.StylePriority.UseBorders = false;
+            this.xrTableCell122.StylePriority.UseFont = false;
+            this.xrTableCell122.StylePriority.UseForeColor = false;
+            this.xrTableCell122.StylePriority.UseTextAlignment = false;
+            this.xrTableCell122.Text = " ";
+            this.xrTableCell122.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.xrTableCell122.Weight = 0.537214518342961D;
+            // 
+            // xrTableRow27
+            // 
+            this.xrTableRow27.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
+            this.xrTableCell127});
+            this.xrTableRow27.Name = "xrTableRow27";
+            this.xrTableRow27.Weight = 0.094089305983694582D;
+            // 
+            // xrTableCell127
+            // 
+            this.xrTableCell127.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.xrTableCell127.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right)
+                        | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrTableCell127.Font = new System.Drawing.Font("Times New Roman", 7.5F);
+            this.xrTableCell127.ForeColor = System.Drawing.Color.Black;
+            this.xrTableCell127.Name = "xrTableCell127";
+            this.xrTableCell127.StylePriority.UseBorderColor = false;
+            this.xrTableCell127.StylePriority.UseBorders = false;
+            this.xrTableCell127.StylePriority.UseFont = false;
+            this.xrTableCell127.StylePriority.UseForeColor = false;
+            this.xrTableCell127.StylePriority.UseTextAlignment = false;
+            this.xrTableCell127.Text = " ";
+            this.xrTableCell127.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.xrTableCell127.Weight = 0.537214518342961D;
+            // 
+            // xrTable5
+            // 
+            this.xrTable5.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.xrTable5.LocationFloat = new DevExpress.Utils.PointFloat(77.30981F, 164.8226F);
+            this.xrTable5.Name = "xrTable5";
+            this.xrTable5.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
+            this.xrTableRow70,
+            this.xrTableRow71});
+            this.xrTable5.SizeF = new System.Drawing.SizeF(539.0239F, 41.77844F);
+            this.xrTable5.StylePriority.UseFont = false;
+            // 
+            // xrTableRow70
+            // 
+            this.xrTableRow70.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
+            this.xrTableCell158});
+            this.xrTableRow70.Name = "xrTableRow70";
+            this.xrTableRow70.Weight = 0.17474691232127129D;
+            // 
+            // xrTableCell158
+            // 
+            this.xrTableCell158.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.xrTableCell158.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right)));
+            this.xrTableCell158.Font = new System.Drawing.Font("Times New Roman", 7.5F, System.Drawing.FontStyle.Bold);
+            this.xrTableCell158.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.xrTableCell158.Multiline = true;
+            this.xrTableCell158.Name = "xrTableCell158";
+            this.xrTableCell158.StylePriority.UseBorderColor = false;
+            this.xrTableCell158.StylePriority.UseBorders = false;
+            this.xrTableCell158.StylePriority.UseFont = false;
+            this.xrTableCell158.StylePriority.UseForeColor = false;
+            this.xrTableCell158.StylePriority.UseTextAlignment = false;
+            this.xrTableCell158.Text = "                                                                                 " +
+                "                                                      DR. ELDRIN M. MASCARINAS  " +
+                "\r\n          ";
+            this.xrTableCell158.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
+            this.xrTableCell158.Weight = 1.8358808026631812D;
+            // 
+            // xrTableRow71
+            // 
+            this.xrTableRow71.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
+            this.xrTableCell163});
+            this.xrTableRow71.Name = "xrTableRow71";
+            this.xrTableRow71.Weight = 0.094089305983694582D;
+            // 
+            // xrTableCell163
+            // 
+            this.xrTableCell163.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.xrTableCell163.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right)
+                        | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrTableCell163.Font = new System.Drawing.Font("Times New Roman", 6.5F);
+            this.xrTableCell163.ForeColor = System.Drawing.Color.Black;
+            this.xrTableCell163.Name = "xrTableCell163";
+            this.xrTableCell163.StylePriority.UseBorderColor = false;
+            this.xrTableCell163.StylePriority.UseBorders = false;
+            this.xrTableCell163.StylePriority.UseFont = false;
+            this.xrTableCell163.StylePriority.UseForeColor = false;
+            this.xrTableCell163.StylePriority.UseTextAlignment = false;
+            this.xrTableCell163.Text = "                                                                                 " +
+                "                                                                       Municipal" +
+                " Health Officer";
+            this.xrTableCell163.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
+            this.xrTableCell163.Weight = 1.8358808026631812D;
+            // 
+            // xrTable6
+            // 
+            this.xrTable6.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.xrTable6.LocationFloat = new DevExpress.Utils.PointFloat(77.30981F, 0F);
+            this.xrTable6.Name = "xrTable6";
+            this.xrTable6.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
+            this.xrTableRow38});
+            this.xrTable6.SizeF = new System.Drawing.SizeF(539.0239F, 164.8227F);
+            this.xrTable6.StylePriority.UseFont = false;
+            // 
+            // xrTableRow38
+            // 
+            this.xrTableRow38.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
+            this.xrTableCell72});
+            this.xrTableRow38.Name = "xrTableRow38";
+            this.xrTableRow38.Weight = 1.235424230176037D;
+            // 
+            // xrTableCell72
+            // 
+            this.xrTableCell72.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.xrTableCell72.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)
+                        | DevExpress.XtraPrinting.BorderSide.Right)));
+            this.xrTableCell72.Font = new System.Drawing.Font("Times New Roman", 7.2F);
+            this.xrTableCell72.ForeColor = System.Drawing.Color.Black;
+            this.xrTableCell72.Name = "xrTableCell72";
+            this.xrTableCell72.StylePriority.UseBorderColor = false;
+            this.xrTableCell72.StylePriority.UseBorders = false;
+            this.xrTableCell72.StylePriority.UseFont = false;
+            this.xrTableCell72.StylePriority.UseForeColor = false;
+            this.xrTableCell72.StylePriority.UseTextAlignment = false;
+            this.xrTableCell72.Text = "  SAMPLE";
+            this.xrTableCell72.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            this.xrTableCell72.Weight = 1.8358808026631812D;
+            // 
+            // xrTableCell95
+            // 
+            this.xrTableCell95.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.xrTableCell95.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right)));
+            this.xrTableCell95.Font = new System.Drawing.Font("Times New Roman", 7F, System.Drawing.FontStyle.Bold);
+            this.xrTableCell95.ForeColor = System.Drawing.Color.Blue;
+            this.xrTableCell95.Name = "xrTableCell95";
+            this.xrTableCell95.StylePriority.UseBorderColor = false;
+            this.xrTableCell95.StylePriority.UseBorders = false;
+            this.xrTableCell95.StylePriority.UseFont = false;
+            this.xrTableCell95.StylePriority.UseForeColor = false;
+            this.xrTableCell95.StylePriority.UseTextAlignment = false;
+            this.xrTableCell95.Text = "Chief Complaint";
+            this.xrTableCell95.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.xrTableCell95.Weight = 1.8358808026631812D;
+            // 
+            // xrTableRow29
+            // 
+            this.xrTableRow29.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
+            this.xrTableCell95});
+            this.xrTableRow29.Name = "xrTableRow29";
+            this.xrTableRow29.Weight = 0.1600818097239764D;
+            // 
+            // xrTableCell91
+            // 
+            this.xrTableCell91.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.xrTableCell91.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)
+                        | DevExpress.XtraPrinting.BorderSide.Right)));
+            this.xrTableCell91.Font = new System.Drawing.Font("Times New Roman", 7.5F);
+            this.xrTableCell91.ForeColor = System.Drawing.Color.Blue;
+            this.xrTableCell91.Name = "xrTableCell91";
+            this.xrTableCell91.StylePriority.UseBorderColor = false;
+            this.xrTableCell91.StylePriority.UseBorders = false;
+            this.xrTableCell91.StylePriority.UseFont = false;
+            this.xrTableCell91.StylePriority.UseForeColor = false;
+            this.xrTableCell91.StylePriority.UseTextAlignment = false;
+            this.xrTableCell91.Text = "ASSESMENT";
+            this.xrTableCell91.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.xrTableCell91.Weight = 1.8358808026631812D;
+            // 
+            // xrTableRow28
+            // 
+            this.xrTableRow28.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
+            this.xrTableCell91});
+            this.xrTableRow28.Name = "xrTableRow28";
+            this.xrTableRow28.Weight = 0.1600818097239764D;
+            // 
+            // xrTableCell141
+            // 
+            this.xrTableCell141.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.xrTableCell141.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right)
+                        | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrTableCell141.Font = new System.Drawing.Font("Times New Roman", 5F);
+            this.xrTableCell141.ForeColor = System.Drawing.Color.Blue;
+            this.xrTableCell141.Name = "xrTableCell141";
+            this.xrTableCell141.StylePriority.UseBorderColor = false;
+            this.xrTableCell141.StylePriority.UseBorders = false;
+            this.xrTableCell141.StylePriority.UseFont = false;
+            this.xrTableCell141.StylePriority.UseForeColor = false;
+            this.xrTableCell141.StylePriority.UseTextAlignment = false;
+            this.xrTableCell141.Text = " ";
+            this.xrTableCell141.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            this.xrTableCell141.Weight = 1.8358808026631812D;
+            // 
+            // xrTableRow36
+            // 
+            this.xrTableRow36.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
+            this.xrTableCell141});
+            this.xrTableRow36.Name = "xrTableRow36";
+            this.xrTableRow36.Weight = 0.094089305983694582D;
             // 
             // PatientClinicalRecord
             // 
@@ -9744,12 +8811,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.xrTable14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xrTable4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xrTable3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xrTable5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xrTable6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
         }
@@ -10049,61 +9119,6 @@
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell89;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell90;
         private DevExpress.XtraReports.UI.ReportHeaderBand ReportHeader;
-        private DevExpress.XtraReports.UI.XRTable xrTable14;
-        private DevExpress.XtraReports.UI.XRTableRow xrTableRow88;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell392;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell393;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell394;
-        private DevExpress.XtraReports.UI.XRTableRow xrTableRow89;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell395;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell396;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell397;
-        private DevExpress.XtraReports.UI.XRTableRow xrTableRow90;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell398;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell399;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell400;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell401;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell402;
-        private DevExpress.XtraReports.UI.XRTableRow xrTableRow91;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell403;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell404;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell405;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell406;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell407;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell408;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell409;
-        private DevExpress.XtraReports.UI.XRTableRow xrTableRow92;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell410;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell411;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell412;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell413;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell414;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell415;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell416;
-        private DevExpress.XtraReports.UI.XRTableRow xrTableRow137;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell417;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell418;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell419;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell420;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell421;
-        private DevExpress.XtraReports.UI.XRTableRow xrTableRow138;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell422;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell423;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell424;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell631;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell632;
-        private DevExpress.XtraReports.UI.XRTableRow xrTableRow139;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell633;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell634;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell635;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell636;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell637;
-        private DevExpress.XtraReports.UI.XRTableRow xrTableRow140;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell638;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell639;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell640;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell641;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell642;
         private DevExpress.XtraReports.UI.XRTable xrTable13;
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow87;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell388;
@@ -10127,25 +9142,6 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel10;
         private DevExpress.XtraReports.UI.XRLabel xrLabel9;
         private DevExpress.XtraReports.UI.XRTable xrTable7;
-        private DevExpress.XtraReports.UI.XRTableRow xrTableRow40;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell174;
-        private DevExpress.XtraReports.UI.XRTableRow xrTableRow41;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell175;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell176;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell177;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell178;
-        private DevExpress.XtraReports.UI.XRTableRow xrTableRow42;
-        public DevExpress.XtraReports.UI.XRTableCell lblLastName;
-        public DevExpress.XtraReports.UI.XRTableCell lblFirstName;
-        public DevExpress.XtraReports.UI.XRTableCell lblExt;
-        public DevExpress.XtraReports.UI.XRTableCell lblMiddleName;
-        private DevExpress.XtraReports.UI.XRTableRow xrTableRow43;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell183;
-        private DevExpress.XtraReports.UI.XRTableRow xrTableRow44;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell184;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell185;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell186;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell187;
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow45;
         public DevExpress.XtraReports.UI.XRTableCell lblMaidenLastName;
         public DevExpress.XtraReports.UI.XRTableCell lblMaidenFirstName;
@@ -10298,62 +9294,87 @@
         public DevExpress.XtraReports.UI.XRTableCell lblMotherDob;
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow65;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell289;
-        private DevExpress.XtraReports.UI.XRTableRow xrTableRow75;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell335;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell336;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell337;
-        private DevExpress.XtraReports.UI.XRTableRow xrTableRow76;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell338;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell340;
-        private DevExpress.XtraReports.UI.XRTableRow xrTableRow77;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell341;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell342;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell343;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell344;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell345;
-        private DevExpress.XtraReports.UI.XRTableRow xrTableRow78;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell346;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell347;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell348;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell349;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell350;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell351;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell352;
-        private DevExpress.XtraReports.UI.XRTableRow xrTableRow79;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell353;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell354;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell355;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell356;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell357;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell358;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell359;
-        private DevExpress.XtraReports.UI.XRTableRow xrTableRow80;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell360;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell361;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell362;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell363;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell364;
-        private DevExpress.XtraReports.UI.XRTableRow xrTableRow81;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell365;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell366;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell367;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell368;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell369;
-        private DevExpress.XtraReports.UI.XRTableRow xrTableRow82;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell370;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell371;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell372;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell373;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell374;
-        private DevExpress.XtraReports.UI.XRTableRow xrTableRow83;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell375;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell376;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell377;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell378;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell379;
         private DevExpress.XtraReports.UI.XRLabel xrLabel1;
         private DevExpress.XtraReports.UI.XRLabel xrLabel2;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell339;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel3;
+        private DevExpress.XtraReports.UI.XRTableRow xrTableRow40;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell174;
+        private DevExpress.XtraReports.UI.XRTableRow xrTableRow41;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell175;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell176;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell177;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell178;
+        private DevExpress.XtraReports.UI.XRTableRow xrTableRow42;
+        public DevExpress.XtraReports.UI.XRTableCell lblLastName;
+        public DevExpress.XtraReports.UI.XRTableCell lblFirstName;
+        public DevExpress.XtraReports.UI.XRTableCell lblExt;
+        public DevExpress.XtraReports.UI.XRTableCell lblMiddleName;
+        private DevExpress.XtraReports.UI.XRTableRow xrTableRow43;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell183;
+        private DevExpress.XtraReports.UI.XRTableRow xrTableRow44;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell184;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell185;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell186;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell187;
+        private DevExpress.XtraReports.UI.XRTable xrTable4;
+        private DevExpress.XtraReports.UI.XRTableRow xrTableRow30;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell101;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell102;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell103;
+        private DevExpress.XtraReports.UI.XRTableRow xrTableRow31;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell110;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell111;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell113;
+        private DevExpress.XtraReports.UI.XRTableRow xrTableRow32;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell119;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell120;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell121;
+        private DevExpress.XtraReports.UI.XRTableRow xrTableRow33;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell125;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell126;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell128;
+        private DevExpress.XtraReports.UI.XRTableRow xrTableRow34;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell131;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell132;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell133;
+        private DevExpress.XtraReports.UI.XRTableRow xrTableRow35;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell136;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell137;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell138;
+        private DevExpress.XtraReports.UI.XRTable xrTable3;
+        private DevExpress.XtraReports.UI.XRTableRow xrTableRow19;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell53;
+        private DevExpress.XtraReports.UI.XRTableRow xrTableRow20;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell77;
+        private DevExpress.XtraReports.UI.XRTableRow xrTableRow21;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell93;
+        private DevExpress.XtraReports.UI.XRTableRow xrTableRow22;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell98;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell99;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell100;
+        private DevExpress.XtraReports.UI.XRTableRow xrTableRow23;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell105;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell106;
+        private DevExpress.XtraReports.UI.XRTableRow xrTableRow24;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell112;
+        private DevExpress.XtraReports.UI.XRTableRow xrTableRow25;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell117;
+        private DevExpress.XtraReports.UI.XRTableRow xrTableRow26;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell122;
+        private DevExpress.XtraReports.UI.XRTableRow xrTableRow27;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell127;
+        private DevExpress.XtraReports.UI.XRTable xrTable5;
+        private DevExpress.XtraReports.UI.XRTableRow xrTableRow70;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell158;
+        private DevExpress.XtraReports.UI.XRTableRow xrTableRow71;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell163;
+        private DevExpress.XtraReports.UI.XRTable xrTable6;
+        private DevExpress.XtraReports.UI.XRTableRow xrTableRow38;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell72;
+        private DevExpress.XtraReports.UI.XRTableRow xrTableRow28;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell91;
+        private DevExpress.XtraReports.UI.XRTableRow xrTableRow29;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell95;
+        private DevExpress.XtraReports.UI.XRTableRow xrTableRow36;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell141;
     }
 }
