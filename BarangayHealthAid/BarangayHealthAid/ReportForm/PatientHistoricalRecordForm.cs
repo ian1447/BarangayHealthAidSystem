@@ -98,6 +98,7 @@ namespace BarangayHealthAid.ReportForm
             ClinicalRecordAddHistoryForm crah = new ClinicalRecordAddHistoryForm();
             crah.patient_id = patient_id;
             crah.ShowDialog();
+            LoadData();
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)

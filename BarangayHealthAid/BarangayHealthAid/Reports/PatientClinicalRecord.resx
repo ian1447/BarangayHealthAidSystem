@@ -117,4 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="sqlDataSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="customSqlQuery1.Sql" xml:space="preserve">
+    <value>SELECT ph.*, DATE_FORMAT(ph.`transdate`,"%M %d,%Y") `date`,DATE_FORMAT(ph.`transdate`,"%m/%d/%y") `reportdate`, TIME_FORMAT(ph.`transdate`, '%h:%i:%s %p') `time`,1 age FROM `patient_details_history` ph WHERE ph.`patient_details_id` = 1;</value>
+  </data>
+  <data name="sqlDataSource1.ResultSchemaSerializable" xml:space="preserve">
+    <value>PERhdGFTZXQgTmFtZT0ic3FsRGF0YVNvdXJjZTEiPjxWaWV3IE5hbWU9IkN1c3RvbVNxbFF1ZXJ5Ij48RmllbGQgTmFtZT0iaWQiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJwYXRpZW50X2RldGFpbHNfaWQiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJ3ZWlnaHQiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9ImhlaWdodCIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0icHIiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9InJyIiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJ0ZW1wIiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJCUCIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0icmVtYXJrcyIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJhZGRlZF9ieSIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9InRyYW5zZGF0ZSIgVHlwZT0iRGF0ZVRpbWUiIC8+PEZpZWxkIE5hbWU9ImRhdGUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0icmVwb3J0ZGF0ZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJ0aW1lIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9ImFnZSIgVHlwZT0iSW50NjQiIC8+PC9WaWV3PjwvRGF0YVNldD4=</value>
+  </data>
 </root>

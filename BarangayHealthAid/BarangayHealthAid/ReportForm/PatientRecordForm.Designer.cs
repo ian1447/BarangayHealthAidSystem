@@ -63,6 +63,7 @@
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::BarangayHealthAid.WaitForm1), true, true);
             this.bwGetPatientData = new System.ComponentModel.BackgroundWorker();
+            this.bwGetPatientHistory = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtPatient)).BeginInit();
@@ -476,6 +477,12 @@
             this.bwGetPatientData.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwGetPatientData_DoWork);
             this.bwGetPatientData.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwGetPatientData_RunWorkerCompleted);
             // 
+            // bwGetPatientHistory
+            // 
+            this.bwGetPatientHistory.WorkerSupportsCancellation = true;
+            this.bwGetPatientHistory.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwGetPatientHistory_DoWork);
+            this.bwGetPatientHistory.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwGetPatientHistory_RunWorkerCompleted);
+            // 
             // PatientRecordForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -540,5 +547,6 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
         private DevExpress.XtraEditors.SimpleButton btnAddRecord;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
+        private System.ComponentModel.BackgroundWorker bwGetPatientHistory;
     }
 }
