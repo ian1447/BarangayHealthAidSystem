@@ -171,7 +171,7 @@ namespace BarangayHealthAid.Management
                 PurokFamilyMemberAddForm pfma = new PurokFamilyMemberAddForm();
                 pfma.purok_member_id = purok_member_id;
                 pfma.is_add = false;
-                pfma.cbType.Text = gvMembers.GetFocusedRowCellValue("description").ToString();
+                pfma.txtType.Text = gvMembers.GetFocusedRowCellValue("description").ToString();
                 pfma.txtAge.Text = gvMembers.GetFocusedRowCellValue("age").ToString();
                 pfma.cbSex.Text = gvMembers.GetFocusedRowCellValue("sex").ToString();
                 try

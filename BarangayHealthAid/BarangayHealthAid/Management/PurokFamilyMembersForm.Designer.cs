@@ -37,7 +37,7 @@
             this.dtMembers = new DevExpress.XtraGrid.GridControl();
             this.gvMembers = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.family_member_name = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.description = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.description_case = new DevExpress.XtraGrid.Columns.GridColumn();
             this.formated_dob = new DevExpress.XtraGrid.Columns.GridColumn();
             this.age = new DevExpress.XtraGrid.Columns.GridColumn();
             this.sex = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -145,7 +145,7 @@
             // 
             this.gvMembers.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.family_member_name,
-            this.description,
+            this.description_case,
             this.formated_dob,
             this.age,
             this.sex,
@@ -161,7 +161,7 @@
             this.gvMembers.OptionsView.ShowGroupPanel = false;
             this.gvMembers.OptionsView.ShowIndicator = false;
             this.gvMembers.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
-            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.description, DevExpress.Data.ColumnSortOrder.Ascending)});
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.description_case, DevExpress.Data.ColumnSortOrder.Ascending)});
             // 
             // family_member_name
             // 
@@ -173,13 +173,13 @@
             this.family_member_name.Visible = true;
             this.family_member_name.VisibleIndex = 0;
             // 
-            // description
+            // description_case
             // 
-            this.description.Caption = "Member Type";
-            this.description.FieldName = "description";
-            this.description.Name = "description";
-            this.description.Visible = true;
-            this.description.VisibleIndex = 1;
+            this.description_case.Caption = "Member Type";
+            this.description_case.FieldName = "description_case";
+            this.description_case.Name = "description_case";
+            this.description_case.Visible = true;
+            this.description_case.VisibleIndex = 1;
             // 
             // formated_dob
             // 
@@ -374,7 +374,7 @@
         private System.ComponentModel.BackgroundWorker bwGetPurokFamilyMembers;
         private System.ComponentModel.BackgroundWorker bwDeletePurokFamilyMember;
         public DevExpress.XtraLayout.SimpleLabelItem lblHeadName;
-        private DevExpress.XtraGrid.Columns.GridColumn description;
+        private DevExpress.XtraGrid.Columns.GridColumn description_case;
         private DevExpress.XtraGrid.Columns.GridColumn formated_dob;
         private DevExpress.XtraGrid.Columns.GridColumn age;
         private DevExpress.XtraGrid.Columns.GridColumn sex;
