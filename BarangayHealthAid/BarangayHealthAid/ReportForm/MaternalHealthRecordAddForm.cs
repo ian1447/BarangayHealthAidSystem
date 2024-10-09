@@ -59,7 +59,7 @@ namespace BarangayHealthAid.ReportForm
         #endregion
 
         private string Checklist = "";
-
+        public bool isAdd = true;
         private void MaternalHealthRecordAddForm_Load(object sender, EventArgs e)
         {
             layoutControl1.AllowCustomization = false;
@@ -82,10 +82,13 @@ namespace BarangayHealthAid.ReportForm
             }
             if (Checklist.Length > 0)
                 Checklist = Checklist.Remove(Checklist.Length - 1);
-            if (!bwAddRecord.IsBusy)
+            if (isAdd)
             {
-                ShowLoading("Adding Record...");
-                bwAddRecord.RunWorkerAsync();
+                if (!bwAddRecord.IsBusy)
+                {
+                    ShowLoading("Adding Record...");
+                    bwAddRecord.RunWorkerAsync();
+                }
             }
         }
 

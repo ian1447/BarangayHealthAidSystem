@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MaternalHealthRecordForm));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.btnEdit = new DevExpress.XtraEditors.SimpleButton();
             this.btnRefresh = new DevExpress.XtraEditors.SimpleButton();
             this.btnPrint = new DevExpress.XtraEditors.SimpleButton();
             this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
@@ -53,10 +54,9 @@
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::BarangayHealthAid.WaitForm1), true, true);
             this.bwGetMaternalRecord = new System.ComponentModel.BackgroundWorker();
-            this.btnEdit = new DevExpress.XtraEditors.SimpleButton();
-            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtMaternal)).BeginInit();
@@ -88,6 +88,17 @@
             this.layoutControl1.Size = new System.Drawing.Size(1188, 584);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
+            this.btnEdit.Location = new System.Drawing.Point(828, 12);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(131, 22);
+            this.btnEdit.StyleController = this.layoutControl1;
+            this.btnEdit.TabIndex = 9;
+            this.btnEdit.Text = "Edit Maternal Patient";
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnRefresh
             // 
@@ -323,30 +334,23 @@
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
+            // layoutControlItem5
+            // 
+            this.layoutControlItem5.Control = this.btnEdit;
+            this.layoutControlItem5.Location = new System.Drawing.Point(816, 0);
+            this.layoutControlItem5.MaxSize = new System.Drawing.Size(135, 26);
+            this.layoutControlItem5.MinSize = new System.Drawing.Size(135, 26);
+            this.layoutControlItem5.Name = "layoutControlItem5";
+            this.layoutControlItem5.Size = new System.Drawing.Size(135, 26);
+            this.layoutControlItem5.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem5.TextVisible = false;
+            // 
             // bwGetMaternalRecord
             // 
             this.bwGetMaternalRecord.WorkerSupportsCancellation = true;
             this.bwGetMaternalRecord.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwGetMaternalRecord_DoWork);
             this.bwGetMaternalRecord.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwGetMaternalRecord_RunWorkerCompleted);
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
-            this.btnEdit.Location = new System.Drawing.Point(828, 12);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(131, 22);
-            this.btnEdit.StyleController = this.layoutControl1;
-            this.btnEdit.TabIndex = 9;
-            this.btnEdit.Text = "Edit Maternal Patient";
-            // 
-            // layoutControlItem5
-            // 
-            this.layoutControlItem5.Control = this.btnEdit;
-            this.layoutControlItem5.Location = new System.Drawing.Point(816, 0);
-            this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(135, 26);
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem5.TextVisible = false;
             // 
             // MaternalHealthRecordForm
             // 
