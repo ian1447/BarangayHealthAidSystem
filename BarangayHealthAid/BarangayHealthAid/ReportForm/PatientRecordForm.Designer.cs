@@ -117,7 +117,7 @@
             this.btnEdit.Size = new System.Drawing.Size(115, 22);
             this.btnEdit.StyleController = this.layoutControl1;
             this.btnEdit.TabIndex = 8;
-            this.btnEdit.Text = "Edit Patient";
+            this.btnEdit.Text = "Update Patient";
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnRefresh

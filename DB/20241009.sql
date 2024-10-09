@@ -300,19 +300,32 @@ DROP TABLE IF EXISTS `purok_family_members`;
 CREATE TABLE `purok_family_members` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `purok_members_id` int(11) NOT NULL,
-  `name` varchar(255) DEFAULT NULL,
-  `description` varchar(255) DEFAULT NULL,
+  `description` varchar(255) DEFAULT NULL COMMENT 'family member type',
+  `last_name` varchar(255) DEFAULT NULL,
+  `first_name` varchar(255) DEFAULT NULL,
+  `name_ext` varchar(50) DEFAULT NULL,
+  `middle_name` varchar(255) DEFAULT NULL,
   `birthday` date DEFAULT NULL,
   `age` int(11) DEFAULT NULL,
+  `place_of_birth` varchar(255) DEFAULT NULL,
   `sex` enum('Male','Female') DEFAULT NULL,
+  `civil_status` varchar(255) DEFAULT NULL,
+  `religion` varchar(255) DEFAULT NULL,
+  `contact_no` varchar(25) DEFAULT NULL,
+  `purok` varchar(150) DEFAULT NULL,
+  `barangay` varchar(150) DEFAULT NULL,
+  `municipality` varchar(150) DEFAULT NULL,
+  `province` varchar(150) DEFAULT NULL,
+  `country` varchar(150) DEFAULT NULL,
+  `zip_code` varchar(25) DEFAULT NULL,
   `added_by` int(11) DEFAULT NULL,
   `added_on` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 /*Data for the table `purok_family_members` */
 
-insert  into `purok_family_members`(`id`,`purok_members_id`,`name`,`description`,`birthday`,`age`,`sex`,`added_by`,`added_on`) values (1,1,'Father',NULL,NULL,NULL,NULL,1,'2024-09-10 23:26:39'),(2,1,'Family Head 234',NULL,NULL,NULL,NULL,1,'2024-09-10 23:36:08'),(5,2,'Testing Edit PAPAP','Father','2024-10-08',53,'Male',1,'2024-10-01 20:56:40'),(6,2,'test anak1','Son','2024-10-02',1,'Male',1,'2024-10-01 21:00:27'),(7,2,'test Anak 2','Son','2024-10-08',23,'Male',1,'2024-10-01 21:00:37');
+insert  into `purok_family_members`(`id`,`purok_members_id`,`description`,`last_name`,`first_name`,`name_ext`,`middle_name`,`birthday`,`age`,`place_of_birth`,`sex`,`civil_status`,`religion`,`contact_no`,`purok`,`barangay`,`municipality`,`province`,`country`,`zip_code`,`added_by`,`added_on`) values (1,1,'Head','Test','Testingnsd','X','Wala','2000-10-14',23,'tagb','Male','Single','RC','09273743872','23','Cogon','Tagb','Bohol','Philippines','6300',1,'2024-10-09 21:37:57');
 
 /*Table structure for table `purok_members` */
 
@@ -321,15 +334,15 @@ DROP TABLE IF EXISTS `purok_members`;
 CREATE TABLE `purok_members` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `purok_id` int(11) NOT NULL,
-  `name` varchar(255) NOT NULL,
+  `family_serial_number` varchar(255) NOT NULL,
   `added_by` int(11) NOT NULL,
   `added_on` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 /*Data for the table `purok_members` */
 
-insert  into `purok_members`(`id`,`purok_id`,`name`,`added_by`,`added_on`) values (1,1,'test',1,'2024-09-01 21:46:31'),(2,1,'Family Head',1,'2024-09-10 23:36:21');
+insert  into `purok_members`(`id`,`purok_id`,`family_serial_number`,`added_by`,`added_on`) values (1,1,'zxcvasdf2-45',1,'2024-10-09 20:00:52');
 
 /*Table structure for table `users` */
 
@@ -1233,7 +1246,7 @@ DELIMITER $$
 	_patient_details_id int (11)
     )
 BEGIN
-	SELECT ph.*, DATE_FORMAT(ph.`transdate`,"%M %d,%Y") `date`, TIME_FORMAT(ph.`transdate`, '%h:%i:%s %p') `time` FROM `patient_details_history` ph WHERE ph.`patient_details_id` = _patient_details_id;
+	SELECT ph.*, DATE_FORMAT(ph.`transdate`,"%M %d,%Y") `date`,DATE_FORMAT(ph.`transdate`,"%m/%d/%y") `reportdate`, TIME_FORMAT(ph.`transdate`, '%h:%i:%s') `time` FROM `patient_details_history` ph WHERE ph.`patient_details_id` = _patient_details_id;
     END */$$
 DELIMITER ;
 
@@ -1296,7 +1309,11 @@ DELIMITER $$
 	_purok_members_id int (11)
 )
 BEGIN
-	SELECT *,date_format(p.`birthday`,"%M %d,%Y") formated_dob FROM `purok_family_members` p where p.`purok_members_id` = _purok_members_id;
+	-- SELECT *,date_format(p.`birthday`,"%M %d,%Y") formated_dob FROM `purok_family_members` p where p.`purok_members_id` = _purok_members_id;
+	SELECT *,DATE_FORMAT(p.`birthday`,"%M %d,%Y") formated_dob,
+	CONCAT(UPPER(SUBSTRING(p.`description`, 1, 1)), LOWER(SUBSTRING(p.`description`, 2))) description_case,
+	CONCAT(p.`first_name`," ", SUBSTRING(p.`middle_name`, 1, 1), " ", p.`last_name`, " ", COALESCE(p.`name_ext`,"")) `name`  FROM `purok_family_members` p 
+	WHERE p.`purok_members_id` = _purok_members_id;
     END */$$
 DELIMITER ;
 
@@ -1308,28 +1325,67 @@ DELIMITER $$
 
 /*!50003 CREATE DEFINER=`system_admin`@`%` PROCEDURE `sp_purok_family_member_add`(
      _purok_members_id INT (11),
-     _name VARCHAR (255),
      _description varchar (255),
+     _last_name VARCHAR (255),
+     _first_name varchar (255),
+     _name_ext varchar (50),
+     _middle_name varchar (255),
      _birthday date,
      _age int (11),
+     _place_of_birth varchar (255),
      _sex varchar (50),
+     _civil_status varchar (255),
+     _religion varchar (255),
+     _contact_number varchar (25),
+     _purok varchar (255),
+     _barangay varchar (255),
+     _municipality varchar (255),
+     _province varchar (255),
+     _country varchar (255),
+     _zip_code varchar (25),
      _added_by INT (11)    
     )
 BEGIN
-	INSERT INTO `purok_family_members`
-		    (`purok_members_id`,
-		     `name`,
-		     `description`,
-		     `birthday`,
-		     `age`,
-		     `sex`,
-		     `added_by`)
+INSERT INTO `purok_family_members`
+            (`purok_members_id`,
+             `description`,
+             `last_name`,
+             `first_name`,
+             `name_ext`,
+             `middle_name`,
+             `birthday`,
+             `age`,
+             `place_of_birth`,
+             `sex`,
+             `civil_status`,
+             `religion`,
+             `contact_no`,
+             `purok`,
+             `barangay`,
+             `municipality`,
+             `province`,
+             `country`,
+             `zip_code`,
+             `added_by`)
 	VALUES (_purok_members_id,
-		_name,
 		_description,
+		_last_name,
+		_first_name,
+		_name_ext,
+		_middle_name,
 		_birthday,
 		_age,
+		_place_of_birth,
 		_sex,
+		_civil_status,
+		_religion,
+		_contact_number,
+		_purok,
+		_barangay,
+		_municipality,
+		_province,
+		_country,
+		_zip_code,
 		_added_by);
     END */$$
 DELIMITER ;
@@ -1355,15 +1411,48 @@ DELIMITER ;
 DELIMITER $$
 
 /*!50003 CREATE DEFINER=`system_admin`@`%` PROCEDURE `sp_purok_family_member_edit`(
-	_name varchar (255),
 	_description VARCHAR (255),
+	_last_name VARCHAR (255),
+	_first_name VARCHAR (255),
+	_name_ext VARCHAR (50),
+	_middle_name VARCHAR (255),
 	_birthday DATE,
 	_age INT (11),
+	_place_of_birth VARCHAR (255),
 	_sex VARCHAR (50),
+	_civil_status VARCHAR (255),
+	_religion VARCHAR (255),
+	_contact_number VARCHAR (25),
+	_purok VARCHAR (255),
+	_barangay VARCHAR (255),
+	_municipality VARCHAR (255),
+	_province VARCHAR (255),
+	_country VARCHAR (255),
+	_zip_code VARCHAR (25),
 	_id int (11)
     )
 BEGIN
-UPDATE `purok_family_members` p SET p.`name` = _name, p.`description` = _description, p.`age`=_age, p.`sex`=_sex, p.`birthday`=_birthday WHERE p.`id` = _id;
+	-- UPDATE `purok_family_members` p SET p.`name` = _name, p.`description` = _description, p.`age`=_age, p.`sex`=_sex, p.`birthday`=_birthday WHERE p.`id` = _id;
+	UPDATE `barangay_aid`.`purok_family_members`
+	SET `description` = _description,
+	  `last_name` = _last_name,
+	  `first_name` = _first_name,
+	  `name_ext` = _name_ext,
+	  `middle_name` = _middle_name,
+	  `birthday` = _birthday,
+	  `age` = _age,
+	  `place_of_birth` = _place_of_birth,
+	  `sex` = _sex,
+	  `civil_status` = _civil_status,
+	  `religion` = _religion,
+	  `contact_no` = _contact_number,
+	  `purok` = _purok,
+	  `barangay` = _barangay,
+	  `municipality` = _municipality,
+	  `province` = _province,
+	  `country` = _country,
+	  `zip_code` = _zip_code
+	WHERE `id` = _id;
     END */$$
 DELIMITER ;
 
@@ -1392,16 +1481,16 @@ DELIMITER $$
 
 /*!50003 CREATE DEFINER=`system_admin`@`%` PROCEDURE `sp_purok_members_add`(
      _purok_id int (11),
-     _name varchar (255),
+     _family_serial_number varchar (255),
      _added_by int (11)
     )
 BEGIN
 INSERT INTO `purok_members`
             (`purok_id`,
-             `name`,
+             `family_serial_number`,
              `added_by`)
 VALUES (_purok_id,
-	_name,
+	_family_serial_number,
 	_added_by);
     END */$$
 DELIMITER ;
@@ -1429,11 +1518,11 @@ DELIMITER ;
 DELIMITER $$
 
 /*!50003 CREATE DEFINER=`system_admin`@`%` PROCEDURE `sp_purok_members_edit`(
-	_name varchar (255),
+	_family_serial_number varchar (255),
 	_id int (11)
     )
 BEGIN
-UPDATE `purok_members` p SET p.`name` = _name WHERE p.`id` = _id;
+UPDATE `purok_members` p SET p.`family_serial_number` = _family_serial_number WHERE p.`id` = _id;
     END */$$
 DELIMITER ;
 

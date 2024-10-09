@@ -131,7 +131,7 @@ namespace BarangayHealthAid.Dal
 
         public static string AddPurokMemberErrorMessage;
         public static bool AddPurokMemberIsSuccessful;
-        public static void AddPurokMember(int _purok_id, string _name)
+        public static void AddPurokMember(int _purok_id, string _family_serial_number)
         {
             DataSet dt = new DataSet();
             try
@@ -141,7 +141,7 @@ namespace BarangayHealthAid.Dal
                     con.Open();
                     MySqlCommand cmd = new MySqlCommand("sp_purok_members_add", con);
                     cmd.Parameters.Add(new MySqlParameter("_purok_id", _purok_id));
-                    cmd.Parameters.Add(new MySqlParameter("_name", _name));
+                    cmd.Parameters.Add(new MySqlParameter("_family_serial_number", _family_serial_number));
                     cmd.Parameters.Add(new MySqlParameter("_added_by", PublicVariables.Userid));
                     cmd.CommandType = CommandType.StoredProcedure;
                     MySqlDataAdapter adp = new MySqlDataAdapter(cmd);
@@ -160,7 +160,7 @@ namespace BarangayHealthAid.Dal
 
         public static string AddPurokFamilyMemberErrorMessage;
         public static bool AddPurokFamilyMemberIsSuccessful;
-        public static void AddPurokFamilyMember(int _purok_members_id, string _name, string _description, string _birthday, string _age, string _sex)
+        public static void AddPurokFamilyMember(int _purok_members_id, string _description, string _last_name, string _first_name, string _name_ext, string _middle_name, string _birthday, string _age, string _place_of_birth, string _sex,string _civil_status, string _religion, string _contact_number, string _purok, string _barangay, string _municipality, string _province, string _country, string _zip_code)
         {
             DataSet dt = new DataSet();
             try
@@ -170,11 +170,24 @@ namespace BarangayHealthAid.Dal
                     con.Open();
                     MySqlCommand cmd = new MySqlCommand("sp_purok_family_member_add", con);
                     cmd.Parameters.Add(new MySqlParameter("_purok_members_id", _purok_members_id));
-                    cmd.Parameters.Add(new MySqlParameter("_name", _name));
                     cmd.Parameters.Add(new MySqlParameter("_description", _description));
+                    cmd.Parameters.Add(new MySqlParameter("_last_name", _last_name));
+                    cmd.Parameters.Add(new MySqlParameter("_first_name", _first_name));
+                    cmd.Parameters.Add(new MySqlParameter("_name_ext", _name_ext));
+                    cmd.Parameters.Add(new MySqlParameter("_middle_name", _middle_name));
                     cmd.Parameters.Add(new MySqlParameter("_birthday", _birthday));
                     cmd.Parameters.Add(new MySqlParameter("_age", _age));
+                    cmd.Parameters.Add(new MySqlParameter("_place_of_birth", _place_of_birth));
                     cmd.Parameters.Add(new MySqlParameter("_sex", _sex));
+                    cmd.Parameters.Add(new MySqlParameter("_civil_status", _civil_status));
+                    cmd.Parameters.Add(new MySqlParameter("_religion", _religion));
+                    cmd.Parameters.Add(new MySqlParameter("_contact_number", _contact_number));
+                    cmd.Parameters.Add(new MySqlParameter("_purok", _purok));
+                    cmd.Parameters.Add(new MySqlParameter("_barangay", _barangay));
+                    cmd.Parameters.Add(new MySqlParameter("_municipality", _municipality));
+                    cmd.Parameters.Add(new MySqlParameter("_province", _province));
+                    cmd.Parameters.Add(new MySqlParameter("_country", _country));
+                    cmd.Parameters.Add(new MySqlParameter("_zip_code", _zip_code));
                     cmd.Parameters.Add(new MySqlParameter("_added_by", PublicVariables.Userid));
                     cmd.CommandType = CommandType.StoredProcedure;
                     MySqlDataAdapter adp = new MySqlDataAdapter(cmd);
@@ -249,7 +262,7 @@ namespace BarangayHealthAid.Dal
 
         public static string EditPurokFamilyMemberErrorMessage;
         public static bool EditPurokFamilyMemberIsSuccessful;
-        public static void EditPurokFamilyMember(int _id, string _name, string _description, string _birthday, string _age, string _sex)
+        public static void EditPurokFamilyMember(int _id, string _description, string _last_name, string _first_name, string _name_ext, string _middle_name, string _birthday, string _age, string _place_of_birth, string _sex, string _civil_status, string _religion, string _contact_number, string _purok, string _barangay, string _municipality, string _province, string _country, string _zip_code)
         {
             DataSet dt = new DataSet();
             try
@@ -259,11 +272,24 @@ namespace BarangayHealthAid.Dal
                     con.Open();
                     MySqlCommand cmd = new MySqlCommand("sp_purok_family_member_edit", con);
                     cmd.Parameters.Add(new MySqlParameter("_id", _id));
-                    cmd.Parameters.Add(new MySqlParameter("_name", _name));
                     cmd.Parameters.Add(new MySqlParameter("_description", _description));
+                    cmd.Parameters.Add(new MySqlParameter("_last_name", _last_name));
+                    cmd.Parameters.Add(new MySqlParameter("_first_name", _first_name));
+                    cmd.Parameters.Add(new MySqlParameter("_name_ext", _name_ext));
+                    cmd.Parameters.Add(new MySqlParameter("_middle_name", _middle_name));
                     cmd.Parameters.Add(new MySqlParameter("_birthday", _birthday));
                     cmd.Parameters.Add(new MySqlParameter("_age", _age));
+                    cmd.Parameters.Add(new MySqlParameter("_place_of_birth", _place_of_birth));
                     cmd.Parameters.Add(new MySqlParameter("_sex", _sex));
+                    cmd.Parameters.Add(new MySqlParameter("_civil_status", _civil_status));
+                    cmd.Parameters.Add(new MySqlParameter("_religion", _religion));
+                    cmd.Parameters.Add(new MySqlParameter("_contact_number", _contact_number));
+                    cmd.Parameters.Add(new MySqlParameter("_purok", _purok));
+                    cmd.Parameters.Add(new MySqlParameter("_barangay", _barangay));
+                    cmd.Parameters.Add(new MySqlParameter("_municipality", _municipality));
+                    cmd.Parameters.Add(new MySqlParameter("_province", _province));
+                    cmd.Parameters.Add(new MySqlParameter("_country", _country));
+                    cmd.Parameters.Add(new MySqlParameter("_zip_code", _zip_code));
                     cmd.CommandType = CommandType.StoredProcedure;
                     MySqlDataAdapter adp = new MySqlDataAdapter(cmd);
                     adp.Fill(dt);

@@ -168,6 +168,7 @@ namespace BarangayHealthAid.Management
             if (SelectionPass())
             {
                 selected_id = Convert.ToInt32(gvMembers.GetFocusedRowCellValue("id").ToString());
+                DataRow[] filtered = PurokFamilyMembers.Select(String.Format("id = {0}", selected_id));
                 PurokFamilyMemberAddForm pfma = new PurokFamilyMemberAddForm();
                 pfma.purok_member_id = purok_member_id;
                 pfma.is_add = false;
@@ -181,13 +182,68 @@ namespace BarangayHealthAid.Management
                 catch
                 {
                 }
-                pfma.txtName.Text = gvMembers.GetFocusedRowCellValue("name").ToString();
+                pfma.txtlastname.Text = filtered[0]["last_name"].ToString();
+                pfma.txtfirstname.Text = filtered[0]["first_name"].ToString();
+                pfma.txtNameExt.Text = filtered[0]["name_ext"].ToString();
+                pfma.txtMiddleName.Text = filtered[0]["middle_name"].ToString();
+                pfma.txtPlaceofBirth.Text = filtered[0]["place_of_birth"].ToString();
+                pfma.cbCivilStatus.Text = filtered[0]["civil_status"].ToString();
+                pfma.txtReligion.Text = filtered[0]["religion"].ToString();
+                pfma.txtContact.Text = filtered[0]["contact_no"].ToString();
+                pfma.txtPurok.Text = filtered[0]["purok"].ToString();
+                pfma.txtBarangay.Text = filtered[0]["barangay"].ToString();
+                pfma.txtMunicipality.Text = filtered[0]["municipality"].ToString();
+                pfma.txtProvince.Text = filtered[0]["province"].ToString();
+                pfma.txtCountry.Text = filtered[0]["country"].ToString();
+                pfma.txtZip.Text = filtered[0]["zip_code"].ToString();
                 pfma.edit_id = selected_id;
                 pfma.ShowDialog();
                 LoadData();
             }
             else
                 MsgBox.Error("No member selected.");
+        }
+
+        private void btnView_Click(object sender, EventArgs e)
+        {
+              if (SelectionPass())
+            {
+                selected_id = Convert.ToInt32(gvMembers.GetFocusedRowCellValue("id").ToString());
+                DataRow[] filtered = PurokFamilyMembers.Select(String.Format("id = {0}", selected_id));
+                PurokFamilyMemberAddForm pfma = new PurokFamilyMemberAddForm();
+                pfma.purok_member_id = purok_member_id;
+                pfma.is_add = false;
+                pfma.txtType.Text = gvMembers.GetFocusedRowCellValue("description").ToString();
+                pfma.txtAge.Text = gvMembers.GetFocusedRowCellValue("age").ToString();
+                pfma.cbSex.Text = gvMembers.GetFocusedRowCellValue("sex").ToString();
+                try
+                {
+                    pfma.dtDob.EditValue = Convert.ToDateTime(gvMembers.GetFocusedRowCellValue("formated_dob").ToString());
+                }
+                catch
+                {
+                }
+                pfma.txtlastname.Text = filtered[0]["last_name"].ToString();
+                pfma.txtfirstname.Text = filtered[0]["first_name"].ToString();
+                pfma.txtNameExt.Text = filtered[0]["name_ext"].ToString();
+                pfma.txtMiddleName.Text = filtered[0]["middle_name"].ToString();
+                pfma.txtPlaceofBirth.Text = filtered[0]["place_of_birth"].ToString();
+                pfma.cbCivilStatus.Text = filtered[0]["civil_status"].ToString();
+                pfma.txtReligion.Text = filtered[0]["religion"].ToString();
+                pfma.txtContact.Text = filtered[0]["contact_no"].ToString();
+                pfma.txtPurok.Text = filtered[0]["purok"].ToString();
+                pfma.txtBarangay.Text = filtered[0]["barangay"].ToString();
+                pfma.txtMunicipality.Text = filtered[0]["municipality"].ToString();
+                pfma.txtProvince.Text = filtered[0]["province"].ToString();
+                pfma.txtCountry.Text = filtered[0]["country"].ToString();
+                pfma.txtZip.Text = filtered[0]["zip_code"].ToString();
+                pfma.edit_id = selected_id;
+                pfma.is_view = true;
+                pfma.ShowDialog();
+            }
+            else
+                MsgBox.Error("No member selected.");
+        
         }
       
     }

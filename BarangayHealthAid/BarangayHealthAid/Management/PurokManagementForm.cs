@@ -132,7 +132,7 @@ namespace BarangayHealthAid.Management
             if (SelectionPass2())
             {
                 member_id = Convert.ToInt32(gvPurokMember.GetFocusedRowCellValue("id").ToString());
-                member_name = gvPurokMember.GetFocusedRowCellValue("name").ToString();
+                member_name = gvPurokMember.GetFocusedRowCellValue("family_serial_number").ToString();
             }
             else
                 member_id = 0;
@@ -318,7 +318,7 @@ namespace BarangayHealthAid.Management
                 GetRowDetailsMember();
                 PurokFamilyMembersForm pfm = new PurokFamilyMembersForm();
                 pfm.purok_member_id = member_id;
-                pfm.lblHeadName.Text = "Purok Member Name: " + member_name;
+                pfm.lblHeadName.Text = "Purok Family Serial Number: " + member_name;
                 pfm.ShowDialog();
             }
             else

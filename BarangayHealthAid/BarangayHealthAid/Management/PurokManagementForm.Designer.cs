@@ -37,7 +37,7 @@
             this.btnRefresh2 = new DevExpress.XtraEditors.SimpleButton();
             this.dtPurokMember = new DevExpress.XtraGrid.GridControl();
             this.gvPurokMember = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.purok_member_name = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.family_serial_number = new DevExpress.XtraGrid.Columns.GridColumn();
             this.id2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemCheckEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
@@ -194,7 +194,7 @@
             // gvPurokMember
             // 
             this.gvPurokMember.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.purok_member_name,
+            this.family_serial_number,
             this.id2});
             this.gvPurokMember.GridControl = this.dtPurokMember;
             this.gvPurokMember.Name = "gvPurokMember";
@@ -207,15 +207,15 @@
             this.gvPurokMember.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gvPurokMember_FocusedRowChanged);
             this.gvPurokMember.DoubleClick += new System.EventHandler(this.gvPurokMember_DoubleClick);
             // 
-            // purok_member_name
+            // family_serial_number
             // 
-            this.purok_member_name.AppearanceHeader.Options.UseTextOptions = true;
-            this.purok_member_name.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.purok_member_name.Caption = "Purok Member Name";
-            this.purok_member_name.FieldName = "name";
-            this.purok_member_name.Name = "purok_member_name";
-            this.purok_member_name.Visible = true;
-            this.purok_member_name.VisibleIndex = 0;
+            this.family_serial_number.AppearanceHeader.Options.UseTextOptions = true;
+            this.family_serial_number.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.family_serial_number.Caption = "Purok Family Serial Number";
+            this.family_serial_number.FieldName = "family_serial_number";
+            this.family_serial_number.Name = "family_serial_number";
+            this.family_serial_number.Visible = true;
+            this.family_serial_number.VisibleIndex = 0;
             // 
             // id2
             // 
@@ -622,7 +622,7 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
         private DevExpress.XtraGrid.GridControl dtPurokMember;
         private DevExpress.XtraGrid.Views.Grid.GridView gvPurokMember;
-        private DevExpress.XtraGrid.Columns.GridColumn purok_member_name;
+        private DevExpress.XtraGrid.Columns.GridColumn family_serial_number;
         private DevExpress.XtraGrid.Columns.GridColumn id2;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit2;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;

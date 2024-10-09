@@ -89,8 +89,7 @@
             // 
             this.txtName.Location = new System.Drawing.Point(12, 31);
             this.txtName.Name = "txtName";
-            this.txtName.Properties.Mask.EditMask = "\\p{L}+";
-            this.txtName.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.txtName.Properties.Mask.EditMask = ".+";
             this.txtName.Size = new System.Drawing.Size(326, 20);
             this.txtName.StyleController = this.layoutControl1;
             this.txtName.TabIndex = 4;
@@ -116,9 +115,9 @@
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
             this.layoutControlItem1.Size = new System.Drawing.Size(330, 43);
-            this.layoutControlItem1.Text = "Name";
+            this.layoutControlItem1.Text = "Family Serial Number:";
             this.layoutControlItem1.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(35, 16);
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(137, 16);
             // 
             // layoutControlItem2
             // 
