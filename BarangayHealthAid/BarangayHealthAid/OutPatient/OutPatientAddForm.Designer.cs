@@ -138,6 +138,8 @@
             // 
             this.txtNutStat.Location = new System.Drawing.Point(116, 91);
             this.txtNutStat.Name = "txtNutStat";
+            this.txtNutStat.Properties.Mask.EditMask = "\\p{L}+";
+            this.txtNutStat.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtNutStat.Size = new System.Drawing.Size(339, 20);
             this.txtNutStat.StyleController = this.layoutControl1;
             this.txtNutStat.TabIndex = 5;
@@ -211,6 +213,8 @@
             // 
             this.txtChildName.Location = new System.Drawing.Point(97, 43);
             this.txtChildName.Name = "txtChildName";
+            this.txtChildName.Properties.Mask.EditMask = "\\p{L}+";
+            this.txtChildName.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtChildName.Size = new System.Drawing.Size(180, 20);
             this.txtChildName.StyleController = this.layoutControl1;
             this.txtChildName.TabIndex = 4;

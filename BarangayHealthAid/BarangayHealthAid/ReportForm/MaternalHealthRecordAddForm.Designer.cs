@@ -935,6 +935,8 @@
             // 
             this.txtFetalDeaths.Location = new System.Drawing.Point(154, 224);
             this.txtFetalDeaths.Name = "txtFetalDeaths";
+            this.txtFetalDeaths.Properties.Mask.EditMask = "n";
+            this.txtFetalDeaths.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtFetalDeaths.Size = new System.Drawing.Size(203, 20);
             this.txtFetalDeaths.StyleController = this.layoutControl1;
             this.txtFetalDeaths.TabIndex = 12;
@@ -943,6 +945,8 @@
             // 
             this.txtAbortion.Location = new System.Drawing.Point(154, 200);
             this.txtAbortion.Name = "txtAbortion";
+            this.txtAbortion.Properties.Mask.EditMask = "n";
+            this.txtAbortion.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtAbortion.Size = new System.Drawing.Size(203, 20);
             this.txtAbortion.StyleController = this.layoutControl1;
             this.txtAbortion.TabIndex = 12;
@@ -951,6 +955,8 @@
             // 
             this.txtliving.Location = new System.Drawing.Point(154, 176);
             this.txtliving.Name = "txtliving";
+            this.txtliving.Properties.Mask.EditMask = "n";
+            this.txtliving.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtliving.Size = new System.Drawing.Size(203, 20);
             this.txtliving.StyleController = this.layoutControl1;
             this.txtliving.TabIndex = 12;
@@ -959,6 +965,8 @@
             // 
             this.txtbornalive.Location = new System.Drawing.Point(154, 152);
             this.txtbornalive.Name = "txtbornalive";
+            this.txtbornalive.Properties.Mask.EditMask = "n";
+            this.txtbornalive.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtbornalive.Size = new System.Drawing.Size(203, 20);
             this.txtbornalive.StyleController = this.layoutControl1;
             this.txtbornalive.TabIndex = 11;
@@ -979,6 +987,9 @@
             // 
             this.txtContactNo.Location = new System.Drawing.Point(361, 108);
             this.txtContactNo.Name = "txtContactNo";
+            this.txtContactNo.Properties.Mask.EditMask = "\\d\\d\\d\\d\\d\\d\\d\\d\\d\\d\\d";
+            this.txtContactNo.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Regular;
+            this.txtContactNo.Properties.MaxLength = 11;
             this.txtContactNo.Size = new System.Drawing.Size(361, 20);
             this.txtContactNo.StyleController = this.layoutControl1;
             this.txtContactNo.TabIndex = 6;
@@ -987,6 +998,8 @@
             // 
             this.txtAddress.Location = new System.Drawing.Point(12, 108);
             this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Properties.Mask.EditMask = "\\p{L}+";
+            this.txtAddress.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtAddress.Size = new System.Drawing.Size(345, 20);
             this.txtAddress.StyleController = this.layoutControl1;
             this.txtAddress.TabIndex = 6;
@@ -995,6 +1008,8 @@
             // 
             this.txtOccupation.Location = new System.Drawing.Point(361, 68);
             this.txtOccupation.Name = "txtOccupation";
+            this.txtOccupation.Properties.Mask.EditMask = "\\p{L}+";
+            this.txtOccupation.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtOccupation.Size = new System.Drawing.Size(361, 20);
             this.txtOccupation.StyleController = this.layoutControl1;
             this.txtOccupation.TabIndex = 6;
@@ -1003,6 +1018,8 @@
             // 
             this.txtHusbandName.Location = new System.Drawing.Point(12, 68);
             this.txtHusbandName.Name = "txtHusbandName";
+            this.txtHusbandName.Properties.Mask.EditMask = "\\p{L}+";
+            this.txtHusbandName.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtHusbandName.Size = new System.Drawing.Size(345, 20);
             this.txtHusbandName.StyleController = this.layoutControl1;
             this.txtHusbandName.TabIndex = 5;
@@ -1011,6 +1028,8 @@
             // 
             this.txtHeight.Location = new System.Drawing.Point(645, 28);
             this.txtHeight.Name = "txtHeight";
+            this.txtHeight.Properties.Mask.EditMask = "f";
+            this.txtHeight.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtHeight.Size = new System.Drawing.Size(77, 20);
             this.txtHeight.StyleController = this.layoutControl1;
             this.txtHeight.TabIndex = 6;
@@ -1036,6 +1055,8 @@
             // 
             this.txtAge.Location = new System.Drawing.Point(361, 28);
             this.txtAge.Name = "txtAge";
+            this.txtAge.Properties.Mask.EditMask = "n";
+            this.txtAge.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtAge.Size = new System.Drawing.Size(70, 20);
             this.txtAge.StyleController = this.layoutControl1;
             this.txtAge.TabIndex = 5;
@@ -1044,6 +1065,8 @@
             // 
             this.txtName.Location = new System.Drawing.Point(12, 28);
             this.txtName.Name = "txtName";
+            this.txtName.Properties.Mask.EditMask = "\\p{L}+";
+            this.txtName.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtName.Size = new System.Drawing.Size(345, 20);
             this.txtName.StyleController = this.layoutControl1;
             this.txtName.TabIndex = 4;

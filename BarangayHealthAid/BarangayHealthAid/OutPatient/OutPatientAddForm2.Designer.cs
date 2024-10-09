@@ -88,6 +88,8 @@
             // 
             this.txtNutStat.Location = new System.Drawing.Point(104, 60);
             this.txtNutStat.Name = "txtNutStat";
+            this.txtNutStat.Properties.Mask.EditMask = "\\p{L}+";
+            this.txtNutStat.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtNutStat.Size = new System.Drawing.Size(267, 20);
             this.txtNutStat.StyleController = this.layoutControl1;
             this.txtNutStat.TabIndex = 6;

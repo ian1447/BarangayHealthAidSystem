@@ -89,6 +89,8 @@
             // 
             this.txtName.Location = new System.Drawing.Point(12, 31);
             this.txtName.Name = "txtName";
+            this.txtName.Properties.Mask.EditMask = "\\p{L}+";
+            this.txtName.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtName.Size = new System.Drawing.Size(326, 20);
             this.txtName.StyleController = this.layoutControl1;
             this.txtName.TabIndex = 4;

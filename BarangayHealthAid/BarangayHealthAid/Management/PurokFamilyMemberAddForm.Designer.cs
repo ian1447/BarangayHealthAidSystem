@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PurokFamilyMemberAddForm));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.txtType = new DevExpress.XtraEditors.TextEdit();
             this.cbSex = new DevExpress.XtraEditors.ComboBoxEdit();
             this.txtAge = new DevExpress.XtraEditors.TextEdit();
             this.dtDob = new DevExpress.XtraEditors.DateEdit();
@@ -43,13 +44,13 @@
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::BarangayHealthAid.WaitForm1), true, true);
             this.bwAddFamilyMember = new System.ComponentModel.BackgroundWorker();
             this.bwEditFamilyMember = new System.ComponentModel.BackgroundWorker();
-            this.txtType = new DevExpress.XtraEditors.TextEdit();
-            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtType.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbSex.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAge.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtDob.Properties.CalendarTimeProperties)).BeginInit();
@@ -62,7 +63,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtType.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,6 +83,16 @@
             this.layoutControl1.Size = new System.Drawing.Size(400, 179);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // txtType
+            // 
+            this.txtType.Location = new System.Drawing.Point(12, 31);
+            this.txtType.Name = "txtType";
+            this.txtType.Properties.Mask.EditMask = "\\p{L}+";
+            this.txtType.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.txtType.Size = new System.Drawing.Size(376, 20);
+            this.txtType.StyleController = this.layoutControl1;
+            this.txtType.TabIndex = 5;
             // 
             // cbSex
             // 
@@ -151,6 +161,8 @@
             // 
             this.txtName.Location = new System.Drawing.Point(12, 74);
             this.txtName.Name = "txtName";
+            this.txtName.Properties.Mask.EditMask = "\\p{L}+";
+            this.txtName.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtName.Size = new System.Drawing.Size(376, 20);
             this.txtName.StyleController = this.layoutControl1;
             this.txtName.TabIndex = 4;
@@ -248,26 +260,6 @@
             this.layoutControlItem7.TextSize = new System.Drawing.Size(28, 16);
             this.layoutControlItem7.TextToControlDistance = 5;
             // 
-            // bwAddFamilyMember
-            // 
-            this.bwAddFamilyMember.WorkerSupportsCancellation = true;
-            this.bwAddFamilyMember.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwAddFamilyMember_DoWork);
-            this.bwAddFamilyMember.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwAddFamilyMember_RunWorkerCompleted);
-            // 
-            // bwEditFamilyMember
-            // 
-            this.bwEditFamilyMember.WorkerSupportsCancellation = true;
-            this.bwEditFamilyMember.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwEditFamilyMember_DoWork);
-            this.bwEditFamilyMember.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwEditFamilyMember_RunWorkerCompleted);
-            // 
-            // txtType
-            // 
-            this.txtType.Location = new System.Drawing.Point(12, 31);
-            this.txtType.Name = "txtType";
-            this.txtType.Size = new System.Drawing.Size(376, 20);
-            this.txtType.StyleController = this.layoutControl1;
-            this.txtType.TabIndex = 5;
-            // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -279,6 +271,18 @@
             this.layoutControlItem4.Text = "Member Type (e.g Father,Mother):";
             this.layoutControlItem4.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem4.TextSize = new System.Drawing.Size(225, 16);
+            // 
+            // bwAddFamilyMember
+            // 
+            this.bwAddFamilyMember.WorkerSupportsCancellation = true;
+            this.bwAddFamilyMember.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwAddFamilyMember_DoWork);
+            this.bwAddFamilyMember.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwAddFamilyMember_RunWorkerCompleted);
+            // 
+            // bwEditFamilyMember
+            // 
+            this.bwEditFamilyMember.WorkerSupportsCancellation = true;
+            this.bwEditFamilyMember.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwEditFamilyMember_DoWork);
+            this.bwEditFamilyMember.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwEditFamilyMember_RunWorkerCompleted);
             // 
             // PurokFamilyMemberAddForm
             // 
@@ -295,6 +299,7 @@
             this.Text = "Purok Family Member Add";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txtType.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbSex.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAge.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtDob.Properties.CalendarTimeProperties)).EndInit();
@@ -307,7 +312,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtType.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             this.ResumeLayout(false);
 
