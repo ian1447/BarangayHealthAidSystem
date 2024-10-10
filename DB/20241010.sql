@@ -192,6 +192,7 @@ DROP TABLE IF EXISTS `patient_details`;
 
 CREATE TABLE `patient_details` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
+  `purok_family_member_id` int(11) DEFAULT NULL,
   `last_name` varchar(255) DEFAULT NULL,
   `first_name` varchar(255) DEFAULT NULL,
   `name_extension` varchar(50) DEFAULT NULL,
@@ -248,11 +249,11 @@ CREATE TABLE `patient_details` (
   `added_by` int(11) DEFAULT NULL,
   `added_on` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 /*Data for the table `patient_details` */
 
-insert  into `patient_details`(`id`,`last_name`,`first_name`,`name_extension`,`middle_name`,`maiden_last_name`,`maiden_first_name`,`maiden_name_extension`,`maiden_middle_name`,`birthdate`,`age`,`place_of_birth`,`sex`,`civil_status`,`religion`,`blood_type`,`contact_number`,`address_purok`,`address_barangay`,`address_mun`,`address_province`,`address_country`,`address_zip_code`,`educational_attainment`,`employment_status`,`TIN`,`ph_stat`,`phic_id_no`,`phic_status_type`,`is_4p`,`4p_id_no`,`4p_status_type`,`membership_cat`,`partner_last_name`,`partner_first_name`,`partner_name_extension`,`partner_middle_name`,`partner_birthdate`,`partner_sex`,`partner_phic_id`,`father_last_name`,`father_first_name`,`father_name_extension`,`father_middle_name`,`father_birthdate`,`father_disability`,`father_phic_id`,`mother_last_name`,`mother_first_name`,`mother_name_extension`,`mother_middle_name`,`mother_birthdate`,`mother_disability`,`mother_phic_id`,`added_by`,`added_on`) values (1,'Dog','Max','','da','','','','','2024-10-16',12,'asdf','Male','Single','sfd','34','87864','13','312sdf','wer','4 23','x12','231','zxcv','asdf','3452234','','3452435','',0,'','Dependent','Govt-Permanent Regular','wdfa','sdaf','c','df','2024-10-14','Male','xczv','xcvzqfdw','asdf','z','34r','2024-10-05','cvb','asdf','1243','sadf','sdf','wf','2024-10-07','sfd','vxcz',1,'2024-10-03 21:33:35');
+insert  into `patient_details`(`id`,`purok_family_member_id`,`last_name`,`first_name`,`name_extension`,`middle_name`,`maiden_last_name`,`maiden_first_name`,`maiden_name_extension`,`maiden_middle_name`,`birthdate`,`age`,`place_of_birth`,`sex`,`civil_status`,`religion`,`blood_type`,`contact_number`,`address_purok`,`address_barangay`,`address_mun`,`address_province`,`address_country`,`address_zip_code`,`educational_attainment`,`employment_status`,`TIN`,`ph_stat`,`phic_id_no`,`phic_status_type`,`is_4p`,`4p_id_no`,`4p_status_type`,`membership_cat`,`partner_last_name`,`partner_first_name`,`partner_name_extension`,`partner_middle_name`,`partner_birthdate`,`partner_sex`,`partner_phic_id`,`father_last_name`,`father_first_name`,`father_name_extension`,`father_middle_name`,`father_birthdate`,`father_disability`,`father_phic_id`,`mother_last_name`,`mother_first_name`,`mother_name_extension`,`mother_middle_name`,`mother_birthdate`,`mother_disability`,`mother_phic_id`,`added_by`,`added_on`) values (2,0,'Test','Testingnsd','X','Wala','','','','','2000-10-14',23,'tagb','Male','Single','RC','a','09273743872','23','Cogon','Tagb','Bohol','Philippines','6300','test','No','232-312-312-000','With PHIC','345','Member',0,'','','NHTS-PR','spouse','pouse','d','wer','2010-07-24','Female','3451','father','fath','e','r','2010-06-24','gfd','456','mother','moth','e','r','2009-10-24','none','2345',1,'2024-10-10 14:45:00'),(3,1,'Test','Testingnsd','X','Wala','','','','','2000-10-14',23,'tagb','Male','Single','RC','x','09273743872','23','Cogon','Tagb','Bohol','Philippines','6300','xaw','axsd','123-123-123-001','','213','',0,'','','NHTS-PR','asdf','qrwt','df','ghf','2024-10-01','Male','3421','vcxf','dfg','d','cvbn','2024-10-23','dfs','1324','zxcv','vbxc','re','dfgh','2024-10-07','sdf','1234',1,'2024-10-10 16:12:03');
 
 /*Table structure for table `patient_details_history` */
 
@@ -271,11 +272,11 @@ CREATE TABLE `patient_details_history` (
   `added_by` int(11) DEFAULT NULL,
   `transdate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 /*Data for the table `patient_details_history` */
 
-insert  into `patient_details_history`(`id`,`patient_details_id`,`weight`,`height`,`pr`,`rr`,`temp`,`BP`,`remarks`,`added_by`,`transdate`) values (1,1,'3.00','123.00','34.00','2.00','234.00','1.00','test remarks',1,'2024-10-06 22:47:04');
+insert  into `patient_details_history`(`id`,`patient_details_id`,`weight`,`height`,`pr`,`rr`,`temp`,`BP`,`remarks`,`added_by`,`transdate`) values (1,1,'3.00','123.00','34.00','2.00','234.00','1.00','test remarks',1,'2024-10-06 22:47:04'),(2,2,'3412.00','123.00','12.00','12.00','32.00','432.00','dfvzxcvz  cv ',1,'2024-10-10 16:12:28');
 
 /*Table structure for table `purok` */
 
@@ -885,6 +886,7 @@ DELIMITER ;
 DELIMITER $$
 
 /*!50003 CREATE DEFINER=`system_admin`@`%` PROCEDURE `sp_patient_details_add`(
+	_purok_family_member_id int (11),
 	_last_name varchar (255),
 	_first_name VARCHAR (255),
 	_name_extension VARCHAR (50),
@@ -942,7 +944,8 @@ DELIMITER $$
     )
 BEGIN
 INSERT INTO `patient_details`
-            (`last_name`,
+            (`purok_family_member_id`,
+            `last_name`,
              `first_name`,
              `name_extension`,
              `middle_name`,
@@ -996,7 +999,8 @@ INSERT INTO `patient_details`
              `mother_disability`,
              `mother_phic_id`,
              `added_by`)
-VALUES (_last_name,
+VALUES (_purok_family_member_id,
+	_last_name,
         _first_name,
         _name_extension,
         _middle_name,
@@ -1060,6 +1064,8 @@ DELIMITER ;
 DELIMITER $$
 
 /*!50003 CREATE DEFINER=`system_admin`@`%` PROCEDURE `sp_patient_details_edit`(
+	_purok_family_member_id INT (11),
+	_last_name VARCHAR (255),
 	_first_name VARCHAR (255),
 	_name_extension VARCHAR (50),
 	_middle_name VARCHAR (255),
@@ -1116,7 +1122,8 @@ DELIMITER $$
     )
 BEGIN
 	UPDATE `barangay_aid`.`patient_details`
-	SET `last_name` = _last_name,
+	SET `purok_family_member_id` = _purok_family_member_id,
+	  `last_name` = _last_name,
 	  `first_name` = _first_name,
 	  `name_extension` = _name_extension,
 	  `middle_name` = _middle_name,
@@ -1296,6 +1303,21 @@ DELIMITER $$
     )
 BEGIN
 UPDATE `purok` p SET p.`purok_name` = _purok_name WHERE p.`id` = _id;
+    END */$$
+DELIMITER ;
+
+/* Procedure structure for procedure `sp_purok_family_members_all_get` */
+
+/*!50003 DROP PROCEDURE IF EXISTS  `sp_purok_family_members_all_get` */;
+
+DELIMITER $$
+
+/*!50003 CREATE DEFINER=`system_admin`@`%` PROCEDURE `sp_purok_family_members_all_get`()
+BEGIN
+	SELECT *,DATE_FORMAT(p.`birthday`,"%M %d,%Y") formated_dob,
+	CONCAT(UPPER(SUBSTRING(p.`description`, 1, 1)), LOWER(SUBSTRING(p.`description`, 2))) description_case,
+	CONCAT(p.`first_name`," ", SUBSTRING(p.`middle_name`, 1, 1), " ", p.`last_name`, " ", COALESCE(p.`name_ext`,"")) `name`,pm.`family_serial_number` FROM `purok_family_members` p
+	JOIN `purok_members` pm ON pm.`id` = p.`purok_members_id`;
     END */$$
 DELIMITER ;
 

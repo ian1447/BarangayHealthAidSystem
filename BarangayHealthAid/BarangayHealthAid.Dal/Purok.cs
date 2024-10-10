@@ -101,6 +101,34 @@ namespace BarangayHealthAid.Dal
             }
         }
 
+        public static string GetAllPurokMembersErrorMessage;
+        public static bool GetAllPurokMembersIsSuccessful;
+        public static DataTable GetAllPurokMembers()
+        {
+            DataSet dt = new DataSet();
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(ConnectionString()))
+                {
+                    con.Open();
+                    MySqlCommand cmd = new MySqlCommand("sp_purok_family_members_all_get", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    MySqlDataAdapter adp = new MySqlDataAdapter(cmd);
+                    adp.Fill(dt);
+                    con.Close();
+                    GetAllPurokMembersIsSuccessful = true;
+                    return dt.Tables[0];
+                }
+            }
+
+            catch (Exception ex)
+            {
+                GetAllPurokMembersIsSuccessful = false;
+                GetAllPurokMembersErrorMessage = ex.Message + "\nFunction : Get All Purok Family Members";
+                return null;
+            }
+        }
+
         public static string AddPurokErrorMessage;
         public static bool AddPurokIsSuccessful;
         public static void AddPurok(string _purok_name)

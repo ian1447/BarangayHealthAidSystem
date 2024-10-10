@@ -213,6 +213,12 @@
     <Compile Include="ReportForm\PatientRecordForm.Designer.cs">
       <DependentUpon>PatientRecordForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReportForm\SelectPurokFamilyMemberForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForm\SelectPurokFamilyMemberForm.Designer.cs">
+      <DependentUpon>SelectPurokFamilyMemberForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\MaternalHealthRecord2.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -333,6 +339,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ReportForm\PatientRecordForm.resx">
       <DependentUpon>PatientRecordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\SelectPurokFamilyMemberForm.resx">
+      <DependentUpon>SelectPurokFamilyMemberForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\MaternalHealthRecord2.resx">
       <DependentUpon>MaternalHealthRecord2.cs</DependentUpon>

@@ -162,6 +162,7 @@ namespace BarangayHealthAid.ReportForm
                 {
                     PatientRecordAddForm pcaf = new PatientRecordAddForm();
                     pcaf.is_add = false;
+                    pcaf.edit_id = id;
                     pcaf.txtFirstName.Text = filtered[0]["first_name"].ToString();
                     pcaf.txtLastName.Text = filtered[0]["last_name"].ToString();
                     pcaf.txtExtension.Text = filtered[0]["name_extension"].ToString();
@@ -195,20 +196,20 @@ namespace BarangayHealthAid.ReportForm
                     pcaf.txtPartnerMiddleName.Text = filtered[0]["partner_middle_name"].ToString();
                     pcaf.txtPartnerExt.Text = filtered[0]["partner_name_extension"].ToString();
                     pcaf.cbPartnerSex.Text = filtered[0]["partner_sex"].ToString();
-                    pcaf.dtPartnerDob.Text = filtered[0]["partner_birthdate"].ToString();
+                    pcaf.dtPartnerDob.EditValue = Convert.ToDateTime(filtered[0]["partner_birthdate"].ToString());
                     pcaf.txtfatherLastname.Text = filtered[0]["father_last_name"].ToString();
                     pcaf.txtFatherFirstName.Text = filtered[0]["father_first_name"].ToString();
                     pcaf.txtFatherMiddleName.Text = filtered[0]["father_middle_name"].ToString();
                     pcaf.txtFatherExt.Text = filtered[0]["father_name_extension"].ToString();
                     pcaf.txtFatherDisability.Text = filtered[0]["father_disability"].ToString();
-                    pcaf.dtFatherDob.Text = filtered[0]["father_birthdate"].ToString();
+                    pcaf.dtFatherDob.EditValue = Convert.ToDateTime(filtered[0]["father_birthdate"].ToString());
                     pcaf.txtfatherPhicid.Text = filtered[0]["father_phic_id"].ToString();
                     pcaf.txtMotherLastName.Text = filtered[0]["mother_last_name"].ToString();
                     pcaf.txtMotherFirstName.Text = filtered[0]["mother_first_name"].ToString();
                     pcaf.txtMotherMiddleName.Text = filtered[0]["mother_middle_name"].ToString();
                     pcaf.txtMotherExt.Text = filtered[0]["mother_name_extension"].ToString();
                     pcaf.txtMotherDisability.Text = filtered[0]["mother_disability"].ToString();
-                    pcaf.dtMotherDob.Text = filtered[0]["mother_birthdate"].ToString();
+                    pcaf.dtMotherDob.EditValue = Convert.ToDateTime(filtered[0]["mother_birthdate"].ToString());
                     pcaf.txtMotherPhicID.Text = filtered[0]["mother_phic_id"].ToString();
                     pcaf.rgPhicStat.EditValue = filtered[0]["ph_stat"].ToString();
                     pcaf.rgPhicType.EditValue = filtered[0]["phic_status_type"].ToString();
@@ -222,7 +223,6 @@ namespace BarangayHealthAid.ReportForm
             }
             else
                 MsgBox.Warning("No Patient Selected...");
-            
         }
 
         private void gvPatient_DoubleClick(object sender, EventArgs e)
@@ -371,6 +371,78 @@ namespace BarangayHealthAid.ReportForm
             }
             else
                 MsgBox.Error(PatientRecord.GetPatientHistoryErrorMessage);
+        }
+
+        private void btnView_Click(object sender, EventArgs e)
+        {
+            if (SelectionPass())
+            {
+                int id = Convert.ToInt32(gvPatient.GetFocusedRowCellValue("id").ToString());
+                DataRow[] filtered = PatientsRecordTable.Select(String.Format("id = {0}", id));
+                if (filtered.Count() > 0)
+                {
+                    PatientRecordAddForm pcaf = new PatientRecordAddForm();
+                    pcaf.is_add = false;
+                    pcaf.txtFirstName.Text = filtered[0]["first_name"].ToString();
+                    pcaf.txtLastName.Text = filtered[0]["last_name"].ToString();
+                    pcaf.txtExtension.Text = filtered[0]["name_extension"].ToString();
+                    pcaf.txtMiddleName.Text = filtered[0]["middle_name"].ToString();
+                    pcaf.txtMaidenLastName.Text = filtered[0]["maiden_last_name"].ToString();
+                    pcaf.txtMaidenFirstName.Text = filtered[0]["maiden_first_name"].ToString();
+                    pcaf.txtMaidenExtension.Text = filtered[0]["maiden_name_extension"].ToString();
+                    pcaf.txtMaidenMiddleName.Text = filtered[0]["maiden_middle_name"].ToString();
+                    pcaf.dtDob.EditValue = Convert.ToDateTime(filtered[0]["format_birthdate"].ToString());
+                    pcaf.txtAge.Text = filtered[0]["age"].ToString();
+                    pcaf.txtPlaceofBirth.Text = filtered[0]["place_of_birth"].ToString();
+                    pcaf.cbSex.Text = filtered[0]["sex"].ToString();
+                    pcaf.cbCivilStatus.Text = filtered[0]["civil_status"].ToString();
+                    pcaf.txtReligion.Text = filtered[0]["religion"].ToString();
+                    pcaf.txtBloodType.Text = filtered[0]["blood_type"].ToString();
+                    pcaf.txtContactNum.Text = filtered[0]["contact_number"].ToString();
+                    pcaf.txtPurok.Text = filtered[0]["address_purok"].ToString();
+                    pcaf.txtBarangay.Text = filtered[0]["address_barangay"].ToString();
+                    pcaf.txtMunicipality.Text = filtered[0]["address_mun"].ToString();
+                    pcaf.txtProvince.Text = filtered[0]["address_province"].ToString();
+                    pcaf.txtCountry.Text = filtered[0]["address_country"].ToString();
+                    pcaf.txtZip.Text = filtered[0]["address_zip_code"].ToString();
+                    pcaf.txtEducAtt.Text = filtered[0]["educational_attainment"].ToString();
+                    pcaf.txtEmploymentStat.Text = filtered[0]["employment_status"].ToString();
+                    pcaf.txtTin.Text = filtered[0]["TIN"].ToString();
+                    pcaf.txtPhicNo.Text = filtered[0]["phic_id_no"].ToString();
+                    pcaf.txt4pIdNo.Text = filtered[0]["4p_id_no"].ToString();
+                    pcaf.txtPartnerPhicId.Text = filtered[0]["partner_phic_id"].ToString();
+                    pcaf.txtPartnerLastName.Text = filtered[0]["partner_last_name"].ToString();
+                    pcaf.txtPartnerFirstName.Text = filtered[0]["partner_first_name"].ToString();
+                    pcaf.txtPartnerMiddleName.Text = filtered[0]["partner_middle_name"].ToString();
+                    pcaf.txtPartnerExt.Text = filtered[0]["partner_name_extension"].ToString();
+                    pcaf.cbPartnerSex.Text = filtered[0]["partner_sex"].ToString();
+                    pcaf.dtPartnerDob.Text = filtered[0]["partner_birthdate"].ToString();
+                    pcaf.txtfatherLastname.Text = filtered[0]["father_last_name"].ToString();
+                    pcaf.txtFatherFirstName.Text = filtered[0]["father_first_name"].ToString();
+                    pcaf.txtFatherMiddleName.Text = filtered[0]["father_middle_name"].ToString();
+                    pcaf.txtFatherExt.Text = filtered[0]["father_name_extension"].ToString();
+                    pcaf.txtFatherDisability.Text = filtered[0]["father_disability"].ToString();
+                    pcaf.dtFatherDob.Text = filtered[0]["father_birthdate"].ToString();
+                    pcaf.txtfatherPhicid.Text = filtered[0]["father_phic_id"].ToString();
+                    pcaf.txtMotherLastName.Text = filtered[0]["mother_last_name"].ToString();
+                    pcaf.txtMotherFirstName.Text = filtered[0]["mother_first_name"].ToString();
+                    pcaf.txtMotherMiddleName.Text = filtered[0]["mother_middle_name"].ToString();
+                    pcaf.txtMotherExt.Text = filtered[0]["mother_name_extension"].ToString();
+                    pcaf.txtMotherDisability.Text = filtered[0]["mother_disability"].ToString();
+                    pcaf.dtMotherDob.Text = filtered[0]["mother_birthdate"].ToString();
+                    pcaf.txtMotherPhicID.Text = filtered[0]["mother_phic_id"].ToString();
+                    pcaf.rgPhicStat.EditValue = filtered[0]["ph_stat"].ToString();
+                    pcaf.rgPhicType.EditValue = filtered[0]["phic_status_type"].ToString();
+                    pcaf.rg4pType.EditValue = filtered[0]["4p_status_type"].ToString();
+                    pcaf.rgMembershipCat.EditValue = filtered[0]["membership_cat"].ToString();
+                    pcaf.is_view = true;
+                    pcaf.ShowDialog();
+                }
+                else
+                    MsgBox.Error("No Data Found...");
+            }
+            else
+                MsgBox.Warning("No Patient Selected...");
         }
 
     }

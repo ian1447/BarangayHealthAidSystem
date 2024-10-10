@@ -179,10 +179,10 @@ namespace BarangayHealthAid.Management
                         }
                     }
                 }
+                btnSave.Enabled = false;
+                lciSave.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
+                btnCancel.Text = "Close";
             }
-            btnSave.Enabled = false;
-            lciSave.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
-            btnCancel.Text = "Close";
         }
 
     }

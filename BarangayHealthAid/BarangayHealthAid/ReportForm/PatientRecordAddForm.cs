@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using BarangayHealthAid.Core;
 using BarangayHealthAid.Dal;
+using DevExpress.XtraLayout;
 
 namespace BarangayHealthAid.ReportForm
 {
@@ -59,15 +60,43 @@ namespace BarangayHealthAid.ReportForm
 
         private int is4p = 0;
         public bool is_add = true;
+        public bool is_view = false;
+        private int _purok_family_member_id;
+        public int edit_id;
+        DataRow[] filtered;
         private void PatientRecordAddForm_Load(object sender, EventArgs e)
         {
             layoutControl1.AllowCustomization = false;
+            if (is_view)
+            {
+                foreach (BaseLayoutItem item in layoutControl1.Items)
+                {
+                    LayoutControlItem layoutControlItem = item as LayoutControlItem;
+                    if (layoutControlItem != null)
+                    {
+                        BaseEdit component = layoutControlItem.Control as BaseEdit;
+                        if (component != null)
+                        {
+                            component.Properties.ReadOnly = true;
+                        }
+                    }
+                }
+                btnSave.Enabled = false;
+                lciSave.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
+                btnCancel.Text = "Close";
+            }
+            layoutControl1.Select();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            MsgBox.QuestionYesNo("Are you sure you want to cancel creation of Profile?\nDetails inputed will not be saved.");
-            if (MsgBox.isYes)
+            if (!is_view)
+            {
+                MsgBox.QuestionYesNo("Are you sure you want to cancel creation of Profile?\nDetails inputed will not be saved.");
+                if (MsgBox.isYes)
+                    this.Close();
+            }
+            else
                 this.Close();
         }
 
@@ -85,15 +114,18 @@ namespace BarangayHealthAid.ReportForm
                 }
                 else
                 {
-                    MsgBox.Information("Ani ang edit.");
-                    this.Close();
+                    if (!bwEditPatient.IsBusy)
+                    {
+                        ShowLoading("Updating Data...");
+                        bwEditPatient.RunWorkerAsync();
+                    }
                 }
             }
         }
 
         private void bwAddPatient_DoWork(object sender, DoWorkEventArgs e)
         {
-            PatientRecord.AddPatient(txtLastName.Text, txtFirstName.Text, txtExtension.Text, txtMiddleName.Text, txtMaidenLastName.Text, txtMaidenFirstName.Text, txtMaidenExtension.Text, txtMaidenMiddleName.Text, dtDob.Text, txtAge.Text, txtPlaceofBirth.Text, cbSex.Text, cbCivilStatus.Text, txtReligion.Text, txtBloodType.Text, txtContactNum.Text, txtPurok.Text, txtBarangay.Text, txtMunicipality.Text, txtProvince.Text, txtCountry.Text, txtZip.Text, txtEducAtt.Text, txtEmploymentStat.Text, txtTin.Text, rgPhicType.Text, txtPhicNo.Text, rgPhicStat.Text, is4p, txt4pIdNo.Text, rg4pType.Text, rgMembershipCat.Text, txtPartnerLastName.Text, txtPartnerFirstName.Text, txtPartnerExt.Text, txtPartnerMiddleName.Text, dtPartnerDob.Text, cbPartnerSex.Text, txtPartnerPhicId.Text, txtfatherLastname.Text, txtFatherFirstName.Text, txtFatherExt.Text, txtFatherMiddleName.Text, dtFatherDob.Text, txtFatherDisability.Text, txtfatherPhicid.Text, txtMotherLastName.Text, txtMotherFirstName.Text, txtMotherExt.Text, txtMotherMiddleName.Text, dtMotherDob.Text, txtMotherDisability.Text, txtMotherPhicID.Text);
+            PatientRecord.AddPatient(txtLastName.Text, txtFirstName.Text, txtExtension.Text, txtMiddleName.Text, txtMaidenLastName.Text, txtMaidenFirstName.Text, txtMaidenExtension.Text, txtMaidenMiddleName.Text, dtDob.Text, txtAge.Text, txtPlaceofBirth.Text, cbSex.Text, cbCivilStatus.Text, txtReligion.Text, txtBloodType.Text, txtContactNum.Text, txtPurok.Text, txtBarangay.Text, txtMunicipality.Text, txtProvince.Text, txtCountry.Text, txtZip.Text, txtEducAtt.Text, txtEmploymentStat.Text, txtTin.Text, rgPhicType.Text, txtPhicNo.Text, rgPhicStat.Text, is4p, txt4pIdNo.Text, rg4pType.Text, rgMembershipCat.Text, txtPartnerLastName.Text, txtPartnerFirstName.Text, txtPartnerExt.Text, txtPartnerMiddleName.Text, dtPartnerDob.Text, cbPartnerSex.Text, txtPartnerPhicId.Text, txtfatherLastname.Text, txtFatherFirstName.Text, txtFatherExt.Text, txtFatherMiddleName.Text, dtFatherDob.Text, txtFatherDisability.Text, txtfatherPhicid.Text, txtMotherLastName.Text, txtMotherFirstName.Text, txtMotherExt.Text, txtMotherMiddleName.Text, dtMotherDob.Text, txtMotherDisability.Text, txtMotherPhicID.Text, _purok_family_member_id);
             bwAddPatient.CancelAsync();
         }
 
@@ -109,250 +141,58 @@ namespace BarangayHealthAid.ReportForm
                 MsgBox.Error(PatientRecord.AddPatientErrorMessage);
         }
 
-        #region validation
-        private void txtLastName_Validating(object sender, CancelEventArgs e)
-        {
-            if (string.IsNullOrEmpty(txtLastName.Text))
-            { 
-                e.Cancel = true;
-                errorProvider.SetError(txtLastName, "Please fill up.");
-            }
-            else
-            {
-                errorProvider.SetError(txtLastName, null);
-                e.Cancel = false;
-            }
-        }
-
-        private void txtFirstName_Validating(object sender, CancelEventArgs e)
-        {
-            if (string.IsNullOrEmpty(txtFirstName.Text))
-            {
-                e.Cancel = true;
-                errorProvider.SetError(txtFirstName, "Please fill up.");
-            }
-            else
-            {
-                errorProvider.SetError(txtFirstName, null);
-                e.Cancel = false;
-            }
-        }
-
-        private void dtDob_Validating(object sender, CancelEventArgs e)
-        {
-            if (string.IsNullOrEmpty(dtDob.Text))
-            {
-                e.Cancel = true;
-                errorProvider.SetError(dtDob, "Please fill up.");
-            }
-            else
-            {
-                errorProvider.SetError(dtDob, null);
-                e.Cancel = false;
-            }
-        }
-
-        private void cbSex_Validating(object sender, CancelEventArgs e)
-        {
-            if (string.IsNullOrEmpty(cbSex.Text))
-            {
-                e.Cancel = true;
-                errorProvider.SetError(cbSex, "Please fill up.");
-            }
-            else
-            {
-                errorProvider.SetError(cbSex, null);
-                e.Cancel = false;
-            }
-        }
-
-        private void cbCivilStatus_Validating(object sender, CancelEventArgs e)
-        {
-            if (string.IsNullOrEmpty(cbCivilStatus.Text))
-            {
-                e.Cancel = true;
-                errorProvider.SetError(cbCivilStatus, "Please fill up.");
-            }
-            else
-            {
-                errorProvider.SetError(cbCivilStatus, null);
-                e.Cancel = false;
-            }
-        }
-
-        private void txtReligion_Validating(object sender, CancelEventArgs e)
-        {
-            if (string.IsNullOrEmpty(txtReligion.Text))
-            {
-                e.Cancel = true;
-                errorProvider.SetError(txtReligion, "Please fill up.");
-            }
-            else
-            {
-                errorProvider.SetError(txtReligion, null);
-                e.Cancel = false;
-            }
-        }
-
-        private void txtAge_Validating(object sender, CancelEventArgs e)
-        {
-            if (string.IsNullOrEmpty(txtAge.Text))
-            {
-                e.Cancel = true;
-                errorProvider.SetError(txtAge, "Please fill up.");
-            }
-            else
-            {
-                errorProvider.SetError(txtAge, null);
-                e.Cancel = false;
-            }
-        }
-
-        private void txtPlaceofBirth_Validating(object sender, CancelEventArgs e)
-        {
-            if (string.IsNullOrEmpty(txtPlaceofBirth.Text))
-            {
-                e.Cancel = true;
-                errorProvider.SetError(txtPlaceofBirth, "Please fill up.");
-            }
-            else
-            {
-                errorProvider.SetError(txtPlaceofBirth, null);
-                e.Cancel = false;
-            }
-        }
-
-        private void txtBloodType_Validating(object sender, CancelEventArgs e)
-        {
-            if (string.IsNullOrEmpty(txtBloodType.Text))
-            {
-                e.Cancel = true;
-                errorProvider.SetError(txtBloodType, "Please fill up.");
-            }
-            else
-            {
-                errorProvider.SetError(txtBloodType, null);
-                e.Cancel = false;
-            }
-        }
-
-        private void txtContactNum_Validating(object sender, CancelEventArgs e)
-        {
-            if (string.IsNullOrEmpty(txtContactNum.Text))
-            {
-                e.Cancel = true;
-                errorProvider.SetError(txtContactNum, "Please fill up.");
-            }
-            else
-            {
-                errorProvider.SetError(txtContactNum, null);
-                e.Cancel = false;
-            }
-        }
-
-        private void txtEmploymentStat_Validating(object sender, CancelEventArgs e)
-        {
-            if (string.IsNullOrEmpty(txtEmploymentStat.Text))
-            {
-                e.Cancel = true;
-                errorProvider.SetError(txtEmploymentStat, "Please fill up.");
-            }
-            else
-            {
-                errorProvider.SetError(txtEmploymentStat, null);
-                e.Cancel = false;
-            }
-        }
-
-        private void txtPurok_Validating(object sender, CancelEventArgs e)
-        {
-            if (string.IsNullOrEmpty(txtPurok.Text))
-            {
-                e.Cancel = true;
-                errorProvider.SetError(txtPurok, "Please fill up.");
-            }
-            else
-            {
-                errorProvider.SetError(txtPurok, null);
-                e.Cancel = false;
-            }
-        }
-
-        private void txtBarangay_Validating(object sender, CancelEventArgs e)
-        {
-            if (string.IsNullOrEmpty(txtBarangay.Text))
-            {
-                e.Cancel = true;
-                errorProvider.SetError(txtBarangay, "Please fill up.");
-            }
-            else
-            {
-                errorProvider.SetError(txtBarangay, null);
-                e.Cancel = false;
-            }
-        }
-
-        private void txtMunicipality_Validating(object sender, CancelEventArgs e)
-        {
-            if (string.IsNullOrEmpty(txtMunicipality.Text))
-            {
-                e.Cancel = true;
-                errorProvider.SetError(txtMunicipality, "Please fill up.");
-            }
-            else
-            {
-                errorProvider.SetError(txtMunicipality, null);
-                e.Cancel = false;
-            }
-        }
-
-        private void txtProvince_Validating(object sender, CancelEventArgs e)
-        {
-            if (string.IsNullOrEmpty(txtProvince.Text))
-            {
-                e.Cancel = true;
-                errorProvider.SetError(txtProvince, "Please fill up.");
-            }
-            else
-            {
-                errorProvider.SetError(txtProvince, null);
-                e.Cancel = false;
-            }
-        }
-
-        private void txtCountry_Validating(object sender, CancelEventArgs e)
-        {
-            if (string.IsNullOrEmpty(txtCountry.Text))
-            {
-                e.Cancel = true;
-                errorProvider.SetError(txtCountry, "Please fill up.");
-            }
-            else
-            {
-                errorProvider.SetError(txtCountry, null);
-                e.Cancel = false;
-            }
-        }
-
-        private void txtZip_Validating(object sender, CancelEventArgs e)
-        {
-            if (string.IsNullOrEmpty(txtZip.Text))
-            {
-                e.Cancel = true;
-                errorProvider.SetError(txtZip, "Please fill up.");
-            }
-            else
-            {
-                errorProvider.SetError(txtZip, null);
-                e.Cancel = false;
-            }
-        }
-
-        #endregion
-
         private void ce4p_CheckedChanged(object sender, EventArgs e)
         {
             is4p = ce4p.Checked ? 1 : 0; 
+        }
+
+        private void txtLastName_Click(object sender, EventArgs e)
+        {
+            if (!is_view)
+            {
+                SelectPurokFamilyMemberForm spf = new SelectPurokFamilyMemberForm();
+                spf.ShowDialog();
+                filtered = spf.filtered;
+                _purok_family_member_id = spf._purok_family_member_id;
+                if (filtered != null && filtered.Count() > 0)
+                {
+                    txtLastName.Text = filtered[0]["last_name"].ToString();
+                    txtFirstName.Text = filtered[0]["first_name"].ToString();
+                    txtExtension.Text = filtered[0]["name_ext"].ToString();
+                    txtMiddleName.Text = filtered[0]["middle_name"].ToString();
+                    dtDob.EditValue = Convert.ToDateTime(filtered[0]["formated_dob"].ToString());
+                    txtAge.Text = filtered[0]["age"].ToString();
+                    txtPlaceofBirth.Text = filtered[0]["place_of_birth"].ToString();
+                    cbSex.Text = filtered[0]["sex"].ToString();
+                    cbCivilStatus.Text = filtered[0]["civil_status"].ToString();
+                    txtReligion.Text = filtered[0]["religion"].ToString();
+                    txtContactNum.Text = filtered[0]["contact_no"].ToString();
+                    txtPurok.Text = filtered[0]["purok"].ToString();
+                    txtBarangay.Text = filtered[0]["barangay"].ToString();
+                    txtMunicipality.Text = filtered[0]["municipality"].ToString();
+                    txtProvince.Text = filtered[0]["province"].ToString();
+                    txtCountry.Text = filtered[0]["country"].ToString();
+                    txtZip.Text = filtered[0]["zip_code"].ToString();
+                }
+            }
+        }
+
+        private void bwEditPatient_DoWork(object sender, DoWorkEventArgs e)
+        {
+            PatientRecord.UpdatePatient(txtLastName.Text, txtFirstName.Text, txtExtension.Text, txtMiddleName.Text, txtMaidenLastName.Text, txtMaidenFirstName.Text, txtMaidenExtension.Text, txtMaidenMiddleName.Text, dtDob.Text, txtAge.Text, txtPlaceofBirth.Text, cbSex.Text, cbCivilStatus.Text, txtReligion.Text, txtBloodType.Text, txtContactNum.Text, txtPurok.Text, txtBarangay.Text, txtMunicipality.Text, txtProvince.Text, txtCountry.Text, txtZip.Text, txtEducAtt.Text, txtEmploymentStat.Text, txtTin.Text, rgPhicStat.Text, txtPhicNo.Text,rgPhicType.Text, is4p, txt4pIdNo.Text, rg4pType.Text, rgMembershipCat.Text, txtPartnerLastName.Text, txtPartnerFirstName.Text, txtPartnerExt.Text, txtPartnerMiddleName.Text, dtPartnerDob.Text, cbPartnerSex.Text, txtPartnerPhicId.Text, txtfatherLastname.Text, txtFatherFirstName.Text, txtFatherExt.Text, txtFatherMiddleName.Text, dtFatherDob.Text, txtFatherDisability.Text, txtfatherPhicid.Text, txtMotherLastName.Text, txtMotherFirstName.Text, txtMotherExt.Text, txtMotherMiddleName.Text, dtMotherDob.Text, txtMotherDisability.Text, txtMotherPhicID.Text, _purok_family_member_id, edit_id);
+            bwEditPatient.CancelAsync();
+        }
+
+        private void bwEditPatient_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            HideLoading();
+            if (PatientRecord.UpdatePatientIsSuccessful)
+            {
+                MsgBox.Information("Updating complete.");
+                this.Close();
+            }
+            else
+                MsgBox.Error(PatientRecord.UpdatePatientErrorMessage);
         }
     }
 }

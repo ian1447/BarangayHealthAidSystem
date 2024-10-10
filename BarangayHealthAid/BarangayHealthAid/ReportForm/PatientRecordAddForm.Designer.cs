@@ -153,12 +153,13 @@
             this.layoutControlItem55 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem56 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem57 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem58 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciSave = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem59 = new DevExpress.XtraLayout.LayoutControlItem();
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::BarangayHealthAid.WaitForm1), true, true);
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.bwAddPatient = new System.ComponentModel.BackgroundWorker();
             this.errorProvider = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
+            this.bwEditPatient = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtMotherDisability.Properties)).BeginInit();
@@ -281,7 +282,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem55)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem56)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem57)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem58)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciSave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem59)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
@@ -747,7 +748,6 @@
             this.txtZip.Size = new System.Drawing.Size(133, 20);
             this.txtZip.StyleController = this.layoutControl1;
             this.txtZip.TabIndex = 10;
-            this.txtZip.Validating += new System.ComponentModel.CancelEventHandler(this.txtZip_Validating);
             // 
             // txtCountry
             // 
@@ -756,7 +756,6 @@
             this.txtCountry.Size = new System.Drawing.Size(120, 20);
             this.txtCountry.StyleController = this.layoutControl1;
             this.txtCountry.TabIndex = 9;
-            this.txtCountry.Validating += new System.ComponentModel.CancelEventHandler(this.txtCountry_Validating);
             // 
             // txtProvince
             // 
@@ -765,7 +764,6 @@
             this.txtProvince.Size = new System.Drawing.Size(120, 20);
             this.txtProvince.StyleController = this.layoutControl1;
             this.txtProvince.TabIndex = 8;
-            this.txtProvince.Validating += new System.ComponentModel.CancelEventHandler(this.txtProvince_Validating);
             // 
             // txtMunicipality
             // 
@@ -774,7 +772,6 @@
             this.txtMunicipality.Size = new System.Drawing.Size(119, 20);
             this.txtMunicipality.StyleController = this.layoutControl1;
             this.txtMunicipality.TabIndex = 7;
-            this.txtMunicipality.Validating += new System.ComponentModel.CancelEventHandler(this.txtMunicipality_Validating);
             // 
             // txtBarangay
             // 
@@ -783,7 +780,6 @@
             this.txtBarangay.Size = new System.Drawing.Size(120, 20);
             this.txtBarangay.StyleController = this.layoutControl1;
             this.txtBarangay.TabIndex = 6;
-            this.txtBarangay.Validating += new System.ComponentModel.CancelEventHandler(this.txtBarangay_Validating);
             // 
             // txtPurok
             // 
@@ -792,7 +788,6 @@
             this.txtPurok.Size = new System.Drawing.Size(50, 20);
             this.txtPurok.StyleController = this.layoutControl1;
             this.txtPurok.TabIndex = 5;
-            this.txtPurok.Validating += new System.ComponentModel.CancelEventHandler(this.txtPurok_Validating);
             // 
             // labelControl2
             // 
@@ -822,7 +817,6 @@
             this.txtEmploymentStat.Size = new System.Drawing.Size(118, 20);
             this.txtEmploymentStat.StyleController = this.layoutControl1;
             this.txtEmploymentStat.TabIndex = 17;
-            this.txtEmploymentStat.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmploymentStat_Validating);
             // 
             // txtEducAtt
             // 
@@ -841,7 +835,6 @@
             this.txtContactNum.Size = new System.Drawing.Size(96, 20);
             this.txtContactNum.StyleController = this.layoutControl1;
             this.txtContactNum.TabIndex = 15;
-            this.txtContactNum.Validating += new System.ComponentModel.CancelEventHandler(this.txtContactNum_Validating);
             // 
             // txtBloodType
             // 
@@ -850,7 +843,6 @@
             this.txtBloodType.Size = new System.Drawing.Size(80, 20);
             this.txtBloodType.StyleController = this.layoutControl1;
             this.txtBloodType.TabIndex = 14;
-            this.txtBloodType.Validating += new System.ComponentModel.CancelEventHandler(this.txtBloodType_Validating);
             // 
             // txtReligion
             // 
@@ -859,7 +851,6 @@
             this.txtReligion.Size = new System.Drawing.Size(149, 20);
             this.txtReligion.StyleController = this.layoutControl1;
             this.txtReligion.TabIndex = 12;
-            this.txtReligion.Validating += new System.ComponentModel.CancelEventHandler(this.txtReligion_Validating);
             // 
             // cbCivilStatus
             // 
@@ -875,7 +866,6 @@
             this.cbCivilStatus.Size = new System.Drawing.Size(101, 20);
             this.cbCivilStatus.StyleController = this.layoutControl1;
             this.cbCivilStatus.TabIndex = 13;
-            this.cbCivilStatus.Validating += new System.ComponentModel.CancelEventHandler(this.cbCivilStatus_Validating);
             // 
             // cbSex
             // 
@@ -890,7 +880,6 @@
             this.cbSex.Size = new System.Drawing.Size(58, 20);
             this.cbSex.StyleController = this.layoutControl1;
             this.cbSex.TabIndex = 12;
-            this.cbSex.Validating += new System.ComponentModel.CancelEventHandler(this.cbSex_Validating);
             // 
             // txtPlaceofBirth
             // 
@@ -899,7 +888,6 @@
             this.txtPlaceofBirth.Size = new System.Drawing.Size(190, 20);
             this.txtPlaceofBirth.StyleController = this.layoutControl1;
             this.txtPlaceofBirth.TabIndex = 11;
-            this.txtPlaceofBirth.Validating += new System.ComponentModel.CancelEventHandler(this.txtPlaceofBirth_Validating);
             // 
             // txtAge
             // 
@@ -910,7 +898,6 @@
             this.txtAge.Size = new System.Drawing.Size(50, 20);
             this.txtAge.StyleController = this.layoutControl1;
             this.txtAge.TabIndex = 10;
-            this.txtAge.Validating += new System.ComponentModel.CancelEventHandler(this.txtAge_Validating);
             // 
             // dtDob
             // 
@@ -928,7 +915,6 @@
             this.dtDob.Size = new System.Drawing.Size(114, 20);
             this.dtDob.StyleController = this.layoutControl1;
             this.dtDob.TabIndex = 9;
-            this.dtDob.Validating += new System.ComponentModel.CancelEventHandler(this.dtDob_Validating);
             // 
             // txtMaidenMiddleName
             // 
@@ -987,6 +973,7 @@
             this.txtMiddleName.Name = "txtMiddleName";
             this.txtMiddleName.Properties.Mask.EditMask = "\\p{L}+";
             this.txtMiddleName.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.txtMiddleName.Properties.ReadOnly = true;
             this.txtMiddleName.Size = new System.Drawing.Size(208, 20);
             this.txtMiddleName.StyleController = this.layoutControl1;
             this.txtMiddleName.TabIndex = 7;
@@ -997,6 +984,7 @@
             this.txtExtension.Name = "txtExtension";
             this.txtExtension.Properties.Mask.EditMask = "\\p{L}+";
             this.txtExtension.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.txtExtension.Properties.ReadOnly = true;
             this.txtExtension.Size = new System.Drawing.Size(120, 20);
             this.txtExtension.StyleController = this.layoutControl1;
             this.txtExtension.TabIndex = 6;
@@ -1007,10 +995,10 @@
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Properties.Mask.EditMask = "\\p{L}+";
             this.txtFirstName.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.txtFirstName.Properties.ReadOnly = true;
             this.txtFirstName.Size = new System.Drawing.Size(190, 20);
             this.txtFirstName.StyleController = this.layoutControl1;
             this.txtFirstName.TabIndex = 5;
-            this.txtFirstName.Validating += new System.ComponentModel.CancelEventHandler(this.txtFirstName_Validating);
             // 
             // txtLastName
             // 
@@ -1018,10 +1006,11 @@
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Properties.Mask.EditMask = "\\p{L}+";
             this.txtLastName.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.txtLastName.Properties.ReadOnly = true;
             this.txtLastName.Size = new System.Drawing.Size(151, 20);
             this.txtLastName.StyleController = this.layoutControl1;
             this.txtLastName.TabIndex = 4;
-            this.txtLastName.Validating += new System.ComponentModel.CancelEventHandler(this.txtLastName_Validating);
+            this.txtLastName.Click += new System.EventHandler(this.txtLastName_Click);
             // 
             // layoutControlGroup1
             // 
@@ -1082,7 +1071,7 @@
             this.layoutControlItem55,
             this.layoutControlItem56,
             this.layoutControlItem57,
-            this.layoutControlItem58,
+            this.lciSave,
             this.layoutControlItem59});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
@@ -1900,17 +1889,17 @@
             this.layoutControlItem57.TextSize = new System.Drawing.Size(46, 13);
             this.layoutControlItem57.TextToControlDistance = 5;
             // 
-            // layoutControlItem58
+            // lciSave
             // 
-            this.layoutControlItem58.Control = this.btnSave;
-            this.layoutControlItem58.Location = new System.Drawing.Point(458, 595);
-            this.layoutControlItem58.MaxSize = new System.Drawing.Size(228, 27);
-            this.layoutControlItem58.MinSize = new System.Drawing.Size(228, 27);
-            this.layoutControlItem58.Name = "layoutControlItem58";
-            this.layoutControlItem58.Size = new System.Drawing.Size(228, 27);
-            this.layoutControlItem58.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-            this.layoutControlItem58.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem58.TextVisible = false;
+            this.lciSave.Control = this.btnSave;
+            this.lciSave.Location = new System.Drawing.Point(458, 595);
+            this.lciSave.MaxSize = new System.Drawing.Size(228, 27);
+            this.lciSave.MinSize = new System.Drawing.Size(228, 27);
+            this.lciSave.Name = "lciSave";
+            this.lciSave.Size = new System.Drawing.Size(228, 27);
+            this.lciSave.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.lciSave.TextSize = new System.Drawing.Size(0, 0);
+            this.lciSave.TextVisible = false;
             // 
             // layoutControlItem59
             // 
@@ -1941,6 +1930,12 @@
             // errorProvider
             // 
             this.errorProvider.ContainerControl = this.layoutControl1;
+            // 
+            // bwEditPatient
+            // 
+            this.bwEditPatient.WorkerSupportsCancellation = true;
+            this.bwEditPatient.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwEditPatient_DoWork);
+            this.bwEditPatient.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwEditPatient_RunWorkerCompleted);
             // 
             // PatientRecordAddForm
             // 
@@ -2077,7 +2072,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem55)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem56)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem57)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem58)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciSave)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem59)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
@@ -2158,7 +2153,7 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem56;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem57;
         private DevExpress.XtraEditors.SimpleButton btnSave;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem58;
+        private DevExpress.XtraLayout.LayoutControlItem lciSave;
         private DevExpress.XtraEditors.SimpleButton btnCancel;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem59;
         private System.ComponentModel.BackgroundWorker bwAddPatient;
@@ -2216,5 +2211,6 @@
         public DevExpress.XtraEditors.TextEdit txtMotherMiddleName;
         public DevExpress.XtraEditors.DateEdit dtMotherDob;
         public DevExpress.XtraEditors.TextEdit txtMotherDisability;
+        private System.ComponentModel.BackgroundWorker bwEditPatient;
     }
 }
