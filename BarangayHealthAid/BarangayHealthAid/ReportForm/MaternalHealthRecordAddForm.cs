@@ -10,6 +10,7 @@ using DevExpress.XtraEditors;
 using DevExpress.XtraEditors;
 using BarangayHealthAid.Core;
 using BarangayHealthAid.Dal;
+using DevExpress.XtraLayout;
 
 namespace BarangayHealthAid.ReportForm
 {
@@ -60,15 +61,39 @@ namespace BarangayHealthAid.ReportForm
 
         private string Checklist = "";
         public bool isAdd = true;
+        public bool is_view = false;
         private void MaternalHealthRecordAddForm_Load(object sender, EventArgs e)
         {
             layoutControl1.AllowCustomization = false;
+            if (is_view)
+            {
+                foreach (BaseLayoutItem item in layoutControl1.Items)
+                {
+                    LayoutControlItem layoutControlItem = item as LayoutControlItem;
+                    if (layoutControlItem != null)
+                    {
+                        BaseEdit component = layoutControlItem.Control as BaseEdit;
+                        if (component != null)
+                        {
+                            component.Properties.ReadOnly = true;
+                        }
+                    }
+                }
+                btnSave.Enabled = false;
+                lciSave.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
+                btnCancel.Text = "Close";
+            }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            MsgBox.QuestionYesNo("Are you sure you want to cancel creation of record?\nDetails inputed will not be saved.");
-            if (MsgBox.isYes)
+            if (!is_view)
+            {
+                MsgBox.QuestionYesNo("Are you sure you want to cancel creation of record?\nDetails inputed will not be saved.");
+                if (MsgBox.isYes)
+                    this.Close();
+            }
+            else
                 this.Close();
         }
 
