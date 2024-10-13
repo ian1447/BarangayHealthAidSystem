@@ -1160,7 +1160,6 @@
             this.xrTableCell99.StylePriority.UseFont = false;
             this.xrTableCell99.StylePriority.UseForeColor = false;
             this.xrTableCell99.StylePriority.UseTextAlignment = false;
-            this.xrTableCell99.Text = "   ";
             this.xrTableCell99.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomCenter;
             this.xrTableCell99.Weight = 0.537214518342961D;
             // 
@@ -1202,7 +1201,6 @@
             this.xrTableCell106.StylePriority.UseFont = false;
             this.xrTableCell106.StylePriority.UseForeColor = false;
             this.xrTableCell106.StylePriority.UseTextAlignment = false;
-            this.xrTableCell106.Text = "[Age:]";
             this.xrTableCell106.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomCenter;
             this.xrTableCell106.Weight = 0.367641825177632D;
             // 

@@ -7,7 +7,6 @@ using System.Text;
 using System.Linq;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
-using DevExpress.XtraEditors;
 using BarangayHealthAid.Core;
 using BarangayHealthAid.Dal;
 using DevExpress.XtraLayout;

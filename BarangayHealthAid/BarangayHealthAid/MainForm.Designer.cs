@@ -87,6 +87,7 @@
             this.btnForm4b.Id = 2;
             this.btnForm4b.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnForm4b.LargeGlyph")));
             this.btnForm4b.Name = "btnForm4b";
+            this.btnForm4b.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             this.btnForm4b.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnForm4b_ItemClick);
             // 
             // btnMaternalHealth

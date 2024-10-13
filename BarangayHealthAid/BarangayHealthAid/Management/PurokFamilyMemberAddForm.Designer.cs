@@ -267,6 +267,7 @@
             this.txtPlaceofBirth.Size = new System.Drawing.Size(159, 20);
             this.txtPlaceofBirth.StyleController = this.layoutControl1;
             this.txtPlaceofBirth.TabIndex = 6;
+            this.txtPlaceofBirth.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPlaceofBirth_KeyPress);
             // 
             // txtMiddleName
             // 

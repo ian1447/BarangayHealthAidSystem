@@ -83,6 +83,12 @@ namespace BarangayHealthAid.Management
             if (char.IsNumber(e.KeyChar))
                 e.Handled = true;
         }
+
+        private void txtPlaceofBirth_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar))
+                e.Handled = true;
+        }
         #endregion
 
         public int purok_member_id,edit_id;
@@ -184,6 +190,5 @@ namespace BarangayHealthAid.Management
                 btnCancel.Text = "Close";
             }
         }
-
     }
 }

@@ -17,6 +17,45 @@ namespace BarangayHealthAid.ReportForm
             InitializeComponent();
         }
 
+        #region UTIL
+        bool loadingIsAlreadyShowing = false;
+        private void ShowLoading(string message)
+        {
+            try
+            {
+                foreach (Control c in this.Controls)
+                {
+                    c.Enabled = false;
+                }
+
+                if (!loadingIsAlreadyShowing)
+                {
+                    loadingIsAlreadyShowing = true;
+                    splashScreenManager1.ShowWaitForm();
+                }
+                splashScreenManager1.SetWaitFormDescription(message);
+            }
+            catch { }
+        }
+
+        private void HideLoading()
+        {
+            try
+            {
+                foreach (Control c in this.Controls)
+                {
+                    c.Enabled = true;
+                }
+
+                loadingIsAlreadyShowing = false;
+                splashScreenManager1.CloseWaitForm();
+            }
+            catch { }
+        }
+
+        #endregion
+
+        #region subCatOpen/close
         private void rgType_SelectedIndexChanged(object sender, EventArgs e)
         {
             rgSub.Enabled = rgType.SelectedIndex == 1 ? true: false;
@@ -84,6 +123,12 @@ namespace BarangayHealthAid.ReportForm
         {
             if (!rgCurMeth.Enabled)
                 rgCurMeth.SelectedIndex = -1;
+        }
+        #endregion
+
+        private void clbMedHistory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
