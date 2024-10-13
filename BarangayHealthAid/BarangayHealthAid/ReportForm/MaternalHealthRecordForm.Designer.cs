@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MaternalHealthRecordForm));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.btnAddHistory = new DevExpress.XtraEditors.SimpleButton();
             this.btnView = new DevExpress.XtraEditors.SimpleButton();
             this.btnEdit = new DevExpress.XtraEditors.SimpleButton();
             this.btnRefresh = new DevExpress.XtraEditors.SimpleButton();
@@ -57,6 +58,7 @@
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::BarangayHealthAid.WaitForm1), true, true);
             this.bwGetMaternalRecord = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -74,10 +76,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.btnAddHistory);
             this.layoutControl1.Controls.Add(this.btnView);
             this.layoutControl1.Controls.Add(this.btnEdit);
             this.layoutControl1.Controls.Add(this.btnRefresh);
@@ -87,16 +91,27 @@
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
-            this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(732, 405, 250, 350);
+            this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(732, 405, 446, 385);
             this.layoutControl1.Root = this.layoutControlGroup1;
             this.layoutControl1.Size = new System.Drawing.Size(1188, 584);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
+            // btnAddHistory
+            // 
+            this.btnAddHistory.Image = ((System.Drawing.Image)(resources.GetObject("btnAddHistory.Image")));
+            this.btnAddHistory.Location = new System.Drawing.Point(812, 12);
+            this.btnAddHistory.Name = "btnAddHistory";
+            this.btnAddHistory.Size = new System.Drawing.Size(147, 22);
+            this.btnAddHistory.StyleController = this.layoutControl1;
+            this.btnAddHistory.TabIndex = 10;
+            this.btnAddHistory.Text = "Add Maternal History";
+            this.btnAddHistory.Click += new System.EventHandler(this.btnAddHistory_Click);
+            // 
             // btnView
             // 
             this.btnView.Image = ((System.Drawing.Image)(resources.GetObject("btnView.Image")));
-            this.btnView.Location = new System.Drawing.Point(812, 12);
+            this.btnView.Location = new System.Drawing.Point(661, 12);
             this.btnView.Name = "btnView";
             this.btnView.Size = new System.Drawing.Size(147, 22);
             this.btnView.StyleController = this.layoutControl1;
@@ -107,7 +122,7 @@
             // btnEdit
             // 
             this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
-            this.btnEdit.Location = new System.Drawing.Point(661, 12);
+            this.btnEdit.Location = new System.Drawing.Point(510, 12);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(147, 22);
             this.btnEdit.StyleController = this.layoutControl1;
@@ -140,7 +155,7 @@
             // btnAdd
             // 
             this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
-            this.btnAdd.Location = new System.Drawing.Point(526, 12);
+            this.btnAdd.Location = new System.Drawing.Point(375, 12);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(131, 22);
             this.btnAdd.StyleController = this.layoutControl1;
@@ -273,7 +288,8 @@
             this.layoutControlItem3,
             this.layoutControlItem4,
             this.layoutControlItem5,
-            this.layoutControlItem6});
+            this.layoutControlItem6,
+            this.layoutControlItem7});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Size = new System.Drawing.Size(1188, 584);
@@ -285,7 +301,7 @@
             this.emptySpaceItem2.Location = new System.Drawing.Point(0, 0);
             this.emptySpaceItem2.MinSize = new System.Drawing.Size(104, 24);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(514, 24);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(363, 24);
             this.emptySpaceItem2.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
@@ -294,7 +310,7 @@
             this.simpleSeparator1.AllowHotTrack = false;
             this.simpleSeparator1.Location = new System.Drawing.Point(0, 24);
             this.simpleSeparator1.Name = "simpleSeparator1";
-            this.simpleSeparator1.Size = new System.Drawing.Size(514, 2);
+            this.simpleSeparator1.Size = new System.Drawing.Size(363, 2);
             // 
             // layoutControlGroup2
             // 
@@ -317,7 +333,7 @@
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.btnAdd;
-            this.layoutControlItem2.Location = new System.Drawing.Point(514, 0);
+            this.layoutControlItem2.Location = new System.Drawing.Point(363, 0);
             this.layoutControlItem2.MaxSize = new System.Drawing.Size(135, 26);
             this.layoutControlItem2.MinSize = new System.Drawing.Size(135, 26);
             this.layoutControlItem2.Name = "layoutControlItem2";
@@ -353,7 +369,7 @@
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.btnEdit;
-            this.layoutControlItem5.Location = new System.Drawing.Point(649, 0);
+            this.layoutControlItem5.Location = new System.Drawing.Point(498, 0);
             this.layoutControlItem5.MaxSize = new System.Drawing.Size(151, 26);
             this.layoutControlItem5.MinSize = new System.Drawing.Size(151, 26);
             this.layoutControlItem5.Name = "layoutControlItem5";
@@ -365,7 +381,7 @@
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.btnView;
-            this.layoutControlItem6.Location = new System.Drawing.Point(800, 0);
+            this.layoutControlItem6.Location = new System.Drawing.Point(649, 0);
             this.layoutControlItem6.MaxSize = new System.Drawing.Size(151, 26);
             this.layoutControlItem6.MinSize = new System.Drawing.Size(151, 26);
             this.layoutControlItem6.Name = "layoutControlItem6";
@@ -373,6 +389,18 @@
             this.layoutControlItem6.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem6.TextVisible = false;
+            // 
+            // layoutControlItem7
+            // 
+            this.layoutControlItem7.Control = this.btnAddHistory;
+            this.layoutControlItem7.Location = new System.Drawing.Point(800, 0);
+            this.layoutControlItem7.MaxSize = new System.Drawing.Size(151, 26);
+            this.layoutControlItem7.MinSize = new System.Drawing.Size(151, 26);
+            this.layoutControlItem7.Name = "layoutControlItem7";
+            this.layoutControlItem7.Size = new System.Drawing.Size(151, 26);
+            this.layoutControlItem7.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem7.TextVisible = false;
             // 
             // bwGetMaternalRecord
             // 
@@ -405,6 +433,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -441,5 +470,7 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
         private DevExpress.XtraEditors.SimpleButton btnView;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
+        private DevExpress.XtraEditors.SimpleButton btnAddHistory;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
     }
 }

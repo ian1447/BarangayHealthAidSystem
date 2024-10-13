@@ -61,6 +61,8 @@ namespace BarangayHealthAid.ReportForm
         private string Checklist = "";
         public bool isAdd = true;
         public bool is_view = false;
+        private int _purok_family_member_id;
+        DataRow[] filtered;
         private void MaternalHealthRecordAddForm_Load(object sender, EventArgs e)
         {
             layoutControl1.AllowCustomization = false;
@@ -118,8 +120,7 @@ namespace BarangayHealthAid.ReportForm
 
         private void bwAddRecord_DoWork(object sender, DoWorkEventArgs e)
         {
-            MaternalHealth.AddMaternalHealthRecord(txtName.Text,txtAge.Text,dtDob.Text,txtHeight.Text,txtHusbandName.Text,txtOccupation.Text,txtAddress.Text,txtContactNo.Text,
-txtbornalive.Text, txtliving.Text, txtAbortion.Text, txtFetalDeaths.Text, txtLastDelivery.Text, txtLargeBabies.Text, txtDiabetes.Text, txtPrevIllness.Text, txtAllergy.Text, txtPrevHosp.Text, txtGravida.Text, txtPara.Text, txtA.Text, txtStillBirth.Text, txtLMP.Text, txtEDC.Text, txtWhereDel.Text, txtAttended.Text, txtScreeningPlan.Text, txtRiskCodes.Text, dtTT1.Text, dtTT2.Text, dtTT3.Text, dtTT4.Text, dtTT5.Text, txtUrinalysis.Text, txtHbsAntigen.Text, txtCBC.Text, txtRPR.Text, txtBloodTyping.Text, txtHIV.Text, txtComplications.Text, Checklist, dtVitA.Text, txtVitADescribed.Text, dtIronFolic4.Text, dtIronFolic5.Text, dtIronFolic6.Text, dtIronFolic7.Text, dtIronFolic8.Text, dtIronFolic9.Text);
+            MaternalHealth.AddMaternalHealthRecord(_purok_family_member_id, txtName.Text, txtAge.Text, dtDob.Text, txtHeight.Text, txtHusbandName.Text, txtOccupation.Text, txtAddress.Text, txtContactNo.Text,txtbornalive.Text, txtliving.Text, txtAbortion.Text, txtFetalDeaths.Text, txtLastDelivery.Text, txtLargeBabies.Text, txtDiabetes.Text, txtPrevIllness.Text, txtAllergy.Text, txtPrevHosp.Text, txtGravida.Text, txtPara.Text, txtA.Text, txtStillBirth.Text, txtLMP.Text, txtEDC.Text, txtWhereDel.Text, txtAttended.Text, txtScreeningPlan.Text, txtRiskCodes.Text, dtTT1.Text, dtTT2.Text, dtTT3.Text, dtTT4.Text, dtTT5.Text, txtUrinalysis.Text, txtHbsAntigen.Text, txtCBC.Text, txtRPR.Text, txtBloodTyping.Text, txtHIV.Text, txtComplications.Text, Checklist, dtVitA.Text, txtVitADescribed.Text, dtIronFolic4.Text, dtIronFolic5.Text, dtIronFolic6.Text, dtIronFolic7.Text, dtIronFolic8.Text, dtIronFolic9.Text);
             bwAddRecord.CancelAsync();
         }
 
@@ -133,6 +134,23 @@ txtbornalive.Text, txtliving.Text, txtAbortion.Text, txtFetalDeaths.Text, txtLas
             }
             else
                 MsgBox.Error(MaternalHealth.AddMaternalHealthRecordErrorMessage);
+        }
+
+        private void txtName_Click(object sender, EventArgs e)
+        {
+            if (!is_view)
+            {
+                SelectPurokFamilyMemberForm spf = new SelectPurokFamilyMemberForm();
+                spf.ShowDialog();
+                filtered = spf.filtered;
+                _purok_family_member_id = spf._purok_family_member_id;
+                if (filtered != null && filtered.Count() > 0)
+                {
+                    txtName.Text = filtered[0]["name"].ToString();
+                    dtDob.EditValue = Convert.ToDateTime(filtered[0]["formated_dob"].ToString());
+                    txtAge.Text = filtered[0]["age"].ToString();
+                }
+            }
         }
     }
 }

@@ -1047,6 +1047,7 @@
             this.dtDob.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.dtDob.Properties.EditFormat.FormatString = "yyyy-MM-dd";
             this.dtDob.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.dtDob.Properties.ReadOnly = true;
             this.dtDob.Size = new System.Drawing.Size(206, 20);
             this.dtDob.StyleController = this.layoutControl1;
             this.dtDob.TabIndex = 10;
@@ -1057,6 +1058,7 @@
             this.txtAge.Name = "txtAge";
             this.txtAge.Properties.Mask.EditMask = "n";
             this.txtAge.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtAge.Properties.ReadOnly = true;
             this.txtAge.Size = new System.Drawing.Size(70, 20);
             this.txtAge.StyleController = this.layoutControl1;
             this.txtAge.TabIndex = 5;
@@ -1067,9 +1069,11 @@
             this.txtName.Name = "txtName";
             this.txtName.Properties.Mask.EditMask = "\\p{L}+";
             this.txtName.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.txtName.Properties.ReadOnly = true;
             this.txtName.Size = new System.Drawing.Size(345, 20);
             this.txtName.StyleController = this.layoutControl1;
             this.txtName.TabIndex = 4;
+            this.txtName.Click += new System.EventHandler(this.txtName_Click);
             // 
             // layoutControlGroup1
             // 

@@ -364,12 +364,30 @@ namespace BarangayHealthAid.ReportForm
                     mhaf.dtIronFolic7.Text = filtered[0]["iron_folic_7"].ToString();
                     mhaf.dtIronFolic8.Text = filtered[0]["iron_folic_8"].ToString();
                     mhaf.dtIronFolic9.Text = filtered[0]["iron_folic_9"].ToString();
+                    string[] items = filtered[0]["checklist"].ToString().Split(',');
+                    foreach (string item in items)
+                    {
+                        mhaf.clbChecklist.SelectedValue = item;
+                    }
                     mhaf.is_view = true;
                     mhaf.ShowDialog();
                 }
             }
             else
                 MsgBox.Error("No Record Selected.");
+        }
+
+        private void btnAddHistory_Click(object sender, EventArgs e)
+        {
+            if (SelectionPass())
+            {
+                int id = Convert.ToInt32(gvMaternal.GetFocusedRowCellValue("id").ToString());
+                MaternalHealthRecordHistoryForm mhrh = new MaternalHealthRecordHistoryForm();
+                mhrh._maternal_health_id = id;
+                mhrh.ShowDialog();
+            }
+            else
+                MsgBox.Warning("No selected patient.");
         }
     }
 }

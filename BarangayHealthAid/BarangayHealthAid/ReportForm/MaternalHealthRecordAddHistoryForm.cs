@@ -7,6 +7,9 @@ using System.Text;
 using System.Linq;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using DevExpress.XtraLayout;
+using BarangayHealthAid.Core;
+using BarangayHealthAid.Dal;
 
 namespace BarangayHealthAid.ReportForm
 {
@@ -53,5 +56,66 @@ namespace BarangayHealthAid.ReportForm
             catch { }
         }
         #endregion
+
+        public int maternal_health_id;
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (CheckValidate())
+            {
+                if (!bwAddMaternalHistory.IsBusy)
+                {
+                    ShowLoading("Adding History...");
+                    bwAddMaternalHistory.RunWorkerAsync();
+                }
+            }
+            else
+                MsgBox.Warning("Please fill up form.");
+        }
+
+        private bool CheckValidate()
+        {
+            foreach (BaseLayoutItem item in layoutControl1.Items)
+            {
+                LayoutControlItem layoutControlItem = item as LayoutControlItem;
+                if (layoutControlItem != null)
+                {
+                    BaseEdit component = layoutControlItem.Control as BaseEdit;
+                    if (component != null)
+                    {
+                        if (string.IsNullOrEmpty(component.Text.ToString()))
+                        {
+                            return false;
+                        }
+                    }
+                }
+            }
+            return true;
+        }
+
+        private void bwAddMaternalHistory_DoWork(object sender, DoWorkEventArgs e)
+        {
+            MaternalHealth.AddMaternalHealthRecordHistory(maternal_health_id, txtAog.Text, txtWeight.Text, txtbp.Text, txtfh.Text, txtfhb.Text, txtFetus.Text, txtFindings.Text, meNotes.Text);
+            bwAddMaternalHistory.CancelAsync();
+        }
+
+        private void bwAddMaternalHistory_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            HideLoading();
+            if (MaternalHealth.AddMaternalHealthRecordHistoryIsSuccessful)
+            {
+                MsgBox.Information("Adding history successful.");
+                this.Close();
+            }
+            else
+                MsgBox.Error(MaternalHealth.AddMaternalHealthRecordHistoryErrorMessage);
+        }
+
+
     }
 }

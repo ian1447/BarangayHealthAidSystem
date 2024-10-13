@@ -43,9 +43,38 @@ namespace BarangayHealthAid.Dal
             }
         }
 
+        public static string GetMaternalHealthRecordHistoryErrorMessage;
+        public static bool GetMaternalHealthRecordHistoryIsSuccessful;
+        public static DataTable GetMaternalHealthRecordHistory(int _maternal_health_record_id)
+        {
+            DataSet dt = new DataSet();
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(ConnectionString()))
+                {
+                    con.Open();
+                    MySqlCommand cmd = new MySqlCommand("sp_maternal_health_history_get", con);
+                    cmd.Parameters.Add(new MySqlParameter("_maternal_health_record_id", _maternal_health_record_id));
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    MySqlDataAdapter adp = new MySqlDataAdapter(cmd);
+                    adp.Fill(dt);
+                    con.Close();
+                    GetMaternalHealthRecordHistoryIsSuccessful = true;
+                    return dt.Tables[0];
+                }
+            }
+
+            catch (Exception ex)
+            {
+                GetMaternalHealthRecordHistoryIsSuccessful = false;
+                GetMaternalHealthRecordHistoryErrorMessage = ex.Message + "\nFunction : Get Patient Maternal Health Record History";
+                return null;
+            }
+        }
+
         public static string AddMaternalHealthRecordErrorMessage;
         public static bool AddMaternalHealthRecordIsSuccessful;
-        public static void AddMaternalHealthRecord(string _name, string _age, string _dob, string _height, string _husband_name, string _occupation, string _address, string _contact_no, string _no_children_born_alive, string _living_children, string _abortion, string _fetal_deaths, string _type_last_delivery, string _largebabies, string _diabetes, string _previous_illness, string _allergy, string _previous_hospitalization, string _gravida, string _PARA, string _A, string _stillbirth, string _LMP, string _EDC, string _where_to_deliver, string _attended_by, string _new_born_screening_plan, string _risk_codes, string _tt1, string _tt2, string _tt3, string _tt4, string _tt5, string _urinalysis, string _hbs_antigen, string _CBC, string _RPR, string _blood_typing, string _HIV, string _prev_pregnancy_complic, string _checklist, string _vit_a_date_given, string _vit_a_prescribed, string _iron_folic_4, string _iron_folic_5, string _iron_folic_6, string _iron_folic_7, string _iron_folic_8, string _iron_folic_9)
+        public static void AddMaternalHealthRecord(int _patient_id, string _name, string _age, string _dob, string _height, string _husband_name, string _occupation, string _address, string _contact_no, string _no_children_born_alive, string _living_children, string _abortion, string _fetal_deaths, string _type_last_delivery, string _largebabies, string _diabetes, string _previous_illness, string _allergy, string _previous_hospitalization, string _gravida, string _PARA, string _A, string _stillbirth, string _LMP, string _EDC, string _where_to_deliver, string _attended_by, string _new_born_screening_plan, string _risk_codes, string _tt1, string _tt2, string _tt3, string _tt4, string _tt5, string _urinalysis, string _hbs_antigen, string _CBC, string _RPR, string _blood_typing, string _HIV, string _prev_pregnancy_complic, string _checklist, string _vit_a_date_given, string _vit_a_prescribed, string _iron_folic_4, string _iron_folic_5, string _iron_folic_6, string _iron_folic_7, string _iron_folic_8, string _iron_folic_9)
         {
             DataSet dt = new DataSet();
             try
@@ -54,7 +83,7 @@ namespace BarangayHealthAid.Dal
                 {
                     con.Open();
                     MySqlCommand cmd = new MySqlCommand("sp_maternal_health_record_add", con);
-                    cmd.Parameters.Add(new MySqlParameter("_patient_id", "0"));
+                    cmd.Parameters.Add(new MySqlParameter("_patient_id", _patient_id));
                     cmd.Parameters.Add(new MySqlParameter("_name", _name));
                     cmd.Parameters.Add(new MySqlParameter("_age", _age));
                     cmd.Parameters.Add(new MySqlParameter("_dob", _dob));
@@ -117,6 +146,42 @@ namespace BarangayHealthAid.Dal
             {
                 AddMaternalHealthRecordIsSuccessful = false;
                 AddMaternalHealthRecordErrorMessage = ex.Message + "\nFunction : Add Maternal Health Record";
+            }
+        }
+
+        public static string AddMaternalHealthRecordHistoryErrorMessage;
+        public static bool AddMaternalHealthRecordHistoryIsSuccessful;
+        public static void AddMaternalHealthRecordHistory(int _maternal_health_record_id, string _aog, string _weight, string _bp, string _fh, string _fhb, string _presenting_part_of_fetus, string _findings, string _notes)
+        {
+            DataSet dt = new DataSet();
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(ConnectionString()))
+                {
+                    con.Open();
+                    MySqlCommand cmd = new MySqlCommand("sp_maternal_health_history_add", con);
+                    cmd.Parameters.Add(new MySqlParameter("_maternal_health_record_id", _maternal_health_record_id));
+                    cmd.Parameters.Add(new MySqlParameter("_aog", _aog));
+                    cmd.Parameters.Add(new MySqlParameter("_weight", _weight));
+                    cmd.Parameters.Add(new MySqlParameter("_bp", _bp));
+                    cmd.Parameters.Add(new MySqlParameter("_fh", _fh));
+                    cmd.Parameters.Add(new MySqlParameter("_fhb", _fhb));
+                    cmd.Parameters.Add(new MySqlParameter("_presenting_part_of_fetus", _presenting_part_of_fetus));
+                    cmd.Parameters.Add(new MySqlParameter("_findings", _findings));
+                    cmd.Parameters.Add(new MySqlParameter("_notes", _notes));
+                    cmd.Parameters.Add(new MySqlParameter("_added_by", PublicVariables.Userid));
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    MySqlDataAdapter adp = new MySqlDataAdapter(cmd);
+                    adp.Fill(dt);
+                    con.Close();
+                    AddMaternalHealthRecordHistoryIsSuccessful = true;
+                }
+            }
+
+            catch (Exception ex)
+            {
+                AddMaternalHealthRecordHistoryIsSuccessful = false;
+                AddMaternalHealthRecordHistoryErrorMessage = ex.Message + "\nFunction : Add Maternal Health Record History";
             }
         }
     }
