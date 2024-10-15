@@ -61,6 +61,7 @@
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::BarangayHealthAid.WaitForm1), true, true);
             this.bwGetMaternalRecord = new System.ComponentModel.BackgroundWorker();
+            this.bwGetHistory = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtMaternal)).BeginInit();
@@ -408,6 +409,12 @@
             this.bwGetMaternalRecord.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwGetMaternalRecord_DoWork);
             this.bwGetMaternalRecord.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwGetMaternalRecord_RunWorkerCompleted);
             // 
+            // bwGetHistory
+            // 
+            this.bwGetHistory.WorkerSupportsCancellation = true;
+            this.bwGetHistory.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwGetHistory_DoWork);
+            this.bwGetHistory.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwGetHistory_RunWorkerCompleted);
+            // 
             // MaternalHealthRecordForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -472,5 +479,6 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
         private DevExpress.XtraEditors.SimpleButton btnAddHistory;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
+        private System.ComponentModel.BackgroundWorker bwGetHistory;
     }
 }

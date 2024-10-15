@@ -601,10 +601,10 @@
             this.labelControl6.Location = new System.Drawing.Point(361, 384);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Padding = new System.Windows.Forms.Padding(2, 0, 0, 0);
-            this.labelControl6.Size = new System.Drawing.Size(156, 14);
+            this.labelControl6.Size = new System.Drawing.Size(71, 14);
             this.labelControl6.StyleController = this.layoutControl1;
             this.labelControl6.TabIndex = 12;
-            this.labelControl6.Text = "TETANUS TOXOID STATUS";
+            this.labelControl6.Text = "CHECKLIST:";
             // 
             // txtComplications
             // 
@@ -669,10 +669,10 @@
             this.labelControl5.Location = new System.Drawing.Point(361, 250);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Padding = new System.Windows.Forms.Padding(2, 0, 0, 0);
-            this.labelControl5.Size = new System.Drawing.Size(156, 14);
+            this.labelControl5.Size = new System.Drawing.Size(134, 14);
             this.labelControl5.StyleController = this.layoutControl1;
             this.labelControl5.TabIndex = 11;
-            this.labelControl5.Text = "TETANUS TOXOID STATUS";
+            this.labelControl5.Text = "LABORATORY EXAMS:";
             // 
             // dtTT5
             // 
