@@ -139,6 +139,18 @@
     <Compile Include="Management\PurokMemberAddForm.Designer.cs">
       <DependentUpon>PurokMemberAddForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="OutPatient\ChildHistoryAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OutPatient\ChildHistoryAddForm.Designer.cs">
+      <DependentUpon>ChildHistoryAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OutPatient\ChildHistoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OutPatient\ChildHistoryForm.Designer.cs">
+      <DependentUpon>ChildHistoryForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="OutPatient\OutPatientAddForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -305,6 +317,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Management\PurokMemberAddForm.resx">
       <DependentUpon>PurokMemberAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OutPatient\ChildHistoryAddForm.resx">
+      <DependentUpon>ChildHistoryAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OutPatient\ChildHistoryForm.resx">
+      <DependentUpon>ChildHistoryForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OutPatient\OutPatientAddForm.resx">
       <DependentUpon>OutPatientAddForm.cs</DependentUpon>

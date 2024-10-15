@@ -120,5 +120,65 @@ namespace BarangayHealthAid.Dal
                 OutPatientEditErrorMessage = ex.Message + "\nFunction : Edit Out Patient";
             }
         }
+
+        public static string ChildGetHistoryErrorMessage;
+        public static bool ChildGetHistoryIsSuccessful;
+        public static DataTable ChildGetHistory(int _mode, int _show_history)
+        {
+            DataSet dt = new DataSet();
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(ConnectionString()))
+                {
+                    con.Open();
+                    MySqlCommand cmd = new MySqlCommand("sp_chlid_sub_opt_get", con);
+                    cmd.Parameters.Add(new MySqlParameter("_mode", _mode));
+                    cmd.Parameters.Add(new MySqlParameter("_show_history", _show_history));
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    MySqlDataAdapter adp = new MySqlDataAdapter(cmd);
+                    adp.Fill(dt);
+                    con.Close();
+                    ChildGetHistoryIsSuccessful = true;
+                    return dt.Tables[0];
+                }
+            }
+
+            catch (Exception ex)
+            {
+                ChildGetHistoryIsSuccessful = false;
+                ChildGetHistoryErrorMessage = ex.Message + "\nFunction : Get Child History";
+                return null;    
+            }
+        }
+
+        public static string ChildAddHistoryErrorMessage;
+        public static bool ChildAddHistoryIsSuccessful;
+        public static void ChildAddHistory(int _out_patient_id, string _remarks, int _mode)
+        {
+            DataSet dt = new DataSet();
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(ConnectionString()))
+                {
+                    con.Open();
+                    MySqlCommand cmd = new MySqlCommand("sp_child_sub_opt_add", con);
+                    cmd.Parameters.Add(new MySqlParameter("_out_patient_id", _out_patient_id));
+                    cmd.Parameters.Add(new MySqlParameter("_remarks", _remarks));
+                    cmd.Parameters.Add(new MySqlParameter("_mode", _mode));
+                    cmd.Parameters.Add(new MySqlParameter("_added_by", PublicVariables.Userid));
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    MySqlDataAdapter adp = new MySqlDataAdapter(cmd);
+                    adp.Fill(dt);
+                    con.Close();
+                    ChildAddHistoryIsSuccessful = true;
+                }
+            }
+
+            catch (Exception ex)
+            {
+                ChildAddHistoryIsSuccessful = false;
+                ChildAddHistoryErrorMessage = ex.Message + "\nFunction : Add Child History";
+            }
+        }
     }
 }

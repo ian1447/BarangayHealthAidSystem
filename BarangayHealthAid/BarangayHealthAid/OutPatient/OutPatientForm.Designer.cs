@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OutPatientForm));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.btnAddHistory = new DevExpress.XtraEditors.SimpleButton();
             this.cmbdateperiod = new DevExpress.XtraEditors.SearchLookUpEdit();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.cmbCategory = new DevExpress.XtraEditors.ComboBoxEdit();
@@ -59,6 +60,7 @@
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciHistory = new DevExpress.XtraLayout.LayoutControlItem();
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::BarangayHealthAid.WaitForm1), true, true);
             this.bwGetOutPatientData = new System.ComponentModel.BackgroundWorker();
             this.pnlDates = new DevExpress.XtraEditors.PanelControl();
@@ -85,6 +87,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciHistory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlDates)).BeginInit();
             this.pnlDates.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtpTo.Properties.CalendarTimeProperties)).BeginInit();
@@ -95,6 +98,7 @@
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.btnAddHistory);
             this.layoutControl1.Controls.Add(this.cmbdateperiod);
             this.layoutControl1.Controls.Add(this.cmbCategory);
             this.layoutControl1.Controls.Add(this.btnEdit);
@@ -110,6 +114,17 @@
             this.layoutControl1.Size = new System.Drawing.Size(1003, 570);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // btnAddHistory
+            // 
+            this.btnAddHistory.Image = ((System.Drawing.Image)(resources.GetObject("btnAddHistory.Image")));
+            this.btnAddHistory.Location = new System.Drawing.Point(404, 12);
+            this.btnAddHistory.Name = "btnAddHistory";
+            this.btnAddHistory.Size = new System.Drawing.Size(148, 22);
+            this.btnAddHistory.StyleController = this.layoutControl1;
+            this.btnAddHistory.TabIndex = 399;
+            this.btnAddHistory.Text = "Add Deworming/Vitamins";
+            this.btnAddHistory.Click += new System.EventHandler(this.btnAddHistory_Click);
             // 
             // cmbdateperiod
             // 
@@ -143,7 +158,6 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cmbCategory.Properties.Items.AddRange(new object[] {
             "Child",
-            "Family Planning",
             "Maternal"});
             this.cmbCategory.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.cmbCategory.Size = new System.Drawing.Size(105, 20);
@@ -363,7 +377,8 @@
             this.layoutControlItem4,
             this.layoutControlItem5,
             this.layoutControlItem7,
-            this.layoutControlItem6});
+            this.layoutControlItem6,
+            this.lciHistory});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Size = new System.Drawing.Size(1003, 570);
@@ -374,7 +389,7 @@
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.Location = new System.Drawing.Point(352, 0);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(192, 26);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(40, 26);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlGroup2
@@ -466,6 +481,18 @@
             this.layoutControlItem6.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem6.Text = "Period:";
             this.layoutControlItem6.TextSize = new System.Drawing.Size(49, 13);
+            // 
+            // lciHistory
+            // 
+            this.lciHistory.Control = this.btnAddHistory;
+            this.lciHistory.Location = new System.Drawing.Point(392, 0);
+            this.lciHistory.MaxSize = new System.Drawing.Size(152, 26);
+            this.lciHistory.MinSize = new System.Drawing.Size(152, 26);
+            this.lciHistory.Name = "lciHistory";
+            this.lciHistory.Size = new System.Drawing.Size(152, 26);
+            this.lciHistory.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.lciHistory.TextSize = new System.Drawing.Size(0, 0);
+            this.lciHistory.TextVisible = false;
             // 
             // bwGetOutPatientData
             // 
@@ -592,6 +619,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciHistory)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlDates)).EndInit();
             this.pnlDates.ResumeLayout(false);
             this.pnlDates.PerformLayout();
@@ -643,5 +671,7 @@
         private DevExpress.XtraEditors.DateEdit dtpTo;
         private DevExpress.XtraEditors.DateEdit dtpFrom;
         private DevExpress.XtraGrid.Columns.GridColumn remarks;
+        private DevExpress.XtraEditors.SimpleButton btnAddHistory;
+        private DevExpress.XtraLayout.LayoutControlItem lciHistory;
     }
 }

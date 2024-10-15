@@ -267,17 +267,33 @@ namespace BarangayHealthAid.OutPatient
                 GridColumn column2 = gvOutPatient.Columns[4];
                 column2.FieldName = "age";
                 column2.Caption = "Age";
+                lciHistory.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             }
-            else
+            else if (cmbCategory.Text == "Child")
             {
                 GridColumn column = gvOutPatient.Columns[2];
                 column.FieldName = "name_of_child";
                 GridColumn column2 = gvOutPatient.Columns[4];
                 column2.FieldName = "age_in_months";
                 column2.Caption = "Age in months";
+                lciHistory.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
             }
             gvOutPatient.RefreshData();
             LoadData();
+        }
+
+        private void btnAddHistory_Click(object sender, EventArgs e)
+        {
+            if (SelectionPass())
+            {
+                int selected_id = Convert.ToInt32(gvOutPatient.GetFocusedRowCellValue("id").ToString());
+                ChildHistoryForm chf = new ChildHistoryForm();
+                chf.selected_id = selected_id;
+                chf.lblChildName.Text = gvOutPatient.GetFocusedRowCellValue("name_of_child").ToString();
+                chf.ShowDialog();
+            }
+            else
+                MsgBox.Error("No Patient selected.  ");
         }
     }
 }
