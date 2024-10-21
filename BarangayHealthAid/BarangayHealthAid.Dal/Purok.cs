@@ -333,6 +333,33 @@ namespace BarangayHealthAid.Dal
             }
         }
 
+        public static string DeactFamilyMemberErrorMessage;
+        public static bool DeactFamilyMemberIsSuccessful;
+        public static void DeactFamilyMember(int _id)
+        {
+            DataSet dt = new DataSet();
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(ConnectionString()))
+                {
+                    con.Open();
+                    MySqlCommand cmd = new MySqlCommand("sp_purok_family_member_deac", con);
+                    cmd.Parameters.Add(new MySqlParameter("_id", _id));
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    MySqlDataAdapter adp = new MySqlDataAdapter(cmd);
+                    adp.Fill(dt);
+                    con.Close();
+                    DeactFamilyMemberIsSuccessful = true;
+                }
+            }
+
+            catch (Exception ex)
+            {
+                DeactFamilyMemberIsSuccessful = false;
+                DeactFamilyMemberErrorMessage = ex.Message + "\nFunction : Deactivate/Activate Purok Family Member";
+            }
+        }
+
         public static string DeletePurokErrorMessage;
         public static bool DeletePurokIsSuccessful;
         public static void DeletePurok(int _id)

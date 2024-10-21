@@ -206,7 +206,7 @@ namespace BarangayHealthAid.Management
 
         private void btnView_Click(object sender, EventArgs e)
         {
-              if (SelectionPass())
+            if (SelectionPass())
             {
                 selected_id = Convert.ToInt32(gvMembers.GetFocusedRowCellValue("id").ToString());
                 DataRow[] filtered = PurokFamilyMembers.Select(String.Format("id = {0}", selected_id));
@@ -244,6 +244,45 @@ namespace BarangayHealthAid.Management
             else
                 MsgBox.Error("No member selected.");
         
+        }
+
+        private void btnDeactivate_Click(object sender, EventArgs e)
+        {
+            if (SelectionPass())
+            {
+                selected_id = Convert.ToInt32(gvMembers.GetFocusedRowCellValue("id").ToString());
+                if (!bwDeactivateMember.IsBusy)
+                {
+                    ShowLoading("Updating Member status...");
+                    bwDeactivateMember.RunWorkerAsync();
+                }
+            }
+        }
+
+        private void bwDeactivateMember_DoWork(object sender, DoWorkEventArgs e)
+        {
+            Purok.DeactFamilyMember(selected_id);
+            bwDeactivateMember.CancelAsync();
+        }
+
+        private void bwDeactivateMember_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            HideLoading();
+            if (Purok.DeactFamilyMemberIsSuccessful)
+            {
+                MsgBox.Information("Updating status done.");
+                btnRefresh.PerformClick();
+            }
+            else
+                MsgBox.Error(Purok.DeactFamilyMemberErrorMessage);
+        }
+
+        private void gvMembers_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+        {
+            if (SelectionPass())
+            {
+                btnDeactivate.Text = gvMembers.GetFocusedRowCellValue("is_active").ToString() == "True" ? "Deactivate" : "Activate";
+            }
         }
       
     }

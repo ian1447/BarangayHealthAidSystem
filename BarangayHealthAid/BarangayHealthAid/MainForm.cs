@@ -168,5 +168,15 @@ namespace BarangayHealthAid
                     fc.Activate();
             }
         }
+
+        private void btnLogout_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            MsgBox.QuestionYesNo("Are you sure you want to log out?");
+            if (MsgBox.isYes)
+            {
+                LoginForm.Userlogout = true;
+                this.Hide();
+            }
+        }
     }
 }

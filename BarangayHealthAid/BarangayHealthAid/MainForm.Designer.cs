@@ -38,6 +38,7 @@
             this.btnUserManagement = new DevExpress.XtraBars.BarButtonItem();
             this.btnPurok = new DevExpress.XtraBars.BarButtonItem();
             this.btnOpt = new DevExpress.XtraBars.BarButtonItem();
+            this.btnLogout = new DevExpress.XtraBars.BarButtonItem();
             this.rpMain = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rpgReports = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpgOPT = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -62,10 +63,12 @@
             this.btnClinicalRecord,
             this.btnUserManagement,
             this.btnPurok,
-            this.btnOpt});
+            this.btnOpt,
+            this.btnLogout});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 8;
+            this.ribbon.MaxItemId = 9;
             this.ribbon.Name = "ribbon";
+            this.ribbon.PageHeaderItemLinks.Add(this.btnLogout);
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.rpMain});
             this.ribbon.Size = new System.Drawing.Size(1060, 144);
@@ -78,6 +81,7 @@
             this.btnFamilyPlanning.Id = 1;
             this.btnFamilyPlanning.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnFamilyPlanning.LargeGlyph")));
             this.btnFamilyPlanning.Name = "btnFamilyPlanning";
+            this.btnFamilyPlanning.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             this.btnFamilyPlanning.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnFamilyPlanning_ItemClick);
             // 
             // btnForm4b
@@ -134,6 +138,15 @@
             this.btnOpt.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnOpt.LargeGlyph")));
             this.btnOpt.Name = "btnOpt";
             this.btnOpt.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnOpt_ItemClick);
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.Caption = "btnLogout";
+            this.btnLogout.Glyph = ((System.Drawing.Image)(resources.GetObject("btnLogout.Glyph")));
+            this.btnLogout.Id = 8;
+            this.btnLogout.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnLogout.LargeGlyph")));
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnLogout_ItemClick);
             // 
             // rpMain
             // 
@@ -236,5 +249,6 @@
         private DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView tabbedView1;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgOPT;
         private DevExpress.XtraBars.BarButtonItem btnOpt;
+        private DevExpress.XtraBars.BarButtonItem btnLogout;
     }
 }

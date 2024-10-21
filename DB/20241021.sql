@@ -16,6 +16,24 @@ CREATE DATABASE /*!32312 IF NOT EXISTS*/`barangay_aid` /*!40100 DEFAULT CHARACTE
 
 USE `barangay_aid`;
 
+/*Table structure for table `child_sub_opt` */
+
+DROP TABLE IF EXISTS `child_sub_opt`;
+
+CREATE TABLE `child_sub_opt` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `out_patient_id` int(11) DEFAULT NULL,
+  `remarks` text,
+  `mode` int(2) DEFAULT '0' COMMENT '0 - vitamins, 1 - deworming',
+  `added_by` int(11) DEFAULT NULL,
+  `added_on` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+
+/*Data for the table `child_sub_opt` */
+
+insert  into `child_sub_opt`(`id`,`out_patient_id`,`remarks`,`mode`,`added_by`,`added_on`) values (1,1,'Vitamin A injected into the body.',0,1,'2024-10-15 22:32:59'),(5,1,'asdf',1,1,'2024-10-15 22:36:16'),(6,1,'Naka igit ug 10 ka worms',1,1,'2024-10-15 22:36:25'),(7,1,'testing remarks',0,1,'2024-10-21 19:19:03');
+
 /*Table structure for table `family_planning` */
 
 DROP TABLE IF EXISTS `family_planning`;
@@ -159,7 +177,31 @@ CREATE TABLE `maternal_health_record` (
 
 /*Data for the table `maternal_health_record` */
 
-insert  into `maternal_health_record`(`id`,`patient_id`,`name`,`age`,`dob`,`height`,`husband_name`,`occupation`,`address`,`contact_no`,`no_children_born_alive`,`living_children`,`abortion`,`fetal_deaths`,`type_last_delivery`,`largebabies`,`diabetes`,`previous_illness`,`allergy`,`previous_hospitalization`,`gravida`,`PARA`,`A`,`stillbirth`,`LMP`,`EDC`,`where_to_deliver`,`attended_by`,`new_born_screening_plan`,`risk_codes`,`tt1`,`tt2`,`tt3`,`tt4`,`tt5`,`urinalysis`,`hbs_antigen`,`CBC`,`RPR`,`blood_typing`,`HIV`,`prev_pregnancy_complic`,`checklist`,`vit_a_date_given`,`vit_a_prescribed`,`iron_folic_4`,`iron_folic_5`,`iron_folic_6`,`iron_folic_7`,`iron_folic_8`,`iron_folic_9`,`added_by`,`added_on`) values (1,0,'asdf',21,'1999-05-28','158.00','asdf','asdf','asdf','asdf',1,1,0,0,NULL,0,'asdf','asdf','asdf','asdf','asdf','asdf','asdf',NULL,'asdf','asdf','asdf','asdf','asdf','','1999-05-28','1999-05-28','1999-05-28','1999-05-28','1999-05-28','asdf','asdf','asdf','asdf','asdf','asdf','asdf','asdf','1999-05-28','asdf','1999-05-28','1999-05-28','1999-05-28','1999-05-28','1999-05-28','1999-05-28',1,'2024-09-08 14:42:12'),(2,0,'erw',13,'2024-09-03','23.00','asdf','zxcv','asdf','zxc',1,2,3,4,NULL,5,'zxcv','asdf','qwe','uioy','j','k','l',NULL,'hj',';','78g','hfj','fvbnm','A','2024-09-03','2024-09-11','2024-09-10','2024-10-03','2024-09-30','asd','czx','dfsa','xcvz','zxvc','asdf','szxcv','Vaginal Bleeding, Severe Headache','2024-09-18','azxc','2024-09-10','2024-10-01','2024-09-19','2024-09-10','2024-09-11','2024-09-03',1,'2024-09-14 16:03:20'),(3,0,'asfd',2,'2024-08-30','12.00','axc','xcv','cvb','xcvb',2,2,23,3,'2',1,'2','x','df','g','vc','asdf','32','ew','zcx','af','nm,',',.b','jry','','2024-09-18','2024-08-28','2024-09-23','2024-09-19','2024-09-16','1','asd','bn','scxv','nm','vbm','xcbv','Breast abnormalities','2024-08-26','scv','2024-09-04','2024-09-02','2024-09-18','2024-09-10','2024-09-07','2024-09-18',1,'2024-09-21 23:25:51');
+insert  into `maternal_health_record`(`id`,`patient_id`,`name`,`age`,`dob`,`height`,`husband_name`,`occupation`,`address`,`contact_no`,`no_children_born_alive`,`living_children`,`abortion`,`fetal_deaths`,`type_last_delivery`,`largebabies`,`diabetes`,`previous_illness`,`allergy`,`previous_hospitalization`,`gravida`,`PARA`,`A`,`stillbirth`,`LMP`,`EDC`,`where_to_deliver`,`attended_by`,`new_born_screening_plan`,`risk_codes`,`tt1`,`tt2`,`tt3`,`tt4`,`tt5`,`urinalysis`,`hbs_antigen`,`CBC`,`RPR`,`blood_typing`,`HIV`,`prev_pregnancy_complic`,`checklist`,`vit_a_date_given`,`vit_a_prescribed`,`iron_folic_4`,`iron_folic_5`,`iron_folic_6`,`iron_folic_7`,`iron_folic_8`,`iron_folic_9`,`added_by`,`added_on`) values (1,0,'asdf',21,'1999-05-28','158.00','asdf','asdf','asdf','asdf',1,1,0,0,NULL,0,'asdf','asdf','asdf','asdf','asdf','asdf','asdf',NULL,'asdf','asdf','asdf','asdf','asdf','','1999-05-28','1999-05-28','1999-05-28','1999-05-28','1999-05-28','asdf','asdf','asdf','asdf','asdf','asdf','asdf','asdf','1999-05-28','asdf','1999-05-28','1999-05-28','1999-05-28','1999-05-28','1999-05-28','1999-05-28',1,'2024-09-08 14:42:12'),(2,0,'erw',13,'2024-09-03','23.00','asdf','zxcv','asdf','zxc',1,2,3,4,NULL,5,'zxcv','asdf','qwe','uioy','j','k','l',NULL,'hj',';','78g','hfj','fvbnm','A','2024-09-03','2024-09-11','2024-09-10','2024-10-03','2024-09-30','asd','czx','dfsa','xcvz','zxvc','asdf','szxcv','Vaginal Bleeding, Severe Headache','2024-09-18','asdf','2024-09-10','2024-10-01','2024-09-19','2024-09-10','2024-09-11','2024-09-03',1,'2024-09-14 16:03:20'),(3,0,'asfd',2,'2024-08-30','12.00','axc','xcv','cvb','xcvb',2,2,23,3,'2',1,'2','x','df','g','vc','asdf','32','ew','zcx','af','nm,',',.b','jry','','2024-09-18','2024-08-28','2024-09-23','2024-09-19','2024-09-16','1','asd','bn','scxv','nm','vbm','xcbv','Breast abnormalities','2024-08-26','scv','2024-09-04','2024-09-02','2024-09-18','2024-09-10','2024-09-07','2024-09-18',1,'2024-09-21 23:25:51');
+
+/*Table structure for table `maternal_health_record_history` */
+
+DROP TABLE IF EXISTS `maternal_health_record_history`;
+
+CREATE TABLE `maternal_health_record_history` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `maternal_health_record_id` int(11) NOT NULL,
+  `aog` varchar(50) DEFAULT NULL,
+  `weight` decimal(12,2) DEFAULT NULL,
+  `bp` decimal(12,2) DEFAULT NULL,
+  `fh` varchar(50) DEFAULT NULL,
+  `fhb` varchar(255) DEFAULT NULL,
+  `presenting_part_of_fetus` varchar(255) DEFAULT NULL,
+  `findings` varchar(255) DEFAULT NULL,
+  `notes` text,
+  `added_by` int(11) DEFAULT NULL,
+  `transdate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+/*Data for the table `maternal_health_record_history` */
+
+insert  into `maternal_health_record_history`(`id`,`maternal_health_record_id`,`aog`,`weight`,`bp`,`fh`,`fhb`,`presenting_part_of_fetus`,`findings`,`notes`,`added_by`,`transdate`) values (1,1,'23','12.00','123.00',' asd',' asd','as df',' asdf','wer qwer q',1,'2024-10-13 21:46:01'),(2,1,'23','12.00','123.00','testing','testing','testing','testing ','asdfljha sdf ',1,'2024-10-13 22:10:46');
 
 /*Table structure for table `out_patient` */
 
@@ -192,7 +234,7 @@ DROP TABLE IF EXISTS `patient_details`;
 
 CREATE TABLE `patient_details` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `purok_family_member_id` int(11) DEFAULT NULL,
+  `purok_family_member_id` int(11) DEFAULT '0',
   `last_name` varchar(255) DEFAULT NULL,
   `first_name` varchar(255) DEFAULT NULL,
   `name_extension` varchar(50) DEFAULT NULL,
@@ -319,6 +361,7 @@ CREATE TABLE `purok_family_members` (
   `province` varchar(150) DEFAULT NULL,
   `country` varchar(150) DEFAULT NULL,
   `zip_code` varchar(25) DEFAULT NULL,
+  `is_active` tinyint(1) NOT NULL DEFAULT '1',
   `added_by` int(11) DEFAULT NULL,
   `added_on` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
@@ -326,7 +369,7 @@ CREATE TABLE `purok_family_members` (
 
 /*Data for the table `purok_family_members` */
 
-insert  into `purok_family_members`(`id`,`purok_members_id`,`description`,`last_name`,`first_name`,`name_ext`,`middle_name`,`birthday`,`age`,`place_of_birth`,`sex`,`civil_status`,`religion`,`contact_no`,`purok`,`barangay`,`municipality`,`province`,`country`,`zip_code`,`added_by`,`added_on`) values (1,1,'Head','Test','Testingnsd','X','Wala','2000-10-14',23,'tagb','Male','Single','RC','09273743872','23','Cogon','Tagb','Bohol','Philippines','6300',1,'2024-10-09 21:37:57');
+insert  into `purok_family_members`(`id`,`purok_members_id`,`description`,`last_name`,`first_name`,`name_ext`,`middle_name`,`birthday`,`age`,`place_of_birth`,`sex`,`civil_status`,`religion`,`contact_no`,`purok`,`barangay`,`municipality`,`province`,`country`,`zip_code`,`is_active`,`added_by`,`added_on`) values (1,1,'Head','Test','Testingnsd','X','Wala','2000-10-14',23,'tagb','Male','Single','RC','09273743872','23','Cogon','Tagb','Bohol','Philippines','6300',0,1,'2024-10-09 21:37:57');
 
 /*Table structure for table `purok_members` */
 
@@ -366,6 +409,50 @@ CREATE TABLE `users` (
 /*Data for the table `users` */
 
 insert  into `users`(`id`,`username`,`password`,`firstname`,`middlename`,`lastname`,`is_active`,`role`,`added_by`,`added_on`) values (1,'admin','*4ACFE3202A5FF5CF467898FC58AAB1D615029441','admin','admin','admin',1,'Admin',0,'2024-07-27 19:43:44');
+
+/* Procedure structure for procedure `sp_child_sub_opt_add` */
+
+/*!50003 DROP PROCEDURE IF EXISTS  `sp_child_sub_opt_add` */;
+
+DELIMITER $$
+
+/*!50003 CREATE DEFINER=`system_admin`@`%` PROCEDURE `sp_child_sub_opt_add`(
+	_out_patient_id INT (11),
+	_remarks TEXT,
+	_mode INT (11),
+	_added_by INT (11)    
+    )
+BEGIN
+	INSERT INTO `child_sub_opt`
+		    (`out_patient_id`,
+		     `remarks`,
+		     `mode`,
+		     `added_by`)
+	VALUES (_out_patient_id,
+		_remarks,
+		_mode,
+		_added_by);
+    END */$$
+DELIMITER ;
+
+/* Procedure structure for procedure `sp_chlid_sub_opt_get` */
+
+/*!50003 DROP PROCEDURE IF EXISTS  `sp_chlid_sub_opt_get` */;
+
+DELIMITER $$
+
+/*!50003 CREATE DEFINER=`system_admin`@`%` PROCEDURE `sp_chlid_sub_opt_get`(
+	_mode int(11),
+	_show_history int (11)
+    )
+BEGIN
+    if (_show_history = 0) then 
+	SELECT c.*,DATE_FORMAT(c.`added_on`, "%M %d,%Y") `date` FROM `child_sub_opt` c WHERE c.`mode` = _mode AND month(c.`added_on`)  = MONTH(NOW());
+    else 
+	SELECT c.*,DATE_FORMAT(c.`added_on`, "%M %d,%Y") `date` FROM `child_sub_opt` c WHERE c.`mode` = _mode AND MONTH(c.`added_on`)  != MONTH(NOW());
+    end if;
+    END */$$
+DELIMITER ;
 
 /* Procedure structure for procedure `sp_family_planning_add` */
 
@@ -596,6 +683,63 @@ SELECT u.id,CONCAT_WS(" ", u.`firstname`,u.`middlename`, u.`lastname`) `name`, u
 DATE_FORMAT(u.`added_on`, "%M %d, %Y") `added_on`,u.`is_active`,CONCAT_WS(" ", u2.`firstname`,u2.`middlename`, u2.`lastname`) `added_by`,
 u.`firstname`,u.`middlename`,u.`lastname` FROM users u
 INNER JOIN users u2 ON u2.id = u.id;
+    END */$$
+DELIMITER ;
+
+/* Procedure structure for procedure `sp_maternal_health_history_add` */
+
+/*!50003 DROP PROCEDURE IF EXISTS  `sp_maternal_health_history_add` */;
+
+DELIMITER $$
+
+/*!50003 CREATE DEFINER=`system_admin`@`%` PROCEDURE `sp_maternal_health_history_add`(
+	_maternal_health_record_id int (11),
+	_aog varchar (255),
+	_weight decimal (12,2),
+	_bp decimal (12,2),
+	_fh varchar (50),
+	_fhb varchar (255),
+	_presenting_part_of_fetus varchar (255),
+	_findings varchar (255),
+	_notes text,
+	_added_by int (11)
+    )
+BEGIN
+	INSERT INTO `maternal_health_record_history`
+		    (`maternal_health_record_id`,
+		     `aog`,
+		     `weight`,
+		     `bp`,
+		     `fh`,
+		     `fhb`,
+		     `presenting_part_of_fetus`,
+		     `findings`,
+		     `notes`,
+		     `added_by`)
+	VALUES (_maternal_health_record_id,
+		_aog,
+		_weight,
+		_bp,
+		_fh,
+		_fhb,
+		_presenting_part_of_fetus,
+		_findings,
+		_notes,
+		_added_by);
+    END */$$
+DELIMITER ;
+
+/* Procedure structure for procedure `sp_maternal_health_history_get` */
+
+/*!50003 DROP PROCEDURE IF EXISTS  `sp_maternal_health_history_get` */;
+
+DELIMITER $$
+
+/*!50003 CREATE DEFINER=`system_admin`@`%` PROCEDURE `sp_maternal_health_history_get`(
+	_maternal_health_record_id int (11)
+    )
+BEGIN
+SELECT mha.*, DATE_FORMAT(mha.`transdate`,"%M %d,%Y") `date`,DATE_FORMAT(mha.`transdate`,"%m/%d/%y") `reportdate`, TIME_FORMAT(mha.`transdate`, '%h:%i:%s') `time`FROM `maternal_health_record_history` mha WHERE mha.`maternal_health_record_id` = _maternal_health_record_id;
     END */$$
 DELIMITER ;
 
@@ -1253,7 +1397,9 @@ DELIMITER $$
 	_patient_details_id int (11)
     )
 BEGIN
-	SELECT ph.*, DATE_FORMAT(ph.`transdate`,"%M %d,%Y") `date`,DATE_FORMAT(ph.`transdate`,"%m/%d/%y") `reportdate`, TIME_FORMAT(ph.`transdate`, '%h:%i:%s') `time` FROM `patient_details_history` ph WHERE ph.`patient_details_id` = _patient_details_id;
+	SELECT ph.*, DATE_FORMAT(ph.`transdate`,"%M %d,%Y") `date`,DATE_FORMAT(ph.`transdate`,"%m/%d/%y") `reportdate`, TIME_FORMAT(ph.`transdate`, '%h:%i:%s') `time`, pd.`age`
+	FROM `patient_details_history` ph
+	JOIN `patient_details` pd ON pd.`id` = ph.`patient_details_id` WHERE ph.`patient_details_id` = _patient_details_id;
     END */$$
 DELIMITER ;
 
@@ -1409,6 +1555,20 @@ INSERT INTO `purok_family_members`
 		_country,
 		_zip_code,
 		_added_by);
+    END */$$
+DELIMITER ;
+
+/* Procedure structure for procedure `sp_purok_family_member_deac` */
+
+/*!50003 DROP PROCEDURE IF EXISTS  `sp_purok_family_member_deac` */;
+
+DELIMITER $$
+
+/*!50003 CREATE DEFINER=`system_admin`@`%` PROCEDURE `sp_purok_family_member_deac`(
+	_id int (11)
+    )
+BEGIN
+UPDATE `purok_family_members` pf SET pf.`is_active` =  IF((pf.`is_active` = 1),0,1) WHERE pf.id = _id;
     END */$$
 DELIMITER ;
 

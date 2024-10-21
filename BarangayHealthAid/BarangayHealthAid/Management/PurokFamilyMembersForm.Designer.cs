@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PurokFamilyMembersForm));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.btnDeactivate = new DevExpress.XtraEditors.SimpleButton();
             this.btnView = new DevExpress.XtraEditors.SimpleButton();
             this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
             this.btnEdit = new DevExpress.XtraEditors.SimpleButton();
@@ -42,6 +43,7 @@
             this.formated_dob = new DevExpress.XtraGrid.Columns.GridColumn();
             this.age = new DevExpress.XtraGrid.Columns.GridColumn();
             this.sex = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.is_active = new DevExpress.XtraGrid.Columns.GridColumn();
             this.id = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
@@ -53,9 +55,11 @@
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.lblHeadName = new DevExpress.XtraLayout.SimpleLabelItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::BarangayHealthAid.WaitForm1), true, true);
             this.bwGetPurokFamilyMembers = new System.ComponentModel.BackgroundWorker();
             this.bwDeletePurokFamilyMember = new System.ComponentModel.BackgroundWorker();
+            this.bwDeactivateMember = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtMembers)).BeginInit();
@@ -70,10 +74,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblHeadName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.btnDeactivate);
             this.layoutControl1.Controls.Add(this.btnView);
             this.layoutControl1.Controls.Add(this.btnAdd);
             this.layoutControl1.Controls.Add(this.btnEdit);
@@ -85,14 +91,25 @@
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(649, 248, 250, 350);
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(521, 585);
+            this.layoutControl1.Size = new System.Drawing.Size(642, 585);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // btnDeactivate
+            // 
+            this.btnDeactivate.Image = ((System.Drawing.Image)(resources.GetObject("btnDeactivate.Image")));
+            this.btnDeactivate.Location = new System.Drawing.Point(349, 32);
+            this.btnDeactivate.Name = "btnDeactivate";
+            this.btnDeactivate.Size = new System.Drawing.Size(93, 22);
+            this.btnDeactivate.StyleController = this.layoutControl1;
+            this.btnDeactivate.TabIndex = 12;
+            this.btnDeactivate.Text = "Deactivate";
+            this.btnDeactivate.Click += new System.EventHandler(this.btnDeactivate_Click);
             // 
             // btnView
             // 
             this.btnView.Image = ((System.Drawing.Image)(resources.GetObject("btnView.Image")));
-            this.btnView.Location = new System.Drawing.Point(244, 32);
+            this.btnView.Location = new System.Drawing.Point(268, 32);
             this.btnView.Name = "btnView";
             this.btnView.Size = new System.Drawing.Size(77, 22);
             this.btnView.StyleController = this.layoutControl1;
@@ -103,7 +120,7 @@
             // btnAdd
             // 
             this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
-            this.btnAdd.Location = new System.Drawing.Point(62, 32);
+            this.btnAdd.Location = new System.Drawing.Point(86, 32);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(92, 22);
             this.btnAdd.StyleController = this.layoutControl1;
@@ -114,7 +131,7 @@
             // btnEdit
             // 
             this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
-            this.btnEdit.Location = new System.Drawing.Point(158, 32);
+            this.btnEdit.Location = new System.Drawing.Point(182, 32);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(82, 22);
             this.btnEdit.StyleController = this.layoutControl1;
@@ -125,7 +142,7 @@
             // btnRemove
             // 
             this.btnRemove.Image = ((System.Drawing.Image)(resources.GetObject("btnRemove.Image")));
-            this.btnRemove.Location = new System.Drawing.Point(325, 32);
+            this.btnRemove.Location = new System.Drawing.Point(446, 32);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(88, 22);
             this.btnRemove.StyleController = this.layoutControl1;
@@ -136,7 +153,7 @@
             // btnRefresh
             // 
             this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
-            this.btnRefresh.Location = new System.Drawing.Point(417, 32);
+            this.btnRefresh.Location = new System.Drawing.Point(538, 32);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(92, 22);
             this.btnRefresh.StyleController = this.layoutControl1;
@@ -151,7 +168,7 @@
             this.dtMembers.Name = "dtMembers";
             this.dtMembers.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit1});
-            this.dtMembers.Size = new System.Drawing.Size(497, 515);
+            this.dtMembers.Size = new System.Drawing.Size(618, 515);
             this.dtMembers.TabIndex = 6;
             this.dtMembers.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvMembers});
@@ -164,6 +181,7 @@
             this.formated_dob,
             this.age,
             this.sex,
+            this.is_active,
             this.id});
             this.gvMembers.GridControl = this.dtMembers;
             this.gvMembers.GroupCount = 1;
@@ -177,6 +195,7 @@
             this.gvMembers.OptionsView.ShowIndicator = false;
             this.gvMembers.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
             new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.description_case, DevExpress.Data.ColumnSortOrder.Ascending)});
+            this.gvMembers.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gvMembers_FocusedRowChanged);
             // 
             // family_member_name
             // 
@@ -224,6 +243,14 @@
             this.sex.VisibleIndex = 3;
             this.sex.Width = 88;
             // 
+            // is_active
+            // 
+            this.is_active.Caption = "Active";
+            this.is_active.FieldName = "is_active";
+            this.is_active.Name = "is_active";
+            this.is_active.Visible = true;
+            this.is_active.VisibleIndex = 4;
+            // 
             // id
             // 
             this.id.Caption = "id";
@@ -247,10 +274,11 @@
             this.layoutControlItem4,
             this.layoutControlItem5,
             this.lblHeadName,
-            this.layoutControlItem6});
+            this.layoutControlItem6,
+            this.layoutControlItem7});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(521, 585);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(642, 585);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // emptySpaceItem2
@@ -258,7 +286,7 @@
             this.emptySpaceItem2.AllowHotTrack = false;
             this.emptySpaceItem2.Location = new System.Drawing.Point(0, 20);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(50, 26);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(74, 26);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem1
@@ -266,14 +294,14 @@
             this.layoutControlItem1.Control = this.dtMembers;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 46);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(501, 519);
+            this.layoutControlItem1.Size = new System.Drawing.Size(622, 519);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.btnRefresh;
-            this.layoutControlItem2.Location = new System.Drawing.Point(405, 20);
+            this.layoutControlItem2.Location = new System.Drawing.Point(526, 20);
             this.layoutControlItem2.MaxSize = new System.Drawing.Size(96, 26);
             this.layoutControlItem2.MinSize = new System.Drawing.Size(96, 26);
             this.layoutControlItem2.Name = "layoutControlItem2";
@@ -285,7 +313,7 @@
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.btnRemove;
-            this.layoutControlItem3.Location = new System.Drawing.Point(313, 20);
+            this.layoutControlItem3.Location = new System.Drawing.Point(434, 20);
             this.layoutControlItem3.MaxSize = new System.Drawing.Size(92, 26);
             this.layoutControlItem3.MinSize = new System.Drawing.Size(92, 26);
             this.layoutControlItem3.Name = "layoutControlItem3";
@@ -297,7 +325,7 @@
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.btnEdit;
-            this.layoutControlItem4.Location = new System.Drawing.Point(146, 20);
+            this.layoutControlItem4.Location = new System.Drawing.Point(170, 20);
             this.layoutControlItem4.MaxSize = new System.Drawing.Size(86, 26);
             this.layoutControlItem4.MinSize = new System.Drawing.Size(86, 26);
             this.layoutControlItem4.Name = "layoutControlItem4";
@@ -309,7 +337,7 @@
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.btnAdd;
-            this.layoutControlItem5.Location = new System.Drawing.Point(50, 20);
+            this.layoutControlItem5.Location = new System.Drawing.Point(74, 20);
             this.layoutControlItem5.MaxSize = new System.Drawing.Size(96, 26);
             this.layoutControlItem5.MinSize = new System.Drawing.Size(96, 26);
             this.layoutControlItem5.Name = "layoutControlItem5";
@@ -325,13 +353,13 @@
             this.lblHeadName.AppearanceItemCaption.Options.UseFont = true;
             this.lblHeadName.Location = new System.Drawing.Point(0, 0);
             this.lblHeadName.Name = "lblHeadName";
-            this.lblHeadName.Size = new System.Drawing.Size(501, 20);
+            this.lblHeadName.Size = new System.Drawing.Size(622, 20);
             this.lblHeadName.TextSize = new System.Drawing.Size(116, 16);
             // 
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.btnView;
-            this.layoutControlItem6.Location = new System.Drawing.Point(232, 20);
+            this.layoutControlItem6.Location = new System.Drawing.Point(256, 20);
             this.layoutControlItem6.MaxSize = new System.Drawing.Size(81, 26);
             this.layoutControlItem6.MinSize = new System.Drawing.Size(81, 26);
             this.layoutControlItem6.Name = "layoutControlItem6";
@@ -339,6 +367,18 @@
             this.layoutControlItem6.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem6.TextVisible = false;
+            // 
+            // layoutControlItem7
+            // 
+            this.layoutControlItem7.Control = this.btnDeactivate;
+            this.layoutControlItem7.Location = new System.Drawing.Point(337, 20);
+            this.layoutControlItem7.MaxSize = new System.Drawing.Size(97, 26);
+            this.layoutControlItem7.MinSize = new System.Drawing.Size(97, 26);
+            this.layoutControlItem7.Name = "layoutControlItem7";
+            this.layoutControlItem7.Size = new System.Drawing.Size(97, 26);
+            this.layoutControlItem7.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem7.TextVisible = false;
             // 
             // bwGetPurokFamilyMembers
             // 
@@ -352,11 +392,17 @@
             this.bwDeletePurokFamilyMember.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwDeletePurokFamilyMember_DoWork);
             this.bwDeletePurokFamilyMember.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwDeletePurokFamilyMember_RunWorkerCompleted);
             // 
+            // bwDeactivateMember
+            // 
+            this.bwDeactivateMember.WorkerSupportsCancellation = true;
+            this.bwDeactivateMember.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwDeactivateMember_DoWork);
+            this.bwDeactivateMember.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwDeactivateMember_RunWorkerCompleted);
+            // 
             // PurokFamilyMembersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(521, 585);
+            this.ClientSize = new System.Drawing.Size(642, 585);
             this.Controls.Add(this.layoutControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
@@ -380,6 +426,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblHeadName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -413,5 +460,9 @@
         private DevExpress.XtraGrid.Columns.GridColumn sex;
         private DevExpress.XtraEditors.SimpleButton btnView;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
+        private DevExpress.XtraEditors.SimpleButton btnDeactivate;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
+        private System.ComponentModel.BackgroundWorker bwDeactivateMember;
+        private DevExpress.XtraGrid.Columns.GridColumn is_active;
     }
 }

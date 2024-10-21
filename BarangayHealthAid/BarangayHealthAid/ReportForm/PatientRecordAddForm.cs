@@ -150,29 +150,32 @@ namespace BarangayHealthAid.ReportForm
         {
             if (!is_view)
             {
-                SelectPurokFamilyMemberForm spf = new SelectPurokFamilyMemberForm();
-                spf.ShowDialog();
-                filtered = spf.filtered;
-                _purok_family_member_id = spf._purok_family_member_id;
-                if (filtered != null && filtered.Count() > 0)
+                if (txtLastName.Properties.ReadOnly)
                 {
-                    txtLastName.Text = filtered[0]["last_name"].ToString();
-                    txtFirstName.Text = filtered[0]["first_name"].ToString();
-                    txtExtension.Text = filtered[0]["name_ext"].ToString();
-                    txtMiddleName.Text = filtered[0]["middle_name"].ToString();
-                    dtDob.EditValue = Convert.ToDateTime(filtered[0]["formated_dob"].ToString());
-                    txtAge.Text = filtered[0]["age"].ToString();
-                    txtPlaceofBirth.Text = filtered[0]["place_of_birth"].ToString();
-                    cbSex.Text = filtered[0]["sex"].ToString();
-                    cbCivilStatus.Text = filtered[0]["civil_status"].ToString();
-                    txtReligion.Text = filtered[0]["religion"].ToString();
-                    txtContactNum.Text = filtered[0]["contact_no"].ToString();
-                    txtPurok.Text = filtered[0]["purok"].ToString();
-                    txtBarangay.Text = filtered[0]["barangay"].ToString();
-                    txtMunicipality.Text = filtered[0]["municipality"].ToString();
-                    txtProvince.Text = filtered[0]["province"].ToString();
-                    txtCountry.Text = filtered[0]["country"].ToString();
-                    txtZip.Text = filtered[0]["zip_code"].ToString();
+                    SelectPurokFamilyMemberForm spf = new SelectPurokFamilyMemberForm();
+                    spf.ShowDialog();
+                    filtered = spf.filtered;
+                    _purok_family_member_id = spf._purok_family_member_id;
+                    if (filtered != null && filtered.Count() > 0)
+                    {
+                        txtLastName.Text = filtered[0]["last_name"].ToString();
+                        txtFirstName.Text = filtered[0]["first_name"].ToString();
+                        txtExtension.Text = filtered[0]["name_ext"].ToString();
+                        txtMiddleName.Text = filtered[0]["middle_name"].ToString();
+                        dtDob.EditValue = Convert.ToDateTime(filtered[0]["formated_dob"].ToString());
+                        txtAge.Text = filtered[0]["age"].ToString();
+                        txtPlaceofBirth.Text = filtered[0]["place_of_birth"].ToString();
+                        cbSex.Text = filtered[0]["sex"].ToString();
+                        cbCivilStatus.Text = filtered[0]["civil_status"].ToString();
+                        txtReligion.Text = filtered[0]["religion"].ToString();
+                        txtContactNum.Text = filtered[0]["contact_no"].ToString();
+                        txtPurok.Text = filtered[0]["purok"].ToString();
+                        txtBarangay.Text = filtered[0]["barangay"].ToString();
+                        txtMunicipality.Text = filtered[0]["municipality"].ToString();
+                        txtProvince.Text = filtered[0]["province"].ToString();
+                        txtCountry.Text = filtered[0]["country"].ToString();
+                        txtZip.Text = filtered[0]["zip_code"].ToString();
+                    }
                 }
             }
         }
@@ -193,6 +196,29 @@ namespace BarangayHealthAid.ReportForm
             }
             else
                 MsgBox.Error(PatientRecord.UpdatePatientErrorMessage);
+        }
+
+        private void ceOverride_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ceOverride.Checked)
+            {
+                MsgBox.QuestionYesNo("Are you sure you want to override details?");
+                if (!MsgBox.isYes)
+                {
+                    ceOverride.Checked = false;
+                    txtLastName.Properties.ReadOnly = true;
+                    txtFirstName.Properties.ReadOnly = true;
+                    txtMiddleName.Properties.ReadOnly = true;
+                    txtExtension.Properties.ReadOnly = true;
+                }
+                else
+                {
+                    txtLastName.Properties.ReadOnly = false;
+                    txtFirstName.Properties.ReadOnly = false;
+                    txtMiddleName.Properties.ReadOnly = false;
+                    txtExtension.Properties.ReadOnly = false;
+                }
+            }
         }
     }
 }
