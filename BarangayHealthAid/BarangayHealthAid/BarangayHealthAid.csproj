@@ -48,6 +48,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo_system_lwi_icon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="BarangayHealthAid.Sop, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -449,6 +452,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Messenger_creation_EE78C668-7CA8-4E4C-AB85-9724A45B6864.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_system_lwi_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="logo_system_lwi_icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

@@ -215,6 +215,7 @@
             this.ClientSize = new System.Drawing.Size(1060, 449);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.Name = "Mainform";
             this.Ribbon = this.ribbon;
