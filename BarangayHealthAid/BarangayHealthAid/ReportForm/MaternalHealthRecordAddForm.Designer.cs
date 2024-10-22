@@ -999,30 +999,30 @@
             this.txtAddress.Location = new System.Drawing.Point(12, 108);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Properties.Mask.EditMask = "\\p{L}+";
-            this.txtAddress.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtAddress.Size = new System.Drawing.Size(345, 20);
             this.txtAddress.StyleController = this.layoutControl1;
             this.txtAddress.TabIndex = 6;
+            this.txtAddress.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtName_KeyPress);
             // 
             // txtOccupation
             // 
             this.txtOccupation.Location = new System.Drawing.Point(361, 68);
             this.txtOccupation.Name = "txtOccupation";
             this.txtOccupation.Properties.Mask.EditMask = "\\p{L}+";
-            this.txtOccupation.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtOccupation.Size = new System.Drawing.Size(361, 20);
             this.txtOccupation.StyleController = this.layoutControl1;
             this.txtOccupation.TabIndex = 6;
+            this.txtOccupation.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtName_KeyPress);
             // 
             // txtHusbandName
             // 
             this.txtHusbandName.Location = new System.Drawing.Point(12, 68);
             this.txtHusbandName.Name = "txtHusbandName";
             this.txtHusbandName.Properties.Mask.EditMask = "\\p{L}+";
-            this.txtHusbandName.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtHusbandName.Size = new System.Drawing.Size(345, 20);
             this.txtHusbandName.StyleController = this.layoutControl1;
             this.txtHusbandName.TabIndex = 5;
+            this.txtHusbandName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtName_KeyPress);
             // 
             // txtHeight
             // 
@@ -1074,6 +1074,7 @@
             this.txtName.StyleController = this.layoutControl1;
             this.txtName.TabIndex = 4;
             this.txtName.Click += new System.EventHandler(this.txtName_Click);
+            this.txtName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtName_KeyPress);
             // 
             // layoutControlGroup1
             // 

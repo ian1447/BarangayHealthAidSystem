@@ -152,5 +152,11 @@ namespace BarangayHealthAid.ReportForm
                 }
             }
         }
+
+        private void txtName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar))
+                e.Handled = true;
+        }
     }
 }

@@ -578,6 +578,8 @@
             this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
             this.sqlDataSource1 = new DevExpress.DataAccess.Sql.SqlDataSource();
+            this.lblSerialNumber = new DevExpress.XtraReports.UI.XRLabel();
+            this.lblMemberShipCat = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable5)).BeginInit();
@@ -5811,6 +5813,7 @@
             // ReportHeader
             // 
             this.ReportHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.lblSerialNumber,
             this.xrTable13,
             this.xrTable12,
             this.xrTable11,
@@ -5819,7 +5822,8 @@
             this.xrLabel9,
             this.xrTable7,
             this.xrLabel1,
-            this.xrLabel2});
+            this.xrLabel2,
+            this.lblMemberShipCat});
             this.ReportHeader.HeightF = 523.2903F;
             this.ReportHeader.Name = "ReportHeader";
             // 
@@ -5991,13 +5995,13 @@
             // 
             this.xrLabel10.Font = new System.Drawing.Font("Arial", 5.9F);
             this.xrLabel10.ForeColor = System.Drawing.Color.Blue;
-            this.xrLabel10.LocationFloat = new DevExpress.Utils.PointFloat(4.5F, 36.14447F);
+            this.xrLabel10.LocationFloat = new DevExpress.Utils.PointFloat(4.500008F, 36.14448F);
             this.xrLabel10.Name = "xrLabel10";
             this.xrLabel10.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel10.SizeF = new System.Drawing.SizeF(204.4792F, 9.966648F);
+            this.xrLabel10.SizeF = new System.Drawing.SizeF(88.8542F, 9.966648F);
             this.xrLabel10.StylePriority.UseFont = false;
             this.xrLabel10.StylePriority.UseForeColor = false;
-            this.xrLabel10.Text = "Family Serial Number:__________________________";
+            this.xrLabel10.Text = "Family Serial Number:";
             // 
             // xrLabel9
             // 
@@ -8736,13 +8740,13 @@
             // 
             this.xrLabel1.Font = new System.Drawing.Font("Arial", 5.9F);
             this.xrLabel1.ForeColor = System.Drawing.Color.Black;
-            this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(568.8315F, 2.45854F);
+            this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(568.8315F, 2.458541F);
             this.xrLabel1.Name = "xrLabel1";
             this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel1.SizeF = new System.Drawing.SizeF(170.4792F, 10.35262F);
+            this.xrLabel1.SizeF = new System.Drawing.SizeF(87.00586F, 10.35262F);
             this.xrLabel1.StylePriority.UseFont = false;
             this.xrLabel1.StylePriority.UseForeColor = false;
-            this.xrLabel1.Text = "Membership Category:__________________________";
+            this.xrLabel1.Text = "Membership Category: ";
             // 
             // xrLabel2
             // 
@@ -8768,6 +8772,28 @@
             this.sqlDataSource1.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             customSqlQuery1});
             this.sqlDataSource1.ResultSchemaSerializable = resources.GetString("sqlDataSource1.ResultSchemaSerializable");
+            // 
+            // lblSerialNumber
+            // 
+            this.lblSerialNumber.Font = new System.Drawing.Font("Arial", 6F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSerialNumber.ForeColor = System.Drawing.Color.Blue;
+            this.lblSerialNumber.LocationFloat = new DevExpress.Utils.PointFloat(93.35421F, 36.14448F);
+            this.lblSerialNumber.Name = "lblSerialNumber";
+            this.lblSerialNumber.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.lblSerialNumber.SizeF = new System.Drawing.SizeF(88.8542F, 9.966648F);
+            this.lblSerialNumber.StylePriority.UseFont = false;
+            this.lblSerialNumber.StylePriority.UseForeColor = false;
+            // 
+            // lblMemberShipCat
+            // 
+            this.lblMemberShipCat.Font = new System.Drawing.Font("Arial", 5.9F);
+            this.lblMemberShipCat.ForeColor = System.Drawing.Color.Black;
+            this.lblMemberShipCat.LocationFloat = new DevExpress.Utils.PointFloat(655.0534F, 2.458532F);
+            this.lblMemberShipCat.Name = "lblMemberShipCat";
+            this.lblMemberShipCat.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.lblMemberShipCat.SizeF = new System.Drawing.SizeF(98.94659F, 10.35262F);
+            this.lblMemberShipCat.StylePriority.UseFont = false;
+            this.lblMemberShipCat.StylePriority.UseForeColor = false;
             // 
             // PatientClinicalRecord
             // 
@@ -9348,5 +9374,7 @@
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow36;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell141;
         private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource1;
+        public DevExpress.XtraReports.UI.XRLabel lblSerialNumber;
+        public DevExpress.XtraReports.UI.XRLabel lblMemberShipCat;
     }
 }

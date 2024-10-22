@@ -81,7 +81,6 @@
             this.btnFamilyPlanning.Id = 1;
             this.btnFamilyPlanning.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnFamilyPlanning.LargeGlyph")));
             this.btnFamilyPlanning.Name = "btnFamilyPlanning";
-            this.btnFamilyPlanning.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             this.btnFamilyPlanning.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnFamilyPlanning_ItemClick);
             // 
             // btnForm4b

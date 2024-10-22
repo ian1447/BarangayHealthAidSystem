@@ -254,6 +254,7 @@ namespace BarangayHealthAid.ReportForm
             HideLoading();
             if (PatientRecord.GetPatientHistoryIsSuccessful)
             {
+                int id = Convert.ToInt32(gvPatient.GetFocusedRowCellValue("id").ToString());
                 DataRow[] filtered = PatientsRecordTable.Select(String.Format("id = {0}", id));
                 if (filtered.Count() > 0)
                 {
@@ -304,6 +305,8 @@ namespace BarangayHealthAid.ReportForm
                     pcr.lblMotherDisability.Text = filtered[0]["mother_disability"].ToString();
                     pcr.lblMotherDob.Text = filtered[0]["mother_birthdate"].ToString();
                     pcr.lblMotherPhicNo.Text = filtered[0]["mother_phic_id"].ToString();
+                    pcr.lblSerialNumber.Text = filtered[0]["family_serial_number"].ToString();
+                    pcr.lblMemberShipCat.Text = filtered[0]["phic_status_type"].ToString();
 
                     if (filtered[0]["sex"].ToString() == "Male")
                         pcr.ceMale.Checked = true;

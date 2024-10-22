@@ -237,7 +237,6 @@
             this.txtReligion.Location = new System.Drawing.Point(12, 188);
             this.txtReligion.Name = "txtReligion";
             this.txtReligion.Properties.Mask.EditMask = "\\p{L}+";
-            this.txtReligion.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtReligion.Size = new System.Drawing.Size(101, 20);
             this.txtReligion.StyleController = this.layoutControl1;
             this.txtReligion.TabIndex = 7;
@@ -263,7 +262,6 @@
             this.txtPlaceofBirth.Location = new System.Drawing.Point(165, 141);
             this.txtPlaceofBirth.Name = "txtPlaceofBirth";
             this.txtPlaceofBirth.Properties.Mask.EditMask = "\\p{L}+";
-            this.txtPlaceofBirth.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtPlaceofBirth.Size = new System.Drawing.Size(159, 20);
             this.txtPlaceofBirth.StyleController = this.layoutControl1;
             this.txtPlaceofBirth.TabIndex = 6;
@@ -274,7 +272,6 @@
             this.txtMiddleName.Location = new System.Drawing.Point(372, 96);
             this.txtMiddleName.Name = "txtMiddleName";
             this.txtMiddleName.Properties.Mask.EditMask = "\\p{L}+";
-            this.txtMiddleName.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtMiddleName.Size = new System.Drawing.Size(152, 20);
             this.txtMiddleName.StyleController = this.layoutControl1;
             this.txtMiddleName.TabIndex = 7;
@@ -285,7 +282,6 @@
             this.txtNameExt.Location = new System.Drawing.Point(300, 96);
             this.txtNameExt.Name = "txtNameExt";
             this.txtNameExt.Properties.Mask.EditMask = "\\p{L}+";
-            this.txtNameExt.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtNameExt.Size = new System.Drawing.Size(68, 20);
             this.txtNameExt.StyleController = this.layoutControl1;
             this.txtNameExt.TabIndex = 6;

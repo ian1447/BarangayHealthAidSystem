@@ -220,5 +220,14 @@ namespace BarangayHealthAid.ReportForm
                 }
             }
         }
+
+        #region validation
+        private void txtLastName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar))
+                e.Handled = true;
+        }
+
+        #endregion
     }
 }

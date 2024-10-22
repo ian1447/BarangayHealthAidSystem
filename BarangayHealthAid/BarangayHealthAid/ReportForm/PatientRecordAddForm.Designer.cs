@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PatientRecordAddForm));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.ceOverride = new DevExpress.XtraEditors.CheckEdit();
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.txtMotherDisability = new DevExpress.XtraEditors.TextEdit();
@@ -155,15 +156,15 @@
             this.layoutControlItem57 = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciSave = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem59 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem58 = new DevExpress.XtraLayout.LayoutControlItem();
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::BarangayHealthAid.WaitForm1), true, true);
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.bwAddPatient = new System.ComponentModel.BackgroundWorker();
             this.errorProvider = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
             this.bwEditPatient = new System.ComponentModel.BackgroundWorker();
-            this.ceOverride = new DevExpress.XtraEditors.CheckEdit();
-            this.layoutControlItem58 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ceOverride.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMotherDisability.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtMotherDob.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtMotherDob.Properties)).BeginInit();
@@ -286,10 +287,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem57)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciSave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem59)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem58)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ceOverride.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem58)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -363,6 +363,16 @@
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
+            // ceOverride
+            // 
+            this.ceOverride.Location = new System.Drawing.Point(12, 12);
+            this.ceOverride.Name = "ceOverride";
+            this.ceOverride.Properties.Caption = "Override";
+            this.ceOverride.Size = new System.Drawing.Size(682, 19);
+            this.ceOverride.StyleController = this.layoutControl1;
+            this.ceOverride.TabIndex = 24;
+            this.ceOverride.CheckedChanged += new System.EventHandler(this.ceOverride_CheckedChanged);
+            // 
             // btnCancel
             // 
             this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
@@ -390,10 +400,10 @@
             this.txtMotherDisability.Location = new System.Drawing.Point(612, 606);
             this.txtMotherDisability.Name = "txtMotherDisability";
             this.txtMotherDisability.Properties.Mask.EditMask = "\\p{L}+";
-            this.txtMotherDisability.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtMotherDisability.Size = new System.Drawing.Size(82, 20);
             this.txtMotherDisability.StyleController = this.layoutControl1;
             this.txtMotherDisability.TabIndex = 14;
+            this.txtMotherDisability.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLastName_KeyPress);
             // 
             // dtMotherDob
             // 
@@ -417,40 +427,40 @@
             this.txtMotherMiddleName.Location = new System.Drawing.Point(404, 604);
             this.txtMotherMiddleName.Name = "txtMotherMiddleName";
             this.txtMotherMiddleName.Properties.Mask.EditMask = "\\p{L}+";
-            this.txtMotherMiddleName.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtMotherMiddleName.Size = new System.Drawing.Size(109, 20);
             this.txtMotherMiddleName.StyleController = this.layoutControl1;
             this.txtMotherMiddleName.TabIndex = 14;
+            this.txtMotherMiddleName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLastName_KeyPress);
             // 
             // txtMotherExt
             // 
             this.txtMotherExt.Location = new System.Drawing.Point(350, 606);
             this.txtMotherExt.Name = "txtMotherExt";
             this.txtMotherExt.Properties.Mask.EditMask = "\\p{L}+";
-            this.txtMotherExt.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtMotherExt.Size = new System.Drawing.Size(50, 20);
             this.txtMotherExt.StyleController = this.layoutControl1;
             this.txtMotherExt.TabIndex = 13;
+            this.txtMotherExt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLastName_KeyPress);
             // 
             // txtMotherFirstName
             // 
             this.txtMotherFirstName.Location = new System.Drawing.Point(225, 604);
             this.txtMotherFirstName.Name = "txtMotherFirstName";
             this.txtMotherFirstName.Properties.Mask.EditMask = "\\p{L}+";
-            this.txtMotherFirstName.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtMotherFirstName.Size = new System.Drawing.Size(121, 20);
             this.txtMotherFirstName.StyleController = this.layoutControl1;
             this.txtMotherFirstName.TabIndex = 12;
+            this.txtMotherFirstName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLastName_KeyPress);
             // 
             // txtMotherLastName
             // 
             this.txtMotherLastName.Location = new System.Drawing.Point(100, 604);
             this.txtMotherLastName.Name = "txtMotherLastName";
             this.txtMotherLastName.Properties.Mask.EditMask = "\\p{L}+";
-            this.txtMotherLastName.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtMotherLastName.Size = new System.Drawing.Size(121, 20);
             this.txtMotherLastName.StyleController = this.layoutControl1;
             this.txtMotherLastName.TabIndex = 12;
+            this.txtMotherLastName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLastName_KeyPress);
             // 
             // txtMotherPhicID
             // 
@@ -467,10 +477,10 @@
             this.txtFatherDisability.Location = new System.Drawing.Point(613, 546);
             this.txtFatherDisability.Name = "txtFatherDisability";
             this.txtFatherDisability.Properties.Mask.EditMask = "\\p{L}+";
-            this.txtFatherDisability.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtFatherDisability.Size = new System.Drawing.Size(81, 20);
             this.txtFatherDisability.StyleController = this.layoutControl1;
             this.txtFatherDisability.TabIndex = 13;
+            this.txtFatherDisability.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLastName_KeyPress);
             // 
             // dtFatherDob
             // 
@@ -494,40 +504,40 @@
             this.txtFatherMiddleName.Location = new System.Drawing.Point(405, 544);
             this.txtFatherMiddleName.Name = "txtFatherMiddleName";
             this.txtFatherMiddleName.Properties.Mask.EditMask = "\\p{L}+";
-            this.txtFatherMiddleName.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtFatherMiddleName.Size = new System.Drawing.Size(109, 20);
             this.txtFatherMiddleName.StyleController = this.layoutControl1;
             this.txtFatherMiddleName.TabIndex = 13;
+            this.txtFatherMiddleName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLastName_KeyPress);
             // 
             // txtFatherExt
             // 
             this.txtFatherExt.Location = new System.Drawing.Point(351, 544);
             this.txtFatherExt.Name = "txtFatherExt";
             this.txtFatherExt.Properties.Mask.EditMask = "\\p{L}+";
-            this.txtFatherExt.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtFatherExt.Size = new System.Drawing.Size(50, 20);
             this.txtFatherExt.StyleController = this.layoutControl1;
             this.txtFatherExt.TabIndex = 12;
+            this.txtFatherExt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLastName_KeyPress);
             // 
             // txtFatherFirstName
             // 
             this.txtFatherFirstName.Location = new System.Drawing.Point(225, 544);
             this.txtFatherFirstName.Name = "txtFatherFirstName";
             this.txtFatherFirstName.Properties.Mask.EditMask = "\\p{L}+";
-            this.txtFatherFirstName.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtFatherFirstName.Size = new System.Drawing.Size(122, 20);
             this.txtFatherFirstName.StyleController = this.layoutControl1;
             this.txtFatherFirstName.TabIndex = 11;
+            this.txtFatherFirstName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLastName_KeyPress);
             // 
             // txtfatherLastname
             // 
             this.txtfatherLastname.Location = new System.Drawing.Point(100, 544);
             this.txtfatherLastname.Name = "txtfatherLastname";
             this.txtfatherLastname.Properties.Mask.EditMask = "\\p{L}+";
-            this.txtfatherLastname.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtfatherLastname.Size = new System.Drawing.Size(121, 20);
             this.txtfatherLastname.StyleController = this.layoutControl1;
             this.txtfatherLastname.TabIndex = 11;
+            this.txtfatherLastname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLastName_KeyPress);
             // 
             // txtfatherPhicid
             // 
@@ -586,40 +596,40 @@
             this.txtPartnerMiddleName.Location = new System.Drawing.Point(405, 468);
             this.txtPartnerMiddleName.Name = "txtPartnerMiddleName";
             this.txtPartnerMiddleName.Properties.Mask.EditMask = "\\p{L}+";
-            this.txtPartnerMiddleName.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtPartnerMiddleName.Size = new System.Drawing.Size(109, 20);
             this.txtPartnerMiddleName.StyleController = this.layoutControl1;
             this.txtPartnerMiddleName.TabIndex = 12;
+            this.txtPartnerMiddleName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLastName_KeyPress);
             // 
             // txtPartnerExt
             // 
             this.txtPartnerExt.Location = new System.Drawing.Point(351, 468);
             this.txtPartnerExt.Name = "txtPartnerExt";
             this.txtPartnerExt.Properties.Mask.EditMask = "\\p{L}+";
-            this.txtPartnerExt.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtPartnerExt.Size = new System.Drawing.Size(50, 20);
             this.txtPartnerExt.StyleController = this.layoutControl1;
             this.txtPartnerExt.TabIndex = 11;
+            this.txtPartnerExt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLastName_KeyPress);
             // 
             // txtPartnerFirstName
             // 
             this.txtPartnerFirstName.Location = new System.Drawing.Point(225, 468);
             this.txtPartnerFirstName.Name = "txtPartnerFirstName";
             this.txtPartnerFirstName.Properties.Mask.EditMask = "\\p{L}+";
-            this.txtPartnerFirstName.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtPartnerFirstName.Size = new System.Drawing.Size(122, 20);
             this.txtPartnerFirstName.StyleController = this.layoutControl1;
             this.txtPartnerFirstName.TabIndex = 11;
+            this.txtPartnerFirstName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLastName_KeyPress);
             // 
             // txtPartnerLastName
             // 
             this.txtPartnerLastName.Location = new System.Drawing.Point(100, 468);
             this.txtPartnerLastName.Name = "txtPartnerLastName";
             this.txtPartnerLastName.Properties.Mask.EditMask = "\\p{L}+";
-            this.txtPartnerLastName.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtPartnerLastName.Size = new System.Drawing.Size(121, 20);
             this.txtPartnerLastName.StyleController = this.layoutControl1;
             this.txtPartnerLastName.TabIndex = 10;
+            this.txtPartnerLastName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLastName_KeyPress);
             // 
             // txtPartnerPhicId
             // 
@@ -822,6 +832,7 @@
             this.txtEmploymentStat.Size = new System.Drawing.Size(118, 20);
             this.txtEmploymentStat.StyleController = this.layoutControl1;
             this.txtEmploymentStat.TabIndex = 17;
+            this.txtEmploymentStat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLastName_KeyPress);
             // 
             // txtEducAtt
             // 
@@ -830,6 +841,7 @@
             this.txtEducAtt.Size = new System.Drawing.Size(254, 20);
             this.txtEducAtt.StyleController = this.layoutControl1;
             this.txtEducAtt.TabIndex = 16;
+            this.txtEducAtt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLastName_KeyPress);
             // 
             // txtContactNum
             // 
@@ -856,6 +868,7 @@
             this.txtReligion.Size = new System.Drawing.Size(149, 20);
             this.txtReligion.StyleController = this.layoutControl1;
             this.txtReligion.TabIndex = 12;
+            this.txtReligion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLastName_KeyPress);
             // 
             // cbCivilStatus
             // 
@@ -893,6 +906,7 @@
             this.txtPlaceofBirth.Size = new System.Drawing.Size(190, 20);
             this.txtPlaceofBirth.StyleController = this.layoutControl1;
             this.txtPlaceofBirth.TabIndex = 11;
+            this.txtPlaceofBirth.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLastName_KeyPress);
             // 
             // txtAge
             // 
@@ -926,40 +940,40 @@
             this.txtMaidenMiddleName.Location = new System.Drawing.Point(486, 109);
             this.txtMaidenMiddleName.Name = "txtMaidenMiddleName";
             this.txtMaidenMiddleName.Properties.Mask.EditMask = "\\p{L}+";
-            this.txtMaidenMiddleName.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtMaidenMiddleName.Size = new System.Drawing.Size(208, 20);
             this.txtMaidenMiddleName.StyleController = this.layoutControl1;
             this.txtMaidenMiddleName.TabIndex = 8;
+            this.txtMaidenMiddleName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLastName_KeyPress);
             // 
             // txtMaidenExtension
             // 
             this.txtMaidenExtension.Location = new System.Drawing.Point(362, 109);
             this.txtMaidenExtension.Name = "txtMaidenExtension";
             this.txtMaidenExtension.Properties.Mask.EditMask = "\\p{L}+";
-            this.txtMaidenExtension.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtMaidenExtension.Size = new System.Drawing.Size(120, 20);
             this.txtMaidenExtension.StyleController = this.layoutControl1;
             this.txtMaidenExtension.TabIndex = 7;
+            this.txtMaidenExtension.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLastName_KeyPress);
             // 
             // txtMaidenFirstName
             // 
             this.txtMaidenFirstName.Location = new System.Drawing.Point(167, 109);
             this.txtMaidenFirstName.Name = "txtMaidenFirstName";
             this.txtMaidenFirstName.Properties.Mask.EditMask = "\\p{L}+";
-            this.txtMaidenFirstName.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtMaidenFirstName.Size = new System.Drawing.Size(191, 20);
             this.txtMaidenFirstName.StyleController = this.layoutControl1;
             this.txtMaidenFirstName.TabIndex = 6;
+            this.txtMaidenFirstName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLastName_KeyPress);
             // 
             // txtMaidenLastName
             // 
             this.txtMaidenLastName.Location = new System.Drawing.Point(12, 109);
             this.txtMaidenLastName.Name = "txtMaidenLastName";
             this.txtMaidenLastName.Properties.Mask.EditMask = "\\p{L}+";
-            this.txtMaidenLastName.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtMaidenLastName.Size = new System.Drawing.Size(151, 20);
             this.txtMaidenLastName.StyleController = this.layoutControl1;
             this.txtMaidenLastName.TabIndex = 5;
+            this.txtMaidenLastName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLastName_KeyPress);
             // 
             // labelControl1
             // 
@@ -977,45 +991,45 @@
             this.txtMiddleName.Location = new System.Drawing.Point(485, 51);
             this.txtMiddleName.Name = "txtMiddleName";
             this.txtMiddleName.Properties.Mask.EditMask = "\\p{L}+";
-            this.txtMiddleName.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtMiddleName.Properties.ReadOnly = true;
             this.txtMiddleName.Size = new System.Drawing.Size(208, 20);
             this.txtMiddleName.StyleController = this.layoutControl1;
             this.txtMiddleName.TabIndex = 7;
+            this.txtMiddleName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLastName_KeyPress);
             // 
             // txtExtension
             // 
             this.txtExtension.Location = new System.Drawing.Point(361, 51);
             this.txtExtension.Name = "txtExtension";
             this.txtExtension.Properties.Mask.EditMask = "\\p{L}+";
-            this.txtExtension.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtExtension.Properties.ReadOnly = true;
             this.txtExtension.Size = new System.Drawing.Size(120, 20);
             this.txtExtension.StyleController = this.layoutControl1;
             this.txtExtension.TabIndex = 6;
+            this.txtExtension.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLastName_KeyPress);
             // 
             // txtFirstName
             // 
             this.txtFirstName.Location = new System.Drawing.Point(167, 51);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Properties.Mask.EditMask = "\\p{L}+";
-            this.txtFirstName.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtFirstName.Properties.ReadOnly = true;
             this.txtFirstName.Size = new System.Drawing.Size(190, 20);
             this.txtFirstName.StyleController = this.layoutControl1;
             this.txtFirstName.TabIndex = 5;
+            this.txtFirstName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLastName_KeyPress);
             // 
             // txtLastName
             // 
             this.txtLastName.Location = new System.Drawing.Point(12, 51);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Properties.Mask.EditMask = "\\p{L}+";
-            this.txtLastName.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtLastName.Properties.ReadOnly = true;
             this.txtLastName.Size = new System.Drawing.Size(151, 20);
             this.txtLastName.StyleController = this.layoutControl1;
             this.txtLastName.TabIndex = 4;
             this.txtLastName.Click += new System.EventHandler(this.txtLastName_Click);
+            this.txtLastName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLastName_KeyPress);
             // 
             // layoutControlGroup1
             // 
@@ -1919,6 +1933,15 @@
             this.layoutControlItem59.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem59.TextVisible = false;
             // 
+            // layoutControlItem58
+            // 
+            this.layoutControlItem58.Control = this.ceOverride;
+            this.layoutControlItem58.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem58.Name = "layoutControlItem58";
+            this.layoutControlItem58.Size = new System.Drawing.Size(686, 23);
+            this.layoutControlItem58.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem58.TextVisible = false;
+            // 
             // emptySpaceItem3
             // 
             this.emptySpaceItem3.AllowHotTrack = false;
@@ -1943,25 +1966,6 @@
             this.bwEditPatient.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwEditPatient_DoWork);
             this.bwEditPatient.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwEditPatient_RunWorkerCompleted);
             // 
-            // ceOverride
-            // 
-            this.ceOverride.Location = new System.Drawing.Point(12, 12);
-            this.ceOverride.Name = "ceOverride";
-            this.ceOverride.Properties.Caption = "Override";
-            this.ceOverride.Size = new System.Drawing.Size(682, 19);
-            this.ceOverride.StyleController = this.layoutControl1;
-            this.ceOverride.TabIndex = 24;
-            this.ceOverride.CheckedChanged += new System.EventHandler(this.ceOverride_CheckedChanged);
-            // 
-            // layoutControlItem58
-            // 
-            this.layoutControlItem58.Control = this.ceOverride;
-            this.layoutControlItem58.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem58.Name = "layoutControlItem58";
-            this.layoutControlItem58.Size = new System.Drawing.Size(686, 23);
-            this.layoutControlItem58.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem58.TextVisible = false;
-            // 
             // PatientRecordAddForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1977,6 +1981,7 @@
             this.Load += new System.EventHandler(this.PatientRecordAddForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ceOverride.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMotherDisability.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtMotherDob.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtMotherDob.Properties)).EndInit();
@@ -2099,10 +2104,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem57)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciSave)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem59)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem58)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ceOverride.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem58)).EndInit();
             this.ResumeLayout(false);
 
         }

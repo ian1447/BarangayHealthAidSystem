@@ -110,9 +110,11 @@ CREATE TABLE `family_planning` (
   `added_by` int(11) DEFAULT NULL,
   `added_on` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 /*Data for the table `family_planning` */
+
+insert  into `family_planning`(`id`,`last_name`,`given_name`,`middle_initial`,`dob`,`age`,`educ_attain`,`occupation`,`address_no`,`address_street`,`address_barangay`,`address_mun/city`,`address_prov`,`contact_number`,`civil_status`,`religion`,`spouse_last_name`,`spouse_given_name`,`spouse_middle_inital`,`spouse_dob`,`spouse_age`,`spouse_occupation`,`living_children`,`plan_more_children`,`average_monthly_income`,`type_of_client`,`reason_for_FP`,`others`,`current_user_type`,`changin_method_resaon`,`side_effects`,`currently_used_changing_methods`,`changing_method_others`,`medical_history`,`med_history_specify`,`pregnancies_G`,`pregnancies_P`,`pregnancy_full_term`,`pregnancy_abortion`,`pregnancy_premature`,`pregnancy_living`,`date_last_delivery`,`type_last_delivery`,`last_menstrual_period`,`previous_mentrual_period`,`menstrual_flow`,`dysmenorrhea`,`hydatidiform_mole`,`ectopitic_pregnancy`,`sexually_transmitted_infections_risk`,`genital_area_yes`,`VAW`,`referred_to`,`weight`,`height`,`bp`,`pulse_rate`,`skin`,`conjunctiva`,`neck`,`breast`,`abdomen`,`extremities`,`pelvic_examination`,`cervical_abnormalities`,`cervical_consistency`,`uterine_position`,`uterine_depth`,`added_by`,`added_on`) values (1,'12','12','12','2024-10-12',12,'12','12','12','23','123','123','123','123','12','123','123','123','123','2024-09-30',123,'123',123,1,'123.00','New Acceptor','','','','','','','','history of stroke/heart attack/hypertension','',123,123,123,123,123,123,'2024-10-08','Vaginal','2024-10-09','2024-10-15','',1,1,1,'abnormal discharge from the genital area',1,'partner does not approve of the visit to FP clinic','DSWD','123.00','123.00','123',123,'DSWD','DSWD','DSWD','DSWD','DSWD','DSWD','uterine depth','','','','12.00',1,'2024-10-22 23:34:18');
 
 /*Table structure for table `maternal_health_record` */
 
@@ -668,6 +670,20 @@ VALUES (_last_name,
         _uterine_position,
         _uterine_depth,
         _added_by);
+    END */$$
+DELIMITER ;
+
+/* Procedure structure for procedure `sp_family_planning_get` */
+
+/*!50003 DROP PROCEDURE IF EXISTS  `sp_family_planning_get` */;
+
+DELIMITER $$
+
+/*!50003 CREATE DEFINER=`system_admin`@`%` PROCEDURE `sp_family_planning_get`()
+BEGIN
+SELECT
+ *
+FROM `family_planning`;
     END */$$
 DELIMITER ;
 
@@ -1343,7 +1359,9 @@ BEGIN
 	CONCAT(pd.`father_first_name`, " ",pd.`father_middle_name`," ",pd.`father_last_name`, " ", pd.`father_name_extension`)) father_name,
 	IF(pd.`mother_name_extension` = "",CONCAT(pd.`mother_first_name`, " ",pd.`mother_middle_name`," ",pd.`mother_last_name`),
 	CONCAT(pd.`mother_first_name`, " ",pd.`mother_middle_name`," ",pd.`mother_last_name`, " ", pd.`mother_name_extension`)) mother_name,
-	pd.* FROM `patient_details` pd;
+	pd.*, pm.`family_serial_number` FROM `patient_details` pd
+	LEFT JOIN `purok_family_members` pf ON pf.id = pd.`purok_family_member_id`
+	LEFT JOIN `purok_members` pm ON pm.`id` = pf.`purok_members_id`;
     END */$$
 DELIMITER ;
 
