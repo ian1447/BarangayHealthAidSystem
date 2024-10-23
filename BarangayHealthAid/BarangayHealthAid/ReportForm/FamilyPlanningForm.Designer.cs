@@ -38,6 +38,13 @@
             this.gvFamilyRecords = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.id = new DevExpress.XtraGrid.Columns.GridColumn();
             this.name = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.format_birthdate = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.age = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.address = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.religion = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.civil_status = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.educ_attain = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.contact_number = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
@@ -111,6 +118,7 @@
             this.btnRefresh.StyleController = this.layoutControl1;
             this.btnRefresh.TabIndex = 9;
             this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // btnPrint
             // 
@@ -138,7 +146,14 @@
             // 
             this.gvFamilyRecords.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.id,
-            this.name});
+            this.name,
+            this.format_birthdate,
+            this.age,
+            this.address,
+            this.religion,
+            this.civil_status,
+            this.educ_attain,
+            this.contact_number});
             this.gvFamilyRecords.GridControl = this.dtFamilyRecords;
             this.gvFamilyRecords.Name = "gvFamilyRecords";
             this.gvFamilyRecords.OptionsBehavior.Editable = false;
@@ -161,6 +176,70 @@
             this.name.Name = "name";
             this.name.Visible = true;
             this.name.VisibleIndex = 0;
+            this.name.Width = 217;
+            // 
+            // format_birthdate
+            // 
+            this.format_birthdate.Caption = "Birthday";
+            this.format_birthdate.FieldName = "format_birthdate";
+            this.format_birthdate.Name = "format_birthdate";
+            this.format_birthdate.Visible = true;
+            this.format_birthdate.VisibleIndex = 1;
+            this.format_birthdate.Width = 142;
+            // 
+            // age
+            // 
+            this.age.Caption = "Age";
+            this.age.FieldName = "age";
+            this.age.Name = "age";
+            this.age.Visible = true;
+            this.age.VisibleIndex = 2;
+            this.age.Width = 65;
+            // 
+            // address
+            // 
+            this.address.Caption = "Address";
+            this.address.FieldName = "address";
+            this.address.Name = "address";
+            this.address.Visible = true;
+            this.address.VisibleIndex = 3;
+            this.address.Width = 216;
+            // 
+            // religion
+            // 
+            this.religion.Caption = "Religion";
+            this.religion.FieldName = "religion";
+            this.religion.Name = "religion";
+            this.religion.Visible = true;
+            this.religion.VisibleIndex = 4;
+            this.religion.Width = 142;
+            // 
+            // civil_status
+            // 
+            this.civil_status.Caption = "Civil Status";
+            this.civil_status.FieldName = "civil_status";
+            this.civil_status.Name = "civil_status";
+            this.civil_status.Visible = true;
+            this.civil_status.VisibleIndex = 5;
+            this.civil_status.Width = 142;
+            // 
+            // educ_attain
+            // 
+            this.educ_attain.Caption = "Educational Attainment";
+            this.educ_attain.FieldName = "educ_attain";
+            this.educ_attain.Name = "educ_attain";
+            this.educ_attain.Visible = true;
+            this.educ_attain.VisibleIndex = 6;
+            this.educ_attain.Width = 142;
+            // 
+            // contact_number
+            // 
+            this.contact_number.Caption = "Contact Number";
+            this.contact_number.FieldName = "contact_number";
+            this.contact_number.Name = "contact_number";
+            this.contact_number.Visible = true;
+            this.contact_number.VisibleIndex = 7;
+            this.contact_number.Width = 157;
             // 
             // repositoryItemCheckEdit1
             // 
@@ -260,6 +339,8 @@
             // bwGetFamilyRecords
             // 
             this.bwGetFamilyRecords.WorkerSupportsCancellation = true;
+            this.bwGetFamilyRecords.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwGetFamilyRecords_DoWork);
+            this.bwGetFamilyRecords.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwGetFamilyRecords_RunWorkerCompleted);
             // 
             // FamilyPlanningForm
             // 
@@ -309,5 +390,12 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private DevExpress.XtraEditors.SimpleButton btnUpdate;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
+        private DevExpress.XtraGrid.Columns.GridColumn format_birthdate;
+        private DevExpress.XtraGrid.Columns.GridColumn age;
+        private DevExpress.XtraGrid.Columns.GridColumn address;
+        private DevExpress.XtraGrid.Columns.GridColumn religion;
+        private DevExpress.XtraGrid.Columns.GridColumn civil_status;
+        private DevExpress.XtraGrid.Columns.GridColumn educ_attain;
+        private DevExpress.XtraGrid.Columns.GridColumn contact_number;
     }
 }

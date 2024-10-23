@@ -144,13 +144,31 @@ namespace BarangayHealthAid.ReportForm
             lciposition.Visibility = selectedItems.Contains("8") ? DevExpress.XtraLayout.Utils.LayoutVisibility.Always : DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             lcidepth.Visibility = selectedItems.Contains("9") ? DevExpress.XtraLayout.Utils.LayoutVisibility.Always : DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
         }
+
+        private void cedischange_CheckedChanged(object sender, EventArgs e)
+        {
+            cbGenitalDischarge.Enabled = cedischange.Checked;
+        }
       
         #endregion
 
         public bool is_view = false;
         public bool is_add = true;
+        public int edit_id;
+        private string menstual_flow, plan_more_chil, _dysmenorrhea, _hydatidiform_mole, _ectopitic_pregnancy, sexually_transmitted, referred_to;
         private void btnSave_Click(object sender, EventArgs e)
         {
+            menstual_flow = cbFlow.Text.ToString() == "scanty (1-2 pads per day)" ? "Scanty" : cbFlow.Text.ToString() == "moderate(3-5 pads per day)" ? "moderate" : "heavy";
+            plan_more_chil = cePlanMoreChildren.Checked ? "1" : "0";
+            _dysmenorrhea = ceDysmen.Checked ? "1" : "0";
+            _hydatidiform_mole = ceHydatid.Checked ? "1" : "0";
+            _ectopitic_pregnancy = ceEctopic.Checked ? "1" : "0";
+            sexually_transmitted = cedischange.Checked ? "1" : "0";
+            sexually_transmitted = sexually_transmitted + "," + (ceulcers.Checked ? "1" : "0");
+            sexually_transmitted = sexually_transmitted + "," + (cePain.Checked ? "1" : "0");
+            sexually_transmitted = sexually_transmitted + "," + (ceInfections.Checked ? "1" : "0");
+            sexually_transmitted = sexually_transmitted + "," + (ceHIV.Checked ? "1" : "0");
+            referred_to = cbReferredTo.Text == "Others" ? txtReferOthers.Text : cbReferredTo.Text;
             if (is_add)
             {
                 if (!bwAddRecord.IsBusy)
@@ -163,7 +181,7 @@ namespace BarangayHealthAid.ReportForm
 
         private void bwAddRecord_DoWork(object sender, DoWorkEventArgs e)
         {
-            FamilyPlanning.AddFamilyPlanningRecord(txtLastName.Text, txtFirstName.Text, txtMiddleInitial.Text, dtDob.Text, txtAge.Text, txtEducAttain.Text, txtOccup.Text, txtAddressNo.Text, txtAddressSt.Text, txtAddressBarangay.Text, txtAddressMun.Text, txtAddressProvince.Text, txtContactNo.Text, txtCivilStatus.Text, txtReligion.Text, txtSpouseLastName.Text, txtSpouseFirstName.Text, txtSpouseMiddle.Text, dtSpouseDob.Text, txtSpouseAge.Text, txtSpouseOccupation.Text, txtLivingChil.Text, "1", txtMonthlyIncome.Text, rgType.Text, rgFpReason.Text, txtOthers.Text, rgSub.Text, rgCMReason.Text, txtChangeMethodOthers.Text, rgCurMeth.Text, txtCurMeth.Text, clbMedHistory.Text, txtMedOthers.Text, txtG.Text, txtP.Text, txtFullterm.Text, txtAbortion.Text, txtPremature.Text, txtLivingChildren.Text, dtLastdel.Text, cbLastDel.Text, dtLastmens.Text, dtPrevMens.Text, cbFlow.Text, "1", "1", "1", cedischange.Text,"1", clbVAW.Text, cbReferredTo.Text, txtWeight.Text, txtheight.Text, txtBp.Text, txtPulseRate.Text, cbSkin.Text, cbConjunctiva.Text, cbNeck.Text, cbBreast.Text, cbAbdomen.Text, cbExtremites.Text, clbPelvicExamination.Text, cbCervicalAbno.Text, cbCervicalConsis.Text, cbUterinePos.Text, txtUterineDepth.Text);
+            FamilyPlanning.AddFamilyPlanningRecord(txtLastName.Text, txtFirstName.Text, txtMiddleInitial.Text, dtDob.Text, txtAge.Text, txtEducAttain.Text, txtOccup.Text, txtAddressNo.Text, txtAddressSt.Text, txtAddressBarangay.Text, txtAddressMun.Text, txtAddressProvince.Text, txtContactNo.Text, txtCivilStatus.Text, txtReligion.Text, txtSpouseLastName.Text, txtSpouseFirstName.Text, txtSpouseMiddle.Text, dtSpouseDob.Text, txtSpouseAge.Text, txtSpouseOccupation.Text, txtLivingChil.Text, plan_more_chil, txtMonthlyIncome.Text, rgType.Text, rgFpReason.Text, txtOthers.Text, rgSub.Text, rgCMReason.Text, txtChangeMethodOthers.Text, rgCurMeth.Text, txtCurMeth.Text, clbMedHistory.Text, txtMedOthers.Text, txtG.Text, txtP.Text, txtFullterm.Text, txtAbortion.Text, txtPremature.Text, txtLivingChildren.Text, dtLastdel.Text, cbLastDel.Text, dtLastmens.Text, dtPrevMens.Text, menstual_flow, _dysmenorrhea, _hydatidiform_mole, _ectopitic_pregnancy, sexually_transmitted, cbGenitalDischarge.Text, clbVAW.Text, cbReferredTo.Text, txtWeight.Text, txtheight.Text, txtBp.Text, txtPulseRate.Text, cbSkin.Text, cbConjunctiva.Text, cbNeck.Text, cbBreast.Text, cbAbdomen.Text, cbExtremites.Text, clbPelvicExamination.Text, cbCervicalAbno.Text, cbCervicalConsis.Text, cbUterinePos.Text, txtUterineDepth.Text);
             bwAddRecord.CancelAsync();
         }
 
@@ -190,5 +208,6 @@ namespace BarangayHealthAid.ReportForm
             else
                 this.Close();
         }
+
     }
 }

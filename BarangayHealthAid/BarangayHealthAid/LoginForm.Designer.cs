@@ -64,11 +64,11 @@
             // labelControl1
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl1.Location = new System.Drawing.Point(39, 218);
+            this.labelControl1.Location = new System.Drawing.Point(124, 218);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(234, 23);
+            this.labelControl1.Size = new System.Drawing.Size(70, 23);
             this.labelControl1.TabIndex = 1;
-            this.labelControl1.Text = "BARANGAY AID SYSTEM";
+            this.labelControl1.Text = "BHCMS";
             // 
             // txtUsername
             // 
@@ -206,7 +206,7 @@
             this.MinimizeBox = false;
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Barangay Aid System";
+            this.Text = "BHCMS";
             this.Shown += new System.EventHandler(this.LoginForm_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUsername.Properties)).EndInit();
