@@ -204,7 +204,7 @@
             this.lciconsistency = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciposition = new DevExpress.XtraLayout.LayoutControlItem();
             this.lcidepth = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem78 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciSave = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem79 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem37 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -381,7 +381,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciconsistency)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciposition)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcidepth)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem78)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciSave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem79)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem37)).BeginInit();
@@ -1541,7 +1541,7 @@
             this.lciconsistency,
             this.lciposition,
             this.lcidepth,
-            this.layoutControlItem78,
+            this.lciSave,
             this.emptySpaceItem4,
             this.layoutControlItem79,
             this.layoutControlItem37,
@@ -2540,14 +2540,14 @@
             this.lcidepth.TextToControlDistance = 5;
             this.lcidepth.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             // 
-            // layoutControlItem78
+            // lciSave
             // 
-            this.layoutControlItem78.Control = this.btnSave;
-            this.layoutControlItem78.Location = new System.Drawing.Point(564, 852);
-            this.layoutControlItem78.Name = "layoutControlItem78";
-            this.layoutControlItem78.Size = new System.Drawing.Size(142, 26);
-            this.layoutControlItem78.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem78.TextVisible = false;
+            this.lciSave.Control = this.btnSave;
+            this.lciSave.Location = new System.Drawing.Point(564, 852);
+            this.lciSave.Name = "lciSave";
+            this.lciSave.Size = new System.Drawing.Size(142, 26);
+            this.lciSave.TextSize = new System.Drawing.Size(0, 0);
+            this.lciSave.TextVisible = false;
             // 
             // emptySpaceItem4
             // 
@@ -2602,6 +2602,7 @@
             this.Name = "FamilyPlanningAddForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Family Planning Add";
+            this.Load += new System.EventHandler(this.FamilyPlanningAddForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtUterineDepth.Properties)).EndInit();
@@ -2772,7 +2773,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciconsistency)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciposition)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcidepth)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem78)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciSave)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem79)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem37)).EndInit();
@@ -2878,10 +2879,6 @@
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem11;
         public DevExpress.XtraEditors.ComboBoxEdit cbConjunctiva;
         public DevExpress.XtraEditors.ComboBoxEdit cbSkin;
-        private DevExpress.XtraEditors.TextEdit txtPulseRate;
-        private DevExpress.XtraEditors.TextEdit txtheight;
-        private DevExpress.XtraEditors.TextEdit txtBp;
-        private DevExpress.XtraEditors.TextEdit txtWeight;
         private DevExpress.XtraEditors.LabelControl labelControl9;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem66;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem67;
@@ -2909,7 +2906,7 @@
         private DevExpress.XtraLayout.LayoutControlItem lcidepth;
         private DevExpress.XtraEditors.SimpleButton btnCancel;
         private DevExpress.XtraEditors.SimpleButton btnSave;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem78;
+        private DevExpress.XtraLayout.LayoutControlItem lciSave;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem4;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem79;
         private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
@@ -2965,5 +2962,9 @@
         public DevExpress.XtraEditors.CheckEdit ceulcers;
         public DevExpress.XtraEditors.TextEdit txtReferOthers;
         public DevExpress.XtraEditors.TextEdit txtUterineDepth;
+        public DevExpress.XtraEditors.TextEdit txtPulseRate;
+        public DevExpress.XtraEditors.TextEdit txtheight;
+        public DevExpress.XtraEditors.TextEdit txtBp;
+        public DevExpress.XtraEditors.TextEdit txtWeight;
     }
 }

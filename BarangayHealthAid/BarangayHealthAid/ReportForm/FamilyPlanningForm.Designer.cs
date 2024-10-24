@@ -56,6 +56,8 @@
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::BarangayHealthAid.WaitForm1), true, true);
             this.bwGetFamilyRecords = new System.ComponentModel.BackgroundWorker();
+            this.btnView = new DevExpress.XtraEditors.SimpleButton();
+            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtFamilyRecords)).BeginInit();
@@ -69,10 +71,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.btnView);
             this.layoutControl1.Controls.Add(this.btnUpdate);
             this.layoutControl1.Controls.Add(this.btnAdd);
             this.layoutControl1.Controls.Add(this.btnRefresh);
@@ -90,7 +94,7 @@
             // btnUpdate
             // 
             this.btnUpdate.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.Image")));
-            this.btnUpdate.Location = new System.Drawing.Point(943, 12);
+            this.btnUpdate.Location = new System.Drawing.Point(837, 12);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(106, 22);
             this.btnUpdate.StyleController = this.layoutControl1;
@@ -101,7 +105,7 @@
             // btnAdd
             // 
             this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
-            this.btnAdd.Location = new System.Drawing.Point(837, 12);
+            this.btnAdd.Location = new System.Drawing.Point(731, 12);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(102, 22);
             this.btnAdd.StyleController = this.layoutControl1;
@@ -256,7 +260,8 @@
             this.layoutControlItem2,
             this.layoutControlItem3,
             this.layoutControlItem4,
-            this.layoutControlItem5});
+            this.layoutControlItem5,
+            this.layoutControlItem6});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Size = new System.Drawing.Size(1273, 605);
@@ -267,7 +272,7 @@
             this.emptySpaceItem2.AllowHotTrack = false;
             this.emptySpaceItem2.Location = new System.Drawing.Point(0, 0);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(825, 26);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(719, 26);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlGroup2
@@ -315,7 +320,7 @@
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.btnAdd;
-            this.layoutControlItem4.Location = new System.Drawing.Point(825, 0);
+            this.layoutControlItem4.Location = new System.Drawing.Point(719, 0);
             this.layoutControlItem4.MaxSize = new System.Drawing.Size(106, 26);
             this.layoutControlItem4.MinSize = new System.Drawing.Size(106, 26);
             this.layoutControlItem4.Name = "layoutControlItem4";
@@ -327,7 +332,7 @@
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.btnUpdate;
-            this.layoutControlItem5.Location = new System.Drawing.Point(931, 0);
+            this.layoutControlItem5.Location = new System.Drawing.Point(825, 0);
             this.layoutControlItem5.MaxSize = new System.Drawing.Size(110, 26);
             this.layoutControlItem5.MinSize = new System.Drawing.Size(110, 26);
             this.layoutControlItem5.Name = "layoutControlItem5";
@@ -341,6 +346,26 @@
             this.bwGetFamilyRecords.WorkerSupportsCancellation = true;
             this.bwGetFamilyRecords.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwGetFamilyRecords_DoWork);
             this.bwGetFamilyRecords.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwGetFamilyRecords_RunWorkerCompleted);
+            // 
+            // btnView
+            // 
+            this.btnView.Image = ((System.Drawing.Image)(resources.GetObject("btnView.Image")));
+            this.btnView.Location = new System.Drawing.Point(947, 12);
+            this.btnView.Name = "btnView";
+            this.btnView.Size = new System.Drawing.Size(102, 22);
+            this.btnView.StyleController = this.layoutControl1;
+            this.btnView.TabIndex = 12;
+            this.btnView.Text = "View Record";
+            this.btnView.Click += new System.EventHandler(this.btnView_Click);
+            // 
+            // layoutControlItem6
+            // 
+            this.layoutControlItem6.Control = this.btnView;
+            this.layoutControlItem6.Location = new System.Drawing.Point(935, 0);
+            this.layoutControlItem6.Name = "layoutControlItem6";
+            this.layoutControlItem6.Size = new System.Drawing.Size(106, 26);
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem6.TextVisible = false;
             // 
             // FamilyPlanningForm
             // 
@@ -364,6 +389,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -397,5 +423,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn civil_status;
         private DevExpress.XtraGrid.Columns.GridColumn educ_attain;
         private DevExpress.XtraGrid.Columns.GridColumn contact_number;
+        private DevExpress.XtraEditors.SimpleButton btnView;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
     }
 }

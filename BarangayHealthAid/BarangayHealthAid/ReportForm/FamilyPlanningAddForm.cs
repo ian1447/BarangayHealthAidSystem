@@ -10,6 +10,7 @@ using DevExpress.XtraEditors;
 using BarangayHealthAid.Core;
 using BarangayHealthAid.Dal;
 using DevExpress.XtraEditors.Controls;
+using DevExpress.XtraLayout;
 
 namespace BarangayHealthAid.ReportForm
 {
@@ -207,6 +208,28 @@ namespace BarangayHealthAid.ReportForm
             }
             else
                 this.Close();
+        }
+
+        private void FamilyPlanningAddForm_Load(object sender, EventArgs e)
+        {
+            if (is_view)
+            {
+                foreach (BaseLayoutItem item in layoutControl1.Items)
+                {
+                    LayoutControlItem layoutControlItem = item as LayoutControlItem;
+                    if (layoutControlItem != null)
+                    {
+                        BaseEdit component = layoutControlItem.Control as BaseEdit;
+                        if (component != null)
+                        {
+                            component.Properties.ReadOnly = true;
+                        }
+                    }
+                }
+                btnSave.Enabled = false;
+                lciSave.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
+                btnCancel.Text = "Close";
+            }
         }
 
     }
