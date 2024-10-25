@@ -178,6 +178,14 @@ namespace BarangayHealthAid.ReportForm
                     bwAddRecord.RunWorkerAsync();
                 }
             }
+            else
+            {
+                if (!bwUpdateRecord.IsBusy)
+                {
+                    ShowLoading("Updating Record...");
+                    bwUpdateRecord.RunWorkerAsync();
+                }
+            }
         }
 
         private void bwAddRecord_DoWork(object sender, DoWorkEventArgs e)
@@ -230,6 +238,25 @@ namespace BarangayHealthAid.ReportForm
                 lciSave.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
                 btnCancel.Text = "Close";
             }
+        }
+
+        private void bwUpdateRecord_DoWork(object sender, DoWorkEventArgs e)
+        {
+            FamilyPlanning.UpdateFamilyPlanningRecord(txtLastName.Text, txtFirstName.Text, txtMiddleInitial.Text, dtDob.Text, txtAge.Text, txtEducAttain.Text, txtOccup.Text, txtAddressNo.Text, txtAddressSt.Text, txtAddressBarangay.Text, txtAddressMun.Text, txtAddressProvince.Text, txtContactNo.Text, txtCivilStatus.Text, txtReligion.Text, txtSpouseLastName.Text, txtSpouseFirstName.Text, txtSpouseMiddle.Text, dtSpouseDob.Text, txtSpouseAge.Text, txtSpouseOccupation.Text, txtLivingChil.Text, plan_more_chil, txtMonthlyIncome.Text, rgType.Text, rgFpReason.Text, txtOthers.Text, rgSub.Text, rgCMReason.Text, txtChangeMethodOthers.Text, rgCurMeth.Text, txtCurMeth.Text, clbMedHistory.Text, txtMedOthers.Text, txtG.Text, txtP.Text, txtFullterm.Text, txtAbortion.Text, txtPremature.Text, txtLivingChildren.Text, dtLastdel.Text, cbLastDel.Text, dtLastmens.Text, dtPrevMens.Text, menstual_flow, _dysmenorrhea, _hydatidiform_mole, _ectopitic_pregnancy, sexually_transmitted, cbGenitalDischarge.Text, clbVAW.Text, cbReferredTo.Text, txtWeight.Text, txtheight.Text, txtBp.Text, txtPulseRate.Text, cbSkin.Text, cbConjunctiva.Text, cbNeck.Text, cbBreast.Text, cbAbdomen.Text, cbExtremites.Text, clbPelvicExamination.Text, cbCervicalAbno.Text, cbCervicalConsis.Text, cbUterinePos.Text, txtUterineDepth.Text,edit_id);
+            bwUpdateRecord.CancelAsync();
+
+        }
+
+        private void bwUpdateRecord_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            HideLoading();
+            if (FamilyPlanning.UpdateFamilyPlanningRecordIsSuccessful)
+            {
+                MsgBox.Information("Record Updated Successfully.");
+                this.Close();
+            }
+            else
+                MsgBox.Error(FamilyPlanning.UpdateFamilyPlanningRecordErrorMessage);
         }
 
     }

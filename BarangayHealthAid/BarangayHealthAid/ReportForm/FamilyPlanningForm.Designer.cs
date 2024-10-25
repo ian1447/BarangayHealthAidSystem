@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FamilyPlanningForm));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.btnView = new DevExpress.XtraEditors.SimpleButton();
             this.btnUpdate = new DevExpress.XtraEditors.SimpleButton();
             this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
             this.btnRefresh = new DevExpress.XtraEditors.SimpleButton();
@@ -54,10 +55,9 @@
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::BarangayHealthAid.WaitForm1), true, true);
             this.bwGetFamilyRecords = new System.ComponentModel.BackgroundWorker();
-            this.btnView = new DevExpress.XtraEditors.SimpleButton();
-            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtFamilyRecords)).BeginInit();
@@ -90,6 +90,17 @@
             this.layoutControl1.Size = new System.Drawing.Size(1273, 605);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // btnView
+            // 
+            this.btnView.Image = ((System.Drawing.Image)(resources.GetObject("btnView.Image")));
+            this.btnView.Location = new System.Drawing.Point(947, 12);
+            this.btnView.Name = "btnView";
+            this.btnView.Size = new System.Drawing.Size(102, 22);
+            this.btnView.StyleController = this.layoutControl1;
+            this.btnView.TabIndex = 12;
+            this.btnView.Text = "View Record";
+            this.btnView.Click += new System.EventHandler(this.btnView_Click);
             // 
             // btnUpdate
             // 
@@ -133,6 +144,7 @@
             this.btnPrint.StyleController = this.layoutControl1;
             this.btnPrint.TabIndex = 9;
             this.btnPrint.Text = "Print";
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // dtFamilyRecords
             // 
@@ -341,31 +353,23 @@
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
             // 
+            // layoutControlItem6
+            // 
+            this.layoutControlItem6.Control = this.btnView;
+            this.layoutControlItem6.Location = new System.Drawing.Point(935, 0);
+            this.layoutControlItem6.MaxSize = new System.Drawing.Size(106, 26);
+            this.layoutControlItem6.MinSize = new System.Drawing.Size(106, 26);
+            this.layoutControlItem6.Name = "layoutControlItem6";
+            this.layoutControlItem6.Size = new System.Drawing.Size(106, 26);
+            this.layoutControlItem6.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem6.TextVisible = false;
+            // 
             // bwGetFamilyRecords
             // 
             this.bwGetFamilyRecords.WorkerSupportsCancellation = true;
             this.bwGetFamilyRecords.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwGetFamilyRecords_DoWork);
             this.bwGetFamilyRecords.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwGetFamilyRecords_RunWorkerCompleted);
-            // 
-            // btnView
-            // 
-            this.btnView.Image = ((System.Drawing.Image)(resources.GetObject("btnView.Image")));
-            this.btnView.Location = new System.Drawing.Point(947, 12);
-            this.btnView.Name = "btnView";
-            this.btnView.Size = new System.Drawing.Size(102, 22);
-            this.btnView.StyleController = this.layoutControl1;
-            this.btnView.TabIndex = 12;
-            this.btnView.Text = "View Record";
-            this.btnView.Click += new System.EventHandler(this.btnView_Click);
-            // 
-            // layoutControlItem6
-            // 
-            this.layoutControlItem6.Control = this.btnView;
-            this.layoutControlItem6.Location = new System.Drawing.Point(935, 0);
-            this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(106, 26);
-            this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem6.TextVisible = false;
             // 
             // FamilyPlanningForm
             // 

@@ -211,6 +211,7 @@
             this.layoutControlItem46 = new DevExpress.XtraLayout.LayoutControlItem();
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::BarangayHealthAid.WaitForm1), true, true);
             this.bwAddRecord = new System.ComponentModel.BackgroundWorker();
+            this.bwUpdateRecord = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtUterineDepth.Properties)).BeginInit();
@@ -2590,6 +2591,12 @@
             this.bwAddRecord.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwAddRecord_DoWork);
             this.bwAddRecord.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwAddRecord_RunWorkerCompleted);
             // 
+            // bwUpdateRecord
+            // 
+            this.bwUpdateRecord.WorkerSupportsCancellation = true;
+            this.bwUpdateRecord.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwUpdateRecord_DoWork);
+            this.bwUpdateRecord.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwUpdateRecord_RunWorkerCompleted);
+            // 
             // FamilyPlanningAddForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2966,5 +2973,6 @@
         public DevExpress.XtraEditors.TextEdit txtheight;
         public DevExpress.XtraEditors.TextEdit txtBp;
         public DevExpress.XtraEditors.TextEdit txtWeight;
+        private System.ComponentModel.BackgroundWorker bwUpdateRecord;
     }
 }

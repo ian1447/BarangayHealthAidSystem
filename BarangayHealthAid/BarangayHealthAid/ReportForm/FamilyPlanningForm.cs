@@ -174,7 +174,7 @@ namespace BarangayHealthAid.ReportForm
                     fpa.ceEctopic.Checked = Convert.ToBoolean(filtered[0]["ectopitic_pregnancy"].ToString());
                     string[] risksArray = filtered[0]["sexually_transmitted_infections_risk"].ToString().Split(',');
                     fpa.cedischange.Checked = risksArray[0] == "1" ? true:false;
-                    fpa.cbGenitalDischarge.SelectedIndex = Convert.ToInt32(filtered[0]["genital_area_yes"].ToString());
+                    fpa.cbGenitalDischarge.Text = (filtered[0]["genital_area_yes"].ToString());
                     fpa.ceulcers.Checked = risksArray[1] == "1" ? true : false;
                     fpa.cePain.Checked = risksArray[2] == "1" ? true : false;
                     fpa.ceInfections.Checked = risksArray[3] == "1" ? true : false;
@@ -321,7 +321,7 @@ namespace BarangayHealthAid.ReportForm
                     fpa.ceEctopic.Checked = Convert.ToBoolean(filtered[0]["ectopitic_pregnancy"].ToString());
                     string[] risksArray = filtered[0]["sexually_transmitted_infections_risk"].ToString().Split(',');
                     fpa.cedischange.Checked = risksArray[0] == "1" ? true : false;
-                    fpa.cbGenitalDischarge.SelectedIndex = Convert.ToInt32(filtered[0]["genital_area_yes"].ToString());
+                    fpa.cbGenitalDischarge.Text =   (filtered[0]["genital_area_yes"].ToString());
                     fpa.ceulcers.Checked = risksArray[1] == "1" ? true : false;
                     fpa.cePain.Checked = risksArray[2] == "1" ? true : false;
                     fpa.ceInfections.Checked = risksArray[3] == "1" ? true : false;
@@ -371,6 +371,80 @@ namespace BarangayHealthAid.ReportForm
                     fpa.is_view = true;
                     fpa.ShowDialog();
                     LoadData();
+                }
+            }
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            if (SelectionPass())
+            {
+                int id = Convert.ToInt32(gvFamilyRecords.GetFocusedRowCellValue("id").ToString());
+                DataRow[] filtered = familyRecords.Select(String.Format("id = {0}", id));
+                if (filtered.Count() > 0)
+                {
+                    FamilyPlanningReportForm fpf = new FamilyPlanningReportForm();
+                    fpf.lblLastName.Text = filtered[0]["last_name"].ToString();
+                    fpf.lblGivenName.Text = filtered[0]["given_name"].ToString();
+                    fpf.lblMiddleInitial.Text = filtered[0]["given_name"].ToString();
+                    fpf.lbldob.Text = filtered[0]["dob"].ToString();
+                    fpf.lblage.Text = filtered[0]["age"].ToString();
+                    fpf.lblEduc.Text = filtered[0]["educ_attain"].ToString();
+                    fpf.lblOccup.Text = filtered[0]["occupation"].ToString();
+                    fpf.lblAddNo.Text = filtered[0]["address_no"].ToString();
+                    fpf.lblAddStr.Text = filtered[0]["address_street"].ToString();
+                    fpf.lblAddBar.Text = filtered[0]["address_barangay"].ToString();
+                    //fpf.lbladdmu.Text = filtered[0]["address_mun/city"].ToString();
+                    fpf.lblAddPro.Text = filtered[0]["address_prov"].ToString();
+                    fpf.lblContact.Text = filtered[0]["contact_number"].ToString();
+                    fpf.lblCivil.Text = filtered[0]["civil_status"].ToString();
+                    fpf.lblReligion.Text = filtered[0]["religion"].ToString();
+                    fpf.lblSpouseLast.Text = filtered[0]["spouse_last_name"].ToString();
+                    fpf.lblSpouseGiven.Text = filtered[0]["spouse_given_name"].ToString();
+                    fpf.lblSpouseMid.Text = filtered[0]["spouse_middle_inital"].ToString();
+                    fpf.lblSpouseDob.Text = filtered[0]["spouse_dob"].ToString();
+                    fpf.lblSpouseAge.Text = filtered[0]["spouse_age"].ToString();
+                    fpf.lblSpouseOcc.Text = filtered[0]["spouse_occupation"].ToString();
+                    fpf.lblLiving.Text = filtered[0]["living_children"].ToString();
+                    fpf.lblAveIncome.Text = filtered[0]["average_monthly_income"].ToString();
+                    fpf.lblG.Text = filtered[0]["pregnancies_G"].ToString();
+                    fpf.lblP.Text = filtered[0]["pregnancies_P"].ToString();
+                    fpf.lblFull.Text = filtered[0]["pregnancy_full_term"].ToString();
+                    fpf.lblAbort.Text = filtered[0]["pregnancy_abortion"].ToString();
+                    fpf.lblPre.Text = filtered[0]["pregnancy_premature"].ToString();
+                    fpf.lblLivingChildren.Text = filtered[0]["pregnancy_living"].ToString();
+                    fpf.lblDateLastDel.Text = filtered[0]["date_last_delivery"].ToString();
+                    fpf.lblLastMens.Text = filtered[0]["last_menstrual_period"].ToString();
+                    fpf.lblPrevMens.Text = filtered[0]["previous_mentrual_period"].ToString();
+                    fpf.lblWeight.Text = filtered[0]["weight"].ToString();
+                    fpf.lblHeight.Text = filtered[0]["height"].ToString();
+                    fpf.lblBp.Text = filtered[0]["bp"].ToString();
+                    fpf.lblPulse.Text = filtered[0]["pulse_rate"].ToString();
+                    
+                    fpf.cePlanY.Checked = Convert.ToBoolean(filtered[0]["plan_more_children"].ToString());
+                    fpf.cePlanN.Checked = !Convert.ToBoolean(filtered[0]["plan_more_children"].ToString());
+                    fpf.ceNewAcc.Checked = filtered[0]["type_of_client"].ToString() == "New Acceptor" ? true : false;
+                    fpf.ceCurrUser.Checked = filtered[0]["type_of_client"].ToString() == "New Acceptor" ? false : true;
+                    fpf.ceLimiting.Checked = filtered[0]["reason_for_FP"].ToString() == "limiting" ? true : false;
+                    fpf.ceSpacing.Checked = filtered[0]["reason_for_FP"].ToString() == "spacing" ? true : false;
+                    fpf.ceOthers.Checked = filtered[0]["reason_for_FP"].ToString() == "others" ? true : false;
+                    fpf.ceChaningClinic.Checked = filtered[0]["current_user_type"].ToString() == "Changing Clinic" ? true : false;
+                    fpf.ceChangingmethod.Checked = filtered[0]["current_user_type"].ToString() == "Changing Method" ? true : false;
+                    fpf.ceDropOut.Checked = filtered[0]["current_user_type"].ToString() == "Dropout/Restart" ? true : false;
+                    fpf.ceSideEffect.Checked = filtered[0]["changin_method_resaon"].ToString() == "side_effects" ? true : false;
+                    fpf.ceMedCondition.Checked = filtered[0]["changin_method_resaon"].ToString() == "medical condition" ? true : false;
+                    //fpa.rgType.SelectedIndex = filtered[0]["type_of_client"].ToString() == "New Acceptor" ? 0 : 1;
+                    //fpa.rgFpReason.Text = filtered[0]["reason_for_FP"].ToString();
+                    //fpa.rgSub.Text = filtered[0]["current_user_type"].ToString();
+                    //fpa.rgCMReason.Text = filtered[0]["reason_for_FP"].ToString();
+                    //fpa.txtOthers.Text = filtered[0]["others"].ToString();
+                    //fpa.txtChangeMethodOthers.Text = filtered[0]["side_effects"].ToString();
+                    //fpa.rgCurMeth.Text = filtered[0]["currently_used_changing_methods"].ToString();
+                    //fpa.txtCurMeth.Text = filtered[0]["changing_method_others"].ToString();
+                    string[] medHistArray = filtered[0]["medical_history"].ToString().Split(',');
+
+                    fpf.DataMember = "CustomSqlQuery";
+                    fpf.ShowPreviewDialog();
                 }
             }
         }
