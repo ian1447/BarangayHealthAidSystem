@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OutPatientForm));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.cmbPurok = new DevExpress.XtraEditors.SearchLookUpEdit();
+            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.purok_no1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnAddHistory = new DevExpress.XtraEditors.SimpleButton();
             this.cmbdateperiod = new DevExpress.XtraEditors.SearchLookUpEdit();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -61,6 +64,7 @@
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciHistory = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::BarangayHealthAid.WaitForm1), true, true);
             this.bwGetOutPatientData = new System.ComponentModel.BackgroundWorker();
             this.pnlDates = new DevExpress.XtraEditors.PanelControl();
@@ -71,6 +75,8 @@
             this.dtpFrom = new DevExpress.XtraEditors.DateEdit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbPurok.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbdateperiod.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbCategory.Properties)).BeginInit();
@@ -88,6 +94,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciHistory)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlDates)).BeginInit();
             this.pnlDates.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtpTo.Properties.CalendarTimeProperties)).BeginInit();
@@ -98,6 +105,7 @@
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.cmbPurok);
             this.layoutControl1.Controls.Add(this.btnAddHistory);
             this.layoutControl1.Controls.Add(this.cmbdateperiod);
             this.layoutControl1.Controls.Add(this.cmbCategory);
@@ -111,14 +119,47 @@
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(836, 289, 250, 350);
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(1003, 570);
+            this.layoutControl1.Size = new System.Drawing.Size(1183, 570);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // cmbPurok
+            // 
+            this.cmbPurok.EditValue = "All";
+            this.cmbPurok.Location = new System.Drawing.Point(416, 12);
+            this.cmbPurok.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbPurok.Name = "cmbPurok";
+            this.cmbPurok.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbPurok.Properties.Appearance.Options.UseFont = true;
+            this.cmbPurok.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmbPurok.Properties.View = this.gridView2;
+            this.cmbPurok.Size = new System.Drawing.Size(122, 20);
+            this.cmbPurok.StyleController = this.layoutControl1;
+            this.cmbPurok.TabIndex = 399;
+            this.cmbPurok.EditValueChanged += new System.EventHandler(this.cmbPurok_EditValueChanged);
+            // 
+            // gridView2
+            // 
+            this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.purok_no1});
+            this.gridView2.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridView2.Name = "gridView2";
+            this.gridView2.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridView2.OptionsView.ShowGroupPanel = false;
+            // 
+            // purok_no1
+            // 
+            this.purok_no1.Caption = "Purok No";
+            this.purok_no1.FieldName = "purok_no";
+            this.purok_no1.Name = "purok_no1";
+            this.purok_no1.Visible = true;
+            this.purok_no1.VisibleIndex = 0;
             // 
             // btnAddHistory
             // 
             this.btnAddHistory.Image = ((System.Drawing.Image)(resources.GetObject("btnAddHistory.Image")));
-            this.btnAddHistory.Location = new System.Drawing.Point(404, 12);
+            this.btnAddHistory.Location = new System.Drawing.Point(584, 12);
             this.btnAddHistory.Name = "btnAddHistory";
             this.btnAddHistory.Size = new System.Drawing.Size(148, 22);
             this.btnAddHistory.StyleController = this.layoutControl1;
@@ -168,7 +209,7 @@
             // btnEdit
             // 
             this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
-            this.btnEdit.Location = new System.Drawing.Point(664, 12);
+            this.btnEdit.Location = new System.Drawing.Point(844, 12);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(104, 22);
             this.btnEdit.StyleController = this.layoutControl1;
@@ -179,7 +220,7 @@
             // btnAdd
             // 
             this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
-            this.btnAdd.Location = new System.Drawing.Point(556, 12);
+            this.btnAdd.Location = new System.Drawing.Point(736, 12);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(104, 22);
             this.btnAdd.StyleController = this.layoutControl1;
@@ -190,7 +231,7 @@
             // btnRefresh
             // 
             this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
-            this.btnRefresh.Location = new System.Drawing.Point(772, 12);
+            this.btnRefresh.Location = new System.Drawing.Point(952, 12);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(109, 22);
             this.btnRefresh.StyleController = this.layoutControl1;
@@ -201,7 +242,7 @@
             // btnPrint
             // 
             this.btnPrint.Image = ((System.Drawing.Image)(resources.GetObject("btnPrint.Image")));
-            this.btnPrint.Location = new System.Drawing.Point(885, 12);
+            this.btnPrint.Location = new System.Drawing.Point(1065, 12);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(106, 22);
             this.btnPrint.StyleController = this.layoutControl1;
@@ -216,7 +257,7 @@
             this.dtOutPatient.Name = "dtOutPatient";
             this.dtOutPatient.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit1});
-            this.dtOutPatient.Size = new System.Drawing.Size(955, 477);
+            this.dtOutPatient.Size = new System.Drawing.Size(1135, 477);
             this.dtOutPatient.TabIndex = 7;
             this.dtOutPatient.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvOutPatient});
@@ -378,18 +419,19 @@
             this.layoutControlItem5,
             this.layoutControlItem7,
             this.layoutControlItem6,
-            this.lciHistory});
+            this.lciHistory,
+            this.layoutControlItem8});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(1003, 570);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(1183, 570);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(352, 0);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(530, 0);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(40, 26);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(42, 26);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlGroup2
@@ -398,7 +440,7 @@
             this.layoutControlItem1});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 26);
             this.layoutControlGroup2.Name = "layoutControlGroup2";
-            this.layoutControlGroup2.Size = new System.Drawing.Size(983, 524);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(1163, 524);
             this.layoutControlGroup2.Text = "Out Patient Details";
             // 
             // layoutControlItem1
@@ -406,14 +448,14 @@
             this.layoutControlItem1.Control = this.dtOutPatient;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(959, 481);
+            this.layoutControlItem1.Size = new System.Drawing.Size(1139, 481);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.btnPrint;
-            this.layoutControlItem2.Location = new System.Drawing.Point(873, 0);
+            this.layoutControlItem2.Location = new System.Drawing.Point(1053, 0);
             this.layoutControlItem2.MaxSize = new System.Drawing.Size(110, 26);
             this.layoutControlItem2.MinSize = new System.Drawing.Size(110, 26);
             this.layoutControlItem2.Name = "layoutControlItem2";
@@ -425,7 +467,7 @@
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.btnRefresh;
-            this.layoutControlItem3.Location = new System.Drawing.Point(760, 0);
+            this.layoutControlItem3.Location = new System.Drawing.Point(940, 0);
             this.layoutControlItem3.MaxSize = new System.Drawing.Size(113, 26);
             this.layoutControlItem3.MinSize = new System.Drawing.Size(113, 26);
             this.layoutControlItem3.Name = "layoutControlItem3";
@@ -437,7 +479,7 @@
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.btnAdd;
-            this.layoutControlItem4.Location = new System.Drawing.Point(544, 0);
+            this.layoutControlItem4.Location = new System.Drawing.Point(724, 0);
             this.layoutControlItem4.MaxSize = new System.Drawing.Size(108, 26);
             this.layoutControlItem4.MinSize = new System.Drawing.Size(108, 26);
             this.layoutControlItem4.Name = "layoutControlItem4";
@@ -449,7 +491,7 @@
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.btnEdit;
-            this.layoutControlItem5.Location = new System.Drawing.Point(652, 0);
+            this.layoutControlItem5.Location = new System.Drawing.Point(832, 0);
             this.layoutControlItem5.MaxSize = new System.Drawing.Size(108, 26);
             this.layoutControlItem5.MinSize = new System.Drawing.Size(108, 26);
             this.layoutControlItem5.Name = "layoutControlItem5";
@@ -485,7 +527,7 @@
             // lciHistory
             // 
             this.lciHistory.Control = this.btnAddHistory;
-            this.lciHistory.Location = new System.Drawing.Point(392, 0);
+            this.lciHistory.Location = new System.Drawing.Point(572, 0);
             this.lciHistory.MaxSize = new System.Drawing.Size(152, 26);
             this.lciHistory.MinSize = new System.Drawing.Size(152, 26);
             this.lciHistory.Name = "lciHistory";
@@ -493,6 +535,18 @@
             this.lciHistory.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.lciHistory.TextSize = new System.Drawing.Size(0, 0);
             this.lciHistory.TextVisible = false;
+            // 
+            // layoutControlItem8
+            // 
+            this.layoutControlItem8.Control = this.cmbPurok;
+            this.layoutControlItem8.Location = new System.Drawing.Point(352, 0);
+            this.layoutControlItem8.MaxSize = new System.Drawing.Size(178, 26);
+            this.layoutControlItem8.MinSize = new System.Drawing.Size(178, 26);
+            this.layoutControlItem8.Name = "layoutControlItem8";
+            this.layoutControlItem8.Size = new System.Drawing.Size(178, 26);
+            this.layoutControlItem8.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.layoutControlItem8.Text = "Purok:";
+            this.layoutControlItem8.TextSize = new System.Drawing.Size(49, 13);
             // 
             // bwGetOutPatientData
             // 
@@ -595,7 +649,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1003, 570);
+            this.ClientSize = new System.Drawing.Size(1183, 570);
             this.Controls.Add(this.pnlDates);
             this.Controls.Add(this.layoutControl1);
             this.Name = "OutPatientForm";
@@ -603,6 +657,8 @@
             this.Shown += new System.EventHandler(this.OutPatientForm_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.cmbPurok.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbdateperiod.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbCategory.Properties)).EndInit();
@@ -620,6 +676,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciHistory)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlDates)).EndInit();
             this.pnlDates.ResumeLayout(false);
             this.pnlDates.PerformLayout();
@@ -673,5 +730,9 @@
         private DevExpress.XtraGrid.Columns.GridColumn remarks;
         private DevExpress.XtraEditors.SimpleButton btnAddHistory;
         private DevExpress.XtraLayout.LayoutControlItem lciHistory;
+        private DevExpress.XtraEditors.SearchLookUpEdit cmbPurok;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
+        private DevExpress.XtraGrid.Columns.GridColumn purok_no1;
     }
 }

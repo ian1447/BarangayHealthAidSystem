@@ -126,5 +126,13 @@ namespace BarangayHealthAid.OutPatient
             else
                 MsgBox.Error(OPT.OutPatientEditErrorMessage);
         }
+
+        private void dtDob_EditValueChanged(object sender, EventArgs e)
+        {
+            int year_age = (DateTime.Now.Year - dtDob.DateTime.Year);
+            int month_age = (DateTime.Now.Month - dtDob.DateTime.Month);
+
+            txtAge.Text = month_age.ToString();
+        }
     }
 }

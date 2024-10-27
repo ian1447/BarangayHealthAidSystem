@@ -17,7 +17,7 @@ namespace BarangayHealthAid.Dal
 
         public static string GetOutPatientRecordsErrorMessage;
         public static bool GetOutPatientRecordsIsSuccessful;
-        public static DataTable GetOutPatientRecords(string _patient_type, DateTime _date_from, DateTime _date_to)
+        public static DataSet GetOutPatientRecords(string _patient_type, DateTime _date_from, DateTime _date_to)
         {
             DataSet dt = new DataSet();
             try
@@ -34,7 +34,7 @@ namespace BarangayHealthAid.Dal
                     adp.Fill(dt);
                     con.Close();
                     GetOutPatientRecordsIsSuccessful = true;
-                    return dt.Tables[0];
+                    return dt;
                 }
             }
 

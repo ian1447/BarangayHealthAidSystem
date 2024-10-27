@@ -59,6 +59,7 @@ namespace BarangayHealthAid.ReportForm
         #endregion
 
         private string Checklist = "";
+        public int edit_id;
         public bool isAdd = true;
         public bool is_view = false;
         private int _purok_family_member_id;
@@ -116,6 +117,14 @@ namespace BarangayHealthAid.ReportForm
                     bwAddRecord.RunWorkerAsync();
                 }
             }
+            else
+            {
+                if (!bwUpdateRecord.IsBusy)
+                {
+                    ShowLoading("Updating Record...");
+                    bwUpdateRecord.RunWorkerAsync();
+                }
+            }
         }
 
         private void bwAddRecord_DoWork(object sender, DoWorkEventArgs e)
@@ -157,6 +166,24 @@ namespace BarangayHealthAid.ReportForm
         {
             if (char.IsNumber(e.KeyChar))
                 e.Handled = true;
+        }
+
+        private void bwUpdateRecord_DoWork(object sender, DoWorkEventArgs e)
+        {
+            MaternalHealth.UpdateMaternalHealthRecord(_purok_family_member_id, txtName.Text, txtAge.Text, dtDob.Text, txtHeight.Text, txtHusbandName.Text, txtOccupation.Text, txtAddress.Text, txtContactNo.Text, txtbornalive.Text, txtliving.Text, txtAbortion.Text, txtFetalDeaths.Text, txtLastDelivery.Text, txtLargeBabies.Text, txtDiabetes.Text, txtPrevIllness.Text, txtAllergy.Text, txtPrevHosp.Text, txtGravida.Text, txtPara.Text, txtA.Text, txtStillBirth.Text, txtLMP.Text, txtEDC.Text, txtWhereDel.Text, txtAttended.Text, txtScreeningPlan.Text, txtRiskCodes.Text, dtTT1.Text, dtTT2.Text, dtTT3.Text, dtTT4.Text, dtTT5.Text, txtUrinalysis.Text, txtHbsAntigen.Text, txtCBC.Text, txtRPR.Text, txtBloodTyping.Text, txtHIV.Text, txtComplications.Text, Checklist, dtVitA.Text, txtVitADescribed.Text, dtIronFolic4.Text, dtIronFolic5.Text, dtIronFolic6.Text, dtIronFolic7.Text, dtIronFolic8.Text, dtIronFolic9.Text, edit_id);
+            bwAddRecord.CancelAsync();
+        }
+
+        private void bwUpdateRecord_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            HideLoading();
+            if (MaternalHealth.UpdateMaternalHealthRecordIsSuccessful)
+            {
+                MsgBox.Information("Updating complete.");
+                this.Close();
+            }
+            else
+                MsgBox.Error(MaternalHealth.UpdateMaternalHealthRecordErrorMessage);
         }
     }
 }

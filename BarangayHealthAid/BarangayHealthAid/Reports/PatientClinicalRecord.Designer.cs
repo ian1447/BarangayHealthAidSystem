@@ -381,6 +381,7 @@
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.ReportHeader = new DevExpress.XtraReports.UI.ReportHeaderBand();
+            this.lblSerialNumber = new DevExpress.XtraReports.UI.XRLabel();
             this.xrTable13 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow87 = new DevExpress.XtraReports.UI.XRTableRow();
             this.xrTableCell388 = new DevExpress.XtraReports.UI.XRTableCell();
@@ -577,9 +578,8 @@
             this.xrTableCell289 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
-            this.sqlDataSource1 = new DevExpress.DataAccess.Sql.SqlDataSource();
-            this.lblSerialNumber = new DevExpress.XtraReports.UI.XRLabel();
             this.lblMemberShipCat = new DevExpress.XtraReports.UI.XRLabel();
+            this.sqlDataSource1 = new DevExpress.DataAccess.Sql.SqlDataSource();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable5)).BeginInit();
@@ -1361,7 +1361,7 @@
             this.xrTableCell72.Borders = DevExpress.XtraPrinting.BorderSide.Top;
             this.xrTableCell72.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "CustomSqlQuery.remarks")});
-            this.xrTableCell72.Font = new System.Drawing.Font("Times New Roman", 7.2F);
+            this.xrTableCell72.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrTableCell72.ForeColor = System.Drawing.Color.Black;
             this.xrTableCell72.Name = "xrTableCell72";
             this.xrTableCell72.Padding = new DevExpress.XtraPrinting.PaddingInfo(4, 0, 0, 0, 100F);
@@ -5827,6 +5827,17 @@
             this.ReportHeader.HeightF = 523.2903F;
             this.ReportHeader.Name = "ReportHeader";
             // 
+            // lblSerialNumber
+            // 
+            this.lblSerialNumber.Font = new System.Drawing.Font("Arial", 6F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSerialNumber.ForeColor = System.Drawing.Color.Blue;
+            this.lblSerialNumber.LocationFloat = new DevExpress.Utils.PointFloat(93.35421F, 36.14448F);
+            this.lblSerialNumber.Name = "lblSerialNumber";
+            this.lblSerialNumber.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.lblSerialNumber.SizeF = new System.Drawing.SizeF(88.8542F, 9.966648F);
+            this.lblSerialNumber.StylePriority.UseFont = false;
+            this.lblSerialNumber.StylePriority.UseForeColor = false;
+            // 
             // xrTable13
             // 
             this.xrTable13.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
@@ -8760,6 +8771,17 @@
             this.xrLabel2.StylePriority.UseForeColor = false;
             this.xrLabel2.Text = "PhilHealth Identification Number (PIN)";
             // 
+            // lblMemberShipCat
+            // 
+            this.lblMemberShipCat.Font = new System.Drawing.Font("Arial", 5.9F);
+            this.lblMemberShipCat.ForeColor = System.Drawing.Color.Black;
+            this.lblMemberShipCat.LocationFloat = new DevExpress.Utils.PointFloat(655.0534F, 2.458532F);
+            this.lblMemberShipCat.Name = "lblMemberShipCat";
+            this.lblMemberShipCat.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.lblMemberShipCat.SizeF = new System.Drawing.SizeF(98.94659F, 10.35262F);
+            this.lblMemberShipCat.StylePriority.UseFont = false;
+            this.lblMemberShipCat.StylePriority.UseForeColor = false;
+            // 
             // sqlDataSource1
             // 
             this.sqlDataSource1.ConnectionName = "192.168.254.107_barangay_aidConnection";
@@ -8772,28 +8794,6 @@
             this.sqlDataSource1.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             customSqlQuery1});
             this.sqlDataSource1.ResultSchemaSerializable = resources.GetString("sqlDataSource1.ResultSchemaSerializable");
-            // 
-            // lblSerialNumber
-            // 
-            this.lblSerialNumber.Font = new System.Drawing.Font("Arial", 6F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSerialNumber.ForeColor = System.Drawing.Color.Blue;
-            this.lblSerialNumber.LocationFloat = new DevExpress.Utils.PointFloat(93.35421F, 36.14448F);
-            this.lblSerialNumber.Name = "lblSerialNumber";
-            this.lblSerialNumber.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.lblSerialNumber.SizeF = new System.Drawing.SizeF(88.8542F, 9.966648F);
-            this.lblSerialNumber.StylePriority.UseFont = false;
-            this.lblSerialNumber.StylePriority.UseForeColor = false;
-            // 
-            // lblMemberShipCat
-            // 
-            this.lblMemberShipCat.Font = new System.Drawing.Font("Arial", 5.9F);
-            this.lblMemberShipCat.ForeColor = System.Drawing.Color.Black;
-            this.lblMemberShipCat.LocationFloat = new DevExpress.Utils.PointFloat(655.0534F, 2.458532F);
-            this.lblMemberShipCat.Name = "lblMemberShipCat";
-            this.lblMemberShipCat.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.lblMemberShipCat.SizeF = new System.Drawing.SizeF(98.94659F, 10.35262F);
-            this.lblMemberShipCat.StylePriority.UseFont = false;
-            this.lblMemberShipCat.StylePriority.UseForeColor = false;
             // 
             // PatientClinicalRecord
             // 

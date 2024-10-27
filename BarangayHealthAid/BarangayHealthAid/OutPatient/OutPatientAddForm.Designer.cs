@@ -208,6 +208,7 @@
             this.dtDob.Size = new System.Drawing.Size(121, 20);
             this.dtDob.StyleController = this.layoutControl1;
             this.dtDob.TabIndex = 5;
+            this.dtDob.EditValueChanged += new System.EventHandler(this.dtDob_EditValueChanged);
             // 
             // txtChildName
             // 

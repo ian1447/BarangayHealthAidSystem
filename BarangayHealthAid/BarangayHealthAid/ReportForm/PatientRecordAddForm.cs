@@ -219,6 +219,13 @@ namespace BarangayHealthAid.ReportForm
                     txtExtension.Properties.ReadOnly = false;
                 }
             }
+            else
+            {
+                txtLastName.Properties.ReadOnly = true;
+                txtFirstName.Properties.ReadOnly = true;
+                txtMiddleName.Properties.ReadOnly = true;
+                txtExtension.Properties.ReadOnly = true;
+            }
         }
 
         #region validation

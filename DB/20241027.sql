@@ -179,7 +179,7 @@ CREATE TABLE `maternal_health_record` (
 
 /*Data for the table `maternal_health_record` */
 
-insert  into `maternal_health_record`(`id`,`patient_id`,`name`,`age`,`dob`,`height`,`husband_name`,`occupation`,`address`,`contact_no`,`no_children_born_alive`,`living_children`,`abortion`,`fetal_deaths`,`type_last_delivery`,`largebabies`,`diabetes`,`previous_illness`,`allergy`,`previous_hospitalization`,`gravida`,`PARA`,`A`,`stillbirth`,`LMP`,`EDC`,`where_to_deliver`,`attended_by`,`new_born_screening_plan`,`risk_codes`,`tt1`,`tt2`,`tt3`,`tt4`,`tt5`,`urinalysis`,`hbs_antigen`,`CBC`,`RPR`,`blood_typing`,`HIV`,`prev_pregnancy_complic`,`checklist`,`vit_a_date_given`,`vit_a_prescribed`,`iron_folic_4`,`iron_folic_5`,`iron_folic_6`,`iron_folic_7`,`iron_folic_8`,`iron_folic_9`,`added_by`,`added_on`) values (1,0,'asdf',21,'1999-05-28','158.00','asdf','asdf','asdf','asdf',1,1,0,0,NULL,0,'asdf','asdf','asdf','asdf','asdf','asdf','asdf',NULL,'asdf','asdf','asdf','asdf','asdf','','1999-05-28','1999-05-28','1999-05-28','1999-05-28','1999-05-28','asdf','asdf','asdf','asdf','asdf','asdf','asdf','asdf','1999-05-28','asdf','1999-05-28','1999-05-28','1999-05-28','1999-05-28','1999-05-28','1999-05-28',1,'2024-09-08 14:42:12'),(2,0,'erw',13,'2024-09-03','23.00','asdf','zxcv','asdf','zxc',1,2,3,4,NULL,5,'zxcv','asdf','qwe','uioy','j','k','l',NULL,'hj',';','78g','hfj','fvbnm','A','2024-09-03','2024-09-11','2024-09-10','2024-10-03','2024-09-30','asd','czx','dfsa','xcvz','zxvc','asdf','szxcv','Vaginal Bleeding, Severe Headache','2024-09-18','asdf','2024-09-10','2024-10-01','2024-09-19','2024-09-10','2024-09-11','2024-09-03',1,'2024-09-14 16:03:20'),(3,0,'asfd',2,'2024-08-30','12.00','axc','xcv','cvb','xcvb',2,2,23,3,'2',1,'2','x','df','g','vc','asdf','32','ew','zcx','af','nm,',',.b','jry','','2024-09-18','2024-08-28','2024-09-23','2024-09-19','2024-09-16','1','asd','bn','scxv','nm','vbm','xcbv','Breast abnormalities','2024-08-26','scv','2024-09-04','2024-09-02','2024-09-18','2024-09-10','2024-09-07','2024-09-18',1,'2024-09-21 23:25:51');
+insert  into `maternal_health_record`(`id`,`patient_id`,`name`,`age`,`dob`,`height`,`husband_name`,`occupation`,`address`,`contact_no`,`no_children_born_alive`,`living_children`,`abortion`,`fetal_deaths`,`type_last_delivery`,`largebabies`,`diabetes`,`previous_illness`,`allergy`,`previous_hospitalization`,`gravida`,`PARA`,`A`,`stillbirth`,`LMP`,`EDC`,`where_to_deliver`,`attended_by`,`new_born_screening_plan`,`risk_codes`,`tt1`,`tt2`,`tt3`,`tt4`,`tt5`,`urinalysis`,`hbs_antigen`,`CBC`,`RPR`,`blood_typing`,`HIV`,`prev_pregnancy_complic`,`checklist`,`vit_a_date_given`,`vit_a_prescribed`,`iron_folic_4`,`iron_folic_5`,`iron_folic_6`,`iron_folic_7`,`iron_folic_8`,`iron_folic_9`,`added_by`,`added_on`) values (1,1,'Testingnsd W Test X',23,'2000-10-14','158.00','testing update','asdf','asdf','asdf',1,1,0,0,'',0,'asdf','asdf','asdf','asdf','asdf','asdf','asdf','','asdf','asdf','asdf','asdf','asdf','','1999-05-28','1999-05-28','1999-05-28',NULL,NULL,'asdf','asdf','asdf','asdf','asdf','asdf','asdf','','1999-05-28','asdf','1999-05-28','1999-05-28','1999-05-28','1999-05-28','1999-05-28','1999-05-28',1,'2024-09-08 14:42:12'),(2,0,'erw',13,'2024-09-03','23.00','asdf','zxcv','asdf','zxc',1,2,3,4,NULL,5,'zxcv','asdf','qwe','uioy','j','k','l',NULL,'hj',';','78g','hfj','fvbnm','A','2024-09-03','2024-09-11','2024-09-10','2024-10-03','2024-09-30','asd','czx','dfsa','xcvz','zxvc','asdf','szxcv','Vaginal Bleeding, Severe Headache','2024-09-18','asdf','2024-09-10','2024-10-01','2024-09-19','2024-09-10','2024-09-11','2024-09-03',1,'2024-09-14 16:03:20'),(3,0,'asfd',2,'2024-08-30','12.00','axc','xcv','cvb','xcvb',2,2,23,3,'2',1,'2','x','df','g','vc','asdf','32','ew','zcx','af','nm,',',.b','jry','','2024-09-18','2024-08-28','2024-09-23','2024-09-19','2024-09-16','1','asd','bn','scxv','nm','vbm','xcbv','Breast abnormalities','2024-08-26','scv','2024-09-04','2024-09-02','2024-09-18','2024-09-10','2024-09-07','2024-09-18',1,'2024-09-21 23:25:51');
 
 /*Table structure for table `maternal_health_record_history` */
 
@@ -1089,6 +1089,121 @@ SELECT DATE_FORMAT(m.`dob`, "%M %d,%Y") format_birthdate, m.*  FROM `maternal_he
     END */$$
 DELIMITER ;
 
+/* Procedure structure for procedure `sp_maternal_health_record_update` */
+
+/*!50003 DROP PROCEDURE IF EXISTS  `sp_maternal_health_record_update` */;
+
+DELIMITER $$
+
+/*!50003 CREATE DEFINER=`system_admin`@`%` PROCEDURE `sp_maternal_health_record_update`(
+	_patient_id INT (11),
+    	_name VARCHAR (255),
+    	_age INT (11),
+    	_dob DATE,
+    	_height	DECIMAL (12,2),
+	_husband_name VARCHAR (255),
+	_occupation VARCHAR (255),
+	_address TEXT,
+	_contact_no VARCHAR (25),
+	_no_children_born_alive INT (11),
+	_living_children INT (11),
+	_abortion INT (11),
+	_fetal_deaths INT (11),
+	_type_last_delivery VARCHAR (255),
+	_largebabies INT (11),
+	_diabetes VARCHAR (255),
+	_previous_illness VARCHAR (255),
+	_allergy VARCHAR (255),
+	_previous_hospitalization VARCHAR (255),
+	_gravida VARCHAR (50),
+	_PARA VARCHAR (50),
+	_A VARCHAR (50),
+	_stillbirth VARCHAR (50),
+	_LMP VARCHAR (50),
+	_EDC VARCHAR (50),
+	_where_to_deliver VARCHAR (255),
+	_attended_by VARCHAR (255),
+	_new_born_screening_plan VARCHAR (255),
+	_risk_codes VARCHAR (25),
+	_tt1 DATE,
+	_tt2 DATE,
+	_tt3 DATE,
+	_tt4 DATE,
+	_tt5 DATE,
+	_urinalysis VARCHAR (255),
+	_hbs_antigen VARCHAR (255),
+	_CBC VARCHAR (25),
+	_RPR VARCHAR (25),
+	_blood_typing VARCHAR (25),
+	_HIV VARCHAR (25),
+	_prev_pregnancy_complic TEXT,
+	_checklist TEXT,
+	_vit_a_date_given DATE,
+	_vit_a_prescribed VARCHAR (50),
+	_iron_folic_4 DATE,
+	_iron_folic_5 DATE,
+	_iron_folic_6 DATE,
+	_iron_folic_7 DATE,
+	_iron_folic_8 DATE,
+	_iron_folic_9 DATE,
+	_id int (11)
+    )
+BEGIN
+	UPDATE `maternal_health_record`
+	SET `patient_id` = _patient_id,
+	  `name` = _name,
+	  `age` = _age,
+	  `dob` = _dob,
+	  `height` = _height,
+	  `husband_name` = _husband_name,
+	  `occupation` = _occupation,
+	  `address` = _address,
+	  `contact_no` = _contact_no,
+	  `no_children_born_alive` = _no_children_born_alive,
+	  `living_children` = _living_children,
+	  `abortion` = _abortion,
+	  `fetal_deaths` = _fetal_deaths,
+	  `type_last_delivery` = _type_last_delivery,
+	  `largebabies` = _largebabies,
+	  `diabetes` = _diabetes,
+	  `previous_illness` = _previous_illness,
+	  `allergy` = _allergy,
+	  `previous_hospitalization` = _previous_hospitalization,
+	  `gravida` = _gravida,
+	  `PARA` = _PARA,
+	  `A` = _A,
+	  `stillbirth` = _stillbirth,
+	  `LMP` = _LMP,
+	  `EDC` = _EDC,
+	  `where_to_deliver` = _where_to_deliver,
+	  `attended_by` = _attended_by,
+	  `new_born_screening_plan` = _new_born_screening_plan,
+	  `risk_codes` = _risk_codes,
+	  `tt1` = _tt1,
+	  `tt2` = _tt2,
+	  `tt3` = _tt3,
+	  `tt4` = _tt4,
+	  `tt5` = _tt5,
+	  `urinalysis` = _urinalysis,
+	  `hbs_antigen` = _hbs_antigen,
+	  `CBC` = _CBC,
+	  `RPR` = _RPR,
+	  `blood_typing` = _blood_typing,
+	  `HIV` = _HIV,
+	  `prev_pregnancy_complic` = _prev_pregnancy_complic,
+	  `checklist` = _checklist,
+	  `vit_a_date_given` = _vit_a_date_given,
+	  `vit_a_prescribed` = _vit_a_prescribed,
+	  `iron_folic_4` = _iron_folic_4,
+	  `iron_folic_5` = _iron_folic_5,
+	  `iron_folic_6` = _iron_folic_6,
+	  `iron_folic_7` = _iron_folic_7,
+	  `iron_folic_8` = _iron_folic_8,
+	  `iron_folic_9` = _iron_folic_9
+	WHERE `id` = _id;
+    END */$$
+DELIMITER ;
+
 /* Procedure structure for procedure `sp_out_patient_add` */
 
 /*!50003 DROP PROCEDURE IF EXISTS  `sp_out_patient_add` */;
@@ -1188,6 +1303,8 @@ BEGIN
 		SELECT DATE_FORMAT(m.`dob`, "%M %d,%Y") Formatbirthdate,m.`name`, m.`height`,m.`age`,op.*FROM `out_patient` op
 		JOIN `maternal_health_record` m ON m.`id` = op.`patient_id` WHERE op.`patient_type` = _patient_type AND (DATE(op.`transdate`) BETWEEN DATE(_date_from) AND DATE(_date_to));
 	end if;
+	
+	SELECT DISTINCT(CONCAT("Purok ",opt.purok_no)) purok_no,opt.purok_no order_purok FROM `out_patient` opt WHERE opt.`patient_type` = _patient_type ORDER BY order_purok;
     END */$$
 DELIMITER ;
 

@@ -160,7 +160,7 @@ namespace BarangayHealthAid.ReportForm
                     mhaf.txtName.Text = filtered[0]["name"].ToString();
                     mhaf.txtAge.Text = filtered[0]["age"].ToString();
 
-                    mhaf.dtDob.Text = filtered[0]["dob"].ToString();
+                    mhaf.dtDob.EditValue =Convert.ToDateTime(filtered[0]["dob"].ToString());
 
                     mhaf.txtHeight.Text = filtered[0]["height"].ToString();
                     mhaf.txtHusbandName.Text = filtered[0]["husband_name"].ToString();
@@ -188,11 +188,11 @@ namespace BarangayHealthAid.ReportForm
                     mhaf.txtScreeningPlan.Text = filtered[0]["new_born_screening_plan"].ToString();
                     mhaf.txtRiskCodes.Text = filtered[0]["risk_codes"].ToString();
 
-                    mhaf.dtTT1.Text = filtered[0]["tt1"].ToString();
-                    mhaf.dtTT2.Text = filtered[0]["tt2"].ToString();
-                    mhaf.dtTT3.Text = filtered[0]["tt3"].ToString();
-                    mhaf.dtTT4.Text = filtered[0]["tt4"].ToString();
-                    mhaf.dtTT5.Text = filtered[0]["tt5"].ToString();
+                    mhaf.dtTT1.EditValue = string.IsNullOrEmpty(filtered[0]["tt1"].ToString()) ? (DateTime?)null : Convert.ToDateTime(filtered[0]["tt1"].ToString());
+                    mhaf.dtTT2.EditValue = string.IsNullOrEmpty(filtered[0]["tt2"].ToString()) ? (DateTime?)null : Convert.ToDateTime(filtered[0]["tt2"].ToString());
+                    mhaf.dtTT3.EditValue = string.IsNullOrEmpty(filtered[0]["tt3"].ToString()) ? (DateTime?)null : Convert.ToDateTime(filtered[0]["tt3"].ToString());
+                    mhaf.dtTT4.EditValue = string.IsNullOrEmpty(filtered[0]["tt4"].ToString()) ? (DateTime?)null : Convert.ToDateTime(filtered[0]["tt4"].ToString());
+                    mhaf.dtTT5.EditValue = string.IsNullOrEmpty(filtered[0]["tt5"].ToString()) ? (DateTime?)null : Convert.ToDateTime(filtered[0]["tt5"].ToString());
 
                     mhaf.txtUrinalysis.Text = filtered[0]["urinalysis"].ToString();
                     mhaf.txtHbsAntigen.Text = filtered[0]["hbs_antigen"].ToString();
@@ -201,17 +201,19 @@ namespace BarangayHealthAid.ReportForm
                     mhaf.txtBloodTyping.Text = filtered[0]["blood_typing"].ToString();
                     mhaf.txtHIV.Text = filtered[0]["HIV"].ToString();
                     mhaf.txtComplications.Text = filtered[0]["prev_pregnancy_complic"].ToString();
-                    mhaf.dtVitA.Text = filtered[0]["vit_a_date_given"].ToString();
+                    mhaf.dtVitA.EditValue = Convert.ToDateTime(filtered[0]["vit_a_date_given"].ToString());
                     mhaf.txtVitADescribed.Text = filtered[0]["vit_a_prescribed"].ToString();
 
-                    mhaf.dtIronFolic4.Text = filtered[0]["iron_folic_4"].ToString();
-                    mhaf.dtIronFolic5.Text = filtered[0]["iron_folic_5"].ToString();
-                    mhaf.dtIronFolic6.Text = filtered[0]["iron_folic_6"].ToString();
-                    mhaf.dtIronFolic7.Text = filtered[0]["iron_folic_7"].ToString();
-                    mhaf.dtIronFolic8.Text = filtered[0]["iron_folic_8"].ToString();
-                    mhaf.dtIronFolic9.Text = filtered[0]["iron_folic_9"].ToString();
+                    mhaf.dtIronFolic4.EditValue = Convert.ToDateTime(filtered[0]["iron_folic_4"].ToString());
+                    mhaf.dtIronFolic5.EditValue = Convert.ToDateTime(filtered[0]["iron_folic_5"].ToString());
+                    mhaf.dtIronFolic6.EditValue = Convert.ToDateTime(filtered[0]["iron_folic_6"].ToString());
+                    mhaf.dtIronFolic7.EditValue = Convert.ToDateTime(filtered[0]["iron_folic_7"].ToString());
+                    mhaf.dtIronFolic8.EditValue = Convert.ToDateTime(filtered[0]["iron_folic_8"].ToString());
+                    mhaf.dtIronFolic9.EditValue = Convert.ToDateTime(filtered[0]["iron_folic_9"].ToString());
                     mhaf.isAdd = false;
+                    mhaf.edit_id = id;
                     mhaf.ShowDialog();
+                    LoadData();
                 }
             }
             else

@@ -80,7 +80,8 @@ namespace BarangayHealthAid.OutPatient
             catch { return false; }
         }
 
-        DataTable OutPatientTable = new DataTable();
+        private bool firstLoad = true;
+        DataSet OutPatientTable = new DataSet();
         DataTable dataPeriod = new DataTable();
         DateTime dateFrom = new DateTime();
         DateTime dateTo = new DateTime();
@@ -123,14 +124,23 @@ namespace BarangayHealthAid.OutPatient
             HideLoading();
             if (OPT.GetOutPatientRecordsIsSuccessful)
             {
-                if (OutPatientTable.Rows.Count > 0)
+                OutPatientTable.Tables[1].Rows.Add("All");
+                cmbPurok.Properties.DataSource = OutPatientTable.Tables[1];
+                cmbPurok.Properties.DisplayMember = "purok_no";
+                cmbPurok.Properties.ValueMember = "purok_no";
+                cmbPurok.EditValue = "All";
+                if (OutPatientTable.Tables[0].Rows.Count > 0)
                 {
-                    dtOutPatient.DataSource = OutPatientTable;
+                    dtOutPatient.DataSource = OutPatientTable.Tables[0];
                 }
                 else
                 {
                     dtOutPatient.DataSource = new DataTable();
-                    //MsgBox.Error("No Data Available.");
+                }
+                if (firstLoad)
+                {
+                    firstLoad = false;
+                    LoadData();
                 }
             }
             else
@@ -146,7 +156,7 @@ namespace BarangayHealthAid.OutPatient
         {
             OutPatientReportForm opr = new OutPatientReportForm();
             opr.lblPreparedBy.Text = PublicVariables.UserFullName;
-            opr.DataSource = OutPatientTable;
+            opr.DataSource = dtOutPatient.DataSource;
             opr.DataMember = "CustomeSqlQuery";
             opr.ShowPreviewDialog();
         }
@@ -294,6 +304,19 @@ namespace BarangayHealthAid.OutPatient
             }
             else
                 MsgBox.Error("No Patient selected.  ");
+        }
+
+        private void cmbPurok_EditValueChanged(object sender, EventArgs e)
+        {
+            if (cmbPurok.Text != "All")
+            {
+                string purokNumber = new string(cmbPurok.Text.Where(char.IsDigit).ToArray());
+                var filteredRows = OutPatientTable.Tables[0].AsEnumerable().Where(row => row.Field<int>("purok_no") == Convert.ToInt32(purokNumber));
+                DataTable Filtered = filteredRows.Any() ? filteredRows.CopyToDataTable() :new DataTable();
+                dtOutPatient.DataSource = Filtered;
+            }
+            else
+                dtOutPatient.DataSource = OutPatientTable.Tables[0];
         }
     }
 }

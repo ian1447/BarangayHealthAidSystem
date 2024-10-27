@@ -181,6 +181,7 @@
             this.emptySpaceItem11 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::BarangayHealthAid.WaitForm1), true, true);
             this.bwAddRecord = new System.ComponentModel.BackgroundWorker();
+            this.bwUpdateRecord = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtIronFolic9.Properties.CalendarTimeProperties)).BeginInit();
@@ -1068,7 +1069,6 @@
             this.txtName.Location = new System.Drawing.Point(12, 28);
             this.txtName.Name = "txtName";
             this.txtName.Properties.Mask.EditMask = "\\p{L}+";
-            this.txtName.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtName.Properties.ReadOnly = true;
             this.txtName.Size = new System.Drawing.Size(345, 20);
             this.txtName.StyleController = this.layoutControl1;
@@ -2083,6 +2083,12 @@
             this.bwAddRecord.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwAddRecord_DoWork);
             this.bwAddRecord.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwAddRecord_RunWorkerCompleted);
             // 
+            // bwUpdateRecord
+            // 
+            this.bwUpdateRecord.WorkerSupportsCancellation = true;
+            this.bwUpdateRecord.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwUpdateRecord_DoWork);
+            this.bwUpdateRecord.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwUpdateRecord_RunWorkerCompleted);
+            // 
             // MaternalHealthRecordAddForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2408,5 +2414,6 @@
         public DevExpress.XtraEditors.DateEdit dtIronFolic7;
         public DevExpress.XtraEditors.DateEdit dtIronFolic9;
         public DevExpress.XtraEditors.DateEdit dtIronFolic8;
+        private System.ComponentModel.BackgroundWorker bwUpdateRecord;
     }
 }
