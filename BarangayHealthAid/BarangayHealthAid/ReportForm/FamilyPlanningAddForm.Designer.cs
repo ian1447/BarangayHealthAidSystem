@@ -1291,6 +1291,7 @@
             // 
             this.txtAge.Location = new System.Drawing.Point(425, 46);
             this.txtAge.Name = "txtAge";
+            this.txtAge.Properties.ReadOnly = true;
             this.txtAge.Size = new System.Drawing.Size(50, 20);
             this.txtAge.StyleController = this.layoutControl1;
             this.txtAge.TabIndex = 8;
@@ -1407,6 +1408,7 @@
             this.dtDob.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.dtDob.Properties.EditFormat.FormatString = "yyyy-MM-dd";
             this.dtDob.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.dtDob.Properties.ReadOnly = true;
             this.dtDob.Size = new System.Drawing.Size(85, 20);
             this.dtDob.StyleController = this.layoutControl1;
             this.dtDob.TabIndex = 10;
@@ -1416,6 +1418,7 @@
             this.txtMiddleInitial.Location = new System.Drawing.Point(269, 46);
             this.txtMiddleInitial.Margin = new System.Windows.Forms.Padding(0);
             this.txtMiddleInitial.Name = "txtMiddleInitial";
+            this.txtMiddleInitial.Properties.ReadOnly = true;
             this.txtMiddleInitial.Size = new System.Drawing.Size(63, 20);
             this.txtMiddleInitial.StyleController = this.layoutControl1;
             this.txtMiddleInitial.TabIndex = 8;
@@ -1424,6 +1427,7 @@
             // 
             this.txtFirstName.Location = new System.Drawing.Point(136, 46);
             this.txtFirstName.Name = "txtFirstName";
+            this.txtFirstName.Properties.ReadOnly = true;
             this.txtFirstName.Size = new System.Drawing.Size(129, 20);
             this.txtFirstName.StyleController = this.layoutControl1;
             this.txtFirstName.TabIndex = 7;
@@ -1432,9 +1436,11 @@
             // 
             this.txtLastName.Location = new System.Drawing.Point(12, 46);
             this.txtLastName.Name = "txtLastName";
+            this.txtLastName.Properties.ReadOnly = true;
             this.txtLastName.Size = new System.Drawing.Size(120, 20);
             this.txtLastName.StyleController = this.layoutControl1;
             this.txtLastName.TabIndex = 6;
+            this.txtLastName.Click += new System.EventHandler(this.txtLastName_Click);
             // 
             // labelControl1
             // 
