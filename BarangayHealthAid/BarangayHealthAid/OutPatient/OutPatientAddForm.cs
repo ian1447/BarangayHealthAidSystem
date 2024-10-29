@@ -134,5 +134,11 @@ namespace BarangayHealthAid.OutPatient
 
             txtAge.Text = month_age.ToString();
         }
+
+        private void txtChildName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar))
+                e.Handled = true;
+        }
     }
 }

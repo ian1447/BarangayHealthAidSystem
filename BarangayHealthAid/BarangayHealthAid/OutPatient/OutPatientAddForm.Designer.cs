@@ -215,10 +215,10 @@
             this.txtChildName.Location = new System.Drawing.Point(97, 43);
             this.txtChildName.Name = "txtChildName";
             this.txtChildName.Properties.Mask.EditMask = "\\p{L}+";
-            this.txtChildName.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtChildName.Size = new System.Drawing.Size(180, 20);
             this.txtChildName.StyleController = this.layoutControl1;
             this.txtChildName.TabIndex = 4;
+            this.txtChildName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtChildName_KeyPress);
             // 
             // layoutControlGroup1
             // 
