@@ -302,6 +302,7 @@ namespace BarangayHealthAid.ReportForm
                 int id = Convert.ToInt32(gvMaternal.GetFocusedRowCellValue("id").ToString());
                 MaternalHealthRecordHistoryForm mhrh = new MaternalHealthRecordHistoryForm();
                 mhrh._maternal_health_id = id;
+                mhrh.lblName.Text = "Name: " + gvMaternal.GetFocusedRowCellValue("name").ToString();
                 mhrh.ShowDialog();
             }
             else

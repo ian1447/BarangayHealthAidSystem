@@ -32,13 +32,16 @@
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
             this.btnRefresh = new DevExpress.XtraEditors.SimpleButton();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.lblName = new DevExpress.XtraEditors.LabelControl();
             this.dtMaternalHistory = new DevExpress.XtraGrid.GridControl();
             this.gvMaternalHistory = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.id = new DevExpress.XtraGrid.Columns.GridColumn();
             this.date = new DevExpress.XtraGrid.Columns.GridColumn();
             this.time = new DevExpress.XtraGrid.Columns.GridColumn();
             this.presenting_part_of_fetus = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.findings = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemMemoEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
+            this.notes = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
@@ -48,13 +51,11 @@
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::BarangayHealthAid.WaitForm1), true, true);
             this.bwGetMaternalHistory = new System.ComponentModel.BackgroundWorker();
-            this.findings = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.notes = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemMemoEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtMaternalHistory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvMaternalHistory)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
@@ -62,14 +63,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit1)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
             this.layoutControl1.Controls.Add(this.btnAdd);
             this.layoutControl1.Controls.Add(this.btnRefresh);
-            this.layoutControl1.Controls.Add(this.labelControl1);
+            this.layoutControl1.Controls.Add(this.lblName);
             this.layoutControl1.Controls.Add(this.dtMaternalHistory);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
@@ -102,15 +102,15 @@
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
-            // labelControl1
+            // lblName
             // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl1.Location = new System.Drawing.Point(12, 12);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(37, 14);
-            this.labelControl1.StyleController = this.layoutControl1;
-            this.labelControl1.TabIndex = 11;
-            this.labelControl1.Text = "Name:";
+            this.lblName.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Location = new System.Drawing.Point(12, 12);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(37, 14);
+            this.lblName.StyleController = this.layoutControl1;
+            this.lblName.TabIndex = 11;
+            this.lblName.Text = "Name:";
             // 
             // dtMaternalHistory
             // 
@@ -200,6 +200,44 @@
             this.presenting_part_of_fetus.VisibleIndex = 2;
             this.presenting_part_of_fetus.Width = 167;
             // 
+            // findings
+            // 
+            this.findings.AppearanceCell.Options.UseTextOptions = true;
+            this.findings.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.findings.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.findings.AppearanceCell.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.findings.AppearanceHeader.Options.UseTextOptions = true;
+            this.findings.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.findings.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.findings.Caption = "Findings";
+            this.findings.ColumnEdit = this.repositoryItemMemoEdit1;
+            this.findings.FieldName = "findings";
+            this.findings.Name = "findings";
+            this.findings.Visible = true;
+            this.findings.VisibleIndex = 3;
+            this.findings.Width = 132;
+            // 
+            // repositoryItemMemoEdit1
+            // 
+            this.repositoryItemMemoEdit1.Name = "repositoryItemMemoEdit1";
+            // 
+            // notes
+            // 
+            this.notes.AppearanceCell.Options.UseTextOptions = true;
+            this.notes.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.notes.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.notes.AppearanceCell.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.notes.AppearanceHeader.Options.UseTextOptions = true;
+            this.notes.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.notes.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.notes.Caption = "Notes";
+            this.notes.ColumnEdit = this.repositoryItemMemoEdit1;
+            this.notes.FieldName = "notes";
+            this.notes.Name = "notes";
+            this.notes.Visible = true;
+            this.notes.VisibleIndex = 4;
+            this.notes.Width = 143;
+            // 
             // repositoryItemCheckEdit1
             // 
             this.repositoryItemCheckEdit1.AutoHeight = false;
@@ -239,7 +277,7 @@
             // 
             // layoutControlItem2
             // 
-            this.layoutControlItem2.Control = this.labelControl1;
+            this.layoutControlItem2.Control = this.lblName;
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
             this.layoutControlItem2.Size = new System.Drawing.Size(41, 26);
@@ -276,44 +314,6 @@
             this.bwGetMaternalHistory.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwGetMaternalHistory_DoWork);
             this.bwGetMaternalHistory.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwGetMaternalHistory_RunWorkerCompleted);
             // 
-            // findings
-            // 
-            this.findings.AppearanceCell.Options.UseTextOptions = true;
-            this.findings.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.findings.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.findings.AppearanceCell.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.findings.AppearanceHeader.Options.UseTextOptions = true;
-            this.findings.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.findings.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.findings.Caption = "Findings";
-            this.findings.ColumnEdit = this.repositoryItemMemoEdit1;
-            this.findings.FieldName = "findings";
-            this.findings.Name = "findings";
-            this.findings.Visible = true;
-            this.findings.VisibleIndex = 3;
-            this.findings.Width = 132;
-            // 
-            // notes
-            // 
-            this.notes.AppearanceCell.Options.UseTextOptions = true;
-            this.notes.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.notes.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.notes.AppearanceCell.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.notes.AppearanceHeader.Options.UseTextOptions = true;
-            this.notes.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.notes.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.notes.Caption = "Notes";
-            this.notes.ColumnEdit = this.repositoryItemMemoEdit1;
-            this.notes.FieldName = "notes";
-            this.notes.Name = "notes";
-            this.notes.Visible = true;
-            this.notes.VisibleIndex = 4;
-            this.notes.Width = 143;
-            // 
-            // repositoryItemMemoEdit1
-            // 
-            this.repositoryItemMemoEdit1.Name = "repositoryItemMemoEdit1";
-            // 
             // MaternalHealthRecordHistoryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -331,6 +331,7 @@
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtMaternalHistory)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvMaternalHistory)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
@@ -338,7 +339,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -356,7 +356,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn presenting_part_of_fetus;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
-        private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraEditors.SimpleButton btnAdd;
         private DevExpress.XtraEditors.SimpleButton btnRefresh;
@@ -367,5 +366,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn findings;
         private DevExpress.XtraGrid.Columns.GridColumn notes;
         private DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit repositoryItemMemoEdit1;
+        public DevExpress.XtraEditors.LabelControl lblName;
     }
 }

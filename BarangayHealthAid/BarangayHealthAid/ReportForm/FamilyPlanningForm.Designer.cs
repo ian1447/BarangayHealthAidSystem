@@ -205,6 +205,9 @@
             // 
             // age
             // 
+            this.age.AppearanceCell.Options.UseTextOptions = true;
+            this.age.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.age.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.age.Caption = "Age";
             this.age.FieldName = "age";
             this.age.Name = "age";
