@@ -262,7 +262,7 @@ namespace BarangayHealthAid.Dal
 
         public static string EditPurokMemberErrorMessage;
         public static bool EditPurokMemberIsSuccessful;
-        public static void EditPurokMember(int _id, string _name)
+        public static void EditPurokMember(int _id, string _family_serial_number)
         {
             DataSet dt = new DataSet();
             try
@@ -272,7 +272,7 @@ namespace BarangayHealthAid.Dal
                     con.Open();
                     MySqlCommand cmd = new MySqlCommand("sp_purok_members_edit", con);
                     cmd.Parameters.Add(new MySqlParameter("_id", _id));
-                    cmd.Parameters.Add(new MySqlParameter("_name", _name));
+                    cmd.Parameters.Add(new MySqlParameter("_family_serial_number", _family_serial_number));
                     cmd.CommandType = CommandType.StoredProcedure;
                     MySqlDataAdapter adp = new MySqlDataAdapter(cmd);
                     adp.Fill(dt);
