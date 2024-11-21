@@ -62,72 +62,93 @@ namespace BarangayHealthAid.ReportForm
         #region subCatOpen/close
         private void rgType_SelectedIndexChanged(object sender, EventArgs e)
         {
-            rgSub.Enabled = rgType.SelectedIndex == 1 ? true: false;
-            rgFpReason.Enabled = rgType.SelectedIndex == 0 ? true : false;
+            if (rgType.SelectedIndex == 1)
+            {
+                rgSub.Enabled = true;
+            }
+            else
+            {
+                rgSub.Enabled = false;
+                rgSub.SelectedIndex = -1;
+            }
+
+            if (rgType.SelectedIndex == 0)
+            {
+                rgFpReason.Enabled = true;
+            }
+            else
+            {
+                rgFpReason.Enabled = false;
+                rgFpReason.SelectedIndex = -1;
+            }
         }
 
         private void rgFpReason_SelectedIndexChanged(object sender, EventArgs e)
         {
-            txtOthers.Enabled = rgFpReason.SelectedIndex == 2 ? true : false;
+            if (rgFpReason.SelectedIndex == 2)
+            {
+                txtOthers.Enabled = true;
+            }
+            else
+            {
+                txtOthers.Enabled = false;
+                txtOthers.Text = "";
+            }
         }
 
         private void rgCMReason_SelectedIndexChanged(object sender, EventArgs e)
         {
-            txtChangeMethodOthers.Enabled = rgCMReason.SelectedIndex == 1 ? true : false;
+            if (rgCMReason.SelectedIndex == 1)
+            {
+                txtChangeMethodOthers.Enabled = true;
+            }
+            else
+            {
+                txtChangeMethodOthers.Enabled = false;
+                txtChangeMethodOthers.Text = "";
+            }
         }
 
         private void rgSub_SelectedIndexChanged(object sender, EventArgs e)
         {
-            rgCMReason.Enabled = rgSub.SelectedIndex == 0 ? true : false;
-            rgCurMeth.Enabled = rgSub.SelectedIndex == 0 ? true : false;
-        }
-
-        private void rgSub_EnabledChanged(object sender, EventArgs e)
-        {
-            if (!rgSub.Enabled)
-                rgSub.SelectedIndex = -1;
-        }
-
-        private void rgFpReason_EnabledChanged(object sender, EventArgs e)
-        {
-            if (!rgFpReason.Enabled)
-                rgFpReason.SelectedIndex = -1;
-        }
-
-        private void rgCMReason_EnabledChanged(object sender, EventArgs e)
-        {
-            if (!rgCMReason.Enabled)
+            if (rgSub.SelectedIndex == 0)
+            {
+                rgCMReason.Enabled = true;
+            }
+            else
+            {
+                rgCMReason.Enabled = false;
                 rgCMReason.SelectedIndex = -1;
-        }
-
-        private void txtOthers_EnabledChanged(object sender, EventArgs e)
-        {
-            if (!txtOthers.Enabled)
-                txtOthers.Text = "";
-        }
-
-        private void txtChangeMethodOthers_EnabledChanged(object sender, EventArgs e)
-        {
-            if (!txtChangeMethodOthers.Enabled)
-                txtChangeMethodOthers.Text = "";
+            }
+            if (rgSub.SelectedIndex == 0)
+            {
+                rgCurMeth.Enabled = true;
+            }
+            else
+            {
+                rgCurMeth.Enabled = false; 
+                rgCurMeth.SelectedIndex = -1;
+            }
         }
 
         private void rgCurMeth_SelectedIndexChanged(object sender, EventArgs e)
         {
-            txtCurMeth.Enabled = rgCurMeth.SelectedIndex == 12 ? true : false;
-        }
-
-        private void txtCurMeth_EnabledChanged(object sender, EventArgs e)
-        {
-            if (!txtCurMeth.Enabled)
+            if (rgCurMeth.SelectedIndex == 12)
+            {
+                txtCurMeth.Enabled = true;
+            }
+            else
+            {
+                txtCurMeth.Enabled = false;
                 txtCurMeth.Text = "";
+            }
         }
 
-        private void rgCurMeth_EnabledChanged(object sender, EventArgs e)
-        {
-            if (!rgCurMeth.Enabled)
-                rgCurMeth.SelectedIndex = -1;
-        }
+        //private void rgCurMeth_EnabledChanged(object sender, EventArgs e)
+        //{
+        //    if (!rgCurMeth.Enabled)
+        //        rgCurMeth.SelectedIndex = -1;
+        //}
 
         private void cbReferredTo_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -157,6 +178,7 @@ namespace BarangayHealthAid.ReportForm
         public bool is_add = true;
         public int edit_id;
         private string menstual_flow, plan_more_chil, _dysmenorrhea, _hydatidiform_mole, _ectopitic_pregnancy, sexually_transmitted, referred_to, depth;
+        private string fpReason;
         private void btnSave_Click(object sender, EventArgs e)
         {
             menstual_flow = cbFlow.Text.ToString() == "scanty (1-2 pads per day)" ? "Scanty" : cbFlow.Text.ToString() == "moderate(3-5 pads per day)" ? "moderate" : "heavy";
@@ -171,6 +193,10 @@ namespace BarangayHealthAid.ReportForm
             sexually_transmitted = sexually_transmitted + "," + (ceHIV.Checked ? "1" : "0");
             referred_to = cbReferredTo.Text == "Others" ? txtReferOthers.Text : cbReferredTo.Text;
             depth = txtUterineDepth.Text == "" ? "0.00" : txtUterineDepth.Text;
+            fpReason = rgFpReason.Text;
+            //MsgBox.Information(rgFpReason.Text);
+            MsgBox.Information(fpReason);
+            MsgBox.Information(txtOthers.Text);
             if (is_add)
             {
                 if (!bwAddRecord.IsBusy)
@@ -191,7 +217,7 @@ namespace BarangayHealthAid.ReportForm
 
         private void bwAddRecord_DoWork(object sender, DoWorkEventArgs e)
         {
-            FamilyPlanning.AddFamilyPlanningRecord(_purok_family_member_id, txtLastName.Text, txtFirstName.Text, txtMiddleInitial.Text, dtDob.Text, txtAge.Text, txtEducAttain.Text, txtOccup.Text, txtAddressNo.Text, txtAddressSt.Text, txtAddressBarangay.Text, txtAddressMun.Text, txtAddressProvince.Text, txtContactNo.Text, txtCivilStatus.Text, txtReligion.Text, txtSpouseLastName.Text, txtSpouseFirstName.Text, txtSpouseMiddle.Text, dtSpouseDob.Text, txtSpouseAge.Text, txtSpouseOccupation.Text, txtLivingChil.Text, plan_more_chil, txtMonthlyIncome.Text, rgType.Text, rgFpReason.Text, txtOthers.Text, rgSub.Text, rgCMReason.Text, txtChangeMethodOthers.Text, rgCurMeth.Text, txtCurMeth.Text, clbMedHistory.Text, txtMedOthers.Text, txtG.Text, txtP.Text, txtFullterm.Text, txtAbortion.Text, txtPremature.Text, txtLivingChildren.Text, dtLastdel.Text, cbLastDel.Text, dtLastmens.Text, dtPrevMens.Text, menstual_flow, _dysmenorrhea, _hydatidiform_mole, _ectopitic_pregnancy, sexually_transmitted, cbGenitalDischarge.Text, clbVAW.Text, cbReferredTo.Text, txtWeight.Text, txtheight.Text, txtBp.Text, txtPulseRate.Text, cbSkin.Text, cbConjunctiva.Text, cbNeck.Text, cbBreast.Text, cbAbdomen.Text, cbExtremites.Text, clbPelvicExamination.Text, cbCervicalAbno.Text, cbCervicalConsis.Text, cbUterinePos.Text, depth);
+            FamilyPlanning.AddFamilyPlanningRecord(_purok_family_member_id, txtLastName.Text, txtFirstName.Text, txtMiddleInitial.Text, dtDob.Text, txtAge.Text, txtEducAttain.Text, txtOccup.Text, txtAddressNo.Text, txtAddressSt.Text, txtAddressBarangay.Text, txtAddressMun.Text, txtAddressProvince.Text, txtContactNo.Text, txtCivilStatus.Text, txtReligion.Text, txtSpouseLastName.Text, txtSpouseFirstName.Text, txtSpouseMiddle.Text, dtSpouseDob.Text, txtSpouseAge.Text, txtSpouseOccupation.Text, txtLivingChil.Text, plan_more_chil, txtMonthlyIncome.Text, rgType.Text, fpReason, txtOthers.Text, rgSub.Text, rgCMReason.Text, txtChangeMethodOthers.Text, rgCurMeth.Text, txtCurMeth.Text, clbMedHistory.Text, txtMedOthers.Text, txtG.Text, txtP.Text, txtFullterm.Text, txtAbortion.Text, txtPremature.Text, txtLivingChildren.Text, dtLastdel.Text, cbLastDel.Text, dtLastmens.Text, dtPrevMens.Text, menstual_flow, _dysmenorrhea, _hydatidiform_mole, _ectopitic_pregnancy, sexually_transmitted, cbGenitalDischarge.Text, clbVAW.Text, cbReferredTo.Text, txtWeight.Text, txtheight.Text, txtBp.Text, txtPulseRate.Text, cbSkin.Text, cbConjunctiva.Text, cbNeck.Text, cbBreast.Text, cbAbdomen.Text, cbExtremites.Text, clbPelvicExamination.Text, cbCervicalAbno.Text, cbCervicalConsis.Text, cbUterinePos.Text, depth);
             bwAddRecord.CancelAsync();
         }
 
@@ -243,7 +269,7 @@ namespace BarangayHealthAid.ReportForm
 
         private void bwUpdateRecord_DoWork(object sender, DoWorkEventArgs e)
         {
-            FamilyPlanning.UpdateFamilyPlanningRecord(_purok_family_member_id, txtLastName.Text, txtFirstName.Text, txtMiddleInitial.Text, dtDob.Text, txtAge.Text, txtEducAttain.Text, txtOccup.Text, txtAddressNo.Text, txtAddressSt.Text, txtAddressBarangay.Text, txtAddressMun.Text, txtAddressProvince.Text, txtContactNo.Text, txtCivilStatus.Text, txtReligion.Text, txtSpouseLastName.Text, txtSpouseFirstName.Text, txtSpouseMiddle.Text, dtSpouseDob.Text, txtSpouseAge.Text, txtSpouseOccupation.Text, txtLivingChil.Text, plan_more_chil, txtMonthlyIncome.Text, rgType.Text, rgFpReason.Text, txtOthers.Text, rgSub.Text, rgCMReason.Text, txtChangeMethodOthers.Text, rgCurMeth.Text, txtCurMeth.Text, clbMedHistory.Text, txtMedOthers.Text, txtG.Text, txtP.Text, txtFullterm.Text, txtAbortion.Text, txtPremature.Text, txtLivingChildren.Text, dtLastdel.Text, cbLastDel.Text, dtLastmens.Text, dtPrevMens.Text, menstual_flow, _dysmenorrhea, _hydatidiform_mole, _ectopitic_pregnancy, sexually_transmitted, cbGenitalDischarge.Text, clbVAW.Text, cbReferredTo.Text, txtWeight.Text, txtheight.Text, txtBp.Text, txtPulseRate.Text, cbSkin.Text, cbConjunctiva.Text, cbNeck.Text, cbBreast.Text, cbAbdomen.Text, cbExtremites.Text, clbPelvicExamination.Text, cbCervicalAbno.Text, cbCervicalConsis.Text, cbUterinePos.Text, depth, edit_id);
+            FamilyPlanning.UpdateFamilyPlanningRecord(_purok_family_member_id, txtLastName.Text, txtFirstName.Text, txtMiddleInitial.Text, dtDob.Text, txtAge.Text, txtEducAttain.Text, txtOccup.Text, txtAddressNo.Text, txtAddressSt.Text, txtAddressBarangay.Text, txtAddressMun.Text, txtAddressProvince.Text, txtContactNo.Text, txtCivilStatus.Text, txtReligion.Text, txtSpouseLastName.Text, txtSpouseFirstName.Text, txtSpouseMiddle.Text, dtSpouseDob.Text, txtSpouseAge.Text, txtSpouseOccupation.Text, txtLivingChil.Text, plan_more_chil, txtMonthlyIncome.Text, rgType.Text, fpReason, txtOthers.Text, rgSub.Text, rgCMReason.Text, txtChangeMethodOthers.Text, rgCurMeth.Text, txtCurMeth.Text, clbMedHistory.Text, txtMedOthers.Text, txtG.Text, txtP.Text, txtFullterm.Text, txtAbortion.Text, txtPremature.Text, txtLivingChildren.Text, dtLastdel.Text, cbLastDel.Text, dtLastmens.Text, dtPrevMens.Text, menstual_flow, _dysmenorrhea, _hydatidiform_mole, _ectopitic_pregnancy, sexually_transmitted, cbGenitalDischarge.Text, clbVAW.Text, cbReferredTo.Text, txtWeight.Text, txtheight.Text, txtBp.Text, txtPulseRate.Text, cbSkin.Text, cbConjunctiva.Text, cbNeck.Text, cbBreast.Text, cbAbdomen.Text, cbExtremites.Text, clbPelvicExamination.Text, cbCervicalAbno.Text, cbCervicalConsis.Text, cbUterinePos.Text, depth, edit_id);
             bwUpdateRecord.CancelAsync();
 
         }

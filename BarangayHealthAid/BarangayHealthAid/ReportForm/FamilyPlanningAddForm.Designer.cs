@@ -1062,7 +1062,6 @@
             this.txtCurMeth.Size = new System.Drawing.Size(73, 20);
             this.txtCurMeth.StyleController = this.layoutControl1;
             this.txtCurMeth.TabIndex = 24;
-            this.txtCurMeth.EnabledChanged += new System.EventHandler(this.txtCurMeth_EnabledChanged);
             // 
             // rgCurMeth
             // 
@@ -1090,7 +1089,6 @@
             this.rgCurMeth.StyleController = this.layoutControl1;
             this.rgCurMeth.TabIndex = 23;
             this.rgCurMeth.SelectedIndexChanged += new System.EventHandler(this.rgCurMeth_SelectedIndexChanged);
-            this.rgCurMeth.EnabledChanged += new System.EventHandler(this.rgCurMeth_EnabledChanged);
             // 
             // txtChangeMethodOthers
             // 
@@ -1100,7 +1098,6 @@
             this.txtChangeMethodOthers.Size = new System.Drawing.Size(51, 20);
             this.txtChangeMethodOthers.StyleController = this.layoutControl1;
             this.txtChangeMethodOthers.TabIndex = 11;
-            this.txtChangeMethodOthers.EnabledChanged += new System.EventHandler(this.txtChangeMethodOthers_EnabledChanged);
             // 
             // rgCMReason
             // 
@@ -1119,7 +1116,6 @@
             this.rgCMReason.StyleController = this.layoutControl1;
             this.rgCMReason.TabIndex = 22;
             this.rgCMReason.SelectedIndexChanged += new System.EventHandler(this.rgCMReason_SelectedIndexChanged);
-            this.rgCMReason.EnabledChanged += new System.EventHandler(this.rgCMReason_EnabledChanged);
             // 
             // txtOthers
             // 
@@ -1129,7 +1125,6 @@
             this.txtOthers.Size = new System.Drawing.Size(51, 20);
             this.txtOthers.StyleController = this.layoutControl1;
             this.txtOthers.TabIndex = 10;
-            this.txtOthers.EnabledChanged += new System.EventHandler(this.txtOthers_EnabledChanged);
             // 
             // rgFpReason
             // 
@@ -1149,7 +1144,6 @@
             this.rgFpReason.StyleController = this.layoutControl1;
             this.rgFpReason.TabIndex = 21;
             this.rgFpReason.SelectedIndexChanged += new System.EventHandler(this.rgFpReason_SelectedIndexChanged);
-            this.rgFpReason.EnabledChanged += new System.EventHandler(this.rgFpReason_EnabledChanged);
             // 
             // rgSub
             // 
@@ -1166,7 +1160,6 @@
             this.rgSub.StyleController = this.layoutControl1;
             this.rgSub.TabIndex = 22;
             this.rgSub.SelectedIndexChanged += new System.EventHandler(this.rgSub_SelectedIndexChanged);
-            this.rgSub.EnabledChanged += new System.EventHandler(this.rgSub_EnabledChanged);
             // 
             // rgType
             // 

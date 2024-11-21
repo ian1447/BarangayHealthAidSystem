@@ -138,11 +138,56 @@ namespace BarangayHealthAid.ReportForm
                     fpa.cePlanMoreChildren.Checked = Convert.ToBoolean(filtered[0]["plan_more_children"].ToString());
                     fpa.txtMonthlyIncome.Text = filtered[0]["average_monthly_income"].ToString();
                     fpa.rgType.SelectedIndex = filtered[0]["type_of_client"].ToString() == "New Acceptor"? 0:1;
-                    fpa.rgFpReason.Text = filtered[0]["reason_for_FP"].ToString();
-                    fpa.rgSub.Text = filtered[0]["current_user_type"].ToString();
-                    fpa.rgCMReason.Text = filtered[0]["reason_for_FP"].ToString();
+                    fpa.rgFpReason.SelectedIndex = filtered[0]["reason_for_FP"].ToString() == "spacing" ? 0 : filtered[0]["reason_for_FP"].ToString() == "limiting" ? 1: filtered[0]["reason_for_FP"].ToString() == "others" ? 2 : -1;
                     fpa.txtOthers.Text = filtered[0]["others"].ToString();
+                    fpa.rgSub.SelectedIndex = filtered[0]["current_user_type"].ToString() == "Changing Method" ? 0 : filtered[0]["current_user_type"].ToString() == "Changing Clinic" ? 1 : filtered[0]["current_user_type"].ToString() == "Dropout/Restart" ? 2 : -1;
+                    fpa.rgCMReason.SelectedIndex = filtered[0]["changin_method_resaon"].ToString() == "medical condition" ? 0 : filtered[0]["changin_method_resaon"].ToString() == "side effects" ? 1 : -1;
                     fpa.txtChangeMethodOthers.Text = filtered[0]["side_effects"].ToString();
+                    switch (filtered[0]["currently_used_changing_methods"].ToString())
+                    {
+                        case ("COC"):
+                            fpa.rgCurMeth.SelectedIndex = 0;
+                            break;
+                        case ("POP"):
+                            fpa.rgCurMeth.SelectedIndex = 1;
+                            break;
+                        case ("Injectable"):
+                            fpa.rgCurMeth.SelectedIndex = 2;
+                            break;
+                        case ("Implant"):
+                            fpa.rgCurMeth.SelectedIndex = 3;
+                            break;
+                        case ("IUD-Internal"):
+                            fpa.rgCurMeth.SelectedIndex = 4;
+                            break;
+                        case ("IUD-Post-Partum"):
+                            fpa.rgCurMeth.SelectedIndex = 5;
+                            break;
+                        case ("Condom"):
+                            fpa.rgCurMeth.SelectedIndex = 6;
+                            break;
+                        case ("BOM/CMM"):
+                            fpa.rgCurMeth.SelectedIndex = 7;
+                            break;
+                        case ("BBT"):
+                            fpa.rgCurMeth.SelectedIndex = 8;
+                            break;
+                        case ("STM"):
+                            fpa.rgCurMeth.SelectedIndex = 9;
+                            break;
+                        case ("SDM"):
+                            fpa.rgCurMeth.SelectedIndex = 10;
+                            break;
+                        case ("LAM"):
+                            fpa.rgCurMeth.SelectedIndex = 11;
+                            break;
+                        case ("others"):
+                            fpa.rgCurMeth.SelectedIndex = 12;
+                            break;
+                        default:
+                            fpa.rgCurMeth.SelectedIndex = -1;
+                            break;
+                    }
                     fpa.rgCurMeth.Text = filtered[0]["currently_used_changing_methods"].ToString();
                     fpa.txtCurMeth.Text = filtered[0]["changing_method_others"].ToString();
                     string[] medHistArray =  filtered[0]["medical_history"].ToString().Split(',');
@@ -431,17 +476,12 @@ namespace BarangayHealthAid.ReportForm
                     fpf.ceChaningClinic.Checked = filtered[0]["current_user_type"].ToString() == "Changing Clinic" ? true : false;
                     fpf.ceChangingmethod.Checked = filtered[0]["current_user_type"].ToString() == "Changing Method" ? true : false;
                     fpf.ceDropOut.Checked = filtered[0]["current_user_type"].ToString() == "Dropout/Restart" ? true : false;
-                    fpf.ceSideEffect.Checked = filtered[0]["changin_method_resaon"].ToString() == "side_effects" ? true : false;
+                    fpf.ceSideEffect.Checked = filtered[0]["changin_method_resaon"].ToString() == "side effects" ? true : false;
                     fpf.ceMedCondition.Checked = filtered[0]["changin_method_resaon"].ToString() == "medical condition" ? true : false;
-                    //fpa.rgType.SelectedIndex = filtered[0]["type_of_client"].ToString() == "New Acceptor" ? 0 : 1;
-                    //fpa.rgFpReason.Text = filtered[0]["reason_for_FP"].ToString();
-                    //fpa.rgSub.Text = filtered[0]["current_user_type"].ToString();
-                    //fpa.rgCMReason.Text = filtered[0]["reason_for_FP"].ToString();
-                    //fpa.txtOthers.Text = filtered[0]["others"].ToString();
-                    //fpa.txtChangeMethodOthers.Text = filtered[0]["side_effects"].ToString();
-                    //fpa.rgCurMeth.Text = filtered[0]["currently_used_changing_methods"].ToString();
-                    //fpa.txtCurMeth.Text = filtered[0]["changing_method_others"].ToString();
                     string[] medHistArray = filtered[0]["medical_history"].ToString().Split(',');
+
+                    MsgBox.Information(medHistArray[0].ToString());
+
 
                     fpf.DataMember = "CustomSqlQuery";
                     fpf.ShowPreviewDialog();
