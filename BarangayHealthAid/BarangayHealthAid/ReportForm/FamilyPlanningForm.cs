@@ -190,7 +190,7 @@ namespace BarangayHealthAid.ReportForm
                     }
                     fpa.rgCurMeth.Text = filtered[0]["currently_used_changing_methods"].ToString();
                     fpa.txtCurMeth.Text = filtered[0]["changing_method_others"].ToString();
-                    string[] medHistArray =  filtered[0]["medical_history"].ToString().Split(',');
+                    string[] medHistArray =  filtered[0]["medical_history"].ToString().Split('$');
                     foreach (string str in medHistArray)
                     {
                         for (int i = 0; i < fpa.clbMedHistory.Items.Count; i++)
@@ -337,7 +337,7 @@ namespace BarangayHealthAid.ReportForm
                     fpa.txtChangeMethodOthers.Text = filtered[0]["side_effects"].ToString();
                     fpa.rgCurMeth.Text = filtered[0]["currently_used_changing_methods"].ToString();
                     fpa.txtCurMeth.Text = filtered[0]["changing_method_others"].ToString();
-                    string[] medHistArray = filtered[0]["medical_history"].ToString().Split(',');
+                    string[] medHistArray = filtered[0]["medical_history"].ToString().Split('$');
                     foreach (string str in medHistArray)
                     {
                         for (int i = 0; i < fpa.clbMedHistory.Items.Count; i++)
@@ -465,11 +465,12 @@ namespace BarangayHealthAid.ReportForm
                     fpf.lblHeight.Text = filtered[0]["height"].ToString();
                     fpf.lblBp.Text = filtered[0]["bp"].ToString();
                     fpf.lblPulse.Text = filtered[0]["pulse_rate"].ToString();
-                    
+                    fpf.lblReasonOthers.Text = filtered[0]["side_effects"].ToString();
                     fpf.cePlanY.Checked = Convert.ToBoolean(filtered[0]["plan_more_children"].ToString());
                     fpf.cePlanN.Checked = !Convert.ToBoolean(filtered[0]["plan_more_children"].ToString());
                     fpf.ceNewAcc.Checked = filtered[0]["type_of_client"].ToString() == "New Acceptor" ? true : false;
                     fpf.ceCurrUser.Checked = filtered[0]["type_of_client"].ToString() == "New Acceptor" ? false : true;
+                    fpf.lblFPOthers.Text = filtered[0]["others"].ToString();
                     fpf.ceLimiting.Checked = filtered[0]["reason_for_FP"].ToString() == "limiting" ? true : false;
                     fpf.ceSpacing.Checked = filtered[0]["reason_for_FP"].ToString() == "spacing" ? true : false;
                     fpf.ceOthers.Checked = filtered[0]["reason_for_FP"].ToString() == "others" ? true : false;
@@ -479,6 +480,52 @@ namespace BarangayHealthAid.ReportForm
                     fpf.ceSideEffect.Checked = filtered[0]["changin_method_resaon"].ToString() == "side effects" ? true : false;
                     fpf.ceMedCondition.Checked = filtered[0]["changin_method_resaon"].ToString() == "medical condition" ? true : false;
                     string[] medHistArray = filtered[0]["medical_history"].ToString().Split(',');
+
+                    switch (filtered[0]["currently_used_changing_methods"].ToString())
+                    {
+                        case ("COC"):
+                            fpf.ceCoc.Checked = true;
+                            break;
+                        case ("POP"):
+                            fpf.cePop.Checked = true;
+                            break;
+                        case ("Injectable"):
+                            fpf.ceInjectable.Checked = true;
+                            break;
+                        case ("Implant"):
+                            fpf.ceImplant.Checked = true;
+                            break;
+                        case ("IUD-Internal"):
+                            fpf.ceIUD1.Checked = true;
+                            break;
+                        case ("IUD-Post-Partum"):
+                            fpf.ceIUD2.Checked = true;
+                            break;
+                        case ("Condom"):
+                            fpf.ceCondom.Checked = true;
+                            break;
+                        case ("BOM/CMM"):
+                            fpf.ceBOM.Checked = true;
+                            break;
+                        case ("BBT"):
+                            fpf.ceBBT.Checked = true;
+                            break;
+                        case ("STM"):
+                            fpf.ceStm.Checked = true;
+                            break;
+                        case ("SDM"):
+                            fpf.ceSdm.Checked = true;
+                            break;
+                        case ("LAM"):
+                            fpf.ceLam.Checked = true;
+                            break;
+                        case ("others"):
+                            fpf.ceOthers.Checked = true;
+                            break;
+                        default:
+                            break;
+                    }
+
 
                     MsgBox.Information(medHistArray[0].ToString());
 
