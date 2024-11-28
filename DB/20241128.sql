@@ -32,12 +32,17 @@ CREATE TABLE `child_sub_opt` (
 
 /*Data for the table `child_sub_opt` */
 
+LOCK TABLES `child_sub_opt` WRITE;
+
+UNLOCK TABLES;
+
 /*Table structure for table `family_planning` */
 
 DROP TABLE IF EXISTS `family_planning`;
 
 CREATE TABLE `family_planning` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
+  `patient_id` int(11) DEFAULT NULL,
   `last_name` varchar(255) DEFAULT NULL,
   `given_name` varchar(255) DEFAULT NULL,
   `middle_initial` varchar(5) DEFAULT NULL,
@@ -65,10 +70,10 @@ CREATE TABLE `family_planning` (
   `type_of_client` enum('New Acceptor','Current User') DEFAULT NULL,
   `reason_for_FP` enum('spacing','limiting','others') DEFAULT NULL,
   `others` varchar(255) DEFAULT NULL,
-  `current_user_type` enum('Changing Method','Changing Clinic','Dropout/Restart') DEFAULT NULL,
-  `changin_method_resaon` enum('medical condition','side_effects') DEFAULT NULL,
+  `current_user_type` varchar(255) DEFAULT NULL,
+  `changin_method_resaon` varchar(255) DEFAULT NULL,
   `side_effects` varchar(255) DEFAULT NULL,
-  `currently_used_changing_methods` enum('COC','POP','Injectable','Implant','IUD-Internal','IUD-Post-Partum','Condom','BOM/CMM','BBT','STM','SDM','LAM','others') DEFAULT NULL,
+  `currently_used_changing_methods` varchar(255) DEFAULT NULL,
   `changing_method_others` varchar(255) DEFAULT NULL,
   `medical_history` text,
   `med_history_specify` varchar(255) DEFAULT NULL,
@@ -108,9 +113,15 @@ CREATE TABLE `family_planning` (
   `added_by` int(11) DEFAULT NULL,
   `added_on` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 /*Data for the table `family_planning` */
+
+LOCK TABLES `family_planning` WRITE;
+
+insert  into `family_planning`(`id`,`patient_id`,`last_name`,`given_name`,`middle_initial`,`dob`,`age`,`educ_attain`,`occupation`,`address_no`,`address_street`,`address_barangay`,`address_mun/city`,`address_prov`,`contact_number`,`civil_status`,`religion`,`spouse_last_name`,`spouse_given_name`,`spouse_middle_inital`,`spouse_dob`,`spouse_age`,`spouse_occupation`,`living_children`,`plan_more_children`,`average_monthly_income`,`type_of_client`,`reason_for_FP`,`others`,`current_user_type`,`changin_method_resaon`,`side_effects`,`currently_used_changing_methods`,`changing_method_others`,`medical_history`,`med_history_specify`,`pregnancies_G`,`pregnancies_P`,`pregnancy_full_term`,`pregnancy_abortion`,`pregnancy_premature`,`pregnancy_living`,`date_last_delivery`,`type_last_delivery`,`last_menstrual_period`,`previous_mentrual_period`,`menstrual_flow`,`dysmenorrhea`,`hydatidiform_mole`,`ectopitic_pregnancy`,`sexually_transmitted_infections_risk`,`genital_area_yes`,`VAW`,`referred_to`,`weight`,`height`,`bp`,`pulse_rate`,`skin`,`conjunctiva`,`neck`,`breast`,`abdomen`,`extremities`,`pelvic_examination`,`cervical_abnormalities`,`cervical_consistency`,`uterine_position`,`uterine_depth`,`added_by`,`added_on`) values (1,0,'Papa','Papa','','2024-10-07',2,'123','123','123','123','123','123','123','123','123','123','123','123','123','2024-10-23',123,'123',123,1,'132.00','Current User','','','Changing Method','medical condition','','POP','','11$12$4','',123,132123,1,123,123,13,'2024-10-24','Vaginal','2024-10-23','2024-10-15','Scanty',1,0,0,'1,1,0,0,0','Vagina','1,2,3','WCPU','123.00','123.00','12',123,'yellowish','pale','neck mass','mass','abdominal mass','varicosities','uterine position','','','mid','0.00',1,'2024-10-29 23:19:19');
+
+UNLOCK TABLES;
 
 /*Table structure for table `maternal_health_record` */
 
@@ -171,9 +182,15 @@ CREATE TABLE `maternal_health_record` (
   `added_by` int(11) DEFAULT NULL,
   `added_on` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 /*Data for the table `maternal_health_record` */
+
+LOCK TABLES `maternal_health_record` WRITE;
+
+insert  into `maternal_health_record`(`id`,`patient_id`,`name`,`age`,`dob`,`height`,`husband_name`,`occupation`,`address`,`contact_no`,`no_children_born_alive`,`living_children`,`abortion`,`fetal_deaths`,`type_last_delivery`,`largebabies`,`diabetes`,`previous_illness`,`allergy`,`previous_hospitalization`,`gravida`,`PARA`,`A`,`stillbirth`,`LMP`,`EDC`,`where_to_deliver`,`attended_by`,`new_born_screening_plan`,`risk_codes`,`tt1`,`tt2`,`tt3`,`tt4`,`tt5`,`urinalysis`,`hbs_antigen`,`CBC`,`RPR`,`blood_typing`,`HIV`,`prev_pregnancy_complic`,`checklist`,`vit_a_date_given`,`vit_a_prescribed`,`iron_folic_4`,`iron_folic_5`,`iron_folic_6`,`iron_folic_7`,`iron_folic_8`,`iron_folic_9`,`added_by`,`added_on`) values (1,1,'Papa  Papa qq',2,'2024-10-07','123.00','asdf ','wdf ',' asdf','09123812312',12,12,12,12,'12',121,'12','12','12','12','12','12','12','12','12','12','12','12','12','',NULL,NULL,NULL,NULL,NULL,'12','12','12','1212','12','12','12','Severe Headache,Blurring of Vision','2024-10-09','12','2024-10-21','2024-10-16','2024-10-25','2024-10-25','2024-10-31','2024-10-25',1,'2024-10-29 21:56:17');
+
+UNLOCK TABLES;
 
 /*Table structure for table `maternal_health_record_history` */
 
@@ -197,6 +214,10 @@ CREATE TABLE `maternal_health_record_history` (
 
 /*Data for the table `maternal_health_record_history` */
 
+LOCK TABLES `maternal_health_record_history` WRITE;
+
+UNLOCK TABLES;
+
 /*Table structure for table `out_patient` */
 
 DROP TABLE IF EXISTS `out_patient`;
@@ -219,6 +240,10 @@ CREATE TABLE `out_patient` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*Data for the table `out_patient` */
+
+LOCK TABLES `out_patient` WRITE;
+
+UNLOCK TABLES;
 
 /*Table structure for table `patient_details` */
 
@@ -287,6 +312,10 @@ CREATE TABLE `patient_details` (
 
 /*Data for the table `patient_details` */
 
+LOCK TABLES `patient_details` WRITE;
+
+UNLOCK TABLES;
+
 /*Table structure for table `patient_details_history` */
 
 DROP TABLE IF EXISTS `patient_details_history`;
@@ -308,6 +337,10 @@ CREATE TABLE `patient_details_history` (
 
 /*Data for the table `patient_details_history` */
 
+LOCK TABLES `patient_details_history` WRITE;
+
+UNLOCK TABLES;
+
 /*Table structure for table `purok` */
 
 DROP TABLE IF EXISTS `purok`;
@@ -318,9 +351,15 @@ CREATE TABLE `purok` (
   `added_by` int(11) NOT NULL,
   `added_on` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 /*Data for the table `purok` */
+
+LOCK TABLES `purok` WRITE;
+
+insert  into `purok`(`id`,`purok_name`,`added_by`,`added_on`) values (1,'Purok 1',1,'2024-10-29 21:51:35');
+
+UNLOCK TABLES;
 
 /*Table structure for table `purok_family_members` */
 
@@ -351,9 +390,15 @@ CREATE TABLE `purok_family_members` (
   `added_by` int(11) DEFAULT NULL,
   `added_on` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 /*Data for the table `purok_family_members` */
+
+LOCK TABLES `purok_family_members` WRITE;
+
+insert  into `purok_family_members`(`id`,`purok_members_id`,`description`,`last_name`,`first_name`,`name_ext`,`middle_name`,`birthday`,`age`,`place_of_birth`,`sex`,`civil_status`,`religion`,`contact_no`,`purok`,`barangay`,`municipality`,`province`,`country`,`zip_code`,`is_active`,`added_by`,`added_on`) values (1,1,'Father','Papa','Papa','qq','','2024-10-07',2,'sdaf ','Male','Single',' asdf','09289383847','12312 3','123','123','123 ','123 ','123',1,1,'2024-10-29 21:52:11');
+
+UNLOCK TABLES;
 
 /*Table structure for table `purok_members` */
 
@@ -367,9 +412,15 @@ CREATE TABLE `purok_members` (
   `added_on` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   UNIQUE KEY `Serial Number` (`family_serial_number`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 /*Data for the table `purok_members` */
+
+LOCK TABLES `purok_members` WRITE;
+
+insert  into `purok_members`(`id`,`purok_id`,`family_serial_number`,`added_by`,`added_on`) values (1,1,'Z231v',1,'2024-10-29 21:51:41');
+
+UNLOCK TABLES;
 
 /*Table structure for table `users` */
 
@@ -391,7 +442,11 @@ CREATE TABLE `users` (
 
 /*Data for the table `users` */
 
+LOCK TABLES `users` WRITE;
+
 insert  into `users`(`id`,`username`,`password`,`firstname`,`middlename`,`lastname`,`is_active`,`role`,`added_by`,`added_on`) values (1,'admin','*4ACFE3202A5FF5CF467898FC58AAB1D615029441','admin','admin','admin',1,'Admin',0,'2024-07-27 19:43:44');
+
+UNLOCK TABLES;
 
 /* Procedure structure for procedure `sp_child_sub_opt_add` */
 
@@ -444,6 +499,7 @@ DELIMITER ;
 DELIMITER $$
 
 /*!50003 CREATE DEFINER=`system_admin`@`%` PROCEDURE `sp_family_planning_add`(
+	_patient_id int (11),
 	_last_name varchar (255),
 	_given_name varchar (255),
 	_middle_initial varchar (25),
@@ -517,7 +573,8 @@ BEGIN
 	set @_count := (select count(*) from `family_planning` fp where fp.last_name = _last_name and fp.given_name = _given_name and fp.middle_initial = _middle_initial);
 	if (@_count = 0) then 
 		INSERT INTO `family_planning`
-			    (`last_name`,
+			    (`patient_id`,
+			     `last_name`,
 			     `given_name`,
 			     `middle_initial`,
 			     `dob`,
@@ -585,7 +642,8 @@ BEGIN
 			     `uterine_position`,
 			     `uterine_depth`,
 			     `added_by`)
-		VALUES (_last_name,
+		VALUES (_patient_id,
+			_last_name,
 			_given_name,
 			_middle_initial,
 			_dob,
@@ -683,6 +741,7 @@ DELIMITER ;
 DELIMITER $$
 
 /*!50003 CREATE DEFINER=`system_admin`@`%` PROCEDURE `sp_family_planning_update`(
+	_patient_id int (11),
 	_last_name VARCHAR (255),
 	_given_name VARCHAR (255),
 	_middle_initial VARCHAR (25),
@@ -754,7 +813,8 @@ DELIMITER $$
     )
 BEGIN
 	UPDATE `barangay_aid`.`family_planning`
-	SET `last_name` = _last_name,
+	SET `patient_id` = _patient_id,
+	  `last_name` = _last_name,
 	  `given_name` = _given_name,
 	  `middle_initial` = _middle_initial,
 	  `dob` = _dob,

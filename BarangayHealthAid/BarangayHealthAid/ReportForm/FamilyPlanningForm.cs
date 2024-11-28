@@ -195,7 +195,7 @@ namespace BarangayHealthAid.ReportForm
                     {
                         for (int i = 0; i < fpa.clbMedHistory.Items.Count; i++)
                         {
-                            if (fpa.clbMedHistory.Items[i].Description.ToString() == str)
+                            if (fpa.clbMedHistory.Items[i].Value.ToString() == str)
                             {
                                 fpa.clbMedHistory.SetItemChecked(i, true);
                                 break;
@@ -230,7 +230,7 @@ namespace BarangayHealthAid.ReportForm
                     {
                         for (int i = 0; i < fpa.clbVAW.Items.Count; i++)
                         {
-                            if (fpa.clbVAW.Items[i].Description.ToString() == str)
+                            if (fpa.clbVAW.Items[i].Value.ToString() == str)
                             {
                                 fpa.clbVAW.SetItemChecked(i, true);
                                 break;
@@ -342,7 +342,7 @@ namespace BarangayHealthAid.ReportForm
                     {
                         for (int i = 0; i < fpa.clbMedHistory.Items.Count; i++)
                         {
-                            if (fpa.clbMedHistory.Items[i].Description.ToString() == str)
+                            if (fpa.clbMedHistory.Items[i].Value.ToString() == str)
                             {
                                 fpa.clbMedHistory.SetItemChecked(i, true);
                                 break;
@@ -377,7 +377,7 @@ namespace BarangayHealthAid.ReportForm
                     {
                         for (int i = 0; i < fpa.clbVAW.Items.Count; i++)
                         {
-                            if (fpa.clbVAW.Items[i].Description.ToString() == str)
+                            if (fpa.clbVAW.Items[i].Value.ToString() == str)
                             {
                                 fpa.clbVAW.SetItemChecked(i, true);
                                 break;
@@ -479,7 +479,7 @@ namespace BarangayHealthAid.ReportForm
                     fpf.ceDropOut.Checked = filtered[0]["current_user_type"].ToString() == "Dropout/Restart" ? true : false;
                     fpf.ceSideEffect.Checked = filtered[0]["changin_method_resaon"].ToString() == "side effects" ? true : false;
                     fpf.ceMedCondition.Checked = filtered[0]["changin_method_resaon"].ToString() == "medical condition" ? true : false;
-                    string[] medHistArray = filtered[0]["medical_history"].ToString().Split(',');
+                    string[] medHistArray = filtered[0]["medical_history"].ToString().Split('$');
 
                     switch (filtered[0]["currently_used_changing_methods"].ToString())
                     {
@@ -527,9 +527,279 @@ namespace BarangayHealthAid.ReportForm
                     }
 
 
-                    MsgBox.Information(medHistArray[0].ToString());
+                    for (int i = 1; i <= 12; i++)
+                    {
+                        bool isChecked = medHistArray.Contains(i.ToString());
 
+                        DevExpress.XtraReports.UI.XRCheckBox yesCheckBox =
+        fpf.FindControl(string.Format("ce{0}y", i), true) as DevExpress.XtraReports.UI.XRCheckBox;
+                        DevExpress.XtraReports.UI.XRCheckBox noCheckBox =
+                            fpf.FindControl(string.Format("ce{0}n", i), true) as DevExpress.XtraReports.UI.XRCheckBox;
 
+                        if (yesCheckBox != null && noCheckBox != null)
+                        {
+                            yesCheckBox.Checked = isChecked;
+                            noCheckBox.Checked = !isChecked;
+                        }
+                    }
+
+                    fpf.ceVaginal.Checked = filtered[0]["type_last_delivery"].ToString() == "Vaginal" ? true : false;
+                    fpf.ceCesarean.Checked = filtered[0]["type_last_delivery"].ToString() == "Vaginal" ? false : true;
+
+                    string mens_flow = filtered[0]["menstrual_flow"].ToString();
+                    if (mens_flow == "Scanty")
+                        fpf.ceScanty.Checked = true;
+                    else if (mens_flow == "moderate")
+                        fpf.ceModerate.Checked = true;
+                    else if (mens_flow == "heavy")
+                        fpf.ceHeavy.Checked = true;
+                    fpf.ceDysme.Checked = Convert.ToBoolean(filtered[0]["dysmenorrhea"].ToString());
+                    fpf.ceHydalid.Checked = Convert.ToBoolean(filtered[0]["hydatidiform_mole"].ToString());
+                    fpf.ceHistory.Checked = Convert.ToBoolean(filtered[0]["ectopitic_pregnancy"].ToString());
+
+                    int counter = 0;
+                    string[] transmittedRisk = filtered[0]["sexually_transmitted_infections_risk"].ToString().Split(',');
+                    for (int index = 0; index < Math.Min(transmittedRisk.Length, 5); index++)
+                    {
+                        string str = transmittedRisk[index];
+                        if (counter == 0)
+                        {
+                            if (str != "0")
+                            {
+                                fpf.ce13y.Checked = true;
+                                fpf.ce13n.Checked = false;
+                            }
+                        }
+                        else if (counter == 1)
+                        {
+                            if (str != "0")
+                            {
+                                fpf.ce14y.Checked = true;
+                                fpf.ce14n.Checked = false;
+                                fpf.cePenis.Checked = filtered[0]["genital_area_yes"].ToString() == "Penis" ? true : false;
+                                fpf.ceVagina2.Checked = filtered[0]["genital_area_yes"].ToString() == "Vagina" ? true : false;
+                            }
+                        }
+                        else if (counter == 2)
+                        {
+                            if (str != "0")
+                            {
+                                fpf.ce15y.Checked = true;
+                                fpf.ce15n.Checked = false;
+                            }
+                        }
+                        else if (counter == 3)
+                        {
+                            if (str != "0")
+                            {
+                                fpf.ce16y.Checked = true;
+                                fpf.ce16n.Checked = false;
+                            }
+                        }
+                        else if (counter == 4)
+                        {
+                            if (str != "0")
+                            {
+                                fpf.ce17y.Checked = true;
+                                fpf.ce17n.Checked = false;
+                            }
+                        }
+                        counter += 1;
+                    }
+
+                    string[] VAWArray = filtered[0]["VAW"].ToString().Split(',');
+                    counter = 0;
+                    foreach (string str in VAWArray)
+                    {
+                        if (counter == 0)
+                        {
+                            if (str == "1")
+                            {
+                                fpf.ce18y.Checked = true;
+                                fpf.ce18n.Checked = false;
+                            }
+                        }
+                        else if (counter == 1)
+                        {
+                            if (str == "1")
+                            {
+                                fpf.ce19y.Checked = true;
+                                fpf.ce19n.Checked = false;
+                            }
+                        }
+                        else if (counter == 2)
+                        {
+                            if (str == "1")
+                            {
+                                fpf.ce20y.Checked = true;
+                                fpf.ce20n.Checked = false;
+                            }
+                        }
+                        counter += 1;
+                        break;
+                    }
+
+                    switch (filtered[0]["referred_to"].ToString())
+                    {
+                        case ("DSWD"):
+                            fpf.ceDSWD.Checked = true;
+                            break;
+                        case ("WCPU"):
+                            fpf.ceWCPU.Checked = true;
+                            break;
+                        case ("NGOs"):
+                            fpf.ceNGO.Checked = true;
+                            break;
+                        case ("Others"):
+                            fpf.ceOtherss.Checked = true;
+                            break;
+                    }
+
+                    switch (filtered[0]["skin"].ToString())
+                    {
+                        case ("normal"):
+                            fpf.ceSkinNormal.Checked = true;
+                            break;
+                        case ("yellowish"):
+                            fpf.ceSkinYellow.Checked = true;
+                            break;
+                        case ("hematoma"):
+                            fpf.ceSkinHema.Checked = true;
+                            break;
+                        case ("pale"):
+                            fpf.ceSkinePale.Checked = true;
+                            break;
+                    }
+                    switch (filtered[0]["conjunctiva"].ToString())
+                    {
+                        case ("normal"):
+                            fpf.ceConjNormal.Checked = true;
+                            break;
+                        case ("yellowish"):
+                            fpf.ceConjYellow.Checked = true;
+                            break;
+                        case ("pale"):
+                            fpf.ceConjPale.Checked = true;
+                            break;
+                    }
+                    switch (filtered[0]["neck"].ToString())
+                    {
+                        case ("normal"):
+                            fpf.ceNeckNormal.Checked = true;
+                            break;
+                        case ("neck mass"):
+                            fpf.ceNeckMass.Checked = true;
+                            break;
+                        case ("enlarged lymph nodes"):
+                            fpf.ceNeckNodes.Checked = true;
+                            break;
+                    }
+                    switch (filtered[0]["breast"].ToString())
+                    {
+                        case ("normal"):
+                            fpf.ceBreastNormal.Checked = true;
+                            break;
+                        case ("mass"):
+                            fpf.ceBreastMass.Checked = true;
+                            break;
+                        case ("nipple discharge"):
+                            fpf.ceBreastNip.Checked = true;
+                            break;
+                    }
+                    switch (filtered[0]["abdomen"].ToString())
+                    {
+                        case ("normal"):
+                            fpf.ceAbdomenNormal.Checked = true;
+                            break;
+                        case ("abdominal mass"):
+                            fpf.ceAbdomenmass.Checked = true;
+                            break;
+                        case ("varicosities"):
+                            fpf.ceAbdomenVari.Checked = true;
+                            break;
+                    }
+                    switch (filtered[0]["extremities"].ToString())
+                    {
+                        case ("normal"):
+                            fpf.ceExtreNormal.Checked = true;
+                            break;
+                        case ("edema"):
+                            fpf.ceExtreEdema.Checked = true;
+                            break;
+                        case ("varicosities"):
+                            fpf.ceExtreVari.Checked = true;
+                            break;
+                    }
+
+                    switch (filtered[0]["pelvic_examination"].ToString())
+                    {
+                        case ("normal"):
+                            fpf.cePelvNormal.Checked = true;
+                            break;
+                        case ("mass"):
+                            fpf.cePelvMass.Checked = true;
+                            break;
+                        case ("abnormal discharge"):
+                            fpf.cePelvAdne.Checked = true;
+                            break;
+                        case ("cervical abnormalities"):
+                            fpf.cePelvAbnor.Checked = true;
+                            break;
+                        case ("cervical consistency"):
+                            fpf.cePelvCons.Checked = true;
+                            break;
+                        case ("cervical tenderness"):
+                            fpf.cePelvTender.Checked = true;
+                            break;
+                        case ("adnexal mass/tenderness"):
+                            fpf.cePelvTender.Checked = true;
+                            break;
+                        case ("uterine position"):
+                            fpf.cePelvPosi.Checked = true;
+                            break;
+                        case ("uterine depth"):
+                            fpf.cePelvDepth.Checked = true;
+                            break;
+                    }
+
+                    switch (filtered[0]["cervical_abnormalities"].ToString())
+                    {
+                        case ("warts"):
+                            fpf.ceAbnoWarts.Checked = true;
+                            break;
+                        case ("polyp or cyst"):
+                            fpf.ceAbnoCyst.Checked = true;
+                            break;
+                        case ("inflammation or erosion"):
+                            fpf.ceAbnoInflam.Checked = true;
+                            break;
+                        case ("bloody discharges"):
+                            fpf.ceAbnoDischarge.Checked = true;
+                            break;
+                    }
+                    switch (filtered[0]["cervical_consistency"].ToString())
+                    {
+                        case ("firm"):
+                            fpf.ceConsisFirm.Checked = true;
+                            break;
+                        case ("soft"):
+                            fpf.ceConsisSoft.Checked = true;
+                            break;
+                    }
+                    switch (filtered[0]["uterine_position"].ToString())
+                    {
+                        case ("mid"):
+                            fpf.cePosiMid.Checked = true;
+                            break;
+                        case ("anteflexed"):
+                            fpf.cePosiAnte.Checked = true;
+                            break;
+                        case ("retroflexed"):
+                            fpf.cePosiRetro.Checked = true;
+                            break;
+                    }
+
+                    fpf.lblDepth.Text = filtered[0]["uterine_depth"].ToString();
                     fpf.DataMember = "CustomSqlQuery";
                     fpf.ShowPreviewDialog();
                 }

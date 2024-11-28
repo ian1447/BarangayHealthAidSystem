@@ -157,14 +157,28 @@ namespace BarangayHealthAid.ReportForm
 
         private void clbPelvicExamination_ItemCheck(object sender, DevExpress.XtraEditors.Controls.ItemCheckEventArgs e)
         {
+            if (e.State == CheckState.Checked)
+            {
+                for (int i = 0; i < clbPelvicExamination.Items.Count; i++)
+                {
+                    if (i != e.Index) // Uncheck all other items
+                    {
+                        clbPelvicExamination.SetItemChecked(i, false);
+                    }
+                }
+            }
             var selectedItems = clbPelvicExamination.CheckedItems
-.Cast<CheckedListBoxItem>()
-.Select(item => item.Value.ToString())
-.ToArray();
+            .Cast<CheckedListBoxItem>()
+            .Select(item => item.Value.ToString())
+            .ToArray();
             lciabnormalities.Visibility = selectedItems.Contains("4") ? DevExpress.XtraLayout.Utils.LayoutVisibility.Always : DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
+            cbCervicalAbno.Text = selectedItems.Contains("4") ? cbCervicalAbno.Text : "";
             lciconsistency.Visibility = selectedItems.Contains("5") ? DevExpress.XtraLayout.Utils.LayoutVisibility.Always : DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
+            cbCervicalConsis.Text = selectedItems.Contains("5") ? cbCervicalConsis.Text : "";
             lciposition.Visibility = selectedItems.Contains("8") ? DevExpress.XtraLayout.Utils.LayoutVisibility.Always : DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
+            cbUterinePos.Text = selectedItems.Contains("8") ? cbUterinePos.Text : "";
             lcidepth.Visibility = selectedItems.Contains("9") ? DevExpress.XtraLayout.Utils.LayoutVisibility.Always : DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
+            txtUterineDepth.Text = selectedItems.Contains("9") ? txtUterineDepth.Text : "0.00";
         }
 
         private void cedischange_CheckedChanged(object sender, EventArgs e)
@@ -178,7 +192,7 @@ namespace BarangayHealthAid.ReportForm
         public bool is_add = true;
         public int edit_id;
         private string menstual_flow, plan_more_chil, _dysmenorrhea, _hydatidiform_mole, _ectopitic_pregnancy, sexually_transmitted, referred_to, depth;
-        private string fpReason, concatenatedString;
+        private string fpReason, concatenatedString, VawString, PelvicExam;
         private void btnSave_Click(object sender, EventArgs e)
         {
             menstual_flow = cbFlow.Text.ToString() == "scanty (1-2 pads per day)" ? "Scanty" : cbFlow.Text.ToString() == "moderate(3-5 pads per day)" ? "moderate" : "heavy";
@@ -195,14 +209,35 @@ namespace BarangayHealthAid.ReportForm
             depth = txtUterineDepth.Text == "" ? "0.00" : txtUterineDepth.Text;
             fpReason = rgFpReason.Text;
 
-            var checkedItemsText = clbMedHistory.CheckedIndices
-                .Cast<int>() 
-                .Select(index => clbMedHistory.GetItemText(index))
-                .ToArray();
+            List<string> checkedItemsValues = new List<string>();
 
-            concatenatedString = string.Join("$", checkedItemsText);
+            foreach (int index in clbMedHistory.CheckedIndices)
+            {
+                object value = clbMedHistory.GetItemValue(index);
+                checkedItemsValues.Add(value != null ? value.ToString() : string.Empty);
+            }
 
-            MsgBox.Information(concatenatedString);
+            concatenatedString = string.Join("$", checkedItemsValues.ToArray());
+
+            List<string> checkedItemsVAW = new List<string>();
+
+            foreach (int index in clbVAW.CheckedIndices)
+            {
+                object value = clbVAW.GetItemValue(index);
+                checkedItemsVAW.Add(value != null ? value.ToString() : string.Empty);
+            }
+
+            VawString = string.Join(",", checkedItemsVAW.ToArray());
+
+            //List<string> checkedItemsPelvicExamination = new List<string>();
+
+            //foreach (int index in clbVAW.CheckedIndices)
+            //{
+            //    object value = clbVAW.GetItemValue(index);
+            //    checkedItemsVAW.Add(value != null ? value.ToString() : string.Empty);
+            //}
+
+            //VawString = string.Join(",", checkedItemsVAW.ToArray());
 
             if (is_add)
             {
@@ -224,7 +259,7 @@ namespace BarangayHealthAid.ReportForm
 
         private void bwAddRecord_DoWork(object sender, DoWorkEventArgs e)
         {
-            FamilyPlanning.AddFamilyPlanningRecord(_purok_family_member_id, txtLastName.Text, txtFirstName.Text, txtMiddleInitial.Text, dtDob.Text, txtAge.Text, txtEducAttain.Text, txtOccup.Text, txtAddressNo.Text, txtAddressSt.Text, txtAddressBarangay.Text, txtAddressMun.Text, txtAddressProvince.Text, txtContactNo.Text, txtCivilStatus.Text, txtReligion.Text, txtSpouseLastName.Text, txtSpouseFirstName.Text, txtSpouseMiddle.Text, dtSpouseDob.Text, txtSpouseAge.Text, txtSpouseOccupation.Text, txtLivingChil.Text, plan_more_chil, txtMonthlyIncome.Text, rgType.Text, fpReason, txtOthers.Text, rgSub.Text, rgCMReason.Text, txtChangeMethodOthers.Text, rgCurMeth.Text, txtCurMeth.Text, concatenatedString, txtMedOthers.Text, txtG.Text, txtP.Text, txtFullterm.Text, txtAbortion.Text, txtPremature.Text, txtLivingChildren.Text, dtLastdel.Text, cbLastDel.Text, dtLastmens.Text, dtPrevMens.Text, menstual_flow, _dysmenorrhea, _hydatidiform_mole, _ectopitic_pregnancy, sexually_transmitted, cbGenitalDischarge.Text, clbVAW.Text, cbReferredTo.Text, txtWeight.Text, txtheight.Text, txtBp.Text, txtPulseRate.Text, cbSkin.Text, cbConjunctiva.Text, cbNeck.Text, cbBreast.Text, cbAbdomen.Text, cbExtremites.Text, clbPelvicExamination.Text, cbCervicalAbno.Text, cbCervicalConsis.Text, cbUterinePos.Text, depth);
+            FamilyPlanning.AddFamilyPlanningRecord(_purok_family_member_id, txtLastName.Text, txtFirstName.Text, txtMiddleInitial.Text, dtDob.Text, txtAge.Text, txtEducAttain.Text, txtOccup.Text, txtAddressNo.Text, txtAddressSt.Text, txtAddressBarangay.Text, txtAddressMun.Text, txtAddressProvince.Text, txtContactNo.Text, txtCivilStatus.Text, txtReligion.Text, txtSpouseLastName.Text, txtSpouseFirstName.Text, txtSpouseMiddle.Text, dtSpouseDob.Text, txtSpouseAge.Text, txtSpouseOccupation.Text, txtLivingChil.Text, plan_more_chil, txtMonthlyIncome.Text, rgType.Text, fpReason, txtOthers.Text, rgSub.Text, rgCMReason.Text, txtChangeMethodOthers.Text, rgCurMeth.Text, txtCurMeth.Text, concatenatedString, txtMedOthers.Text, txtG.Text, txtP.Text, txtFullterm.Text, txtAbortion.Text, txtPremature.Text, txtLivingChildren.Text, dtLastdel.Text, cbLastDel.Text, dtLastmens.Text, dtPrevMens.Text, menstual_flow, _dysmenorrhea, _hydatidiform_mole, _ectopitic_pregnancy, sexually_transmitted, cbGenitalDischarge.Text, VawString, cbReferredTo.Text, txtWeight.Text, txtheight.Text, txtBp.Text, txtPulseRate.Text, cbSkin.Text, cbConjunctiva.Text, cbNeck.Text, cbBreast.Text, cbAbdomen.Text, cbExtremites.Text, clbPelvicExamination.Text, cbCervicalAbno.Text, cbCervicalConsis.Text, cbUterinePos.Text, depth);
             bwAddRecord.CancelAsync();
         }
 
@@ -276,7 +311,7 @@ namespace BarangayHealthAid.ReportForm
 
         private void bwUpdateRecord_DoWork(object sender, DoWorkEventArgs e)
         {
-            FamilyPlanning.UpdateFamilyPlanningRecord(_purok_family_member_id, txtLastName.Text, txtFirstName.Text, txtMiddleInitial.Text, dtDob.Text, txtAge.Text, txtEducAttain.Text, txtOccup.Text, txtAddressNo.Text, txtAddressSt.Text, txtAddressBarangay.Text, txtAddressMun.Text, txtAddressProvince.Text, txtContactNo.Text, txtCivilStatus.Text, txtReligion.Text, txtSpouseLastName.Text, txtSpouseFirstName.Text, txtSpouseMiddle.Text, dtSpouseDob.Text, txtSpouseAge.Text, txtSpouseOccupation.Text, txtLivingChil.Text, plan_more_chil, txtMonthlyIncome.Text, rgType.Text, fpReason, txtOthers.Text, rgSub.Text, rgCMReason.Text, txtChangeMethodOthers.Text, rgCurMeth.Text, txtCurMeth.Text, concatenatedString, txtMedOthers.Text, txtG.Text, txtP.Text, txtFullterm.Text, txtAbortion.Text, txtPremature.Text, txtLivingChildren.Text, dtLastdel.Text, cbLastDel.Text, dtLastmens.Text, dtPrevMens.Text, menstual_flow, _dysmenorrhea, _hydatidiform_mole, _ectopitic_pregnancy, sexually_transmitted, cbGenitalDischarge.Text, clbVAW.Text, cbReferredTo.Text, txtWeight.Text, txtheight.Text, txtBp.Text, txtPulseRate.Text, cbSkin.Text, cbConjunctiva.Text, cbNeck.Text, cbBreast.Text, cbAbdomen.Text, cbExtremites.Text, clbPelvicExamination.Text, cbCervicalAbno.Text, cbCervicalConsis.Text, cbUterinePos.Text, depth, edit_id);
+            FamilyPlanning.UpdateFamilyPlanningRecord(_purok_family_member_id, txtLastName.Text, txtFirstName.Text, txtMiddleInitial.Text, dtDob.Text, txtAge.Text, txtEducAttain.Text, txtOccup.Text, txtAddressNo.Text, txtAddressSt.Text, txtAddressBarangay.Text, txtAddressMun.Text, txtAddressProvince.Text, txtContactNo.Text, txtCivilStatus.Text, txtReligion.Text, txtSpouseLastName.Text, txtSpouseFirstName.Text, txtSpouseMiddle.Text, dtSpouseDob.Text, txtSpouseAge.Text, txtSpouseOccupation.Text, txtLivingChil.Text, plan_more_chil, txtMonthlyIncome.Text, rgType.Text, fpReason, txtOthers.Text, rgSub.Text, rgCMReason.Text, txtChangeMethodOthers.Text, rgCurMeth.Text, txtCurMeth.Text, concatenatedString, txtMedOthers.Text, txtG.Text, txtP.Text, txtFullterm.Text, txtAbortion.Text, txtPremature.Text, txtLivingChildren.Text, dtLastdel.Text, cbLastDel.Text, dtLastmens.Text, dtPrevMens.Text, menstual_flow, _dysmenorrhea, _hydatidiform_mole, _ectopitic_pregnancy, sexually_transmitted, cbGenitalDischarge.Text, VawString, cbReferredTo.Text, txtWeight.Text, txtheight.Text, txtBp.Text, txtPulseRate.Text, cbSkin.Text, cbConjunctiva.Text, cbNeck.Text, cbBreast.Text, cbAbdomen.Text, cbExtremites.Text, clbPelvicExamination.Text, cbCervicalAbno.Text, cbCervicalConsis.Text, cbUterinePos.Text, depth, edit_id);
             bwUpdateRecord.CancelAsync();
 
         }
@@ -312,6 +347,11 @@ namespace BarangayHealthAid.ReportForm
                     txtAge.Text = filtered[0]["age"].ToString();
                 }
             }
+        }
+
+        private void clbMedHistory_Click(object sender, EventArgs e)
+        {
+            
         }
 
     }

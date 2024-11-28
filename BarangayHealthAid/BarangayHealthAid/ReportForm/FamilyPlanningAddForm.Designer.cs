@@ -543,8 +543,7 @@
             this.cbUterinePos.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbUterinePos.Properties.Items.AddRange(new object[] {
-            "firm",
-            "soft"});
+            "mid"});
             this.cbUterinePos.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.cbUterinePos.Size = new System.Drawing.Size(70, 20);
             this.cbUterinePos.StyleController = this.layoutControl1;
@@ -876,6 +875,7 @@
             this.clbMedHistory.Size = new System.Drawing.Size(342, 64);
             this.clbMedHistory.StyleController = this.layoutControl1;
             this.clbMedHistory.TabIndex = 19;
+            this.clbMedHistory.Click += new System.EventHandler(this.clbMedHistory_Click);
             // 
             // ceEctopic
             // 
